@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calm Feed</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="title">Calm Feed</div>
+        <div class="subtitle">Allowlisted subreddit posts (RSS), no in-app comments.</div>
+      </div>
+
+      <div class="top-actions">
+        <button id="refreshBtn" class="btn" type="button">Refresh</button>
+        <button
+          id="toggleSettingsBtn"
+          class="btn btn-ghost"
+          type="button"
+          aria-expanded="false"
+          aria-controls="settingsPanel"
+        >
+          Settings
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="settingsPanel" class="panel hidden" aria-label="Settings">
+        <form id="settingsForm" class="form">
+          <label class="label" for="subsInput">Subreddits (one per line)</label>
+          <textarea
+            id="subsInput"
+            class="textarea"
+            rows="7"
+            spellcheck="false"
+            placeholder="cats&#10;wholesomememes&#10;aww"
+          ></textarea>
+
+          <div class="row">
+            <div class="field">
+              <label class="label" for="sortSelect">Sort</label>
+              <select id="sortSelect" class="select">
+                <option value="hot">Hot</option>
+                <option value="new">New</option>
+                <option value="top">Top</option>
+              </select>
+            </div>
+
+            <div class="field" id="topTimeField">
+              <label class="label" for="timeSelect">Top window</label>
+              <select id="timeSelect" class="select">
+                <option value="day">Day</option>
+                <option value="week">Week</option>
+                <option value="month">Month</option>
+                <option value="year">Year</option>
+                <option value="all">All time</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="label" for="limitInput">Posts/subreddit</label>
+              <input id="limitInput" class="input" type="number" min="5" max="100" step="1" />
+            </div>
+          </div>
+
+          <label class="checkbox">
+            <input id="hideNsfwInput" type="checkbox" />
+            <span>Hide items marked NSFW (heuristic)</span>
+          </label>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Save & refresh</button>
+            <button id="resetBtn" class="btn btn-ghost" type="button">Reset</button>
+          </div>
+
+          <div class="hint">
+            Notes: this is a static site. It fetches RSS via a public CORS proxy; if that proxy is down or rate-limited,
+            fetching may fail.
+          </div>
+        </form>
+      </section>
+
+      <section class="statusbar">
+        <div id="status" class="status"></div>
+      </section>
+
+      <section id="feed" class="feed" aria-label="Feed"></section>
+    </main>
+
+    <footer class="footer">
+      Clicking “Comments” opens the Reddit thread in a new tab.
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

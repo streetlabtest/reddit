@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #666666;
+  --card: #f6f6f7;
+  --border: rgba(0, 0, 0, 0.10);
+  --shadow: rgba(0, 0, 0, 0.06);
+  --accent: #2f6fed;
+  --accent-fg: #ffffff;
+  --radius: 14px;
+  --maxw: 980px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0c0f;
+    --fg: #f2f3f5;
+    --muted: #a7a7a7;
+    --card: #13151b;
+    --border: rgba(255, 255, 255, 0.10);
+    --shadow: rgba(0, 0, 0, 0.30);
+    --accent: #6aa3ff;
+    --accent-fg: #0b0c0f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand .title {
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+}
+
+.brand .subtitle {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 0 12px 30px var(--shadow);
+  margin-bottom: 14px;
+}
+
+.hidden { display: none; }
+
+.form { display: grid; gap: 12px; }
+
+.label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.textarea, .select, .input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  color: var(--fg);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.textarea { resize: vertical; }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 760px) {
+  .row { grid-template-columns: 1fr; }
+}
+
+.field { display: grid; align-content: start; }
+
+.checkbox {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--fg);
+}
+
+.checkbox input { transform: translateY(1px); }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  color: var(--fg);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn:hover { border-color: color-mix(in srgb, var(--border) 50%, var(--fg)); }
+
+.btn-primary {
+  background: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--border));
+  color: var(--accent-fg);
+}
+
+.btn-ghost { background: transparent; }
+
+.hint {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.statusbar {
+  display: flex;
+  align-items: center;
+  margin: 8px 0 14px;
+}
+
+.status {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.feed {
+  display: grid;
+  gap: 12px;
+}
+
+.post {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.post-body {
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--fg);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+}
+
+.titlelink {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.titlelink:hover { text-decoration: underline; }
+
+.media {
+  width: 100%;
+  display: block;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+}
+
+.media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.post-actions a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-actions a:hover { text-decoration: underline; }
+
+.footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 14px 18px 26px;
+  font-size: 12px;
+  color: var(--muted);
+}
