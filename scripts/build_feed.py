@@ -14,8 +14,8 @@ OUT_PATH = os.path.join(ROOT, "feed.json")
 DEFAULT_SUBS = ["cats"]
 DEFAULT_SORT = "hot"     # hot | new | top
 DEFAULT_TOP_T = "day"    # day | week | month | year | all
-DEFAULT_LIMIT = 25       # per subreddit, RSS may not always honor exactly
-MAX_ITEMS_TOTAL = 200    # safety cap
+DEFAULT_LIMIT = 25
+MAX_ITEMS_TOTAL = 200
 
 UA = "CalmFeedGitHubActions/1.0 (+https://github.com/)"
 
@@ -61,7 +61,13 @@ def text(el, tag):
     child = el.find(tag)
     return (child.text or "").strip() if child is not None and child.text else ""
 
-def parse_rss(xml_bytes, subreddit):
+def extract_first(regex, html):
+    if not html:
+        return ""
+    m = re.search(regex, html, flags=re.IGNORECASE | re.DOTALL)
+    return m.group(1).strip() if m else ""
+
+def parse_feed(xml_bytes, subreddit):
     out = []
     try:
         root = ET.fromstring(xml_bytes)
@@ -70,7 +76,7 @@ def parse_rss(xml_bytes, subreddit):
 
     tag = root.tag.lower()
 
-    # -------- RSS 2.0 --------
+    # ---------------- RSS 2.0 ----------------
     if tag.endswith("rss"):
         channel = root.find("channel")
         if channel is None:
@@ -90,15 +96,26 @@ def parse_rss(xml_bytes, subreddit):
                 pass
 
             desc = text(item, "description") or ""
-            html = desc
+            content_html = desc
 
+            # Media extraction (best-effort):
+            # 1) <media:content url="..."> or <media:thumbnail url="...">
             media_url = ""
-            m = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
-            if m:
-                media_url = m.group(1)
+            for ch in list(item):
+                t = ch.tag.lower()
+                if t.endswith("content") or t.endswith("thumbnail"):
+                    u = ch.attrib.get("url", "").strip()
+                    if u:
+                        media_url = u
+                        break
+
+            # 2) <video src="..."> or <img src="..."> in HTML
+            video_url = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
+            if video_url:
+                media_url = media_url or ""
+            img_url = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
-
 
             out.append({
                 "id": comments or link or f"{subreddit}:{title}:{date_ms}",
@@ -107,14 +124,15 @@ def parse_rss(xml_bytes, subreddit):
                 "dateMs": date_ms,
                 "permalink": comments or link,
                 "outboundUrl": link or comments,
-                "mediaUrl": media_url or None,
-                "contentHtml": html or "",
+                "mediaUrl": img_url or media_url or None,
+                "videoUrl": video_url or None,
+                "contentHtml": content_html or "",
                 "isNsfw": nsfw,
             })
 
         return out
 
-    # -------- Atom --------
+    # ---------------- Atom ----------------
     if tag.endswith("feed"):
         ns = {"a": "http://www.w3.org/2005/Atom"}
 
@@ -125,12 +143,12 @@ def parse_rss(xml_bytes, subreddit):
             link = ""
             for l in entry.findall("a:link", ns):
                 if l.get("rel") == "alternate":
-                    link = l.get("href")
+                    link = (l.get("href") or "").strip()
                     break
             if not link:
                 l = entry.find("a:link", ns)
                 if l is not None:
-                    link = l.get("href")
+                    link = (l.get("href") or "").strip()
 
             updated_el = entry.find("a:updated", ns)
             date_ms = int(time.time() * 1000)
@@ -142,30 +160,24 @@ def parse_rss(xml_bytes, subreddit):
                     pass
 
             summary_el = entry.find("a:summary", ns)
-            html = summary_el.text if summary_el is not None and summary_el.text else ""
+            content_html = summary_el.text if summary_el is not None and summary_el.text else ""
 
-            # Extract image
-            media_url = ""
-            img_match = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
-            if img_match:
-                media_url = img_match.group(1)
-            
-            # Extract video
-            video_match = re.search(r'<video[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
-            if video_match:
-                media_url = video_match.group(1)
+            # Atom summaries often include <img> tags for previews
+            img_url = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
+            video_url = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
             out.append({
-                "id": comments or link or f"{subreddit}:{title}:{date_ms}",
+                "id": link or f"{subreddit}:{title}:{date_ms}",
                 "subreddit": subreddit,
                 "title": title,
                 "dateMs": date_ms,
-                "permalink": comments or link,
-                "outboundUrl": link or comments,
-                "mediaUrl": media_url or None,
-                "contentHtml": html or "",
+                "permalink": link,
+                "outboundUrl": link,
+                "mediaUrl": img_url or None,
+                "videoUrl": video_url or None,
+                "contentHtml": content_html or "",
                 "isNsfw": nsfw,
             })
 
@@ -187,14 +199,13 @@ def main():
         url = build_rss_url(sub, sort, top_t, limit)
         try:
             xml = fetch_url(url)
-            posts = parse_rss(xml, sub)
+            posts = parse_feed(xml, sub)
             if hide_nsfw:
                 posts = [p for p in posts if not p.get("isNsfw")]
             all_posts.extend(posts)
         except Exception:
             errors.append(sub)
 
-    # Deduplicate by permalink/outbound
     seen = set()
     deduped = []
     for p in all_posts:
