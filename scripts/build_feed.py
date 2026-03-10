@@ -99,6 +99,7 @@ def parse_rss(xml_bytes, subreddit):
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
+
             out.append({
                 "id": comments or link or f"{subreddit}:{title}:{date_ms}",
                 "subreddit": subreddit,
@@ -107,6 +108,7 @@ def parse_rss(xml_bytes, subreddit):
                 "permalink": comments or link,
                 "outboundUrl": link or comments,
                 "mediaUrl": media_url or None,
+                "contentHtml": html or "",
                 "isNsfw": nsfw,
             })
 
@@ -150,13 +152,14 @@ def parse_rss(xml_bytes, subreddit):
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
             out.append({
-                "id": link or f"{subreddit}:{title}:{date_ms}",
+                "id": comments or link or f"{subreddit}:{title}:{date_ms}",
                 "subreddit": subreddit,
                 "title": title,
                 "dateMs": date_ms,
-                "permalink": link,
-                "outboundUrl": link,
+                "permalink": comments or link,
+                "outboundUrl": link or comments,
                 "mediaUrl": media_url or None,
+                "contentHtml": html or "",
                 "isNsfw": nsfw,
             })
 
