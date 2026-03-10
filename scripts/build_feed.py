@@ -57,15 +57,52 @@ def build_rss_url(sub, sort, top_t, limit):
         params["t"] = top_t
     return base + "?" + urlencode(params)
 
-def text(el, tag):
-    child = el.find(tag)
-    return (child.text or "").strip() if child is not None and child.text else ""
-
 def extract_first(regex, html):
     if not html:
         return ""
     m = re.search(regex, html, flags=re.IGNORECASE | re.DOTALL)
     return m.group(1).strip() if m else ""
+
+def looks_like_image(url: str) -> bool:
+    u = (url or "").lower()
+    return (
+        u.endswith(".png") or u.endswith(".jpg") or u.endswith(".jpeg") or u.endswith(".gif") or u.endswith(".webp")
+        or "i.redd.it/" in u or "preview.redd.it/" in u or "i.imgur.com/" in u
+    )
+
+def looks_like_mp4(url: str) -> bool:
+    return (url or "").lower().endswith(".mp4")
+
+def parse_rfc822_ms(pub: str) -> int:
+    if not pub:
+        return int(time.time() * 1000)
+    for fmt in ("%a, %d %b %Y %H:%M:%S %Z", "%a, %d %b %Y %H:%M:%S %z"):
+        try:
+            dt = datetime.strptime(pub, fmt)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return int(dt.timestamp() * 1000)
+        except Exception:
+            pass
+    return int(time.time() * 1000)
+
+def parse_iso_ms(s: str) -> int:
+    if not s:
+        return int(time.time() * 1000)
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+        return int(dt.timestamp() * 1000)
+    except Exception:
+        return int(time.time() * 1000)
+
+def get_child_text_by_suffix(parent, suffix: str) -> str:
+    """Return text of the first child whose tag endswith(suffix), namespace-agnostic."""
+    if parent is None:
+        return ""
+    for ch in list(parent):
+        if ch.tag.lower().endswith(suffix.lower()) and (ch.text or "").strip():
+            return (ch.text or "").strip()
+    return ""
 
 def parse_feed(xml_bytes, subreddit):
     out = []
@@ -83,37 +120,52 @@ def parse_feed(xml_bytes, subreddit):
             return out
 
         for item in channel.findall("item"):
-            title = text(item, "title") or "(untitled)"
-            link = text(item, "link")
-            comments = text(item, "comments") or link
-            pub = text(item, "pubDate")
+            title = (item.findtext("title") or "").strip() or "(untitled)"
+            link = (item.findtext("link") or "").strip()
+            comments = (item.findtext("comments") or "").strip() or link
 
-            date_ms = int(time.time() * 1000)
-            try:
-                dt = datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
-                date_ms = int(dt.replace(tzinfo=timezone.utc).timestamp() * 1000)
-            except Exception:
-                pass
+            pub = (item.findtext("pubDate") or "").strip()
+            date_ms = parse_rfc822_ms(pub)
 
-            desc = text(item, "description") or ""
-            content_html = desc
+            # Prefer <content:encoded> (namespace) then <description>
+            content_html = get_child_text_by_suffix(item, "encoded")
+            if not content_html:
+                content_html = (item.findtext("description") or "").strip()
 
-            # Media extraction (best-effort):
-            # 1) <media:content url="..."> or <media:thumbnail url="...">
+            # Media candidates
             media_url = ""
-            for ch in list(item):
-                t = ch.tag.lower()
-                if t.endswith("content") or t.endswith("thumbnail"):
-                    u = ch.attrib.get("url", "").strip()
-                    if u:
-                        media_url = u
-                        break
+            video_url = ""
 
-            # 2) <video src="..."> or <img src="..."> in HTML
-            video_url = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
-            if video_url:
-                media_url = media_url or ""
-            img_url = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
+            # 1) <enclosure url="...">
+            enc = item.find("enclosure")
+            if enc is not None:
+                u = (enc.attrib.get("url") or "").strip()
+                t = (enc.attrib.get("type") or "").strip().lower()
+                if u:
+                    if looks_like_mp4(u) or t.startswith("video/"):
+                        video_url = u
+                    elif looks_like_image(u) or t.startswith("image/"):
+                        media_url = u
+
+            # 2) <media:content url="..."> / <media:thumbnail url="..."> (namespace-agnostic)
+            if not media_url:
+                for ch in list(item):
+                    t = ch.tag.lower()
+                    if t.endswith("content") or t.endswith("thumbnail"):
+                        u = (ch.attrib.get("url") or "").strip()
+                        if u and looks_like_image(u):
+                            media_url = u
+                            break
+
+            # 3) HTML scan (video first, then img)
+            if not video_url:
+                v = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
+                if v and looks_like_mp4(v):
+                    video_url = v
+            if not media_url:
+                img = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
+                if img:
+                    media_url = img
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
@@ -124,7 +176,7 @@ def parse_feed(xml_bytes, subreddit):
                 "dateMs": date_ms,
                 "permalink": comments or link,
                 "outboundUrl": link or comments,
-                "mediaUrl": img_url or media_url or None,
+                "mediaUrl": media_url or None,
                 "videoUrl": video_url or None,
                 "contentHtml": content_html or "",
                 "isNsfw": nsfw,
@@ -137,12 +189,12 @@ def parse_feed(xml_bytes, subreddit):
         ns = {"a": "http://www.w3.org/2005/Atom"}
 
         for entry in root.findall("a:entry", ns):
-            title_el = entry.find("a:title", ns)
-            title = title_el.text.strip() if title_el is not None and title_el.text else "(untitled)"
+            title = (entry.findtext("a:title", default="", namespaces=ns) or "").strip() or "(untitled)"
 
+            # Prefer rel="alternate" for permalink
             link = ""
             for l in entry.findall("a:link", ns):
-                if l.get("rel") == "alternate":
+                if (l.get("rel") or "").strip() == "alternate":
                     link = (l.get("href") or "").strip()
                     break
             if not link:
@@ -150,21 +202,42 @@ def parse_feed(xml_bytes, subreddit):
                 if l is not None:
                     link = (l.get("href") or "").strip()
 
-            updated_el = entry.find("a:updated", ns)
-            date_ms = int(time.time() * 1000)
-            if updated_el is not None and updated_el.text:
-                try:
-                    dt = datetime.fromisoformat(updated_el.text.replace("Z", "+00:00"))
-                    date_ms = int(dt.timestamp() * 1000)
-                except Exception:
-                    pass
+            updated = (entry.findtext("a:updated", default="", namespaces=ns) or "").strip()
+            published = (entry.findtext("a:published", default="", namespaces=ns) or "").strip()
+            date_ms = parse_iso_ms(updated or published)
 
-            summary_el = entry.find("a:summary", ns)
-            content_html = summary_el.text if summary_el is not None and summary_el.text else ""
+            # Prefer <content> over <summary> (Reddit commonly uses content for the HTML)
+            content_el = entry.find("a:content", ns)
+            content_html = ""
+            if content_el is not None and (content_el.text or "").strip():
+                content_html = (content_el.text or "").strip()
+            if not content_html:
+                summary = (entry.findtext("a:summary", default="", namespaces=ns) or "").strip()
+                content_html = summary
 
-            # Atom summaries often include <img> tags for previews
-            img_url = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
-            video_url = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
+            media_url = ""
+            video_url = ""
+
+            # Atom can carry media via link rel="enclosure"
+            for l in entry.findall("a:link", ns):
+                if (l.get("rel") or "").strip() == "enclosure":
+                    href = (l.get("href") or "").strip()
+                    typ = (l.get("type") or "").strip().lower()
+                    if href:
+                        if looks_like_mp4(href) or typ.startswith("video/"):
+                            video_url = href
+                        elif looks_like_image(href) or typ.startswith("image/"):
+                            media_url = href
+
+            # HTML scan (video first, then img)
+            if not video_url:
+                v = extract_first(r'<video[^>]+src="([^"]+)"', content_html)
+                if v and looks_like_mp4(v):
+                    video_url = v
+            if not media_url:
+                img = extract_first(r'<img[^>]+src="([^"]+)"', content_html)
+                if img:
+                    media_url = img
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
@@ -175,7 +248,7 @@ def parse_feed(xml_bytes, subreddit):
                 "dateMs": date_ms,
                 "permalink": link,
                 "outboundUrl": link,
-                "mediaUrl": img_url or None,
+                "mediaUrl": media_url or None,
                 "videoUrl": video_url or None,
                 "contentHtml": content_html or "",
                 "isNsfw": nsfw,
@@ -206,6 +279,7 @@ def main():
         except Exception:
             errors.append(sub)
 
+    # Deduplicate by permalink/outbound
     seen = set()
     deduped = []
     for p in all_posts:
