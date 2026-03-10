@@ -167,22 +167,6 @@ async function refreshFeed() {
   }
 }
 
-function renderFeed(posts) {
-  els.feed.innerHTML = "";
-
-  if (!posts || posts.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "hint";
-    empty.textContent = "No posts to display.";
-    els.feed.appendChild(empty);
-    return;
-  }
-
-  const frag = document.createDocumentFragment();
-  for (const p of posts) frag.appendChild(renderPost(p));
-  els.feed.appendChild(frag);
-}
-
 function renderPost(p) {
   const article = document.createElement("article");
   article.className = "post";
@@ -223,10 +207,26 @@ function renderPost(p) {
 
   body.appendChild(meta);
   body.appendChild(titleLink);
-  body.appendChild(actions);
 
+  // ---------- TEXT CONTENT ----------
+  if (p.contentHtml) {
+    const content = document.createElement("div");
+    content.className = "post-content";
+
+    // Basic sanitization: remove scripts
+    const temp = document.createElement("div");
+    temp.innerHTML = p.contentHtml;
+
+    temp.querySelectorAll("script").forEach(s => s.remove());
+
+    content.innerHTML = temp.innerHTML;
+    body.appendChild(content);
+  }
+
+  body.appendChild(actions);
   article.appendChild(body);
 
+  // ---------- IMAGE ----------
   if (p.mediaUrl && looksLikeImageUrl(p.mediaUrl)) {
     const media = document.createElement("div");
     media.className = "media";
@@ -241,7 +241,26 @@ function renderPost(p) {
     article.appendChild(media);
   }
 
+  // ---------- VIDEO ----------
+  if (p.mediaUrl && looksLikeVideoUrl(p.mediaUrl)) {
+    const media = document.createElement("div");
+    media.className = "media";
+
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+    video.src = p.mediaUrl;
+
+    media.appendChild(video);
+    article.appendChild(media);
+  }
+
   return article;
+}
+
+function looksLikeVideoUrl(url) {
+  const u = String(url || "").toLowerCase();
+  return u.endsWith(".mp4") || u.includes("v.redd.it");
 }
 
 function looksLikeImageUrl(url) {
