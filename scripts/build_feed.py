@@ -144,10 +144,16 @@ def parse_rss(xml_bytes, subreddit):
             summary_el = entry.find("a:summary", ns)
             html = summary_el.text if summary_el is not None and summary_el.text else ""
 
+            # Extract image
             media_url = ""
-            m = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
-            if m:
-                media_url = m.group(1)
+            img_match = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
+            if img_match:
+                media_url = img_match.group(1)
+            
+            # Extract video
+            video_match = re.search(r'<video[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
+            if video_match:
+                media_url = video_match.group(1)
 
             nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
 
