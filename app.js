@@ -1,14 +1,16 @@
 "use strict";
 
-const STORAGE_KEY = "calmFeed.settings.v2";
+const STORAGE_KEY = "calmFeed.settings.v3";
 
 const DEFAULT_SETTINGS = Object.freeze({
-  subreddits: ["cats"],     // UI-only; global feed is produced by GitHub Actions
+  subreddits: ["cats"],        // UI-only
   sort: "hot",
   topTime: "day",
   limit: 25,
   hideNsfw: true,
-  showTextOnly: false       // (a) OFF by default: hide text-only posts
+  showTextOnly: false,         // off by default
+  enableTitleFilter: true,     // on by default (optional but recommended)
+  titleFilter: "dying, lost, cancer"
 });
 
 const els = {
@@ -23,6 +25,8 @@ const els = {
   limitInput: document.getElementById("limitInput"),
   hideNsfwInput: document.getElementById("hideNsfwInput"),
   showTextOnlyInput: document.getElementById("showTextOnlyInput"),
+  enableTitleFilterInput: document.getElementById("enableTitleFilterInput"),
+  titleFilterInput: document.getElementById("titleFilterInput"),
   resetBtn: document.getElementById("resetBtn"),
   status: document.getElementById("status"),
   feed: document.getElementById("feed")
@@ -36,10 +40,12 @@ refreshFeed();
 function initUI() {
   applySettingsToForm(currentSettings);
   updateTopTimeVisibility();
+  updateTitleFilterEnabledUI();
 
   els.refreshBtn.addEventListener("click", () => refreshFeed());
   els.toggleSettingsBtn.addEventListener("click", toggleSettings);
   els.sortSelect.addEventListener("change", updateTopTimeVisibility);
+  els.enableTitleFilterInput.addEventListener("change", updateTitleFilterEnabledUI);
 
   els.settingsForm.addEventListener("submit", (ev) => {
     ev.preventDefault();
@@ -55,6 +61,7 @@ function initUI() {
     saveSettings(currentSettings);
     applySettingsToForm(currentSettings);
     updateTopTimeVisibility();
+    updateTitleFilterEnabledUI();
     setStatus("Reset. Refreshing…");
     refreshFeed();
   });
@@ -69,6 +76,11 @@ function toggleSettings() {
 function updateTopTimeVisibility() {
   const show = els.sortSelect.value === "top";
   els.topTimeField.style.display = show ? "block" : "none";
+}
+
+function updateTitleFilterEnabledUI() {
+  els.titleFilterInput.disabled = !els.enableTitleFilterInput.checked;
+  els.titleFilterInput.style.opacity = els.enableTitleFilterInput.checked ? "1" : "0.65";
 }
 
 function loadSettings() {
@@ -101,6 +113,9 @@ function sanitizeSettings(maybe) {
   s.hideNsfw = Boolean(s.hideNsfw);
   s.showTextOnly = Boolean(s.showTextOnly);
 
+  s.enableTitleFilter = Boolean(s.enableTitleFilter);
+  s.titleFilter = String(s.titleFilter || "");
+
   s.subreddits = Array.from(new Set(s.subreddits));
   return s;
 }
@@ -112,6 +127,9 @@ function applySettingsToForm(settings) {
   els.limitInput.value = String(settings.limit);
   els.hideNsfwInput.checked = settings.hideNsfw;
   els.showTextOnlyInput.checked = settings.showTextOnly;
+
+  els.enableTitleFilterInput.checked = settings.enableTitleFilter;
+  els.titleFilterInput.value = settings.titleFilter;
 }
 
 function readSettingsFromForm() {
@@ -127,7 +145,9 @@ function readSettingsFromForm() {
     topTime: els.timeSelect.value,
     limit: Number(els.limitInput.value),
     hideNsfw: els.hideNsfwInput.checked,
-    showTextOnly: els.showTextOnlyInput.checked
+    showTextOnly: els.showTextOnlyInput.checked,
+    enableTitleFilter: els.enableTitleFilterInput.checked,
+    titleFilter: els.titleFilterInput.value
   });
 }
 
@@ -154,7 +174,13 @@ async function refreshFeed() {
     const data = await res.json();
     let posts = Array.isArray(data.posts) ? data.posts : [];
 
-    // Apply (a) filter: hide text-only posts unless user enables them.
+    // Title keyword filter (optional)
+    const filters = buildTitleFilters(currentSettings);
+    if (filters.enabled && filters.keywords.length) {
+      posts = posts.filter(p => !titleMatchesAny(String(p.title || ""), filters.keywords));
+    }
+
+    // Text-only filter (default hides text-only)
     const showTextOnly = currentSettings.showTextOnly;
     posts = posts.filter(p => showTextOnly || !isTextOnlyPost(p));
 
@@ -172,16 +198,31 @@ async function refreshFeed() {
   }
 }
 
+function buildTitleFilters(settings) {
+  const enabled = Boolean(settings.enableTitleFilter);
+  const keywords = String(settings.titleFilter || "")
+    .split(",")
+    .map(s => s.trim().toLowerCase())
+    .filter(Boolean);
+  return { enabled, keywords };
+}
+
+function titleMatchesAny(title, keywords) {
+  const t = String(title || "").toLowerCase();
+  for (const k of keywords) {
+    if (k && t.includes(k)) return true;
+  }
+  return false;
+}
+
 function isTextOnlyPost(p) {
   const hasMedia = Boolean(p && (p.mediaUrl || p.videoUrl));
   if (hasMedia) return false;
 
-  // If contentHtml contains ONLY the common "submitted by" / link/comments boilerplate,
-  // treat it as text-only (we'll also remove it from display regardless).
   const raw = String(p.contentHtml || "").trim();
   if (!raw) return true;
 
-  const cleaned = cleanRedditBoilerplate(raw).trim();
+  const cleaned = extractMeaningfulText(raw).trim();
   return cleaned.length === 0;
 }
 
@@ -191,7 +232,7 @@ function renderFeed(posts) {
   if (!posts || posts.length === 0) {
     const empty = document.createElement("div");
     empty.className = "hint";
-    empty.textContent = "No posts to display.";
+    empty.textContent = "No posts to display (or all were filtered).";
     els.feed.appendChild(empty);
     return;
   }
@@ -242,21 +283,19 @@ function renderPost(p) {
   body.appendChild(meta);
   body.appendChild(titleLink);
 
-  // (b) Remove "submitted by /u/..." and link/comments boilerplate from contentHtml.
-  const cleanedHtml = cleanRedditBoilerplate(String(p.contentHtml || ""));
-  const excerptHtml = excerptHtmlSafe(cleanedHtml);
-
-  if (excerptHtml) {
+  // Clean and render excerpt (no "submitted by", no [link] [comments])
+  const excerpt = buildExcerptHtml(p.contentHtml);
+  if (excerpt) {
     const content = document.createElement("div");
     content.className = "post-content";
-    content.innerHTML = excerptHtml;
+    content.innerHTML = excerpt;
     body.appendChild(content);
   }
 
   body.appendChild(actions);
   article.appendChild(body);
 
-  // Media: show only the main media block (not inline content thumbnails)
+  // Media (kept separate and clean)
   if (p.videoUrl && looksLikeMp4(p.videoUrl)) {
     const media = document.createElement("div");
     media.className = "media";
@@ -285,60 +324,42 @@ function renderPost(p) {
   return article;
 }
 
-function cleanRedditBoilerplate(html) {
-  if (!html) return "";
+function buildExcerptHtml(contentHtml) {
+  const raw = String(contentHtml || "").trim();
+  if (!raw) return "";
 
-  // Parse to DOM to remove unwanted elements and attributes safely.
   const temp = document.createElement("div");
-  temp.innerHTML = html;
+  temp.innerHTML = raw;
 
-  // Drop potentially unsafe tags.
+  // Remove unsafe elements
   temp.querySelectorAll("script, iframe, object, embed, style").forEach(n => n.remove());
 
-  // Remove event handlers.
+  // Remove images from excerpt (media rendered separately)
+  temp.querySelectorAll("img").forEach(img => img.remove());
+
+  // Remove user/profile links and typical boilerplate anchors
+  temp.querySelectorAll('a[href*="/user/"], a[href*="/u/"]').forEach(a => a.remove());
+
+  // Remove [link] [comments] anchors by text content
+  temp.querySelectorAll("a").forEach(a => {
+    const t = (a.textContent || "").trim().toLowerCase();
+    if (t === "link" || t === "comments") a.remove();
+  });
+
+  // Remove “submitted by” text nodes / paragraphs
+  removeTextMatching(temp, /\bsubmitted by\b/i);
+
+  // Strip event handlers
   temp.querySelectorAll("*").forEach(el => {
     for (const attr of Array.from(el.attributes)) {
       if (/^on/i.test(attr.name)) el.removeAttribute(attr.name);
     }
   });
 
-  // Remove common "submitted by" text blocks and [link] [comments] patterns:
-  // Approach: remove anchors/strings that match those patterns.
-  // 1) Remove anchors linking to user profiles (/user/ or /u/)
-  temp.querySelectorAll('a[href*="/user/"], a[href*="/u/"]').forEach(a => a.remove());
-
-  // 2) Remove bracket links like [link] [comments] if present as anchors
-  temp.querySelectorAll("a").forEach(a => {
-    const t = (a.textContent || "").trim().toLowerCase();
-    if (t === "link" || t === "comments") a.remove();
-  });
-
-  // 3) Remove literal "submitted by" phrases in text nodes (best-effort)
-  const text = (temp.textContent || "").toLowerCase();
-  if (text.includes("submitted by")) {
-    // If the entire block is just boilerplate, clear it.
-    // Otherwise, we rely on excerpting below.
-  }
-
-  return temp.innerHTML;
-}
-
-function excerptHtmlSafe(html) {
-  const s = String(html || "").trim();
-  if (!s) return "";
-
-  // Build a clean excerpt: allow only a small set of tags, strip images (handled separately).
-  const temp = document.createElement("div");
-  temp.innerHTML = s;
-
-  // Remove images from excerpt (keeps layout clean; media is rendered below)
-  temp.querySelectorAll("img").forEach(img => img.remove());
-
-  // Allowlist tags; unwrap others
+  // Allowlist tags and unwrap others
   const allowed = new Set(["A", "P", "BR", "EM", "STRONG", "B", "I", "UL", "OL", "LI", "BLOCKQUOTE", "CODE"]);
   temp.querySelectorAll("*").forEach(el => {
     if (!allowed.has(el.tagName)) {
-      // unwrap element
       const parent = el.parentNode;
       while (el.firstChild) parent.insertBefore(el.firstChild, el);
       parent.removeChild(el);
@@ -348,11 +369,51 @@ function excerptHtmlSafe(html) {
     }
   });
 
-  // If after cleaning the text is empty, do not render.
+  // If nothing meaningful remains, return empty
   const plain = (temp.textContent || "").trim();
   if (!plain) return "";
 
+  // Further: if it is ONLY the word "submitted by" etc., drop it
+  if (!extractMeaningfulText(temp.innerHTML).trim()) return "";
+
   return temp.innerHTML;
+}
+
+function extractMeaningfulText(html) {
+  const temp = document.createElement("div");
+  temp.innerHTML = String(html || "");
+
+  // Remove boilerplate elements
+  temp.querySelectorAll("script, iframe, object, embed, style, img").forEach(n => n.remove());
+  temp.querySelectorAll('a[href*="/user/"], a[href*="/u/"]').forEach(a => a.remove());
+  temp.querySelectorAll("a").forEach(a => {
+    const t = (a.textContent || "").trim().toLowerCase();
+    if (t === "link" || t === "comments") a.remove();
+  });
+  removeTextMatching(temp, /\bsubmitted by\b/i);
+
+  return (temp.textContent || "").replace(/\s+/g, " ").trim();
+}
+
+function removeTextMatching(root, regex) {
+  // Remove whole <p>/<div>/<span> blocks whose text matches regex after trimming.
+  const candidates = root.querySelectorAll("p, div, span, li, blockquote");
+  candidates.forEach(el => {
+    const t = (el.textContent || "").replace(/\s+/g, " ").trim();
+    if (t && regex.test(t)) {
+      el.remove();
+    }
+  });
+
+  // Also remove standalone text nodes containing the phrase
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const toClear = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const t = (node.nodeValue || "");
+    if (regex.test(t)) toClear.push(node);
+  }
+  toClear.forEach(n => { n.nodeValue = ""; });
 }
 
 function looksLikeImageUrl(url) {
@@ -364,8 +425,7 @@ function looksLikeImageUrl(url) {
 }
 
 function looksLikeMp4(url) {
-  const u = String(url || "").toLowerCase();
-  return u.endsWith(".mp4");
+  return String(url || "").toLowerCase().endsWith(".mp4");
 }
 
 function formatRelativeTime(dateMs) {
