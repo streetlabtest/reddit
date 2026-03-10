@@ -177,27 +177,28 @@ function proxiedCandidates(url) {
 }
 
 async function refreshFeed() {
-  const settings = sanitizeSettings(currentSettings);
-  const subs = settings.subreddits;
-
   els.feed.innerHTML = "";
-  setStatus(`Loading r/${subs.join(", r/")}…`);
+  setStatus("Loading…");
 
-  const allPosts = [];
-  const errors = [];
+  try {
+    const res = await fetch("./feed.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
 
-  for (const sub of subs) {
-    try {
-      const rssUrl = buildRssUrl(sub, settings);
-      const xmlText = await fetchTextViaProxies(rssUrl, 15000);
-      const posts = parseRedditFeed(xmlText, sub);
+    const posts = Array.isArray(data.posts) ? data.posts : [];
+    renderFeed(posts);
 
-      const filtered = settings.hideNsfw ? posts.filter(p => !p.isNsfw) : posts;
-      allPosts.push(...filtered);
-    } catch (e) {
-      errors.push(`r/${sub}`);
+    const stamp = (data.generatedAt || "").replace("T", " ").replace("Z", " UTC");
+    if (data.errors && data.errors.length) {
+      setStatus(`Loaded ${posts.length} posts. Failed: r/${data.errors.join(", r/")}. Updated: ${stamp || "recently"}`);
+    } else {
+      setStatus(`Loaded ${posts.length} posts. Updated: ${stamp || "recently"}`);
     }
+  } catch (e) {
+    setStatus("Failed to load feed.json. Ensure the GitHub Action has created it and it is in the repo root.");
+    renderFeed([]);
   }
+}
 
   const deduped = dedupePosts(allPosts);
   deduped.sort((a, b) => b.dateMs - a.dateMs);
