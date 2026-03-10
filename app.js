@@ -3,15 +3,24 @@
 /*
   Calm Feed: minimalist, allowlisted subreddit reader (RSS).
 
-  This is a static GitHub Pages-friendly implementation. Because browsers enforce CORS,
-  RSS is fetched through a public CORS proxy (AllOrigins).
+  GitHub Pages is static; browsers enforce CORS, so we fetch Reddit RSS through
+  CORS-friendly “text mirror / proxy” services. Public proxies can be flaky,
+  so we try multiple in sequence and accept the first that returns valid RSS/Atom.
 */
 
 const STORAGE_KEY = "calmFeed.settings.v1";
 
-// Public CORS proxy endpoint.
-// AllOrigins supports /raw?url=... which returns the upstream body with permissive CORS headers.
-const PROXY_BASE = "https://api.allorigins.win/raw?url=";
+/*
+  Multiple proxy candidates (in order). If one fails (down/rate-limited/blocked),
+  we fall back to the next.
+
+  1) AllOrigins raw endpoint (adds CORS headers)
+  2) r.jina.ai URL mirror (often bypasses CORS by serving content itself)
+*/
+const PROXIES = [
+  (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
+  (u) => `https://r.jina.ai/http://${u.replace(/^https?:\/\//, "")}`
+];
 
 const DEFAULT_SETTINGS = Object.freeze({
   subreddits: ["cats"],
@@ -163,8 +172,8 @@ function buildRssUrl(subreddit, settings) {
   return url.toString();
 }
 
-function proxied(url) {
-  return `${PROXY_BASE}${encodeURIComponent(url)}`;
+function proxiedCandidates(url) {
+  return PROXIES.map((fn) => fn(url));
 }
 
 async function refreshFeed() {
@@ -180,7 +189,7 @@ async function refreshFeed() {
   for (const sub of subs) {
     try {
       const rssUrl = buildRssUrl(sub, settings);
-      const xmlText = await fetchTextWithTimeout(proxied(rssUrl), 15000);
+      const xmlText = await fetchTextViaProxies(rssUrl, 15000);
       const posts = parseRedditFeed(xmlText, sub);
 
       const filtered = settings.hideNsfw ? posts.filter(p => !p.isNsfw) : posts;
@@ -199,7 +208,7 @@ async function refreshFeed() {
   const stamp = `${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
 
   if (deduped.length === 0 && errors.length > 0) {
-    setStatus(`Failed to load: ${errors.join(", ")}. (Proxy/rate-limit issues are common.) Updated: ${stamp}`);
+    setStatus(`Failed to load: ${errors.join(", ")}. (Proxy/rate-limit/blocking issues are common.) Updated: ${stamp}`);
     return;
   }
 
@@ -208,6 +217,27 @@ async function refreshFeed() {
   } else {
     setStatus(`Loaded ${deduped.length} posts. Updated: ${stamp}`);
   }
+}
+
+async function fetchTextViaProxies(url, timeoutMs) {
+  let lastErr = null;
+
+  for (const candidate of proxiedCandidates(url)) {
+    try {
+      const text = await fetchTextWithTimeout(candidate, timeoutMs);
+
+      // Sanity check: RSS/Atom should look like XML, not an HTML block page.
+      const head = text.slice(0, 400).toLowerCase();
+      const looksXml = head.includes("<?xml") || head.includes("<rss") || head.includes("<feed");
+      if (!looksXml) throw new Error("Non-RSS response (likely blocked).");
+
+      return text;
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+
+  throw lastErr || new Error("All proxies failed.");
 }
 
 async function fetchTextWithTimeout(url, timeoutMs) {
@@ -232,7 +262,6 @@ function parseRedditFeed(xmlText, subreddit) {
   const parser = new DOMParser();
   const doc = parser.parseFromString(xmlText, "application/xml");
 
-  // Detect parse errors
   if (doc.querySelector("parsererror")) {
     throw new Error("Bad XML (parsererror).");
   }
@@ -258,7 +287,6 @@ function parseRssItem(item, subreddit) {
     text(item, "description") ||
     "";
 
-  // Reddit often includes a comments permalink. If not, we fall back to <comments> or <link>.
   const commentsCandidate = text(item, "comments") || link;
   const permalink = pickPermalink(commentsCandidate, link, contentHtml);
 
@@ -328,7 +356,6 @@ function parseDateMs(raw) {
 }
 
 function pickPermalink(a, b, contentHtml) {
-  // Prefer a Reddit comments URL if present.
   const candidates = [a, b, extractFirstRedditPermalink(contentHtml)].filter(Boolean);
   for (const c of candidates) {
     if (looksLikeRedditPermalink(c)) return c;
@@ -348,7 +375,6 @@ function extractFirstRedditPermalink(contentHtml) {
 function extractOutboundUrl(contentHtml, permalink) {
   const links = extractLinksFromHtml(contentHtml);
 
-  // Prefer a non-permalink absolute URL.
   for (const u of links) {
     if (!u.startsWith("http")) continue;
     if (permalink && normalizeUrl(u) === normalizeUrl(permalink)) continue;
@@ -358,18 +384,15 @@ function extractOutboundUrl(contentHtml, permalink) {
 }
 
 function extractMediaUrl(itemEl, contentHtml) {
-  // 1) media:content / media:thumbnail (RSS style)
   const media = itemEl.querySelector("media\\:content, media\\:thumbnail");
   if (media) {
     const u = media.getAttribute("url");
     if (u) return u;
   }
 
-  // 2) first <img src="..."> in HTML content
   const img = extractFirstImgFromHtml(contentHtml);
   if (img) return img;
 
-  // 3) first link that looks like an image
   const links = extractLinksFromHtml(contentHtml);
   const imgLink = links.find(looksLikeImageUrl);
   return imgLink || "";
@@ -379,11 +402,9 @@ function extractLinksFromHtml(html) {
   if (!html) return [];
   const doc = new DOMParser().parseFromString(`<div>${html}</div>`, "text/html");
   const anchors = Array.from(doc.querySelectorAll("a"));
-  const hrefs = anchors
-    .map(a => a.getAttribute("href") || "")
-    .map(s => s.trim())
+  return anchors
+    .map(a => (a.getAttribute("href") || "").trim())
     .filter(s => s.startsWith("http"));
-  return hrefs;
 }
 
 function extractFirstImgFromHtml(html) {
@@ -398,7 +419,6 @@ function looksLikeImageUrl(url) {
   if (!url) return false;
   const u = url.toLowerCase();
   if (/\.(png|jpe?g|gif|webp)(\?|#|$)/i.test(u)) return true;
-  // Common Reddit image hosts even when extensions vary.
   if (u.includes("i.redd.it/") || u.includes("preview.redd.it/")) return true;
   return false;
 }
