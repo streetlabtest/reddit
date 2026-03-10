@@ -62,60 +62,106 @@ def text(el, tag):
     return (child.text or "").strip() if child is not None and child.text else ""
 
 def parse_rss(xml_bytes, subreddit):
-    # RSS 2.0
     out = []
     try:
         root = ET.fromstring(xml_bytes)
     except Exception:
         return out
 
-    channel = root.find("channel")
-    if channel is None:
+    tag = root.tag.lower()
+
+    # -------- RSS 2.0 --------
+    if tag.endswith("rss"):
+        channel = root.find("channel")
+        if channel is None:
+            return out
+
+        for item in channel.findall("item"):
+            title = text(item, "title") or "(untitled)"
+            link = text(item, "link")
+            comments = text(item, "comments") or link
+            pub = text(item, "pubDate")
+
+            date_ms = int(time.time() * 1000)
+            try:
+                dt = datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
+                date_ms = int(dt.replace(tzinfo=timezone.utc).timestamp() * 1000)
+            except Exception:
+                pass
+
+            desc = text(item, "description") or ""
+            html = desc
+
+            media_url = ""
+            m = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
+            if m:
+                media_url = m.group(1)
+
+            nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
+
+            out.append({
+                "id": comments or link or f"{subreddit}:{title}:{date_ms}",
+                "subreddit": subreddit,
+                "title": title,
+                "dateMs": date_ms,
+                "permalink": comments or link,
+                "outboundUrl": link or comments,
+                "mediaUrl": media_url or None,
+                "isNsfw": nsfw,
+            })
+
         return out
 
-    for item in channel.findall("item"):
-        title = text(item, "title") or "(untitled)"
-        link = text(item, "link")
-        comments = text(item, "comments") or link
-        pub = text(item, "pubDate")
-        # Try parse RFC822-ish date; fallback to now
-        date_ms = int(time.time() * 1000)
-        try:
-            # Example: "Mon, 10 Mar 2026 18:14:15 GMT"
-            dt = datetime.strptime(pub, "%a, %d %b %Y %H:%M:%S %Z")
-            date_ms = int(dt.replace(tzinfo=timezone.utc).timestamp() * 1000)
-        except Exception:
-            pass
+    # -------- Atom --------
+    if tag.endswith("feed"):
+        ns = {"a": "http://www.w3.org/2005/Atom"}
 
-        desc = text(item, "description") or ""
-        content = ""
-        # content:encoded has a namespace; ElementTree represents it with full URI if declared.
-        # We scan for any tag ending with "encoded".
-        for ch in list(item):
-            if ch.tag.lower().endswith("encoded") and (ch.text or "").strip():
-                content = (ch.text or "").strip()
-                break
+        for entry in root.findall("a:entry", ns):
+            title_el = entry.find("a:title", ns)
+            title = title_el.text.strip() if title_el is not None and title_el.text else "(untitled)"
 
-        html = content or desc
+            link = ""
+            for l in entry.findall("a:link", ns):
+                if l.get("rel") == "alternate":
+                    link = l.get("href")
+                    break
+            if not link:
+                l = entry.find("a:link", ns)
+                if l is not None:
+                    link = l.get("href")
 
-        # Heuristic media extraction: first <img src="..."> if present
-        media_url = ""
-        m = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
-        if m:
-            media_url = m.group(1)
+            updated_el = entry.find("a:updated", ns)
+            date_ms = int(time.time() * 1000)
+            if updated_el is not None and updated_el.text:
+                try:
+                    dt = datetime.fromisoformat(updated_el.text.replace("Z", "+00:00"))
+                    date_ms = int(dt.timestamp() * 1000)
+                except Exception:
+                    pass
 
-        nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
+            summary_el = entry.find("a:summary", ns)
+            html = summary_el.text if summary_el is not None and summary_el.text else ""
 
-        out.append({
-            "id": comments or link or f"{subreddit}:{title}:{date_ms}",
-            "subreddit": subreddit,
-            "title": title,
-            "dateMs": date_ms,
-            "permalink": comments or link,
-            "outboundUrl": link or comments,
-            "mediaUrl": media_url or None,
-            "isNsfw": nsfw,
-        })
+            media_url = ""
+            m = re.search(r'<img[^>]+src="([^"]+)"', html, flags=re.IGNORECASE)
+            if m:
+                media_url = m.group(1)
+
+            nsfw = bool(re.search(r"\bnsfw\b", title, flags=re.IGNORECASE))
+
+            out.append({
+                "id": link or f"{subreddit}:{title}:{date_ms}",
+                "subreddit": subreddit,
+                "title": title,
+                "dateMs": date_ms,
+                "permalink": link,
+                "outboundUrl": link,
+                "mediaUrl": media_url or None,
+                "isNsfw": nsfw,
+            })
+
+        return out
+
     return out
 
 def main():
