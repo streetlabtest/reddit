@@ -29,7 +29,7 @@
 
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: var(--bg);
   color: var(--fg);
 }
@@ -121,10 +121,7 @@ body {
   gap: 10px;
   align-items: center;
   font-size: 13px;
-  color: var(--fg);
 }
-
-.checkbox input { transform: translateY(1px); }
 
 .actions {
   display: flex;
@@ -215,6 +212,27 @@ body {
 
 .titlelink:hover { text-decoration: underline; }
 
+.post-content {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--fg);
+}
+
+.post-content a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-content a:hover { text-decoration: underline; }
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
 .media {
   width: 100%;
   display: block;
@@ -228,6 +246,13 @@ body {
   display: block;
   max-height: 520px;
   object-fit: contain;
+}
+
+.media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 520px;
 }
 
 .post-actions {
