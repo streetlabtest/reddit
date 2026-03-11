@@ -1,19 +1,19 @@
 /* Quiet Feed client
    - Loads feed.json (built by GitHub Actions)
-   - Applies local filters:
-       (1) allowlist of subreddits (localStorage)
-       (2) hide text-only unless enabled
-       (3) title keyword filter
-   - Finite pagination (no infinite scroll)
-   - Session cap (25 posts per session) with gentle stop screen
-   - Text truncation with “Show more”
-   - “Updated today/yesterday” status text
+   - Local controls:
+       * allowed subreddits (textarea)
+       * ban list (negative keywords, comma separated)
+       * show text-only toggle
+   - Session cap: 25 posts per session (sessionStorage)
+   - Text truncation with "Show more"
+   - Video support (mp4/webm) via native <video> control (no autoplay)
+   - No display of total feed size; status shows "25 posts per session" + updated label
 */
 
 const STORAGE_KEYS = {
   subreddits: "quietfeed.subreddits",
+  banlist: "quietfeed.banlist",
   showTextOnly: "quietfeed.showTextOnly",
-  keyword: "quietfeed.keyword",
   page: "quietfeed.page"
 };
 
@@ -23,8 +23,8 @@ const SESSION_KEYS = {
 
 const DEFAULTS = {
   subreddits: ["EarthPorn", "NatureIsFuckingLit", "Eyebleach", "CozyPlaces", "mildlyinteresting"],
+  banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
-  keyword: "",
   perPage: 20,
   sessionCap: 25,
   textPreviewChars: 700
@@ -72,17 +72,6 @@ function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
 }
 
-function titleMatches(itemTitle, keyword) {
-  if (!keyword) return true;
-  return (itemTitle || "").toLowerCase().includes(keyword.toLowerCase());
-}
-
-function subredditAllowed(itemSub, allowedSubs) {
-  if (!allowedSubs || allowedSubs.length === 0) return true;
-  const set = new Set(allowedSubs.map(s => (s || "").toLowerCase()));
-  return set.has((itemSub || "").toLowerCase());
-}
-
 function isProbablyEmptyText(t) {
   if (!t) return true;
   const cleaned = t.replace(/\s+/g, " ").trim();
@@ -111,7 +100,6 @@ function humanUpdatedLabel(isoUtc) {
   if (d >= startOfToday) return "Updated today";
   if (d >= startOfYesterday) return "Updated yesterday";
 
-  // Calm fallback: YYYY-MM-DD (local)
   const yyyy = d.getFullYear();
   const mm = String(d.getMonth() + 1).padStart(2, "0");
   const dd = String(d.getDate()).padStart(2, "0");
@@ -121,7 +109,6 @@ function humanUpdatedLabel(isoUtc) {
 function truncateText(text, maxChars) {
   const t = (text || "").trim();
   if (t.length <= maxChars) return { preview: t, truncated: false };
-  // cut at boundary to reduce jaggedness
   const cut = t.slice(0, maxChars);
   const lastSpace = cut.lastIndexOf(" ");
   const preview = (lastSpace > 200 ? cut.slice(0, lastSpace) : cut).trim();
@@ -188,6 +175,7 @@ function buildCard(item, sessionSeenSet) {
     }
   }
 
+  // If there's an image, show it (image after text)
   if (item.image) {
     const wrap = document.createElement("div");
     wrap.className = "img";
@@ -199,9 +187,24 @@ function buildCard(item, sessionSeenSet) {
     card.appendChild(wrap);
   }
 
+  // If there's a video, show a native player (no autoplay)
+  if (item.video) {
+    const wrap = document.createElement("div");
+    wrap.className = "img";
+    const video = document.createElement("video");
+    video.controls = true;
+    video.preload = "metadata";
+    video.playsInline = true;
+    // Do not set autoplay; user initiates.
+    video.src = item.video;
+    wrap.appendChild(video);
+    card.appendChild(wrap);
+  }
+
   const meta = document.createElement("div");
   meta.className = "meta";
 
+  // Show subreddit only (no author/submitter)
   const left = document.createElement("span");
   left.textContent = `/r/${escapeText(item.subreddit || "")}`;
   meta.appendChild(left);
@@ -224,7 +227,7 @@ function buildCard(item, sessionSeenSet) {
 
   card.appendChild(meta);
 
-  // Mark as "seen" for this session once it is actually rendered.
+  // Mark as seen
   if (item.id) {
     sessionSeenSet.add(item.id);
   }
@@ -239,30 +242,38 @@ async function loadFeed() {
 }
 
 function getStateFromUI() {
-  const keyword = document.getElementById("keyword").value || "";
+  const banlistRaw = document.getElementById("banlist").value || "";
+  const banWords = banlistRaw
+    .split(",")
+    .map(w => w.trim().toLowerCase())
+    .filter(Boolean);
+
   const showTextOnly = document.getElementById("showTextOnly").checked;
 
   const subsText = document.getElementById("subreddits").value || "";
   const allowedSubs = uniqNormSubs(subsText.split("\n"));
 
-  return { keyword, showTextOnly, allowedSubs };
+  return { banWords, showTextOnly, allowedSubs };
 }
 
 function persistStateFromUI() {
-  const { keyword, showTextOnly, allowedSubs } = getStateFromUI();
-  saveJSON(STORAGE_KEYS.keyword, keyword);
+  const banlist = document.getElementById("banlist").value || "";
+  saveJSON(STORAGE_KEYS.banlist, banlist);
+  const showTextOnly = document.getElementById("showTextOnly").checked;
   saveJSON(STORAGE_KEYS.showTextOnly, showTextOnly);
+  const subsText = document.getElementById("subreddits").value || "";
+  const allowedSubs = uniqNormSubs(subsText.split("\n"));
   saveJSON(STORAGE_KEYS.subreddits, allowedSubs);
 }
 
 function restoreUIFromStorage() {
   const subs = loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits);
+  const banlist = loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist);
   const showTextOnly = loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly);
-  const keyword = loadJSON(STORAGE_KEYS.keyword, DEFAULTS.keyword);
 
   document.getElementById("subreddits").value = (subs || []).join("\n");
+  document.getElementById("banlist").value = banlist || "";
   document.getElementById("showTextOnly").checked = !!showTextOnly;
-  document.getElementById("keyword").value = keyword || "";
 }
 
 function setPager(page, totalPages, stopReached) {
@@ -271,10 +282,22 @@ function setPager(page, totalPages, stopReached) {
   document.getElementById("next").disabled = stopReached || page >= totalPages;
 }
 
-function applyFilters(items, allowedSubs, keyword, showTextOnly) {
+function titleAllowed(title, banWords) {
+  if (!banWords || banWords.length === 0) return true;
+  const t = (title || "").toLowerCase();
+  return !banWords.some(word => t.includes(word));
+}
+
+function subredditAllowed(itemSub, allowedSubs) {
+  if (!allowedSubs || allowedSubs.length === 0) return true;
+  const set = new Set(allowedSubs.map(s => (s || "").toLowerCase()));
+  return set.has((itemSub || "").toLowerCase());
+}
+
+function applyFilters(items, allowedSubs, banWords, showTextOnly) {
   return (items || []).filter(it => {
     if (!subredditAllowed(it.subreddit, allowedSubs)) return false;
-    if (!titleMatches(it.title, keyword)) return false;
+    if (!titleAllowed(it.title, banWords)) return false;
     if (!showTextOnly && it.is_text_only) return false;
     return true;
   });
@@ -308,7 +331,6 @@ function render(items, page, perPage) {
   const start = (p - 1) * perPage;
   const pageItems = items.slice(start, start + perPage);
 
-  let renderedThisView = 0;
   let stopReached = false;
 
   for (const it of pageItems) {
@@ -317,7 +339,6 @@ function render(items, page, perPage) {
       break;
     }
     feedEl.appendChild(buildCard(it, sessionSeen));
-    renderedThisView += 1;
   }
 
   setSessionSeenSet(sessionSeen);
@@ -332,7 +353,7 @@ function render(items, page, perPage) {
 }
 
 function wireEvents(app) {
-  const keywordEl = document.getElementById("keyword");
+  const banEl = document.getElementById("banlist");
   const showTextOnlyEl = document.getElementById("showTextOnly");
 
   const saveBtn = document.getElementById("saveSettings");
@@ -342,8 +363,8 @@ function wireEvents(app) {
   const nextBtn = document.getElementById("next");
 
   function rerender(resetToFirstPage = false) {
-    const { keyword, showTextOnly, allowedSubs } = getStateFromUI();
-    const filtered = applyFilters(app.items, allowedSubs, keyword, showTextOnly);
+    const { banWords, showTextOnly, allowedSubs } = getStateFromUI();
+    const filtered = applyFilters(app.items, allowedSubs, banWords, showTextOnly);
 
     const pageStored = loadJSON(STORAGE_KEYS.page, 1);
     const page = resetToFirstPage ? 1 : pageStored;
@@ -351,25 +372,26 @@ function wireEvents(app) {
     persistStateFromUI();
 
     const seen = getSessionSeenSet().size;
+    // Display static "25 posts per session" + updated label is handled on load; keep status minimal here
     const remaining = Math.max(0, DEFAULTS.sessionCap - seen);
-
     const capMsg = remaining > 0 ? `${remaining} remaining this session` : `Session limit reached`;
-    setStatus(`${filtered.length} posts • ${capMsg}`);
+    setStatus(`${DEFAULTS.sessionCap} posts per session • ${capMsg}`);
 
     render(filtered, page, DEFAULTS.perPage);
     app.filtered = filtered;
   }
 
-  keywordEl.addEventListener("input", () => rerender(true));
+  banEl.addEventListener("input", () => rerender(true));
   showTextOnlyEl.addEventListener("change", () => rerender(true));
 
   saveBtn.addEventListener("click", () => rerender(true));
 
   resetBtn.addEventListener("click", () => {
     document.getElementById("subreddits").value = DEFAULTS.subreddits.join("\n");
+    document.getElementById("banlist").value = DEFAULTS.banlist;
     document.getElementById("showTextOnly").checked = DEFAULTS.showTextOnly;
-    document.getElementById("keyword").value = DEFAULTS.keyword;
     saveJSON(STORAGE_KEYS.page, 1);
+    sessionStorage.removeItem(SESSION_KEYS.seenIds);
     rerender(true);
   });
 
@@ -402,9 +424,8 @@ function wireEvents(app) {
     const data = await loadFeed();
     const items = data.items || [];
 
-    const updatedLabel = humanUpdatedLabel(data.generated_at_utc);
-    const baseStatus = updatedLabel ? `${updatedLabel}` : "Updated";
-    setStatus(`${items.length} posts • ${baseStatus}`);
+    const updatedLabel = humanUpdatedLabel(data.generated_at_utc) || "";
+    setStatus(`${DEFAULTS.sessionCap} posts per session • ${updatedLabel}`);
 
     const app = { items, filtered: [] };
     wireEvents(app);
