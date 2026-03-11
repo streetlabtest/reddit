@@ -15,26 +15,27 @@
       </div>
 
       <section class="controls" aria-label="Feed controls">
-        <label class="field">
-          <span class="label">Title filter</span>
-          <input id="keyword" type="text" inputmode="search" autocomplete="off" placeholder="e.g., birds, walking, quiet" />
-        </label>
-
-        <label class="toggle">
-          <input id="showTextOnly" type="checkbox" />
-          <span>Show text-only posts</span>
-        </label>
-
         <details class="settings">
           <summary>Settings</summary>
           <div class="settingsBody">
             <p class="hint">
-              Subreddits shown are filtered locally (in this browser). GitHub Actions fetches a larger upstream set into <code>feed.json</code>.
+              The server periodically fetches an upstream set of subreddits (see <code>subreddits_source.txt</code>).
+              Your browser keeps a local allowlist and ban list to control what you see.
             </p>
 
             <label class="field">
+              <span class="label">Ban list (hide titles containing these words — comma separated)</span>
+              <input id="banlist" type="text" autocomplete="off" placeholder="e.g., politics, war, crime" />
+            </label>
+
+            <label class="toggle">
+              <input id="showTextOnly" type="checkbox" />
+              <span>Show text-only posts</span>
+            </label>
+
+            <label class="field">
               <span class="label">Allowed subreddits (one per line)</span>
-              <textarea id="subreddits" rows="8" spellcheck="false" placeholder="e.g. EarthPorn&#10;NatureIsFuckingLit&#10;Eyebleach"></textarea>
+              <textarea id="subreddits" rows="6" spellcheck="false" placeholder="e.g. EarthPorn&#10;Eyebleach"></textarea>
             </label>
 
             <div class="row">
@@ -43,7 +44,7 @@
             </div>
 
             <p class="hint small">
-              Tip: to reduce novelty/impulse, keep the list short and stable.
+              Tip: keep the allowed list short and stable. The "ban list" helps avoid distressing topics.
             </p>
           </div>
         </details>
@@ -64,7 +65,7 @@
 
     <footer class="foot">
       <p class="small">
-        No infinite scroll. No engagement prompts. No comments embedded.
+        No infinite scroll. No engagement prompts. No embedded comments — click “Comments” to open the Reddit thread.
       </p>
     </footer>
   </main>
