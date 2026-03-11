@@ -4,7 +4,7 @@
    - Updates: cache-bust with index.html script ?v=... and migrate storage with APP_VERSION.
 */
 
-const APP_VERSION = "quietfeed-20260310-1";
+const APP_VERSION = "quietfeed-20260310-2";
 
 /* Session model for mobile:
    If the app has been inactive for SESSION_IDLE_RESET_MS, start a new session by clearing session storage.
@@ -604,4 +604,5 @@ function installActivityHooks() {
     feedEl.appendChild(card);
   }
 })();
+
 
