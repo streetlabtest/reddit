@@ -1,16 +1,15 @@
 /* Quiet Feed client (final)
-   Key fixes:
-   - Mobile: do not rely on tab-close to reset sessions. Define session via inactivity timeout.
-   - Updates: cache-bust with index.html script ?v=... and migrate storage with APP_VERSION.
+   - Show Comments default: OFF
+   - Time-of-day background theme (CSS variables)
+   - Breath interstitial on Next pagination (6s animation, continue immediately)
+   - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260310-2";
+const APP_VERSION = "quietfeed-20260311-2";
+const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
-/* Session model for mobile:
-   If the app has been inactive for SESSION_IDLE_RESET_MS, start a new session by clearing session storage.
-   This behaves like "close tab and reopen" even when mobile OS suspends/restores tabs.
-*/
-const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // 30 minutes
+const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
+const MEAL_NUDGE_AUTOHIDE_MS = 30 * 1000; // 30 seconds
 
 const STORAGE_KEYS = {
   appVersion: "quietfeed.appVersion",
@@ -30,15 +29,17 @@ const SESSION_KEYS = {
 };
 
 const DEFAULTS = {
-  subreddits: ["EarthPorn", "PsychologyMemes", "NatureIsFuckingLit", "SurrealMemes", "cats", "dankmemes"],
+  subreddits: ["EarthPorn", "NatureIsFuckingLit", "Eyebleach", "CozyPlaces", "mildlyinteresting"],
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
-  showComments: true,
+  showComments: false,   // EDIT (1): default unchecked
   perPage: 20,
   sessionCap: 25,
   textPreviewChars: 700,
   persistentSeenCap: 3000
 };
+
+/* ----------------- utilities ----------------- */
 
 function loadJSON(key, fallback, storage = localStorage) {
   try {
@@ -58,12 +59,12 @@ function setStatus(msg) {
   document.getElementById("statusText").textContent = msg;
 }
 
-function escapeText(s) {
-  return (s ?? "").toString();
-}
-
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
+}
+
+function escapeText(s) {
+  return (s ?? "").toString();
 }
 
 function isProbablyEmptyText(t) {
@@ -127,21 +128,53 @@ function subredditAllowed(itemSub, allowedSubs) {
   return set.has((itemSub || "").toLowerCase());
 }
 
-/* ---------- storage migration / reset ---------- */
+/* ----------------- time-of-day theming (EDIT 2) ----------------- */
+
+function applyTimeOfDayTheme() {
+  const hour = new Date().getHours();
+
+  // Calm palettes; do not use high-contrast color shifts.
+  // Night: 21–5, Morning: 6–11, Afternoon: 12–17, Evening: 18–20.
+  let bg, panel, panel2;
+
+  if (hour >= 21 || hour <= 5) {
+    bg = "#0f1115";
+    panel = "#141824";
+    panel2 = "#101420";
+  } else if (hour >= 6 && hour <= 11) {
+    bg = "#12151b";
+    panel = "#151b26";
+    panel2 = "#121824";
+  } else if (hour >= 12 && hour <= 17) {
+    bg = "#14161b";
+    panel = "#171c25";
+    panel2 = "#131924";
+  } else {
+    bg = "#11141a";
+    panel = "#151a24";
+    panel2 = "#111723";
+  }
+
+  const r = document.documentElement;
+  r.style.setProperty("--bg", bg);
+  r.style.setProperty("--panel", panel);
+  r.style.setProperty("--panel2", panel2);
+}
+
+/* ----------------- migration / session model ----------------- */
 
 function migrateIfNeeded() {
   const stored = loadJSON(STORAGE_KEYS.appVersion, null, localStorage);
   if (stored === APP_VERSION) return;
 
-  // Reset settings so you do not inherit old defaults from previous versions.
-  // Keep persistent seen history by default (comment out if you want it cleared on upgrade).
+  // Reset settings so old defaults don't "stick" after upgrades
   localStorage.removeItem(STORAGE_KEYS.subreddits);
   localStorage.removeItem(STORAGE_KEYS.banlist);
   localStorage.removeItem(STORAGE_KEYS.showTextOnly);
   localStorage.removeItem(STORAGE_KEYS.showComments);
   localStorage.removeItem(STORAGE_KEYS.page);
 
-  // Also reset current session state.
+  // Reset current session state
   sessionStorage.removeItem(SESSION_KEYS.seenIds);
   sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
 
@@ -156,7 +189,6 @@ function maybeResetSessionForMobile() {
   const last = loadJSON(STORAGE_KEYS.lastActiveMs, null, localStorage);
   const now = Date.now();
   if (typeof last === "number" && now - last > SESSION_IDLE_RESET_MS) {
-    // Consider this a new session
     sessionStorage.removeItem(SESSION_KEYS.seenIds);
     sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
     saveJSON(STORAGE_KEYS.page, 1, localStorage);
@@ -164,7 +196,62 @@ function maybeResetSessionForMobile() {
   touchLastActive();
 }
 
-/* ---------- seen tracking ---------- */
+/* ----------------- meal nudge (EDIT 3b) ----------------- */
+
+let mealNudgeTimer = null;
+let mealNudgeVisible = false;
+
+function showMealNudgeIfNeeded(baseStatusText) {
+  const last = loadJSON(STORAGE_KEYS.lastActiveMs, null, localStorage);
+  const now = Date.now();
+
+  if (typeof last === "number" && (now - last) >= MEAL_NUDGE_THRESHOLD_MS) {
+    // Show a faint note in the status area; no popup.
+    mealNudgeVisible = true;
+    renderStatusWithMealNote(baseStatusText);
+
+    // Auto-hide after 30 seconds for this session
+    if (mealNudgeTimer) clearTimeout(mealNudgeTimer);
+    mealNudgeTimer = setTimeout(() => {
+      mealNudgeVisible = false;
+      renderStatusWithMealNote(baseStatusText);
+    }, MEAL_NUDGE_AUTOHIDE_MS);
+  } else {
+    mealNudgeVisible = false;
+    renderStatusWithMealNote(baseStatusText);
+  }
+}
+
+function renderStatusWithMealNote(baseStatusText) {
+  const el = document.getElementById("statusText");
+  if (!el) return;
+
+  // Use lightweight DOM update; no external deps.
+  el.textContent = "";
+  const span = document.createElement("span");
+  span.textContent = baseStatusText || "";
+  el.appendChild(span);
+
+  if (!mealNudgeVisible) return;
+
+  const note = document.createElement("span");
+  note.className = "statusNote";
+  note.style.marginLeft = "10px";
+  note.textContent = "Have you eaten recently?";
+  el.appendChild(note);
+
+  const dismiss = document.createElement("button");
+  dismiss.type = "button";
+  dismiss.className = "noteDismiss";
+  dismiss.textContent = "Dismiss";
+  dismiss.addEventListener("click", () => {
+    mealNudgeVisible = false;
+    renderStatusWithMealNote(baseStatusText);
+  });
+  el.appendChild(dismiss);
+}
+
+/* ----------------- seen tracking ----------------- */
 
 function getSessionSeenSet() {
   const arr = loadJSON(SESSION_KEYS.seenIds, [], sessionStorage);
@@ -186,7 +273,7 @@ function setPersistentSeenSet(set) {
   saveJSON(STORAGE_KEYS.seenPersistent, trimmed, localStorage);
 }
 
-/* ---------- randomization (stable per session) ---------- */
+/* ----------------- randomization stable per session ----------------- */
 
 function mulberry32(seed) {
   let t = seed >>> 0;
@@ -224,7 +311,57 @@ function shuffledIdsForSession(items, seedStr) {
   return ids;
 }
 
-/* ---------- rendering ---------- */
+/* ----------------- breath interstitial (EDIT 3a) ----------------- */
+
+let pendingNextPage = null;
+let pendingNextRerender = null;
+
+function buildBreathInterstitial(onContinue) {
+  const card = document.createElement("article");
+  card.className = "card breathCard";
+
+  const title = document.createElement("div");
+  title.className = "breathTitle";
+  title.textContent = "Before continuing, take one slow breath.";
+  card.appendChild(title);
+
+  const viz = document.createElement("div");
+  viz.className = "breathViz animate";
+  card.appendChild(viz);
+
+  const btnRow = document.createElement("div");
+  btnRow.className = "row";
+  btnRow.style.justifyContent = "center";
+  btnRow.style.marginTop = "2px";
+
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "btn ghost";
+  btn.textContent = "Continue";
+  btn.addEventListener("click", onContinue);
+
+  btnRow.appendChild(btn);
+  card.appendChild(btnRow);
+
+  return card;
+}
+
+function showBreathThenContinue(nextAction) {
+  const feedEl = document.getElementById("feed");
+  if (!feedEl) return nextAction();
+
+  // Insert full-width card at top of feed
+  const interstitial = buildBreathInterstitial(() => {
+    interstitial.remove();
+    nextAction();
+    window.scrollTo({ top: 0, behavior: "instant" });
+  });
+
+  feedEl.prepend(interstitial);
+  window.scrollTo({ top: 0, behavior: "instant" });
+}
+
+/* ----------------- rendering ----------------- */
 
 function buildStopScreen() {
   const card = document.createElement("article");
@@ -356,7 +493,7 @@ async function loadFeed() {
   return await res.json();
 }
 
-/* ---------- UI state ---------- */
+/* ----------------- UI state ----------------- */
 
 function getStateFromUI() {
   const banlistRaw = document.getElementById("banlist").value || "";
@@ -392,7 +529,7 @@ function restoreUIFromStorage() {
   document.getElementById("showComments").checked = !!showComments;
 }
 
-/* ---------- filtering + ordering ---------- */
+/* ----------------- filtering + ordering ----------------- */
 
 function applyFilters(items, allowedSubs, banWords, showTextOnly, persistentSeenSet) {
   return (items || []).filter(it => {
@@ -466,7 +603,25 @@ function render(items, page, perPage, showComments) {
   saveJSON(STORAGE_KEYS.page, p);
 }
 
-/* ---------- events ---------- */
+/* ----------------- events + lifecycle ----------------- */
+
+function installActivityHooks() {
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      maybeResetSessionForMobile();
+    } else {
+      touchLastActive();
+    }
+  });
+
+  window.addEventListener("pageshow", () => {
+    maybeResetSessionForMobile();
+  });
+
+  window.addEventListener("pagehide", () => {
+    touchLastActive();
+  });
+}
 
 function wireEvents(app, updatedLabel) {
   const banEl = document.getElementById("banlist");
@@ -484,7 +639,8 @@ function wireEvents(app, updatedLabel) {
     const remaining = Math.max(0, DEFAULTS.sessionCap - seenThisSession);
     const capMsg = remaining > 0 ? `${remaining} remaining this session` : "Session limit reached";
     const upd = updatedLabel ? ` • ${updatedLabel}` : "";
-    setStatus(`${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`);
+    const base = `${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`;
+    renderStatusWithMealNote(base);
   }
 
   function rerender(resetToFirstPage = false) {
@@ -523,7 +679,6 @@ function wireEvents(app, updatedLabel) {
     document.getElementById("showComments").checked = DEFAULTS.showComments;
 
     saveJSON(STORAGE_KEYS.page, 1, localStorage);
-
     sessionStorage.removeItem(SESSION_KEYS.seenIds);
     sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
 
@@ -542,39 +697,22 @@ function wireEvents(app, updatedLabel) {
     const current = loadJSON(STORAGE_KEYS.page, 1);
     const perPage = DEFAULTS.perPage;
     const totalPages = Math.ceil((app.filtered || []).length / perPage);
-    const next = Math.min(totalPages, (current || 1) + 1);
-    saveJSON(STORAGE_KEYS.page, next);
-    rerender(false);
-    window.scrollTo({ top: 0, behavior: "instant" });
+    const nextPage = Math.min(totalPages, (current || 1) + 1);
+
+    // Breath interstitial tied to pagination (EDIT 3a)
+    showBreathThenContinue(() => {
+      saveJSON(STORAGE_KEYS.page, nextPage);
+      rerender(false);
+    });
   });
 
   rerender(false);
 }
 
-/* ---------- lifecycle hooks for mobile ---------- */
-
-function installActivityHooks() {
-  // When app goes to background/foreground, treat long gaps as new sessions.
-  document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") {
-      maybeResetSessionForMobile();
-    } else {
-      touchLastActive();
-    }
-  });
-
-  window.addEventListener("pageshow", () => {
-    maybeResetSessionForMobile();
-  });
-
-  window.addEventListener("pagehide", () => {
-    touchLastActive();
-  });
-}
-
-/* ---------- main ---------- */
+/* ----------------- main ----------------- */
 
 (async function main() {
+  applyTimeOfDayTheme();
   migrateIfNeeded();
   maybeResetSessionForMobile();
   installActivityHooks();
@@ -589,7 +727,10 @@ function installActivityHooks() {
     if (data.generated_at_utc) {
       saveJSON(STORAGE_KEYS.feedGeneratedAt, data.generated_at_utc, localStorage);
     }
+
     const updatedLabel = humanUpdatedLabel(data.generated_at_utc) || "";
+    const base = `${DEFAULTS.sessionCap} posts per session • ${updatedLabel}`;
+    showMealNudgeIfNeeded(base);
 
     const app = { items, filtered: [] };
     wireEvents(app, updatedLabel);
@@ -604,5 +745,3 @@ function installActivityHooks() {
     feedEl.appendChild(card);
   }
 })();
-
-
