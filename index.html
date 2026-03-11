@@ -2,28 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calm Feed</title>
-  <link rel="stylesheet" href="./styles.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quiet Feed</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="title">Calm Feed</div>
-      <div class="subtitle">Allowlisted subreddit posts (RSS), no in-app comments.</div>
-    </div>
+  <main class="wrap">
+    <header class="top">
+      <div class="brand">
+        <h1>Quiet Feed</h1>
+        <p class="sub">A low-arousal, finite feed from selected subreddits.</p>
+      </div>
 
-    <div class="top-actions">
-      <button id="refreshBtn" class="btn">Refresh</button>
-    </div>
-  </header>
+      <section class="controls" aria-label="Feed controls">
+        <label class="field">
+          <span class="label">Title filter</span>
+          <input id="keyword" type="text" inputmode="search" autocomplete="off" placeholder="e.g., birds, walking, quiet" />
+        </label>
 
-  <main class="container">
-    <div id="status" class="status"></div>
-    <section id="feed" class="feed"></section>
+        <label class="toggle">
+          <input id="showTextOnly" type="checkbox" />
+          <span>Show text-only posts</span>
+        </label>
+
+        <details class="settings">
+          <summary>Settings</summary>
+          <div class="settingsBody">
+            <p class="hint">
+              Subreddits shown are filtered locally (in this browser). GitHub Actions fetches a larger upstream set into <code>feed.json</code>.
+            </p>
+
+            <label class="field">
+              <span class="label">Allowed subreddits (one per line)</span>
+              <textarea id="subreddits" rows="8" spellcheck="false" placeholder="e.g. EarthPorn&#10;NatureIsFuckingLit&#10;Eyebleach"></textarea>
+            </label>
+
+            <div class="row">
+              <button id="saveSettings" class="btn" type="button">Save</button>
+              <button id="resetSettings" class="btn ghost" type="button">Reset to defaults</button>
+            </div>
+
+            <p class="hint small">
+              Tip: to reduce novelty/impulse, keep the list short and stable.
+            </p>
+          </div>
+        </details>
+      </section>
+    </header>
+
+    <section class="status" aria-live="polite">
+      <span id="statusText">Loading…</span>
+    </section>
+
+    <section id="feed" class="feed" aria-label="Posts"></section>
+
+    <nav class="pager" aria-label="Pagination">
+      <button id="prev" class="btn ghost" type="button" disabled>Prev</button>
+      <span id="pageInfo" class="pageInfo">Page 1</span>
+      <button id="next" class="btn ghost" type="button" disabled>Next</button>
+    </nav>
+
+    <footer class="foot">
+      <p class="small">
+        No infinite scroll. No engagement prompts. No comments embedded.
+      </p>
+    </footer>
   </main>
 
-  <script src="./app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>
