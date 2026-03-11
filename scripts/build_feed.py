@@ -2,14 +2,10 @@
 """
 Fetch subreddit RSS (server-side) and build a static feed.json.
 
-Upstream fetch list is read from subreddits_source.txt (repo root by default).
-The browser then applies the *local* allowlist (localStorage) on top.
-
-Design goals:
-- Avoid Reddit API / keys; use public RSS endpoints.
-- Store only what the client needs: title, text, one image, comments URL, external URL.
-- Do not include author/submitter info.
-- Output is deterministic and stable.
+- Reads upstream subreddit list from subreddits_source.txt (repo root).
+- Extracts title, sanitized text, one image (if any), one video (if any), comments URL, external URL.
+- Strips common Reddit RSS noise (e.g., "submitted by /u/..." and [link] [comments]).
+- Writes feed.json suitable for a static GitHub Pages site.
 """
 
 from __future__ import annotations
@@ -26,7 +22,6 @@ import requests
 import feedparser
 from bs4 import BeautifulSoup
 
-
 SUBREDDITS_SOURCE_PATH = "subreddits_source.txt"
 RSS_TEMPLATE = "https://www.reddit.com/r/{sub}/new/.rss"
 USER_AGENT = "quiet-feed/1.2 (GitHub Actions; +https://pages.github.com/)"
@@ -34,9 +29,7 @@ TIMEOUT_SECONDS = 20
 MAX_ENTRIES_PER_SUB = 25
 OUTPUT_PATH = "feed.json"
 
-
 REDDIT_DOMAINS = {"www.reddit.com", "reddit.com", "old.reddit.com", "np.reddit.com", "redd.it"}
-# Media hosts that frequently serve images without a file extension
 IMAGE_HOST_HINTS = {
     "i.redd.it",
     "preview.redd.it",
@@ -47,6 +40,14 @@ IMAGE_HOST_HINTS = {
     "i.redditmedia.com",
 }
 IMG_EXT_RE = re.compile(r"\.(png|jpe?g|gif|webp)(\?.*)?$", re.IGNORECASE)
+VIDEO_EXT_RE = re.compile(r"\.(mp4|webm|mov)(\?.*)?$", re.IGNORECASE)
+
+
+def _host(url: str) -> str:
+    try:
+        return urlparse(url).netloc.lower()
+    except Exception:
+        return ""
 
 
 def _is_reddit_url(url: str) -> bool:
@@ -57,13 +58,6 @@ def _is_reddit_url(url: str) -> bool:
     return host in REDDIT_DOMAINS
 
 
-def _host(url: str) -> str:
-    try:
-        return urlparse(url).netloc.lower()
-    except Exception:
-        return ""
-
-
 def _looks_like_image(url: str) -> bool:
     if not url:
         return False
@@ -72,8 +66,18 @@ def _looks_like_image(url: str) -> bool:
     h = _host(url)
     if h in IMAGE_HOST_HINTS:
         return True
-    # Some Reddit preview URLs include "format=" or "width=" but no extension
     if "preview.redd.it" in h or "redditmedia.com" in h:
+        return True
+    return False
+
+
+def _looks_like_video(url: str) -> bool:
+    if not url:
+        return False
+    if VIDEO_EXT_RE.search(url):
+        return True
+    h = _host(url)
+    if "v.redd.it" in h:
         return True
     return False
 
@@ -86,12 +90,6 @@ def _normalize_subreddit(s: str) -> str:
 
 
 def _read_subreddits_source(path: str) -> List[str]:
-    """
-    Reads one subreddit per line; supports:
-      - blank lines
-      - comments starting with '#'
-      - entries like '/r/foo'
-    """
     try:
         with open(path, "r", encoding="utf-8") as f:
             raw_lines = f.read().splitlines()
@@ -116,44 +114,51 @@ def _clean_text(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _extract_from_content_html(html: str) -> Tuple[str, Optional[str], Optional[str]]:
+def _extract_from_content_html(html: str) -> Tuple[str, Optional[str], Optional[str], Optional[str]]:
     """
-    Returns: (text, image_url, external_url)
-    external_url is the first non-Reddit hyperlink (if any).
-    image_url is first <img src> or first image-like hyperlink.
+    Returns (text, image_url, video_url, external_url)
     """
     soup = BeautifulSoup(html or "", "html.parser")
     for tag in soup(["script", "style"]):
         tag.decompose()
 
+    # Remove introductory "submitted by..." paragraphs if present
     first_p = soup.find("p")
     if first_p and "submitted by" in first_p.get_text(" ", strip=True).lower():
         first_p.decompose()
 
     external_url = None
-    for a in soup.find_all("a", href=True):
-        href = a["href"].strip()
-        if not href:
-            continue
-        if _is_reddit_url(href) or href.startswith("/r/") or href.startswith("/u/"):
-            continue
-        external_url = href
-        break
-
     image_url = None
+    video_url = None
+
+    # First pass: images and videos inside the content
     img = soup.find("img", src=True)
     if img:
         image_url = img["src"].strip()
 
-    if not image_url:
-        for a in soup.find_all("a", href=True):
-            href = a["href"].strip()
-            if _looks_like_image(href):
-                image_url = href
-                break
+    # Look for obvious video links / anchors
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if not href:
+            continue
+        # external link detection
+        if not _is_reddit_url(href) and not href.startswith("/r/") and not href.startswith("/u/"):
+            if not external_url:
+                external_url = href
+        # detect video
+        if not video_url and _looks_like_video(href):
+            video_url = href
+        # detect image-like links
+        if not image_url and _looks_like_image(href):
+            image_url = href
 
-    text = _clean_text(soup.get_text(" ", strip=True))
-    return text, image_url, external_url
+    # Clean visible text and strip common RSS noise tokens like [link] [comments]
+    raw_text = soup.get_text(" ", strip=True) or ""
+    raw_text = re.sub(r"submitted by\s+/u/\S+.*?(?=\s|$)", "", raw_text, flags=re.IGNORECASE)
+    raw_text = re.sub(r"\[link\]|\[comments\]", "", raw_text, flags=re.IGNORECASE)
+    text = _clean_text(raw_text)
+
+    return text, image_url, video_url, external_url
 
 
 def _to_epoch(entry: Any) -> int:
@@ -165,32 +170,48 @@ def _to_epoch(entry: Any) -> int:
 
 
 def _extract_image_from_entry_fields(entry: Any) -> Optional[str]:
-    """
-    Practical improvement (2.5): use feedparser media/enclosure fields when present.
-    """
-    # media_content is common in some feeds
     mc = getattr(entry, "media_content", None)
     if mc and isinstance(mc, list):
         for obj in mc:
-            url = (obj.get("url") or "").strip() if isinstance(obj, dict) else ""
-            if _looks_like_image(url):
-                return url
-
-    # links rel=enclosure sometimes contains image previews
+            if isinstance(obj, dict):
+                url = (obj.get("url") or "").strip()
+                if _looks_like_image(url):
+                    return url
     links = getattr(entry, "links", None)
     if links and isinstance(links, list):
         for l in links:
             if not isinstance(l, dict):
                 continue
-            rel = (l.get("rel") or "").lower()
             href = (l.get("href") or "").strip()
+            rel = (l.get("rel") or "").lower()
             type_ = (l.get("type") or "").lower()
             if rel == "enclosure" and (type_.startswith("image/") or _looks_like_image(href)):
                 return href
             if _looks_like_image(href):
-                # fall back to any image-like link if nothing else found
                 return href
+    return None
 
+
+def _extract_video_from_entry_fields(entry: Any) -> Optional[str]:
+    mc = getattr(entry, "media_content", None)
+    if mc and isinstance(mc, list):
+        for obj in mc:
+            if isinstance(obj, dict):
+                url = (obj.get("url") or "").strip()
+                if _looks_like_video(url):
+                    return url
+    links = getattr(entry, "links", None)
+    if links and isinstance(links, list):
+        for l in links:
+            if not isinstance(l, dict):
+                continue
+            href = (l.get("href") or "").strip()
+            rel = (l.get("rel") or "").lower()
+            type_ = (l.get("type") or "").lower()
+            if rel == "enclosure" and (type_.startswith("video/") or _looks_like_video(href)):
+                return href
+            if _looks_like_video(href):
+                return href
     return None
 
 
@@ -201,6 +222,7 @@ class FeedItem:
     title: str
     text: str
     image: Optional[str]
+    video: Optional[str]
     comments_url: str
     external_url: Optional[str]
     created_utc: int
@@ -233,15 +255,16 @@ def build_items_for_subreddit(sub: str) -> List[FeedItem]:
         if not content_html:
             content_html = getattr(entry, "summary", "") or ""
 
-        text, image_url, external_url = _extract_from_content_html(content_html)
+        text, image_url, video_url, external_url = _extract_from_content_html(content_html)
 
-        # Robustness: if no image found in HTML, try feedparser media/enclosure fields
+        # fallback to feed fields
         if not image_url:
             image_url = _extract_image_from_entry_fields(entry)
+        if not video_url:
+            video_url = _extract_video_from_entry_fields(entry)
 
         created = _to_epoch(entry)
-
-        is_text_only = bool(text) and not image_url and not external_url
+        is_text_only = bool(text) and not image_url and not video_url and not external_url
 
         raw_id = getattr(entry, "id", "") or comments_url
         stable_id = re.sub(r"[^A-Za-z0-9:_-]+", "", raw_id)
@@ -253,6 +276,7 @@ def build_items_for_subreddit(sub: str) -> List[FeedItem]:
                 title=title,
                 text=text,
                 image=image_url,
+                video=video_url,
                 comments_url=comments_url,
                 external_url=external_url,
                 created_utc=created,
@@ -275,6 +299,7 @@ def main() -> None:
         except Exception as e:
             errors[sub] = str(e)
 
+    # dedupe by comments_url
     dedup: Dict[str, FeedItem] = {}
     for it in all_items:
         if it.comments_url not in dedup or it.created_utc > dedup[it.comments_url].created_utc:
