@@ -18,6 +18,11 @@
         <details class="settings">
           <summary>Settings</summary>
           <div class="settingsBody">
+            <p class="hint">
+              The server periodically fetches an upstream set of subreddits (see <code>subreddits_source.txt</code>).
+              Your browser keeps a local allowlist and ban list to control what you see.
+            </p>
+
             <label class="field">
               <span class="label">Ban list (hide titles containing these words — comma separated)</span>
               <input id="banlist" type="text" autocomplete="off" placeholder="e.g., politics, war, crime" />
@@ -70,8 +75,6 @@
     </footer>
   </main>
 
-  <!-- Cache-bust: increment v= when you update app.js -->
-  <script src="app.js?v=20260310-2"></script>
+  <script src="app.js?v=20260311-2"></script>
 </body>
 </html>
-
