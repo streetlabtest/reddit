@@ -30,7 +30,7 @@ const SESSION_KEYS = {
 };
 
 const DEFAULTS = {
-  subreddits: ["EarthPorn", "NatureIsFuckingLit", "Eyebleach", "CozyPlaces", "mildlyinteresting"],
+  subreddits: ["EarthPorn", "PsychologyMemes", "NatureIsFuckingLit", "SurrealMemes", "cats", "dankmemes"],
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
   showComments: true,
@@ -604,3 +604,4 @@ function installActivityHooks() {
     feedEl.appendChild(card);
   }
 })();
+
