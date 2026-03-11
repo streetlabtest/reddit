@@ -1,59 +1,44 @@
-/* Quiet Feed client
-   - Loads feed.json (built by GitHub Actions)
-   - Local controls:
-       * allowed subreddits (textarea)
-       * ban list (negative keywords, comma separated)
-       * show text-only toggle
-       * show comments links toggle
-   - Session cap: 25 posts per session
-   - Randomized order per session (stable during a session)
-   - Do not show posts again in subsequent sessions (persistent seen list)
-   - Text truncation with "Show more"
-   - Video support via native <video> control (no autoplay)
-   - No display of total feed size
+/* Quiet Feed client (final)
+   Key fixes:
+   - Mobile: do not rely on tab-close to reset sessions. Define session via inactivity timeout.
+   - Updates: cache-bust with index.html script ?v=... and migrate storage with APP_VERSION.
 */
 
+const APP_VERSION = "quietfeed-20260310-1";
+
+/* Session model for mobile:
+   If the app has been inactive for SESSION_IDLE_RESET_MS, start a new session by clearing session storage.
+   This behaves like "close tab and reopen" even when mobile OS suspends/restores tabs.
+*/
+const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // 30 minutes
+
 const STORAGE_KEYS = {
+  appVersion: "quietfeed.appVersion",
+  lastActiveMs: "quietfeed.lastActiveMs",
   subreddits: "quietfeed.subreddits",
   banlist: "quietfeed.banlist",
   showTextOnly: "quietfeed.showTextOnly",
   showComments: "quietfeed.showComments",
   page: "quietfeed.page",
-  seenPersistent: "quietfeed.seenPersistent" // localStorage
+  feedGeneratedAt: "quietfeed.feedGeneratedAt",
+  seenPersistent: "quietfeed.seenPersistent"
 };
 
 const SESSION_KEYS = {
-  seenIds: "quietfeed.sessionSeenIds",       // sessionStorage (for cap display)
-  shuffledIds: "quietfeed.sessionShuffledIds" // sessionStorage (stable shuffle)
+  seenIds: "quietfeed.sessionSeenIds",
+  shuffledIds: "quietfeed.sessionShuffledIds"
 };
 
 const DEFAULTS = {
-  subreddits: ["EarthPorn", "NatureIsFuckingLit", "SurrealMemes", "cats", "dankmemes", "PsychologyMemes"],
+  subreddits: ["EarthPorn", "NatureIsFuckingLit", "Eyebleach", "CozyPlaces", "mildlyinteresting"],
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
   showComments: true,
   perPage: 20,
   sessionCap: 25,
   textPreviewChars: 700,
-  // cap the persistent "seen" memory to avoid unbounded growth
   persistentSeenCap: 3000
 };
-
-function uniqNormSubs(lines) {
-  const out = [];
-  const seen = new Set();
-  for (const raw of lines) {
-    const s = (raw || "").trim().replace(/^\/r\//i, "");
-    if (!s) continue;
-    const norm = s.replace(/[^A-Za-z0-9_]+/g, "");
-    if (!norm) continue;
-    const key = norm.toLowerCase();
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(norm);
-  }
-  return out;
-}
 
 function loadJSON(key, fallback, storage = localStorage) {
   try {
@@ -85,6 +70,22 @@ function isProbablyEmptyText(t) {
   if (!t) return true;
   const cleaned = t.replace(/\s+/g, " ").trim();
   return cleaned.length < 3;
+}
+
+function uniqNormSubs(lines) {
+  const out = [];
+  const seen = new Set();
+  for (const raw of lines) {
+    const s = (raw || "").trim().replace(/^\/r\//i, "");
+    if (!s) continue;
+    const norm = s.replace(/[^A-Za-z0-9_]+/g, "");
+    if (!norm) continue;
+    const key = norm.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(norm);
+  }
+  return out;
 }
 
 function humanUpdatedLabel(isoUtc) {
@@ -126,7 +127,44 @@ function subredditAllowed(itemSub, allowedSubs) {
   return set.has((itemSub || "").toLowerCase());
 }
 
-/* ---------- Seen tracking ---------- */
+/* ---------- storage migration / reset ---------- */
+
+function migrateIfNeeded() {
+  const stored = loadJSON(STORAGE_KEYS.appVersion, null, localStorage);
+  if (stored === APP_VERSION) return;
+
+  // Reset settings so you do not inherit old defaults from previous versions.
+  // Keep persistent seen history by default (comment out if you want it cleared on upgrade).
+  localStorage.removeItem(STORAGE_KEYS.subreddits);
+  localStorage.removeItem(STORAGE_KEYS.banlist);
+  localStorage.removeItem(STORAGE_KEYS.showTextOnly);
+  localStorage.removeItem(STORAGE_KEYS.showComments);
+  localStorage.removeItem(STORAGE_KEYS.page);
+
+  // Also reset current session state.
+  sessionStorage.removeItem(SESSION_KEYS.seenIds);
+  sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
+
+  saveJSON(STORAGE_KEYS.appVersion, APP_VERSION, localStorage);
+}
+
+function touchLastActive() {
+  saveJSON(STORAGE_KEYS.lastActiveMs, Date.now(), localStorage);
+}
+
+function maybeResetSessionForMobile() {
+  const last = loadJSON(STORAGE_KEYS.lastActiveMs, null, localStorage);
+  const now = Date.now();
+  if (typeof last === "number" && now - last > SESSION_IDLE_RESET_MS) {
+    // Consider this a new session
+    sessionStorage.removeItem(SESSION_KEYS.seenIds);
+    sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
+    saveJSON(STORAGE_KEYS.page, 1, localStorage);
+  }
+  touchLastActive();
+}
+
+/* ---------- seen tracking ---------- */
 
 function getSessionSeenSet() {
   const arr = loadJSON(SESSION_KEYS.seenIds, [], sessionStorage);
@@ -143,13 +181,12 @@ function getPersistentSeenSet() {
 }
 
 function setPersistentSeenSet(set) {
-  // bound growth
   const arr = Array.from(set);
   const trimmed = arr.length > DEFAULTS.persistentSeenCap ? arr.slice(arr.length - DEFAULTS.persistentSeenCap) : arr;
   saveJSON(STORAGE_KEYS.seenPersistent, trimmed, localStorage);
 }
 
-/* ---------- Randomization (stable per session) ---------- */
+/* ---------- randomization (stable per session) ---------- */
 
 function mulberry32(seed) {
   let t = seed >>> 0;
@@ -162,7 +199,6 @@ function mulberry32(seed) {
 }
 
 function hashStringToSeed(str) {
-  // simple FNV-1a-ish hash
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
     h ^= str.charCodeAt(i);
@@ -172,7 +208,6 @@ function hashStringToSeed(str) {
 }
 
 function shuffledIdsForSession(items, seedStr) {
-  // If already computed this session, reuse
   const stored = loadJSON(SESSION_KEYS.shuffledIds, null, sessionStorage);
   if (stored && Array.isArray(stored) && stored.length > 0) return stored;
 
@@ -180,8 +215,6 @@ function shuffledIdsForSession(items, seedStr) {
   const rnd = mulberry32(seed);
 
   const ids = items.map(it => it.id).filter(Boolean);
-
-  // Fisher–Yates
   for (let i = ids.length - 1; i > 0; i--) {
     const j = Math.floor(rnd() * (i + 1));
     [ids[i], ids[j]] = [ids[j], ids[i]];
@@ -191,7 +224,7 @@ function shuffledIdsForSession(items, seedStr) {
   return ids;
 }
 
-/* ---------- Rendering ---------- */
+/* ---------- rendering ---------- */
 
 function buildStopScreen() {
   const card = document.createElement("article");
@@ -253,7 +286,6 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
     }
   }
 
-  // Media after text: image then video
   if (item.image) {
     const wrap = document.createElement("div");
     wrap.className = "img";
@@ -304,13 +336,18 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
 
   card.appendChild(meta);
 
-  // Mark as seen for this session and persistently across sessions
   if (item.id) {
     sessionSeenSet.add(item.id);
     persistentSeenSet.add(item.id);
   }
 
   return card;
+}
+
+function setPager(page, totalPages, stopReached) {
+  document.getElementById("pageInfo").textContent = `Page ${page} / ${Math.max(totalPages, 1)}`;
+  document.getElementById("prev").disabled = page <= 1;
+  document.getElementById("next").disabled = stopReached || page >= totalPages;
 }
 
 async function loadFeed() {
@@ -323,10 +360,7 @@ async function loadFeed() {
 
 function getStateFromUI() {
   const banlistRaw = document.getElementById("banlist").value || "";
-  const banWords = banlistRaw
-    .split(",")
-    .map(w => w.trim().toLowerCase())
-    .filter(Boolean);
+  const banWords = banlistRaw.split(",").map(w => w.trim().toLowerCase()).filter(Boolean);
 
   const showTextOnly = document.getElementById("showTextOnly").checked;
   const showComments = document.getElementById("showComments").checked;
@@ -358,27 +392,17 @@ function restoreUIFromStorage() {
   document.getElementById("showComments").checked = !!showComments;
 }
 
-/* ---------- Filtering + ordering ---------- */
+/* ---------- filtering + ordering ---------- */
 
 function applyFilters(items, allowedSubs, banWords, showTextOnly, persistentSeenSet) {
   return (items || []).filter(it => {
     if (!it || !it.id) return false;
-
-    // Never show already-seen posts across sessions
     if (persistentSeenSet.has(it.id)) return false;
-
     if (!subredditAllowed(it.subreddit, allowedSubs)) return false;
     if (!titleAllowed(it.title, banWords)) return false;
     if (!showTextOnly && it.is_text_only) return false;
-
     return true;
   });
-}
-
-function setPager(page, totalPages, stopReached) {
-  document.getElementById("pageInfo").textContent = `Page ${page} / ${Math.max(totalPages, 1)}`;
-  document.getElementById("prev").disabled = page <= 1;
-  document.getElementById("next").disabled = stopReached || page >= totalPages;
 }
 
 function render(items, page, perPage, showComments) {
@@ -403,10 +427,8 @@ function render(items, page, perPage, showComments) {
     return;
   }
 
-  // Stable shuffle order for this session:
-  // seed uses feed generation time + allowed subs + banlist + showTextOnly; this avoids oscillation when toggling comments
   const seedStr = [
-    loadJSON("quietfeed.feedGeneratedAt", "", localStorage),
+    loadJSON(STORAGE_KEYS.feedGeneratedAt, "", localStorage),
     loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits, localStorage).join("|"),
     loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist, localStorage),
     loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly, localStorage) ? "T" : "F"
@@ -444,7 +466,9 @@ function render(items, page, perPage, showComments) {
   saveJSON(STORAGE_KEYS.page, p);
 }
 
-function wireEvents(app) {
+/* ---------- events ---------- */
+
+function wireEvents(app, updatedLabel) {
   const banEl = document.getElementById("banlist");
   const showTextOnlyEl = document.getElementById("showTextOnly");
   const showCommentsEl = document.getElementById("showComments");
@@ -455,7 +479,17 @@ function wireEvents(app) {
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
 
+  function setSessionStatus() {
+    const seenThisSession = getSessionSeenSet().size;
+    const remaining = Math.max(0, DEFAULTS.sessionCap - seenThisSession);
+    const capMsg = remaining > 0 ? `${remaining} remaining this session` : "Session limit reached";
+    const upd = updatedLabel ? ` • ${updatedLabel}` : "";
+    setStatus(`${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`);
+  }
+
   function rerender(resetToFirstPage = false) {
+    touchLastActive();
+
     const { banWords, showTextOnly, showComments, allowedSubs } = getStateFromUI();
     const persistentSeen = getPersistentSeenSet();
     const filtered = applyFilters(app.items, allowedSubs, banWords, showTextOnly, persistentSeen);
@@ -464,27 +498,20 @@ function wireEvents(app) {
     const page = resetToFirstPage ? 1 : pageStored;
 
     persistStateFromUI();
-
-    const seenThisSession = getSessionSeenSet().size;
-    const remaining = Math.max(0, DEFAULTS.sessionCap - seenThisSession);
-
-    const capMsg = remaining > 0 ? `${remaining} remaining this session` : "Session limit reached";
-    setStatus(`${DEFAULTS.sessionCap} posts per session • ${capMsg}`);
-
+    setSessionStatus();
     render(filtered, page, DEFAULTS.perPage, showComments);
     app.filtered = filtered;
   }
 
-  // Changing ban list / show text-only should reset the shuffle order (new session order)
   function resetSessionShuffleAndRerender() {
     sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
+    saveJSON(STORAGE_KEYS.page, 1, localStorage);
     rerender(true);
   }
 
   banEl.addEventListener("input", resetSessionShuffleAndRerender);
   showTextOnlyEl.addEventListener("change", resetSessionShuffleAndRerender);
 
-  // Comments toggle should not reshuffle content; just rerender
   showCommentsEl.addEventListener("change", () => rerender(false));
 
   saveBtn.addEventListener("click", () => rerender(true));
@@ -495,9 +522,8 @@ function wireEvents(app) {
     document.getElementById("showTextOnly").checked = DEFAULTS.showTextOnly;
     document.getElementById("showComments").checked = DEFAULTS.showComments;
 
-    saveJSON(STORAGE_KEYS.page, 1);
+    saveJSON(STORAGE_KEYS.page, 1, localStorage);
 
-    // Reset current session state (cap + shuffle), but keep persistent seen history by default.
     sessionStorage.removeItem(SESSION_KEYS.seenIds);
     sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
 
@@ -525,7 +551,34 @@ function wireEvents(app) {
   rerender(false);
 }
 
+/* ---------- lifecycle hooks for mobile ---------- */
+
+function installActivityHooks() {
+  // When app goes to background/foreground, treat long gaps as new sessions.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      maybeResetSessionForMobile();
+    } else {
+      touchLastActive();
+    }
+  });
+
+  window.addEventListener("pageshow", () => {
+    maybeResetSessionForMobile();
+  });
+
+  window.addEventListener("pagehide", () => {
+    touchLastActive();
+  });
+}
+
+/* ---------- main ---------- */
+
 (async function main() {
+  migrateIfNeeded();
+  maybeResetSessionForMobile();
+  installActivityHooks();
+
   restoreUIFromStorage();
   setStatus("Loading…");
 
@@ -533,16 +586,13 @@ function wireEvents(app) {
     const data = await loadFeed();
     const items = data.items || [];
 
-    // Store generated_at for stable session shuffle seed
-    const updatedLabel = humanUpdatedLabel(data.generated_at_utc) || "";
     if (data.generated_at_utc) {
-      saveJSON("quietfeed.feedGeneratedAt", data.generated_at_utc, localStorage);
+      saveJSON(STORAGE_KEYS.feedGeneratedAt, data.generated_at_utc, localStorage);
     }
-
-    setStatus(`${DEFAULTS.sessionCap} posts per session • ${updatedLabel}`);
+    const updatedLabel = humanUpdatedLabel(data.generated_at_utc) || "";
 
     const app = { items, filtered: [] };
-    wireEvents(app);
+    wireEvents(app, updatedLabel);
   } catch (e) {
     console.error(e);
     setStatus("Failed to load feed.json.");
@@ -554,4 +604,3 @@ function wireEvents(app) {
     feedEl.appendChild(card);
   }
 })();
-
