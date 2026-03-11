@@ -18,7 +18,11 @@
         <details class="settings">
           <summary>Settings</summary>
           <div class="settingsBody">
-            
+            <p class="hint">
+              The server periodically fetches an upstream set of subreddits (see <code>subreddits_source.txt</code>).
+              Your browser keeps a local allowlist and ban list to control what you see.
+            </p>
+
             <label class="field">
               <span class="label">Ban list (hide titles containing these words — comma separated)</span>
               <input id="banlist" type="text" autocomplete="off" placeholder="e.g., politics, war, crime" />
@@ -27,6 +31,11 @@
             <label class="toggle">
               <input id="showTextOnly" type="checkbox" />
               <span>Show text-only posts</span>
+            </label>
+
+            <label class="toggle">
+              <input id="showComments" type="checkbox" />
+              <span>Show Comments links</span>
             </label>
 
             <label class="field">
@@ -40,7 +49,7 @@
             </div>
 
             <p class="hint small">
-              Tip: keep the allowed list short and stable. The "ban list" helps avoid distressing topics.
+              Tip: keep the allowed list short and stable. The ban list helps avoid distressing topics.
             </p>
           </div>
         </details>
@@ -61,7 +70,7 @@
 
     <footer class="foot">
       <p class="small">
-        No infinite scroll. No engagement prompts. No embedded comments — click “Comments” to open the Reddit thread.
+        No infinite scroll. No engagement prompts. No embedded comments.
       </p>
     </footer>
   </main>
@@ -69,4 +78,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
