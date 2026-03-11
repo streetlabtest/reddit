@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260311-2";
+const APP_VERSION = "quietfeed-20260311-3";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -33,7 +33,7 @@ const DEFAULTS = {
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
   showComments: false,   // EDIT (1): default unchecked
-  perPage: 20,
+  perPage: 10,
   sessionCap: 25,
   textPreviewChars: 700,
   persistentSeenCap: 3000
@@ -745,4 +745,5 @@ function wireEvents(app, updatedLabel) {
     feedEl.appendChild(card);
   }
 })();
+
 
