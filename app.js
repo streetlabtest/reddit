@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260311-3";
+const APP_VERSION = "quietfeed-20260330-1";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -116,16 +116,23 @@ function truncateText(text, maxChars) {
   return { preview, truncated: true };
 }
 
+function debounce(fn, ms) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), ms);
+  };
+}
+
 function titleAllowed(title, banWords) {
   if (!banWords || banWords.length === 0) return true;
   const t = (title || "").toLowerCase();
   return !banWords.some(word => t.includes(word));
 }
 
-function subredditAllowed(itemSub, allowedSubs) {
-  if (!allowedSubs || allowedSubs.length === 0) return true;
-  const set = new Set(allowedSubs.map(s => (s || "").toLowerCase()));
-  return set.has((itemSub || "").toLowerCase());
+function subredditAllowed(itemSub, allowedSet) {
+  if (!allowedSet) return true;
+  return allowedSet.has((itemSub || "").toLowerCase());
 }
 
 /* ----------------- time-of-day theming (EDIT 2) ----------------- */
@@ -350,11 +357,14 @@ function showBreathThenContinue(nextAction) {
   const feedEl = document.getElementById("feed");
   if (!feedEl) return nextAction();
 
+  const nextBtn = document.getElementById("next");
+  if (nextBtn) nextBtn.disabled = true;
+
   // Insert full-width card at top of feed
   const interstitial = buildBreathInterstitial(() => {
     interstitial.remove();
+    if (nextBtn) nextBtn.disabled = false;
     nextAction();
-    window.scrollTo({ top: 0, behavior: "instant" });
   });
 
   feedEl.prepend(interstitial);
@@ -508,13 +518,11 @@ function getStateFromUI() {
   return { banWords, showTextOnly, showComments, allowedSubs };
 }
 
-function persistStateFromUI() {
+function persistStateFromUI(allowedSubs) {
   saveJSON(STORAGE_KEYS.banlist, document.getElementById("banlist").value || "");
   saveJSON(STORAGE_KEYS.showTextOnly, document.getElementById("showTextOnly").checked);
   saveJSON(STORAGE_KEYS.showComments, document.getElementById("showComments").checked);
-
-  const subsText = document.getElementById("subreddits").value || "";
-  saveJSON(STORAGE_KEYS.subreddits, uniqNormSubs(subsText.split("\n")));
+  saveJSON(STORAGE_KEYS.subreddits, allowedSubs);
 }
 
 function restoreUIFromStorage() {
@@ -532,17 +540,20 @@ function restoreUIFromStorage() {
 /* ----------------- filtering + ordering ----------------- */
 
 function applyFilters(items, allowedSubs, banWords, showTextOnly, persistentSeenSet) {
+  const allowedSet = allowedSubs && allowedSubs.length > 0
+    ? new Set(allowedSubs.map(s => (s || "").toLowerCase()))
+    : null;
   return (items || []).filter(it => {
     if (!it || !it.id) return false;
     if (persistentSeenSet.has(it.id)) return false;
-    if (!subredditAllowed(it.subreddit, allowedSubs)) return false;
+    if (!subredditAllowed(it.subreddit, allowedSet)) return false;
     if (!titleAllowed(it.title, banWords)) return false;
     if (!showTextOnly && it.is_text_only) return false;
     return true;
   });
 }
 
-function render(items, page, perPage, showComments) {
+function render(items, page, perPage, showComments, seedStr) {
   const feedEl = document.getElementById("feed");
   feedEl.innerHTML = "";
 
@@ -563,13 +574,6 @@ function render(items, page, perPage, showComments) {
     setPager(1, 1, false);
     return;
   }
-
-  const seedStr = [
-    loadJSON(STORAGE_KEYS.feedGeneratedAt, "", localStorage),
-    loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits, localStorage).join("|"),
-    loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist, localStorage),
-    loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly, localStorage) ? "T" : "F"
-  ].join("::");
 
   const idOrder = shuffledIdsForSession(items, seedStr);
   const byId = new Map(items.map(it => [it.id, it]));
@@ -643,7 +647,7 @@ function wireEvents(app, updatedLabel) {
     renderStatusWithMealNote(base);
   }
 
-  function rerender(resetToFirstPage = false) {
+  function rerender(resetToFirstPage = false, persist = true) {
     touchLastActive();
 
     const { banWords, showTextOnly, showComments, allowedSubs } = getStateFromUI();
@@ -653,9 +657,17 @@ function wireEvents(app, updatedLabel) {
     const pageStored = loadJSON(STORAGE_KEYS.page, 1);
     const page = resetToFirstPage ? 1 : pageStored;
 
-    persistStateFromUI();
+    if (persist) persistStateFromUI(allowedSubs);
+
+    const seedStr = [
+      app.feedGeneratedAt,
+      allowedSubs.join("|"),
+      document.getElementById("banlist").value || "",
+      showTextOnly ? "T" : "F"
+    ].join("::");
+
     setSessionStatus();
-    render(filtered, page, DEFAULTS.perPage, showComments);
+    render(filtered, page, DEFAULTS.perPage, showComments, seedStr);
     app.filtered = filtered;
   }
 
@@ -665,7 +677,7 @@ function wireEvents(app, updatedLabel) {
     rerender(true);
   }
 
-  banEl.addEventListener("input", resetSessionShuffleAndRerender);
+  banEl.addEventListener("input", debounce(resetSessionShuffleAndRerender, 300));
   showTextOnlyEl.addEventListener("change", resetSessionShuffleAndRerender);
 
   showCommentsEl.addEventListener("change", () => rerender(false));
@@ -689,7 +701,7 @@ function wireEvents(app, updatedLabel) {
     const current = loadJSON(STORAGE_KEYS.page, 1);
     const next = Math.max(1, (current || 1) - 1);
     saveJSON(STORAGE_KEYS.page, next);
-    rerender(false);
+    rerender(false, false);
     window.scrollTo({ top: 0, behavior: "instant" });
   });
 
@@ -699,10 +711,10 @@ function wireEvents(app, updatedLabel) {
     const totalPages = Math.ceil((app.filtered || []).length / perPage);
     const nextPage = Math.min(totalPages, (current || 1) + 1);
 
-    // Breath interstitial tied to pagination (EDIT 3a)
     showBreathThenContinue(() => {
       saveJSON(STORAGE_KEYS.page, nextPage);
-      rerender(false);
+      rerender(false, false);
+      window.scrollTo({ top: 0, behavior: "instant" });
     });
   });
 
@@ -732,7 +744,7 @@ function wireEvents(app, updatedLabel) {
     const base = `${DEFAULTS.sessionCap} posts per session • ${updatedLabel}`;
     showMealNudgeIfNeeded(base);
 
-    const app = { items, filtered: [] };
+    const app = { items, filtered: [], feedGeneratedAt: data.generated_at_utc || "" };
     wireEvents(app, updatedLabel);
   } catch (e) {
     console.error(e);
