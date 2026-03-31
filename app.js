@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260331-3";
+const APP_VERSION = "quietfeed-20260331-4";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -667,11 +667,29 @@ function wireEvents(app, updatedLabel) {
     rerender(true);
   }
 
+  function settingsChanged(allowedSubs) {
+    const storedBanlist  = loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist);
+    const storedTextOnly = loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly);
+    const storedComments = loadJSON(STORAGE_KEYS.showComments, DEFAULTS.showComments);
+    const storedSubs     = loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits);
+
+    if ((document.getElementById("banlist").value || "") !== storedBanlist) return true;
+    if (document.getElementById("showTextOnly").checked !== !!storedTextOnly) return true;
+    if (document.getElementById("showComments").checked !== !!storedComments) return true;
+
+    const currentKey = allowedSubs.map(s => s.toLowerCase()).sort().join("|");
+    const storedKey  = (storedSubs || []).map(s => s.toLowerCase()).sort().join("|");
+    if (currentKey !== storedKey) return true;
+
+    return false;
+  }
+
   banEl.addEventListener("input", debounce(resetSessionShuffleAndRerender, 300));
 
   saveBtn.addEventListener("click", () => {
     document.querySelector(".settings").removeAttribute("open");
-    rerender(true);
+    const { allowedSubs } = getStateFromUI();
+    if (settingsChanged(allowedSubs)) rerender(true);
   });
 
   resetBtn.addEventListener("click", () => {
