@@ -29,7 +29,7 @@ const SESSION_KEYS = {
 };
 
 const DEFAULTS = {
-  subreddits: ["EarthPorn", "PsychologyMemes", "NatureIsFuckingLit", "SurrealMemes", "cats", "dankmemes"],
+  subreddits: ["EarthPorn", "PsychologyMemes", "NatureIsFuckingLit", "SurrealMemes", "meirl", "me_irl", "dankmemes"],
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
   showComments: false,   // EDIT (1): default unchecked
