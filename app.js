@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260331-4";
+const APP_VERSION = "quietfeed-20260331-5";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -333,23 +333,33 @@ function buildBreathInterstitial(onContinue) {
 
   const title = document.createElement("div");
   title.className = "breathTitle";
-  title.textContent = "Before continuing, take one slow breath.";
+  title.textContent = "Take a slow breath.";
   card.appendChild(title);
+
+  const phase = document.createElement("div");
+  phase.className = "breathPhase";
+  phase.textContent = "inhale";
+  card.appendChild(phase);
 
   const viz = document.createElement("div");
   viz.className = "breathViz animate";
   card.appendChild(viz);
 
+  const phaseTimer = setTimeout(() => { phase.textContent = "exhale"; }, 4000);
+
   const btnRow = document.createElement("div");
   btnRow.className = "row";
   btnRow.style.justifyContent = "center";
-  btnRow.style.marginTop = "2px";
+  btnRow.style.marginTop = "20px";
 
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "btn ghost";
   btn.textContent = "Continue";
-  btn.addEventListener("click", onContinue);
+  btn.addEventListener("click", () => {
+    clearTimeout(phaseTimer);
+    onContinue();
+  });
 
   btnRow.appendChild(btn);
   card.appendChild(btnRow);
