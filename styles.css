@@ -199,6 +199,8 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
   display: block;
   width: 100%;
   height: auto;
+  max-height: 520px;
+  object-fit: contain;
 }
 
 .pager {
@@ -275,7 +277,10 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
 /* Mobile accessibility */
 @media (max-width: 520px) {
   body { font-size: 17px; }
-  .wrap { padding: 18px 12px 32px; }
+  .wrap {
+    padding: 18px 12px 32px;
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
   .card { padding: 16px; }
   .card h2 { font-size: 17px; }
   .text { font-size: 16px; line-height: 1.6; }
@@ -293,10 +298,41 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
   .toggle { gap: 12px; }
   .toggle input { width: 18px; height: 18px; }
 
+  /* Wrap meta row and give links a full tap target */
+  .meta {
+    flex-wrap: wrap;
+    gap: 4px 14px;
+  }
+  .meta a {
+    padding: 8px 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Larger tap target for settings toggle */
+  .settings summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Dismiss button easier to tap */
+  .noteDismiss {
+    min-height: 36px;
+    padding: 0 14px;
+  }
+
+  /* Cap image height on small screens */
+  .img img, .img video {
+    max-height: 60vh;
+  }
+
   .pager {
     position: sticky;
-    bottom: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     z-index: 10;
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
   }
 }
