@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260331-1";
+const APP_VERSION = "quietfeed-20260331-3";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -448,18 +448,6 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
     card.appendChild(wrap);
   }
 
-  if (item.video) {
-    const wrap = document.createElement("div");
-    wrap.className = "img";
-    const video = document.createElement("video");
-    video.controls = true;
-    video.preload = "metadata";
-    video.playsInline = true;
-    video.src = item.video;
-    wrap.appendChild(video);
-    card.appendChild(wrap);
-  }
-
   const meta = document.createElement("div");
   meta.className = "meta";
 
@@ -632,8 +620,6 @@ function installActivityHooks() {
 
 function wireEvents(app, updatedLabel) {
   const banEl = document.getElementById("banlist");
-  const showTextOnlyEl = document.getElementById("showTextOnly");
-  const showCommentsEl = document.getElementById("showComments");
 
   const saveBtn = document.getElementById("saveSettings");
   const resetBtn = document.getElementById("resetSettings");
@@ -682,9 +668,6 @@ function wireEvents(app, updatedLabel) {
   }
 
   banEl.addEventListener("input", debounce(resetSessionShuffleAndRerender, 300));
-  showTextOnlyEl.addEventListener("change", resetSessionShuffleAndRerender);
-
-  showCommentsEl.addEventListener("change", () => rerender(false));
 
   saveBtn.addEventListener("click", () => {
     document.querySelector(".settings").removeAttribute("open");
