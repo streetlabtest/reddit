@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260330-2";
+const APP_VERSION = "quietfeed-20260331-1";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -497,7 +497,6 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
 
 function setPager(page, totalPages, stopReached) {
   document.getElementById("pageInfo").textContent = `Page ${page}`;
-  document.getElementById("prev").disabled = page <= 1;
   document.getElementById("next").disabled = stopReached || page >= totalPages;
 }
 
@@ -639,7 +638,6 @@ function wireEvents(app, updatedLabel) {
   const saveBtn = document.getElementById("saveSettings");
   const resetBtn = document.getElementById("resetSettings");
 
-  const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
 
   function setSessionStatus() {
@@ -704,14 +702,6 @@ function wireEvents(app, updatedLabel) {
     sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
 
     rerender(true);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    const current = loadJSON(STORAGE_KEYS.page, 1);
-    const next = Math.max(1, (current || 1) - 1);
-    saveJSON(STORAGE_KEYS.page, next);
-    rerender(false, false);
-    window.scrollTo({ top: 0, behavior: "instant" });
   });
 
   nextBtn.addEventListener("click", () => {
