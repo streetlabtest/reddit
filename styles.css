@@ -148,10 +148,28 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
 
 .noteDismiss:hover { border-color: var(--focus); color: var(--muted); }
 
-.feed { display: grid; gap: 12px; }
+.progressBar {
+  height: 2px;
+  margin: 10px 0 0;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.progressBar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--pct, 0%);
+  background: rgba(255,255,255,0.22);
+  border-radius: 1px;
+  transition: width 0.5s ease;
+}
+
+.feed { display: grid; gap: 20px; }
 
 .card {
-  padding: 14px;
+  padding: 18px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -177,9 +195,14 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
   color: var(--muted);
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.15);
+  opacity: 0.45;
+  transition: opacity 0.15s;
 }
 
-.meta a:hover { border-bottom-color: rgba(255,255,255,0.35); }
+.meta a:hover, .meta a:focus-visible {
+  border-bottom-color: rgba(255,255,255,0.35);
+  opacity: 1;
+}
 
 .text {
   margin: 0;

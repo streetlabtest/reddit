@@ -5,7 +5,7 @@
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
 */
 
-const APP_VERSION = "quietfeed-20260330-1";
+const APP_VERSION = "quietfeed-20260330-2";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -145,21 +145,25 @@ function applyTimeOfDayTheme() {
   let bg, panel, panel2;
 
   if (hour >= 21 || hour <= 5) {
-    bg = "#0f1115";
-    panel = "#141824";
-    panel2 = "#101420";
+    // Night: cool blue-black
+    bg = "#0a0d12";
+    panel = "#101826";
+    panel2 = "#0c1420";
   } else if (hour >= 6 && hour <= 11) {
-    bg = "#12151b";
-    panel = "#151b26";
-    panel2 = "#121824";
+    // Morning: warm amber-dark (dawn)
+    bg = "#131008";
+    panel = "#1e190c";
+    panel2 = "#17130a";
   } else if (hour >= 12 && hour <= 17) {
-    bg = "#14161b";
-    panel = "#171c25";
-    panel2 = "#131924";
+    // Afternoon: neutral dark (most awake)
+    bg = "#131518";
+    panel = "#191e24";
+    panel2 = "#151820";
   } else {
-    bg = "#11141a";
-    panel = "#151a24";
-    panel2 = "#111723";
+    // Evening: deep purple-dusk
+    bg = "#0f0c18";
+    panel = "#161224";
+    panel2 = "#12101c";
   }
 
   const r = document.documentElement;
@@ -492,7 +496,7 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
 }
 
 function setPager(page, totalPages, stopReached) {
-  document.getElementById("pageInfo").textContent = `Page ${page} / ${Math.max(totalPages, 1)}`;
+  document.getElementById("pageInfo").textContent = `Page ${page}`;
   document.getElementById("prev").disabled = page <= 1;
   document.getElementById("next").disabled = stopReached || page >= totalPages;
 }
@@ -645,6 +649,8 @@ function wireEvents(app, updatedLabel) {
     const upd = updatedLabel ? ` • ${updatedLabel}` : "";
     const base = `${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`;
     renderStatusWithMealNote(base);
+    const bar = document.getElementById("progressBar");
+    if (bar) bar.style.setProperty("--pct", `${Math.round((seenThisSession / DEFAULTS.sessionCap) * 100)}%`);
   }
 
   function rerender(resetToFirstPage = false, persist = true) {
@@ -682,7 +688,10 @@ function wireEvents(app, updatedLabel) {
 
   showCommentsEl.addEventListener("change", () => rerender(false));
 
-  saveBtn.addEventListener("click", () => rerender(true));
+  saveBtn.addEventListener("click", () => {
+    document.querySelector(".settings").removeAttribute("open");
+    rerender(true);
+  });
 
   resetBtn.addEventListener("click", () => {
     document.getElementById("subreddits").value = DEFAULTS.subreddits.join("\n");
