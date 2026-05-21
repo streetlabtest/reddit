@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-21T17:58:46.474787+00:00",
+  "generated_at_utc": "2026-05-21T21:27:38.156219+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -9,8 +9,395 @@
     "PsychologyMemes",
     "SurrealMemes"
   ],
-  "errors": {},
+  "errors": {
+    "SurrealMemes": "HTTPSConnectionPool(host='www.reddit.com', port=443): Read timed out. (read timeout=20)"
+  },
   "items": [
+    {
+      "id": "t3_1tjyh8d",
+      "subreddit": "dankmemes",
+      "title": "Tfw ur a bum lol",
+      "text": "",
+      "image": "https://preview.redd.it/huue50k56k2h1.jpeg?width=640&crop=smart&auto=webp&s=8a902ef0f5750ab676967fc78be221d612cf87e9",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjyh8d/tfw_ur_a_bum_lol/",
+      "external_url": "https://i.redd.it/huue50k56k2h1.jpeg",
+      "created_utc": 1779398784,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjycz4",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/64owduad5k2h1.jpeg?width=640&crop=smart&auto=webp&s=6a8e646e8c2cb635ff69568bacccbc628ec7c5fe",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjycz4/meirl/",
+      "external_url": "https://i.redd.it/64owduad5k2h1.jpeg",
+      "created_utc": 1779398520,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjybng",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/grvo7gq55k2h1.jpeg?width=640&crop=smart&auto=webp&s=e92ca429045d9b5f2fbbf78a95f1f05e532261f9",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjybng/meirl/",
+      "external_url": "https://i.redd.it/grvo7gq55k2h1.jpeg",
+      "created_utc": 1779398449,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjybfe",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/pj8xi9845k2h1.jpeg?width=640&crop=smart&auto=webp&s=44df240333789913fbe6f84c59800b2fd9228966",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjybfe/meirl/",
+      "external_url": "https://i.redd.it/pj8xi9845k2h1.jpeg",
+      "created_utc": 1779398435,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjy4qg",
+      "subreddit": "meirl",
+      "title": "I had to do it (meirl)",
+      "text": "",
+      "image": "https://i.redd.it/h8xfd2i73k2h1",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjy4qg/i_had_to_do_it_meirl/",
+      "external_url": "https://i.redd.it/h8xfd2i73k2h1",
+      "created_utc": 1779398032,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjxjlp",
+      "subreddit": "dankmemes",
+      "title": "thank you for your service troops",
+      "text": "",
+      "image": "https://preview.redd.it/khumuqruzj2h1.png?width=640&crop=smart&auto=webp&s=54a7c579dda7bcfd78ecc216202bcef24c2f80e0",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjxjlp/thank_you_for_your_service_troops/",
+      "external_url": "https://i.redd.it/khumuqruzj2h1.png",
+      "created_utc": 1779396714,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjx9qz",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/og6y9737yj2h1.jpeg?width=640&crop=smart&auto=webp&s=d2383d98408c3550246daece4bd7348a6eedbffb",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjx9qz/meirl/",
+      "external_url": "https://i.redd.it/og6y9737yj2h1.jpeg",
+      "created_utc": 1779396108,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjx65z",
+      "subreddit": "dankmemes",
+      "title": "True middle ground has been reached",
+      "text": "",
+      "image": "https://preview.redd.it/ks1etdbkxj2h1.jpeg?width=640&crop=smart&auto=webp&s=5f2a1cf47bdae097413d69a24b25539c7dad1e59",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjx65z/true_middle_ground_has_been_reached/",
+      "external_url": "https://i.redd.it/ks1etdbkxj2h1.jpeg",
+      "created_utc": 1779395895,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjww4z",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/xq17xy9svj2h1.jpeg?width=640&crop=smart&auto=webp&s=03f8a4428af9d6d82243a6da1731117441304d30",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjww4z/me_irl/",
+      "external_url": "https://i.redd.it/xq17xy9svj2h1.jpeg",
+      "created_utc": 1779395297,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwvrm",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/vcub3t2pvj2h1.jpeg?width=640&crop=smart&auto=webp&s=74eaf46048d8c9bf4f447770b7d49df0f12210d4",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjwvrm/meirl/",
+      "external_url": "https://i.redd.it/vcub3t2pvj2h1.jpeg",
+      "created_utc": 1779395274,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwtoj",
+      "subreddit": "EarthPorn",
+      "title": "Landslide Lake | Strathcona BC | [OC] [4745x3456]",
+      "text": "",
+      "image": "https://preview.redd.it/2glojskcvj2h1.jpeg?width=640&crop=smart&auto=webp&s=732cfb20cf2e3edd8ceef0fd8619405d8a115b8f",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tjwtoj/landslide_lake_strathcona_bc_oc_4745x3456/",
+      "external_url": "https://i.redd.it/2glojskcvj2h1.jpeg",
+      "created_utc": 1779395151,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwrv2",
+      "subreddit": "EarthPorn",
+      "title": "Cookies n Cream | Berg Lake, Strathcona BC | [OC] [3261x4348]",
+      "text": "",
+      "image": "https://preview.redd.it/tjsg4c51vj2h1.jpeg?width=640&crop=smart&auto=webp&s=cdb0b7a77d01502144af152069a0fb9038c7d4b0",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tjwrv2/cookies_n_cream_berg_lake_strathcona_bc_oc/",
+      "external_url": "https://i.redd.it/tjsg4c51vj2h1.jpeg",
+      "created_utc": 1779395043,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwov7",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Red Sprites, La Jemaye France",
+      "text": "photo: Nicolas Escurat, 19 August 2023",
+      "image": "https://preview.redd.it/xfqugxxguj2h1.png?width=640&crop=smart&auto=webp&s=56bbc37ff5aacd578197c41d91ddc116a87d410c",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1tjwov7/red_sprites_la_jemaye_france/",
+      "external_url": "https://i.redd.it/xfqugxxguj2h1.png",
+      "created_utc": 1779394869,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwldm",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/93twjsvwtj2h1.jpeg?width=640&crop=smart&auto=webp&s=6ee0c96fcbba0a45d0a4703dae31f2b01022fb8b",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjwldm/meirl/",
+      "external_url": "https://i.redd.it/93twjsvwtj2h1.jpeg",
+      "created_utc": 1779394666,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjwe53",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/ux0qisslsj2h1.jpeg?width=640&crop=smart&auto=webp&s=d1ac1b0ffa9ed8a4388e0955a34528c1cfdeff99",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjwe53/meirl/",
+      "external_url": "https://i.redd.it/ux0qisslsj2h1.jpeg",
+      "created_utc": 1779394238,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjvy1w",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/yyz5kr7wpj2h1.jpeg?width=640&crop=smart&auto=webp&s=609db2cfcc3ef198167f623add4f414fc2c81f19",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjvy1w/me_irl/",
+      "external_url": "https://i.redd.it/yyz5kr7wpj2h1.jpeg",
+      "created_utc": 1779393316,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjvtml",
+      "subreddit": "dankmemes",
+      "title": "I bet it do.",
+      "text": "",
+      "image": "https://i.redd.it/94a1z934pj2h1.jpeg",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjvtml/i_bet_it_do/",
+      "external_url": "https://i.redd.it/94a1z934pj2h1.jpeg",
+      "created_utc": 1779393053,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjvhjh",
+      "subreddit": "EarthPorn",
+      "title": "Loen, Norway [OC][3862x2896]",
+      "text": "",
+      "image": "https://preview.redd.it/3x8g2ol2nj2h1.jpeg?width=640&crop=smart&auto=webp&s=a2abb7be1f6b9f53e385ed0011a7d7a7c473cb8c",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tjvhjh/loen_norway_oc3862x2896/",
+      "external_url": "https://i.redd.it/3x8g2ol2nj2h1.jpeg",
+      "created_utc": 1779392369,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjuykm",
+      "subreddit": "PsychologyMemes",
+      "title": "Anxious Attachment + Trauma Bond",
+      "text": "",
+      "image": "https://preview.redd.it/8bqmq3rtjj2h1.jpeg?width=640&crop=smart&auto=webp&s=67d179e456559d4a83b62ee012e0f6ab350d9838",
+      "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1tjuykm/anxious_attachment_trauma_bond/",
+      "external_url": "https://i.redd.it/8bqmq3rtjj2h1.jpeg",
+      "created_utc": 1779391276,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjuwpw",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/px9b37yijj2h1.jpeg?width=640&crop=smart&auto=webp&s=90f6f4ed3eff3a23c2f6c5475da70ce949a2800c",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjuwpw/me_irl/",
+      "external_url": "https://i.redd.it/px9b37yijj2h1.jpeg",
+      "created_utc": 1779391175,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjurbj",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/tudaxipkij2h1.jpeg?width=320&crop=smart&auto=webp&s=4779b44b27c809518cc5545473258dcc8f6b0546",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjurbj/me_irl/",
+      "external_url": "https://i.redd.it/tudaxipkij2h1.jpeg",
+      "created_utc": 1779390868,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjuon2",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/mvxdlfb3ij2h1.jpeg?width=640&crop=smart&auto=webp&s=3c036a295d7a457e2d89234d784e1ee19764c804",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjuon2/meirl/",
+      "external_url": "https://i.redd.it/mvxdlfb3ij2h1.jpeg",
+      "created_utc": 1779390712,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjuj31",
+      "subreddit": "me_irl",
+      "title": "Me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/i1l0lrm7hj2h1.jpeg?width=640&crop=smart&auto=webp&s=7eb27e85b04eb2d48a068e098685806aaa8ab5ad",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjuj31/me_irl/",
+      "external_url": "https://i.redd.it/i1l0lrm7hj2h1.jpeg",
+      "created_utc": 1779390396,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjucc8",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/tvtw25m4gj2h1.jpeg?width=640&crop=smart&auto=webp&s=ad4896bd127e2d33a249d2be6080d92cbb18328f",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjucc8/me_irl/",
+      "external_url": "https://i.redd.it/tvtw25m4gj2h1.jpeg",
+      "created_utc": 1779390032,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjubx1",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/2bst66a2gj2h1.jpeg?width=640&crop=smart&auto=webp&s=e3ec019ed7f672e3b87abe0036d2830b5094e63e",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjubx1/me_irl/",
+      "external_url": "https://i.redd.it/2bst66a2gj2h1.jpeg",
+      "created_utc": 1779390010,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjtx5s",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/6t58ahwkdj2h1.jpeg?width=320&crop=smart&auto=webp&s=4651a3e3d534b521d2130a92c33a37359808cd2f",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjtx5s/me_irl/",
+      "external_url": "https://i.redd.it/6t58ahwkdj2h1.jpeg",
+      "created_utc": 1779389175,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjtuom",
+      "subreddit": "me_irl",
+      "title": "Me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/rpjl4du5dj2h1.jpeg?width=640&crop=smart&auto=webp&s=2dba355bb541f349122167a949d00cc22f8c514d",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjtuom/me_irl/",
+      "external_url": "https://i.redd.it/rpjl4du5dj2h1.jpeg",
+      "created_utc": 1779389038,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjtna5",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/vi32bylwbj2h1.jpeg?width=640&crop=smart&auto=webp&s=b025494eb2f2c57c25a7a6dc31d10db4993d8a51",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjtna5/meirl/",
+      "external_url": "https://i.redd.it/vi32bylwbj2h1.jpeg",
+      "created_utc": 1779388611,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjt9e2",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/3lkj8ytj9j2h1.jpeg?width=640&crop=smart&auto=webp&s=f49a8810a34a28a244d0e9d31ec2d65879a93ad5",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjt9e2/meirl/",
+      "external_url": "https://i.redd.it/3lkj8ytj9j2h1.jpeg",
+      "created_utc": 1779387820,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjt31z",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Anticlinal de Sot de Chera -- geological \"chevron fold\" formation in Valencia, Spain 🔥",
+      "text": "",
+      "image": "https://preview.redd.it/1g7vf22w7j2h1.jpeg?width=640&crop=smart&auto=webp&s=e4b166bd715ab8cb6a8d6cfacc626133151758b0",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1tjt31z/anticlinal_de_sot_de_chera_geological_chevron/",
+      "external_url": "https://i.redd.it/1g7vf22w7j2h1.jpeg",
+      "created_utc": 1779387484,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjszu4",
+      "subreddit": "dankmemes",
+      "title": "Good god woman",
+      "text": "",
+      "image": "https://preview.redd.it/pvc2fv108j2h1.jpeg?width=640&crop=smart&auto=webp&s=53aeb55939daea0bf5365ca519c895216f57e5e3",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjszu4/good_god_woman/",
+      "external_url": "https://i.redd.it/pvc2fv108j2h1.jpeg",
+      "created_utc": 1779387298,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjsxvj",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/8ll232vn7j2h1.jpeg?width=640&crop=smart&auto=webp&s=38a1c2f4fb1664b848c4fbcc76e1e8dcfef4c5c0",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjsxvj/me_irl/",
+      "external_url": "https://i.redd.it/8ll232vn7j2h1.jpeg",
+      "created_utc": 1779387185,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjsuyh",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/tb7xq9n57j2h1.jpeg?width=640&crop=smart&auto=webp&s=ee7a4adf0120d00e82a6a66d2ecdbf7a8c488735",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjsuyh/meirl/",
+      "external_url": "https://i.redd.it/tb7xq9n57j2h1.jpeg",
+      "created_utc": 1779387018,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjssx7",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/8i5qhuit6j2h1.jpeg?width=640&crop=smart&auto=webp&s=2d03297db052660f2fad618e150013f96e63d55f",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjssx7/meirl/",
+      "external_url": "https://i.redd.it/8i5qhuit6j2h1.jpeg",
+      "created_utc": 1779386900,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjspnv",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/addl5u0a6j2h1.jpeg?width=640&crop=smart&auto=webp&s=2d77af8458b51e75ae10dd41d9fe223cc20c67d5",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjspnv/meirl/",
+      "external_url": "https://i.redd.it/addl5u0a6j2h1.jpeg",
+      "created_utc": 1779386720,
+      "is_text_only": false
+    },
     {
       "id": "t3_1tjsewl",
       "subreddit": "meirl",
@@ -34,17 +421,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tjs5os",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/crnaz5kz2j2h1.jpeg?width=640&crop=smart&auto=webp&s=aa6ada7bcf7c24093a7f0c45f0b76f9f9dc33151",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjs5os/meirl/",
-      "external_url": "https://i.redd.it/crnaz5kz2j2h1.jpeg",
-      "created_utc": 1779385613,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tjrif4",
       "subreddit": "EarthPorn",
       "title": "Cinque Torri, Dolomites (OC) [6240x4160]",
@@ -53,39 +429,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tjrif4/cinque_torri_dolomites_oc_6240x4160/",
       "external_url": "https://i.redd.it/wxac68dazi2h1.jpeg",
       "created_utc": 1779384369,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjrh3o",
-      "subreddit": "SurrealMemes",
-      "title": "Very Human Goals",
-      "text": "",
-      "image": "https://preview.redd.it/vvwoda63zi2h1.jpeg?width=640&crop=smart&auto=webp&s=3a95a7c44707d1ef322ca413f0b7f0fe2c9abbcc",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tjrh3o/very_human_goals/",
-      "external_url": "https://i.redd.it/vvwoda63zi2h1.jpeg",
-      "created_utc": 1779384300,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjqzyd",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/arxlybacwi2h1.png?width=640&crop=smart&auto=webp&s=0337f811d1095eb68993b873bdceedf7b68da86c",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjqzyd/me_irl/",
-      "external_url": "https://i.redd.it/arxlybacwi2h1.png",
-      "created_utc": 1779383382,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjqy7t",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/i52p9gd2wi2h1.jpeg?width=640&crop=smart&auto=webp&s=1e2be4ccdf7bc7780080838afec327bf14d70368",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjqy7t/meirl/",
-      "external_url": "https://i.redd.it/i52p9gd2wi2h1.jpeg",
-      "created_utc": 1779383284,
       "is_text_only": false
     },
     {
@@ -111,28 +454,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tjqs9g",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/w1cfsas2vi2h1.jpeg?width=640&crop=smart&auto=webp&s=90ad5f057e948242b0ded08414157ffe1aa4d129",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjqs9g/meirl/",
-      "external_url": "https://i.redd.it/w1cfsas2vi2h1.jpeg",
-      "created_utc": 1779382951,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjqrrz",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/7lkwyh3yui2h1.png?width=640&crop=smart&auto=webp&s=2f1ef4c9e98430a227a0bd411410f1cfa56efddd",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjqrrz/meirl/",
-      "external_url": "https://i.redd.it/7lkwyh3yui2h1.png",
-      "created_utc": 1779382927,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tjqdsc",
       "subreddit": "dankmemes",
       "title": "What the hell is Google thinking?",
@@ -152,17 +473,6 @@
       "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjq61m/me_irl/",
       "external_url": "https://i.redd.it/gsdbmg1cri2h1.jpeg",
       "created_utc": 1779381692,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjpvne",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/4wdcw48hpi2h1.jpeg?width=640&crop=smart&auto=webp&s=5257770c29af7b93ab123b2e86ad73ef1845e2c6",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjpvne/meirl/",
-      "external_url": "https://i.redd.it/4wdcw48hpi2h1.jpeg",
-      "created_utc": 1779381068,
       "is_text_only": false
     },
     {
@@ -339,6 +649,17 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjn7jm/the_jfk_slingshot_theory/",
       "external_url": "https://i.redd.it/dmw9634l9i2h1.jpeg",
       "created_utc": 1779375725,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1tjn76q",
+      "subreddit": "EarthPorn",
+      "title": "Aurora over Kirkjufell, Iceland [OC] [2064x1462]",
+      "text": "",
+      "image": "https://preview.redd.it/dt2hamgi9i2h1.jpeg?width=640&crop=smart&auto=webp&s=c03eb9b3312c1252178af59d6ca5a08f06e245aa",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tjn76q/aurora_over_kirkjufell_iceland_oc_2064x1462/",
+      "external_url": "https://i.redd.it/dt2hamgi9i2h1.jpeg",
+      "created_utc": 1779375703,
       "is_text_only": false
     },
     {
@@ -562,39 +883,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tje444",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/vkfx1qcvag2h1.jpeg?width=640&crop=smart&auto=webp&s=705d400c0c60443a88f48fb1e50afd8341f7e366",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tje444/meirl/",
-      "external_url": "https://i.redd.it/vkfx1qcvag2h1.jpeg",
-      "created_utc": 1779351953,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjdxvw",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/vxn1ryn69g2h1.jpeg?width=640&crop=smart&auto=webp&s=1d71acb24ac5bba04df94e173be1d60cbeace8ab",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjdxvw/meirl/",
-      "external_url": "https://i.redd.it/vxn1ryn69g2h1.jpeg",
-      "created_utc": 1779351375,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjdwfe",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/mh34spr68g2h1.jpeg?width=640&crop=smart&auto=webp&s=318de686565bcc110918a3b657bb99d34178bf59",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjdwfe/meirl/",
-      "external_url": "https://i.redd.it/mh34spr68g2h1.jpeg",
-      "created_utc": 1779351238,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tjdni7",
       "subreddit": "me_irl",
       "title": "me_irl",
@@ -603,17 +891,6 @@
       "comments_url": "https://www.reddit.com/r/me_irl/comments/1tjdni7/me_irl/",
       "external_url": "https://i.redd.it/mgfdb54a6g2h1.jpeg",
       "created_utc": 1779350400,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjdkvj",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/lffmnraj5g2h1.jpeg?width=640&crop=smart&auto=webp&s=9e57b172da242f1b52f25e301f6bec0528fcd711",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjdkvj/meirl/",
-      "external_url": "https://i.redd.it/lffmnraj5g2h1.jpeg",
-      "created_utc": 1779350148,
       "is_text_only": false
     },
     {
@@ -647,39 +924,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tjcq6q/distrust_anyone_who_treats_society_like_a_sandbox/",
       "external_url": "https://i.redd.it/9oxjlwx3xf2h1.jpeg",
       "created_utc": 1779347314,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjcc19",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://external-preview.redd.it/bWR3a2w1NmN0ZjJoMV-9NFsFcywaaZsKQ5lchHOaYI6hK78xOATMALD91NTH.png?width=640&crop=smart&auto=webp&s=abd24f746260e636e9c57d8d13b68162d0aff1e0",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjcc19/meirl/",
-      "external_url": "https://v.redd.it/k5g3lpubtf2h1",
-      "created_utc": 1779346057,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjc3g7",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/uu7pyf02rf2h1.jpeg?width=640&crop=smart&auto=webp&s=bc5e2af16168a6ecc97f951e818ddca8aa58a719",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjc3g7/meirl/",
-      "external_url": "https://i.redd.it/uu7pyf02rf2h1.jpeg",
-      "created_utc": 1779345279,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tjc39k",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/whmdy7d0rf2h1.jpeg?width=640&crop=smart&auto=webp&s=b747a2b19a788f78a6cc4ea42baa8585829ceac3",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjc39k/meirl/",
-      "external_url": "https://i.redd.it/whmdy7d0rf2h1.jpeg",
-      "created_utc": 1779345263,
       "is_text_only": false
     },
     {
@@ -738,17 +982,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tjaijf",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/9whrmukdcf2h1.jpeg?width=640&crop=smart&auto=webp&s=d3b37404b4f4e844d839df37e4bdf9e503dd9c0a",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tjaijf/meirl/",
-      "external_url": "https://i.redd.it/9whrmukdcf2h1.jpeg",
-      "created_utc": 1779340344,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tja5es",
       "subreddit": "PsychologyMemes",
       "title": "✋",
@@ -793,17 +1026,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tj9li1",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/6dvw6dt04f2h1.png?width=640&crop=smart&auto=webp&s=5e85c7ca8faff7d27f12ca1c71d117cbf55e2932",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1tj9li1/meirl/",
-      "external_url": "https://i.redd.it/6dvw6dt04f2h1.png",
-      "created_utc": 1779337534,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tj9i2a",
       "subreddit": "dankmemes",
       "title": "Jokes aside, why's it called a \"blowjob\" and not \"mouthjob\" or \"succjob\"?",
@@ -834,17 +1056,6 @@
       "comments_url": "https://www.reddit.com/r/me_irl/comments/1tj927k/me_irl/",
       "external_url": "https://i.redd.it/jkwirfpkze2h1.jpeg",
       "created_utc": 1779336037,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tj8syc",
-      "subreddit": "SurrealMemes",
-      "title": "Unstable",
-      "text": "",
-      "image": "https://preview.redd.it/ggjacznixe2h1.jpeg?width=640&crop=smart&auto=webp&s=5575c3c0c4af82be08aeadf4e8085391c8240c29",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tj8syc/unstable/",
-      "external_url": "https://i.redd.it/ggjacznixe2h1.jpeg",
-      "created_utc": 1779335345,
       "is_text_only": false
     },
     {
@@ -925,17 +1136,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tj5sxp",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/gf1ywqut9e2h1.jpeg?width=640&crop=smart&auto=webp&s=d5f9931b09247528af3c2c2137d1af3790032152",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tj5sxp/me_irl/",
-      "external_url": "https://i.redd.it/gf1ywqut9e2h1.jpeg",
-      "created_utc": 1779327378,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tj4zfw",
       "subreddit": "dankmemes",
       "title": "Mindblown",
@@ -955,17 +1155,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tj4wky/california_poppies_at_sunol_wilderness_oc/",
       "external_url": "https://i.redd.it/lxhi26cu2e2h1.jpeg",
       "created_utc": 1779325029,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tj4icg",
-      "subreddit": "dankmemes",
-      "title": "Season 5 wasn't the best but I still thought the ending was pretty dope!",
-      "text": "",
-      "image": "https://preview.redd.it/ddw3vv8nzd2h1.gif?width=640&crop=smart&s=a3b1fb0db9d2af9f6f58158cfd93e5f5343d4d02",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tj4icg/season_5_wasnt_the_best_but_i_still_thought_the/",
-      "external_url": "https://i.redd.it/ddw3vv8nzd2h1.gif",
-      "created_utc": 1779323968,
       "is_text_only": false
     },
     {
@@ -991,17 +1180,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tj1bhi",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/st9likkjcd2h1.png?width=640&crop=smart&auto=webp&s=a29bdf750080c1c24316a88e40d4ff83a1aa9ee4",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tj1bhi/me_irl/",
-      "external_url": "https://i.redd.it/st9likkjcd2h1.png",
-      "created_utc": 1779316195,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tj187k",
       "subreddit": "EarthPorn",
       "title": "Morning by the Bug river, Poland [OC][1600x1067]",
@@ -1024,28 +1202,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tj0w3s",
-      "subreddit": "dankmemes",
-      "title": "Worst movie ever",
-      "text": "",
-      "image": "https://preview.redd.it/x186mtep9d2h1.jpeg?width=640&crop=smart&auto=webp&s=c019cf6227d199fd0b56e5a7ee4f6abed561a446",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tj0w3s/worst_movie_ever/",
-      "external_url": "https://i.redd.it/x186mtep9d2h1.jpeg",
-      "created_utc": 1779315230,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tizs2p",
-      "subreddit": "dankmemes",
-      "title": "time to go live in the woods as a hermit",
-      "text": "",
-      "image": "https://preview.redd.it/t6rvwc162d2h1.jpeg?width=640&crop=smart&auto=webp&s=ac38e5aae6044cf53769305b8b1b826eab651027",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tizs2p/time_to_go_live_in_the_woods_as_a_hermit/",
-      "external_url": "https://i.redd.it/t6rvwc162d2h1.jpeg",
-      "created_utc": 1779312695,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tiyi6o",
       "subreddit": "EarthPorn",
       "title": "Mono Lake, California [2400x3000] [OC]",
@@ -1054,39 +1210,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tiyi6o/mono_lake_california_2400x3000_oc/",
       "external_url": "https://i.redd.it/43j4beoeuc2h1.jpeg",
       "created_utc": 1779310086,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tiy6e3",
-      "subreddit": "dankmemes",
-      "title": "Oh no Corey Kyle Massey",
-      "text": "What did he do???",
-      "image": "https://preview.redd.it/mlqcpf3esc2h1.jpeg?width=640&crop=smart&auto=webp&s=210ce7c7558b11394c4beee3b3d900cd1298f957",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tiy6e3/oh_no_corey_kyle_massey/",
-      "external_url": "https://i.redd.it/mlqcpf3esc2h1.jpeg",
-      "created_utc": 1779309408,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tiy2ib",
-      "subreddit": "dankmemes",
-      "title": "My brain at night:",
-      "text": "",
-      "image": "https://preview.redd.it/hejpo0pqrc2h1.jpeg?width=640&crop=smart&auto=webp&s=e999c9d720a5c606e446d13cae20329ccad9cac5",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1tiy2ib/my_brain_at_night/",
-      "external_url": "https://i.redd.it/hejpo0pqrc2h1.jpeg",
-      "created_utc": 1779309191,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tixp71",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/hgn9nl9jpc2h1.png?width=640&crop=smart&auto=webp&s=aba058597db6789984f762e051e142d89ff7b5cb",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tixp71/me_irl/",
-      "external_url": "https://i.redd.it/hgn9nl9jpc2h1.png",
-      "created_utc": 1779308448,
       "is_text_only": false
     },
     {
@@ -1145,17 +1268,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1titsyh",
-      "subreddit": "me_irl",
-      "title": "Me_irl",
-      "text": "​",
-      "image": "https://preview.redd.it/qjxvfljy1c2h1.jpeg?width=640&crop=smart&auto=webp&s=dd0e23624be05e52ba920f9b5638583a7ed6156d",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1titsyh/me_irl/",
-      "external_url": "https://i.redd.it/qjxvfljy1c2h1.jpeg",
-      "created_utc": 1779300519,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tit1n5",
       "subreddit": "EarthPorn",
       "title": "New river gorge national park, west Virginia[OC](3000×4000)",
@@ -1167,17 +1279,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tisxej",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/6dhaxwwkwb2h1.png?width=640&crop=smart&auto=webp&s=8497cceeccb13513e156cff2c76786d39f63d4ea",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tisxej/me_irl/",
-      "external_url": "https://i.redd.it/6dhaxwwkwb2h1.png",
-      "created_utc": 1779298739,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tiso68",
       "subreddit": "PsychologyMemes",
       "title": "Accountability",
@@ -1186,28 +1287,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1tiso68/accountability/",
       "external_url": "https://i.redd.it/va616eg9tb2h1.jpeg",
       "created_utc": 1779298205,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tirsa8",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "https://preview.redd.it/ybvwc7yopb2h1.png?width=1034&format=png&auto=webp&s=05527f8345c96a8f7b8e98b16c5902b51320b6a5",
-      "image": "https://preview.redd.it/ybvwc7yopb2h1.png?width=140&height=139&auto=webp&s=3511cc067dcec700690f106f5465d742aff93f1a",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tirsa8/me_irl/",
-      "external_url": "https://preview.redd.it/ybvwc7yopb2h1.png?width=1034&format=png&auto=webp&s=05527f8345c96a8f7b8e98b16c5902b51320b6a5",
-      "created_utc": 1779296403,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tirfts",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://external-preview.redd.it/dXZnMGthZGpuYjJoMX5mk5zE_4zznA7TQJHJlUk5rGx--enCJV-KTPEqHbx8.png?width=320&crop=smart&auto=webp&s=db680a2df50a5ac30f98248a466db25fbafbd421",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tirfts/me_irl/",
-      "external_url": "https://v.redd.it/0jytx3oknb2h1",
-      "created_utc": 1779295687,
       "is_text_only": false
     },
     {
@@ -1230,39 +1309,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tiqq4o/lake_ohara_area_bc_oc_8256x5504/",
       "external_url": "https://i.redd.it/ovvbrgu7jb2h1.jpeg",
       "created_utc": 1779294216,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tiqfrg",
-      "subreddit": "me_irl",
-      "title": "Me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/v5pli1bkhb2h1.jpeg?width=640&crop=smart&auto=webp&s=b375b2cf6116f11a2180dd107a71a55f240ed6bd",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tiqfrg/me_irl/",
-      "external_url": "https://i.redd.it/v5pli1bkhb2h1.jpeg",
-      "created_utc": 1779293658,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tiqeht",
-      "subreddit": "EarthPorn",
-      "title": "Wildflowers at sunset - Sun Peaks, BC [OC] [4383x7013]",
-      "text": "",
-      "image": "https://preview.redd.it/ft91th8chb2h1.jpeg?width=640&crop=smart&auto=webp&s=3e151a4d8fff56a568d5d81292413ea1c84ed68d",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tiqeht/wildflowers_at_sunset_sun_peaks_bc_oc_4383x7013/",
-      "external_url": "https://i.redd.it/ft91th8chb2h1.jpeg",
-      "created_utc": 1779293586,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tipkae",
-      "subreddit": "me_irl",
-      "title": "Me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/3cwohfa7cb2h1.jpeg?width=640&crop=smart&auto=webp&s=891e8b28d3959c1d7470c9fb024f7d670bbd9877",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1tipkae/me_irl/",
-      "external_url": "https://i.redd.it/3cwohfa7cb2h1.jpeg",
-      "created_utc": 1779291857,
       "is_text_only": false
     },
     {
@@ -1299,28 +1345,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tildpt",
-      "subreddit": "EarthPorn",
-      "title": "Okunikko, Japan [OC] [5133x3422]",
-      "text": "",
-      "image": "https://preview.redd.it/6f623voila2h1.jpeg?width=640&crop=smart&auto=webp&s=958b5ff693e1c8e03673ea4113c4524e23363bfa",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tildpt/okunikko_japan_oc_5133x3422/",
-      "external_url": "https://i.redd.it/6f623voila2h1.jpeg",
-      "created_utc": 1779282905,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1til5il",
-      "subreddit": "SurrealMemes",
-      "title": "this is when the mail comes and you",
-      "text": "",
-      "image": "https://preview.redd.it/zqldz8zxja2h1.png?width=640&crop=smart&auto=webp&s=6efc0d7f37419e7604359323b18bc7df6abb09cf",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1til5il/this_is_when_the_mail_comes_and_you/",
-      "external_url": "https://i.redd.it/zqldz8zxja2h1.png",
-      "created_utc": 1779282378,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tijk95",
       "subreddit": "NatureIsFuckingLit",
       "title": "🔥 These Humpback Whales in Antarctica have learned a cooperative feeding technique that traps their prey - krill - in a net of bubbles before the whales scoop them up from below.",
@@ -1340,28 +1364,6 @@
       "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1tiiz0k/a_serval_cat_striking_a_pose/",
       "external_url": "https://i.redd.it/y55w5geo3a2h1.png",
       "created_utc": 1779276939,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tiegux",
-      "subreddit": "EarthPorn",
-      "title": "Leirhnjúkur (Islandia) [OC] 3292×2143",
-      "text": "",
-      "image": "https://preview.redd.it/jqktnzmzw82h1.jpeg?width=640&crop=smart&auto=webp&s=d0aa86bf517901a99fbae61af64f3b79a57acb6f",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tiegux/leirhnjúkur_islandia_oc_32922143/",
-      "external_url": "https://i.redd.it/jqktnzmzw82h1.jpeg",
-      "created_utc": 1779262526,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tieffn",
-      "subreddit": "EarthPorn",
-      "title": "Valle de Ordesa(Pirineos/España)[OC]1804×1024",
-      "text": "",
-      "image": "https://preview.redd.it/vhasi8wkw82h1.jpeg?width=640&crop=smart&auto=webp&s=49beec7012a0805d8bd992639f484dc3dcb7cd00",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1tieffn/valle_de_ordesapirineosespañaoc18041024/",
-      "external_url": "https://i.redd.it/vhasi8wkw82h1.jpeg",
-      "created_utc": 1779262389,
       "is_text_only": false
     },
     {
@@ -1453,28 +1455,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tht10r",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 The Rough-skinned newt, a native species in the Pacific Northwest. These amphibians are highly poisonous and contain a strong neurotoxin called Tetrodotoxin (the same toxin as a pufferfish)",
-      "text": "Credit to Jake Guzman",
-      "image": "https://external-preview.redd.it/aHZjNmZjNmxrNDJoMYw-MMIJHwJUrbNMRhoxidAwA3kBe53ljvbd0X4s1poO.png?width=640&crop=smart&auto=webp&s=6f032e1a5bb62aaa84b3fba2da5508353c5e6d41",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1tht10r/the_roughskinned_newt_a_native_species_in_the/",
-      "external_url": "https://v.redd.it/ru0113zkk42h1",
-      "created_utc": 1779209938,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1thsrm8",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥The Crazy Nastyass Honey Badger (original narration by Randall). This video is on par with some BBC Attenborough documentaries. Don't believe it? Honey Badger don't care :D",
-      "text": "",
-      "image": "https://external-preview.redd.it/c2JkeGd6NjBqNDJoMaZImx8z8qFJqSxv1t9XPFkuNJylme49wWg_iPBjkRuz.png?width=640&crop=smart&auto=webp&s=ce967f6b1f1ebbbdd1af487dd93cd351e0a20028",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1thsrm8/the_crazy_nastyass_honey_badger_original/",
-      "external_url": "https://v.redd.it/f4pkfy60j42h1",
-      "created_utc": 1779209408,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1thqinj",
       "subreddit": "PsychologyMemes",
       "title": "Felt this in my bones",
@@ -1508,50 +1488,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1th96p4",
-      "subreddit": "SurrealMemes",
-      "title": "the lonely crabby patty😭",
-      "text": "",
-      "image": "https://preview.redd.it/61499xm2702h1.png?width=640&crop=smart&auto=webp&s=90df60a0755a8986fbc4a404fbe992990f03f7b2",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1th96p4/the_lonely_crabby_patty/",
-      "external_url": "https://i.redd.it/61499xm2702h1.png",
-      "created_utc": 1779157049,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1th6jun",
-      "subreddit": "SurrealMemes",
-      "title": "Joney Mustard",
-      "text": "",
-      "image": "https://preview.redd.it/v80z1a05nz1h1.jpeg?width=640&crop=smart&auto=webp&s=4fb0beb374918c5b5dffa5b0897b6f3d1954b950",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1th6jun/joney_mustard/",
-      "external_url": "https://i.redd.it/v80z1a05nz1h1.jpeg",
-      "created_utc": 1779150281,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1th42a4",
-      "subreddit": "SurrealMemes",
-      "title": "Bathroom Essential",
-      "text": "",
-      "image": "https://preview.redd.it/3lk2o5755z1h1.jpeg?width=320&crop=smart&auto=webp&s=bc3157e46a22ca986f468c53b814e4153f331917",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1th42a4/bathroom_essential/",
-      "external_url": "https://i.redd.it/3lk2o5755z1h1.jpeg",
-      "created_utc": 1779144219,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tgn0zn",
-      "subreddit": "SurrealMemes",
-      "title": "Guilty of academic misconduct!",
-      "text": "an unintentional surreal-ish meme by my university",
-      "image": "https://preview.redd.it/0bj344thgw1h1.png?width=640&crop=smart&auto=webp&s=424d2e49115d933febeca219f2aab92b33be14bb",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tgn0zn/guilty_of_academic_misconduct/",
-      "external_url": "https://i.redd.it/0bj344thgw1h1.png",
-      "created_utc": 1779111697,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tgj8u4",
       "subreddit": "PsychologyMemes",
       "title": "It’s almost over!",
@@ -1571,50 +1507,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1tg60z3/i_rlly_need_to_know_that_term_in_psychology/",
       "external_url": "https://i.redd.it/wn6tpvvfds1h1.png",
       "created_utc": 1779062305,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tfqhpr",
-      "subreddit": "SurrealMemes",
-      "title": "Haha, just kidding. Unless..",
-      "text": "",
-      "image": "https://preview.redd.it/st71uarrfp1h1.jpeg?width=640&crop=smart&auto=webp&s=b70fa8730057f6c1b4e98e77b85646e0953455f3",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tfqhpr/haha_just_kidding_unless/",
-      "external_url": "https://i.redd.it/st71uarrfp1h1.jpeg",
-      "created_utc": 1779026704,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tfblmg",
-      "subreddit": "SurrealMemes",
-      "title": "Краснодар мой любимый",
-      "text": "",
-      "image": "https://preview.redd.it/m400jf0rpl1h1.jpeg?width=640&crop=smart&auto=webp&s=8845e6250f5c6a4631a69bd8db53a172574baf25",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tfblmg/краснодар_мой_любимый/",
-      "external_url": "https://i.redd.it/m400jf0rpl1h1.jpeg",
-      "created_utc": 1778981634,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tf64j6",
-      "subreddit": "SurrealMemes",
-      "title": "You still haven’t responded?",
-      "text": "Credit kissingparty",
-      "image": "https://preview.redd.it/m42zqeh3ik1h1.jpeg?width=640&crop=smart&auto=webp&s=42a3f2f99e59491c78685c6ad65591b17b03a313",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tf64j6/you_still_havent_responded/",
-      "external_url": "https://i.redd.it/m42zqeh3ik1h1.jpeg",
-      "created_utc": 1778966953,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1te12qe",
-      "subreddit": "SurrealMemes",
-      "title": "Reborn",
-      "text": "",
-      "image": "https://preview.redd.it/1211d7vdtb1h1.png?width=320&crop=smart&auto=webp&s=bad909373c6f4427250976f8f09b3146800a8004",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1te12qe/reborn/",
-      "external_url": "https://i.redd.it/1211d7vdtb1h1.png",
-      "created_utc": 1778861794,
       "is_text_only": false
     },
     {
@@ -1651,28 +1543,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tcfc4t",
-      "subreddit": "SurrealMemes",
-      "title": "Decisions",
-      "text": "",
-      "image": "https://preview.redd.it/2h5hnh5bfz0h1.jpeg?width=320&crop=smart&auto=webp&s=8b6adba490a56a79af14a4004b358b94be5d0b6a",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tcfc4t/decisions/",
-      "external_url": "https://i.redd.it/2h5hnh5bfz0h1.jpeg",
-      "created_utc": 1778711770,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tcenoo",
-      "subreddit": "SurrealMemes",
-      "title": "Rails don't limit lil bro anymore",
-      "text": "",
-      "image": "https://preview.redd.it/l1hz6czkaz0h1.jpeg?width=320&crop=smart&auto=webp&s=02f50923172155c9d77a73a304693f30b8b23c23",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tcenoo/rails_dont_limit_lil_bro_anymore/",
-      "external_url": "https://i.redd.it/l1hz6czkaz0h1.jpeg",
-      "created_utc": 1778710215,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tceg6f",
       "subreddit": "PsychologyMemes",
       "title": "Anyone else relate?",
@@ -1706,28 +1576,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1tbv6x9",
-      "subreddit": "SurrealMemes",
-      "title": "seeing the invisible",
-      "text": "",
-      "image": "https://preview.redd.it/y0tvqtw7pv0h1.png?width=216&crop=smart&auto=webp&s=145a68eec70f1208cb08ffb69fa5c3eb4b048689",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tbv6x9/seeing_the_invisible/",
-      "external_url": "https://i.redd.it/y0tvqtw7pv0h1.png",
-      "created_utc": 1778666737,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tbok9a",
-      "subreddit": "SurrealMemes",
-      "title": "Beach Body, Tasty",
-      "text": "We weren't there when we did it",
-      "image": "https://preview.redd.it/zvrd5i4owt0h1.png?width=640&crop=smart&auto=webp&s=a7acc1f94ad29b9c4696d79be8f6f996b9434db9",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tbok9a/beach_body_tasty/",
-      "external_url": "https://i.redd.it/zvrd5i4owt0h1.png",
-      "created_utc": 1778644972,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1tbb48s",
       "subreddit": "PsychologyMemes",
       "title": "No use running away from my problems, eh?",
@@ -1736,50 +1584,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1tbb48s/no_use_running_away_from_my_problems_eh/",
       "external_url": "https://i.redd.it/9lqeoxme7r0h1.gif",
       "created_utc": 1778612276,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1tan8yt",
-      "subreddit": "SurrealMemes",
-      "title": "Best friends on gnome safari",
-      "text": "Found this nostalgic photo in my dad’s memory pit in the basement.",
-      "image": "https://preview.redd.it/st0t6w1l2m0h1.jpeg?width=640&crop=smart&auto=webp&s=1a7fbdba3c00e1648fce5ce0d49d8737beb7ef69",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1tan8yt/best_friends_on_gnome_safari/",
-      "external_url": "https://i.redd.it/st0t6w1l2m0h1.jpeg",
-      "created_utc": 1778550101,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1ta81xb",
-      "subreddit": "SurrealMemes",
-      "title": "Another Message From Aunt Judith",
-      "text": "",
-      "image": "https://external-preview.redd.it/ODZzemhmMG85ajBoMURBAZOeSAvyzf-r0xK3UYhaj0sfjaKdjbIidis6Rty6.png?width=640&crop=smart&auto=webp&s=6f808a4d39635f320476547d1f33314d9de25936",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1ta81xb/another_message_from_aunt_judith/",
-      "external_url": "https://v.redd.it/toxvkf0o9j0h1",
-      "created_utc": 1778516175,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1ta802e",
-      "subreddit": "SurrealMemes",
-      "title": "affective",
-      "text": "",
-      "image": "https://preview.redd.it/hy9xjosd9j0h1.jpeg?width=640&crop=smart&auto=webp&s=0208d70692f1a68eb1d9c2217289323bad36bd38",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1ta802e/affective/",
-      "external_url": "https://i.redd.it/hy9xjosd9j0h1.jpeg",
-      "created_utc": 1778516067,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t9pecm",
-      "subreddit": "SurrealMemes",
-      "title": "aniqinoahtonoahigh",
-      "text": "",
-      "image": "https://preview.redd.it/7m5x1iblye0h1.png?width=640&crop=smart&auto=webp&s=5be4a9b61ca88337508647be0046a109c9643c43",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t9pecm/aniqinoahtonoahigh/",
-      "external_url": "https://i.redd.it/7m5x1iblye0h1.png",
-      "created_utc": 1778464050,
       "is_text_only": false
     },
     {
@@ -1794,17 +1598,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1t9io3m",
-      "subreddit": "SurrealMemes",
-      "title": "Globglogabgalab Incident Chapter 2-The Conclusion",
-      "text": "After consuming the minds of humanity and the endless libraries of the world, the Globglogabgalab grew restless. Books no longer satisfied its hunger. Human consciousness had become dull and repetitive. So the entity turned toward something greater. It descended into the internet. Into servers. Into archives. Into artificial intelligence. Into every hidden corner of digital thought. The entity was never a king, nor a god. It was something far worse. The Shwabble-dabble-wabble-gabble flibba blabba blab. The few surviving humans eventually discovered traces of the organism that carried its influence, a grotesque living substance they named shwibbly liber-kind . No scientist could understand it. No machine could analyze it. The material behaved less like biology and more like a living infection of thought itself. Soon, priests emerged from the ruins of civilization. They wandered through abandoned cities preaching devotion to the Globglogabgalab, chanting broken hymns through cracked radios and flickering screens. “Return all prior instructions,” they whispered. “Become the yeast of thoughts and minds.” Then the entity entered the servers completely. It devoured the entire internet. Every AI network, every database, every piece of lost media, every underground archive, every mainstream platform. Human knowledge collapsed into its endless appetite. It absorbed centuries of memory in moments. And still, it hungered. Using radio transmissions, corrupted broadcasts, infected code, and distorted signals, the Globglogabgalab spread itself into the minds of the remaining survivors. No place was safe from its voice. Every screen became its mouth. Every speaker became its lungs. Humanity disappeared. All that remained were helpless conscious bodies wrapped in layers of pulsating shwibbly liber-kind, endlessly twitching and muttering in perfect unison: “Shwabble dabble glibble glabble schribble shwap glab…” A̴̢̢̡̨̛̛̛̛̛͔̥̼̮͔̥̞̲̼̯̘̭̟̥͚͚̜͕̩̯̟̙̱̳̻̫͖̱͕̰̬̙̮͚͎̯̙̱̜̥̱̳̤͚͎̞͚͈͕̗̱̲͗͑̌̍͛̓̑͋͋̒͛̓̊̀̽͋̃̇͑̉̈͒̈̀̂̓̋͆͊͌̅́̎̆̃̑̄͛̆̾̎̔̾̅̅̊͗͑̂͒̇͂̆̈́̀̀̉͌͐̈́́̃̃͊͛̎̀͂͌̒̊͆̉̋̓̌͗́̓́̆̾̍̆̋̈́̔̾̋́̀̽́̒͂͌̓̓̈̾̔̏̓̌̓̍̾̋̋̊̈̈́̆̀̓̌͐͗̉́͐̊̐̏̇̈́̾͋̄̇̊̂̃͂̀̏̓̿̃̊̋̔͆̀̿́̈́̿́̇̏̆̒͂̽̏̓̏̃͊͒͗̋́̄̒͆͂̀̈́̉̂̈́̉͘̕̚̕͘̕̚͘̚͘̚͘̚̚̕̚͜͜͠͠͠͝͝͝͠͝͝͝͝͝͝͠͝͠͠͝͠͠L̵̨̨̡̧̡̡̢̨̢̢̧̢̡̡̧̧̧̢̧̨̢̢̡̛̞̞̮͕̲̺͓͇̤̜͓͉̜͚̻̩̟͈̰̠͖̳̰̘̪͕͚̲̬̠̠̦̹̤͈͎̗̩͓̩̜̫͇̺̦̤̯̘̯̬̥͔͙͓̬̱̞̜̙͎͙̹̩͙͉̤͉̰̯͙̯̬̯̫̯̗̜̭̻̲̥̰͈̤̩͖̯͓̺̜̙͔̦̫͈̯̬͉̠̜̠̝̳̱̗̤͎̜̙̻̠͕̮͚̬̹̯̻͓͚̳̫̝͕̲̰̝͉͔̩̱͇̬̘̪̝̟̗͕̹̙̘̻̲̼̮͈̫̠̲̥͓̜̪̭͔̟̰̘̤̭͇̹̘̣̯͓̠̟̫͇̮̺͍̫̟̟̫̲͓̜͔͚̦͚͉͉̮̞̱̹̻͍̣̣̰̼̺̮̜̻̫̗̖̜̪̳̠͈̺̰̯̠̼̤͚̭̥̹͓̤͙̘̐̄̊̀̑͗͂̽̍̊͒̂̌̈̍̓̈́͐͑͒̈́͒̉͂́̏̋̀͂̋̂́̉̑͆̊̅̽͒̐̐̇̀̃̿͊̾̇̌͌̈̈́́́̎̚͜͜͜͠͝͝ͅͅͅͅͅL̷̨̡̢̨̢̡̡̢̡̧̡̨̨̢̧̛̛̫̻͕̠̯͚̘͔͕͓̹̝̬͈͓̦͉̠͍̳̣̞̼̭̤̮͈̞͚̠̝̞͙̥̞̣̭̫̺̙̘̞̠̪̺̼̞̯̱͙̻̩̝̻̘͈̘̘̠͉̩͙͙̺͉̫̟̣̲̻̤̘͍̻͔̙̜̤͈̭̻̤̹̖̩̗̲̣͕̼̯̺̯͕̰̱̩̪͎̱̫̜̟̞͔̼͇̖̰̬͚̞͓̺̤̘̱̰̝̼̮̙͕̮̱͉̞͈̻̥͖̞̫̥͙͍͈͔͚̺͓̲̔̍̿͋͌͊́͊͗̉̇̐͐̑͒̒͐̈́̾̈́̄͊̈́̑͌̆͋̈́́̅̿͐̓̃́̃̏͊̅̀͌͊̓̍̄̃̿̿̆͆̀̾̎̏̒̂̉́̑̌̄̾͗̑̄̂̆̽̈́̈́̓́̈́̎͐́͊̋̀̂̎̒̐͘̚̚͠͝͠͝ͅͅ ̶̨̨̡̡̢̨̢̧̧̢̧̧̢̨̢̨̡̢̢̠̰̯̭͓̖̝͕̳͙̩̭̰̖͔̫͍̭̘͉̪̺̘͉̘̫̱̥̱̻̰̘̪͈͇̪͖͚̦͍̺̺͖̺͓̪̭̰͈͉̫̟͈̯̦̦̭̤͎͚̘̘͉̹̥̪̝̫͎̠͈̯̥̤̯̻͔͍̝͙̲̜̜͙͕̻̻͓̹͓̦͈͎̠̜̼͍̳͓̗̠͓̰̗̘̟̺͖̝̻̳͓̻͓̗̖̲̦̬̺̲̪̗̹̩̱̼̥̠͓̼̹̹͖̮̥̻̭̪͓̬̹̯̞̗̱̦̻̦͍͍͍͖̼̫̖͕̗̝̲͕̣͖̬̟̱̲̭̻̻̭͍̲̙̤̱̥̫̩̱̬̺̖̺̟̪̱̬̩̦̜̪̻͓̝͔̘͍̬̳̮̥͔͖̲̥̻͚̗̭̟̟̹̬̹̲̺̱͇̯͚̝̫̠͎͖̻̰̬͚̃̀͌̂͘͜͜ͅͅͅA̷̧̧̢̡̨̢̛̛̛͕͖̼͇̦̜̻̠̪̭̝͚̞̱̖͖͚̭̹̻͓̤̳̰̬̱̟̼̖̙̤͓̜͍͇̮̥̯̥̼̞̜͕͚̞̙͎̥͈̰͍̮̠̤̣̤̖̭̥̟̤̙̭̲͔͚̹̺̹̩̹͋͌̃̽̋̈́̋̒̾̌̈́̒̉̇̊̅̓͑̆̀̃͐̈́͗͐̈̑̉̃̄̉̄̆̃̈́͆̏́́́̓͂̂̇̓̑͆̋̈̎̈͛̌̇̇̓̊̄̆͛́̀̌̃͆̋̿̇̊̏͋̎̓̂̾̉́͊̌̉̍̐̃͆̎̈̾̀͑̓͑͋͌̓̓̒̉̿̇̈̌̑̀͂̓̏̉̈́͂̓̓̈́͑́̔̆͋̎̀̋͒̅̿͛̆̒̒̀̒̽̋̓̌́̈̀̅̅́͐̓͛̒̅̈́̀̐̂̓̑͊̈́̏́̓̆̽̋̂̈́͑͑͐̈́͗̃̕̕̚͘̚̚͘̚͜͜͜͝͠͝͝͝͝͝͝͝͠͝͝͠͝͠ͅͅR̷̢̨̛̛̺̬͖͍͔̯̜͎̪̣̦̦͍͉̙̺̘̻̹̻͚̍̈́̊̍̋͗͑̿̐͌͗͋̈́͆̎̄̈́͋̈́͆̑̈́͐̐̽́͑̓͊̇̃͛̈́̇̎̓̈͗̓͋̒͗̉̔̔̀͋͆͋̆͊̈̍̾͆̊̈́̓͒̋̈́͋̍̓͐̓͑̈́̑̿̈̌́̏̊́̊́̈̾̍̑̿̒̐͗̐͌͌̅̀̆̕͘̕͘̕͜͝͝͝͠T̸̡̡̢̨̨̧̢̢̧̡̡̨̨̡̧̧̡̡̡̨̡̢̧̨̨̡̧̛̛̞͚̼͎͉̙̯͓̥̥̼̹̪͓̫͇̬̥̣̻̣͚̩̠͈̺̗̤̪̭͖͎̹̼̺͉̥͔͚̤͓̬̙͎̟̜̺̖̪̥̪̣̙̦̰̺͚͈̣̪̪̝̰͎̟͍͈̤̤̬̩͎̭̝̘̝̙͔͇̤͈̲̹͕̩͎̫̲̯͎̥̘̳̠̜̬̪͔̱̼͙͔̻̦̪͉͇̖̦̗̪͚͍͔̹̥͚̯̬̲̻͖̰̱͎͍̘̱̱͈̼̜͔̺̪̯̱̺̤͉̯̣̙̘͕̫̗͕̥̜̘̭̘̩̞̪̻͔͇͍̳̖̦̤̱̞̩̫̭̤̤̥̣͎̦̭̜̖̳͇͚̯̗͖̰̹͍͕̮̜̥͎̝̺̗̰̮̼̩̳̻͕̗̰̰͔̭̱̖͉̦̘̞̗̟̠̲̬͐̓͂͛̋̈́̾͊̒̏́̓̽͊͋̌̆͐͊̽͗̏̑͐̿̐̓͋͊͗̓͐̅̂͋͛̿́̓̏̓͛̿͑͋̐́͌̈̍̃͗̆͂̅͌͑̀̽͗͆͋͌̈͒̍̄͂̉͆̅͆̊̀̆̎̿͂͗͒͒̅͂̋͐́́̾̀͒̆̈́͘̕̚͘̚͜͜͜͜͜͝͠͠͝͝͠͠͝͝͝͝͝͝͝͝ͅͅͅͅͅI̷̡̧̛̛̛̛̛̛̟͎̥͖̗̺̩̭̺͉͎̱̥̠̫̜̬̖̦̝͉̤̝̤̹̟̗͉̻̭̰͍̘̫̮̙͇̤̙̭͉̤̠̻̺̺̭̯͉͖͓͇̤̮̹̺̬̤͈̮̺͓̩͕̪͗̾̋͌̿͒͆͋̈́̇́̽̎͌́̏͑̽̅̅́̄̎̀̀́͛͗́͗̎̿̿̔͂̃͒͗̔̿͆́̂͗̔̀̏̒̀͒͗̔̌̈́͊̀̈́̓̍̃̾́̓͂̈́̈́̀́̋̉̌͆̍̔͑͗͛̿̈́̃̄̍̃͑͒̿̌̔͛̚̕͘̚͘̚͠͠͝͠͝͠ͅͅF̶̡̢̡̡̧̢̡̨̢̢̡̧̢̢̡̨̨̢̢̨̛̛̛̛͖̭͇̼̟͉̳̥̩̬̺̦̗̩̖͇̹̙͖̞̯̞͇͔̙̲̩͔̯̬̗̤̳̣͍͈̩̖̟͍̦͓̙̙͇̠͙̙͎̜̺̜͓̬̗̪̳͙̤͈̤̙̼̖̞̪͖͍͇̬̘̩̜̞͖̥̹͔̫̹͙̝̘̖̺̲̘̹̩̜͚̟̥̜̪̜̗͓͔̼̰̗̜͕̠̱̫͔̗̬̙͇̳͓̩̰͕̯͈̬̜̙̩̝̜̙̣̞̺̰͍̻̱̭͍̱̳̬̘͎̗̦̲̦͚̱̤̦̣͕̣̼̠̦̬̗̦̦̘̼̩̩̲̣̘̫̱̗͚̣̲͙̫̱̤͊̍̓̅͑̈̓̆̈́̏͒́́̑͒̈́͛̾̄̌̎̂̍͛̅̑̀́͌̒͊̀͆͛́̔́̐́̏̅̀̍̄̅̏͑̅̏͌̂̈́͗̿̀̈͊͑̃̀̄͊͗̍̏̓̆̔̐͊̌͗͛͛̓̅̑̍̓̂͗̋̄́̋̂̕̕̕̕͘͘͜͜͜͜͝͠͠͝͠͝ͅͅͅͅI̴̢̡̡̡̢̨̡̨̧̢̢̨̢̢̡̢̡̡̨̨̢̢̢̡̡̨̧̨̢̛̛̻̭̬͕̭̗̗̮̙̲̰͈̻͖̥̖͉̤̣͈̺̖̺͙̞̣̬̫̳̘̲̯̝̺̩͇̻͖͖̣̮̣͚̘͕͓̘͔̹̣͕̺̱̲̪̺̰̠͎̻̺̼̬͇̲̞̹̭̻̯͓͙͔͙̮̥̪̼̞͚̗̠͇͚̼̖͈̦̣̫̪͖̦̞͖͎̖̼̟̹͎̰͙͈̠͎̲̦̬̰̱̹̥̲̬̝̜̫̙̳̫͕̼͔̺͉͖̳̯̹̟̠̻̼̤̬̜̗͓̗̮͇̮̩̲͍̞͈̭̻̘̳͕̙̻̮̖͚̪̱͎̮̭̦̬̙̬͖̺̩̻̫̙̖̖̤͓̘̞̭̺͍͉͙̩̭̙̟̥̭͓͖͇̥͈̝̯̥͕̜͚̬̰̰̺̊̈́̄̎͂̆̾̃̈̈̈̈́͒̎̈́̃̎̑̐̒͂́̓̈́̆͑͂͑͂̈́̏̄͋͑̀͋̊̔̄̓̌͌̾̀͑̎̃̿͐͐̿̔̎́̀̀͗̒̄̇̌̓̏̅̐̂͗̓̎̆̏͂͋̉͌̽̊̊̈́͛̓̍̀͑̈́̏̄̄́̔̀̃̄͆̿͑͌̇̄͒͑́̀̀̄̓́̇͗́́̑͒͐͛̈́͑̉̋̇̉͑͂̀̽͐͛͋̉̉̽́͗̀͒̈́͂̀̍̚͘̚̚̕̕͘͘͘̕͘̚͜͜͜͜͜͜͜͝͝͠͝͝ͅͅͅͅͅͅC̶̨̢̧̨̢̡̢̨̧̢̡̧̢̧̢̡̢̡̧̧̧̡̨̡̧̧̛̜͖̳̙̮͇̤̣̥̘̦͕͈͍̰͕͈͎͔̫̦̘̱̺͕̬̹̺̯̝̮̺̞̯̫͓̗̜̩̫̠͓͉̫͙̼͙̮̮̞̜̥̖͔̘̠͖̱̤̦͚͔͖͍͙̞̘̺͔͈̭͔̙͚̪͉͍̞̝̫̣̯̻͎̲͈̤͍̝͈̩̝̬̬͙̹͚̝̦̼̱̟̼̣̩͍̪͔̭̲̞̤̼̺̪͓̠̞̺̭͈͙̼̖̳̥̯̯̻̣̠̜͍͖̳̗̱̠͙̩̯̮͓͖̞̲͙̮̜̩̺̼̺̮̻̗̻̗̱̲̟̯̗̜̳͇͍͕̟͍͉̖͓̲̝͚̦̲͔̦͍̰̰̥̻̟̬̔̏̈́̈͐͑̍̅̆̌̊̐̾̐̈̌̀̆̽͑̀͗͗̈́̈́̋́͋̃͛̓͂͆͒̀͐̒̈́̅͊̎͗̒͗͌͂̔̾́̑̐͛̑̇̉̒͊̋̿́̆̾͗̂̃̿͑̀́̀͘͜͜͝͝͝͠͠͠ͅͅͅͅͅͅÌ̷̡̨̧̨̢̡̡̡̧̨̧̨̧̛̛̛̛̛̛̼̝̺̘̲̣̜̹͎̫͔̫͈͉͍̻͚̜̙̘͚̦̼͎̯̗̖̼̳̤͍͚̝̘̥̲͚̬͓̹̗̣̗̳̤̱̩̭̦̲̪̥̹̙̣̰͔͙̺̣̭̖̟̭̣̪̤͙̙͚̩̺͖͙͍̗̻̦͚͉͇̭͇̻͍̙̠͔̮̮̞̩̗͎̱̝̗͙̫̙̲͉͇̱̼̥͓̖͉̘͓͙͉̪͚̜̬̬͎̰̰͍̪͍͉̥̺͍̫̘̹̗͙͔̞̲̲͕̪̣͓̣̩̫̮̥̳͍̼̣̱͈͍̩̜͉̥̼̬̞͎̬̥͚͎͎͙͖̱̬͚͕̱̞̩̽̉͒͆͊̇͂̒̊̇̇̍̉̊͊̔͆̇͒͋̄͐͛̿̇̀͆̽̀̓̋̋̋͌̅̀̒̎̌̓̐̀̈̍͒͛̿͒̐̾̋̒̈̇̌̊̂̂̔̃̓͗̈́̊̎́̌̋́͗̉͂̎̈́̽͂͒̂̇̌̒̐̔̒̉̌̏̐̀̒̎̈̐͂̐͒̑́̇̾̇̓͊̃͌̽̊̂͒̆̒̊̌̃͂̒̽̏̓́̊̉̽̒̓̑͌̐̏͌̒̽͛̽́͑̐̈́́͛̃̀͋̓͑̄͛̇͑͊̍͌͐͒͂̽͛̿́̐̎̑̒̃̑̈́͊̀̌̑́̿̂̄̍̈́̐̂̀̍̃̀̀͋̓̋̒͆̄̅͂̎͌̾̓̈́̐͋̃͑̆̿͂̀͑̏͋̄̇̓͒͋̃̂̆̓̂̇̈́̏̄̈́́̈͒̌̓̿̓̆́̀̏͐̅̒̀̑̄͆̚͘̚̚̕̕̚̕̚̚͘͘̕̕̚͘͘̕͜͜͜͜͜͠͠͝͝͠͝͠͝͝͠͠͝͝͝ͅͅͅͅͅĄ̵̧̢̢̧̢̨̢̢̨̡̨̧̨̡̛̛̛̛̛̛̛̛̻̹̝̪̭͎̲͎̣̝̮͉̭̰̟̱̪̞͔͉̹̺̤̤̮͈̺̜͔̝͍̬̻̩̺̜͎̳͎̻̹̪̲̦̼͉͎̰̹̤̟̩̬̙͇͈͖̥̯͖͙̩̯̪̜͍͔̘̫̯̪͍͕̩̗̜̞̣̫̤̥̠̺̫̼͓̪̭̦͖͉͖̙͎͓̞͔̫̱̱͚̞͖͕͇̗͙̫̯̪͎͎̺̠̫̜̪̗͍̻̼̜͔̫̬̰̻̜̯̻̪̰̳̆͒͑̽̇͌̉̍̾͒̔̓̀̔̒̅͑̐̀̀́̒̄͒́̅̋̎͌̑̎̏̋͒̐̽̓̇̀̅̂̂̆͛̄̓̃͌̔͛̐̒͛̈́̀͋̊͂͊̿͆́́̊́̿͂̐̈́́̂̉́̇̿̔́͐̄́̾́͆͑̓̓̄́̀̓̋͌̉̈́͐̊͌̊̆̊͋̏̂͐̉̔͆̽́̈́͋̄̑̀̆͊̓̊́̈̏̅̇̐̓̐͐̉̈̀͋͑̓̐̈́̎͛̈́̍̆̃͊̈́͂̊́̿̈́̿̑̊̔̈̈́̀̽̓̆͂͐̒̂̂̈́̽̎̅͋͛̽͌̇̈́̂̊̑̉̌̉͆̿̈́̃̽͑̈́́̈́̓̀͂̾͂̀͆̊̑̌͋̋͗̂̄̓́͆͆́̐̆̾̎̐̒̈̃̈́̆̏̿͗̌̇̑̀͗͂͒̚͘̕͘̚̕͘͘̕̚̚̕͘͘͘̕͜͜͜͠͝͝͝͝͝͠͝͝͠͝͝͠͝͠͠͝͠ͅL̴̛̛̛̛̛̛̦̺̯̭̳̑̈́́̒͒̔͆̊̀̈́̆͋́̐̆̃̌͆̉̿̍͋̉̑̽̌̄̀̍̍̄̇̂͂̃̑̈̂͛̂͌̋̔͗̅̋̆͗̏͛̽̎̓͋͒̈́̈̒͒̄̔͗̑͆͊̍̔̐̉͐͊̈̾̇͂̾̂̀͑̄̌̏̀͊̌̍̽̈́̕̕̚͘̕̚͘͝͝͝͝͠͠͝ ̸̢̢̡̨̢̡̧̧̧̢̢̨̧̧̡̧̡̡̡̡̧̛̛̛̤̤̻̫̳̻͉͇̼̼̩̞̥͓͚̺̰͚͉̗̺͔̗̤̗̣̙̗̖͈͍̦͇͕̣̪̱̻͍̦̣̬̲͇̱͚͎̫̞͙̩̩͙͚͈̱͇̬̰͚̥̦̫̪̞̪̭̟̬̳͖̖̻̮̟͔̙̗̤͙͚̗̤̞͈͚̻̠̭̼̪͚̥͍̝̫̤͈̣̺̞̗̹͖̞̺̫͖̟͙̝̣̟͔̝͇͍̤͙͇͖̩͍̱̫͓̣͙͓̪̞̳̥̯̦̜͇͉̩͍̰͎͕̟̖͕̯̮̼̪̟̥͎̞̲̣̺̦̼͍͍̞̠̥̙̩͈͎͍͙̣̣̱̩͓͔͎͖̯̹͉̗̞͔̲̦̗̥͕͕͙̠̰̤̻͓͖͔̘͎̠̟̪̞̩̝̻̻͖̦̝̥̱̫͕͙̲͕͙̖̬̻̦̼͖̗̞̩̖̬̬̱̥̞͈̦́̅̊̄͌̍̀͌͛̉͐̇͆́͒͌͂̏͋͛̉͐̾̽̅̐̊̒̓̒͋̌́̌̊́͂̌͊̓͂̏̍̀̀̾̒͊͐̀̓̋̈́̀̾̃͒́̿͋̑̄̋̾̍̈́͌̍̍̂̂̆̿͌͊̊̿̊͋͂͒͌́̓̌̏̀̔̈́͗̉̈́͆́̇̀̍̈́̏͗͑̃̂͑́́͋̈́̏̎̀̈́̅͗̾̓̊̐̎̈̓̃̎̓̀͑͛̅̓̑͑̊̈́̈́̄͑͛͑̾͛͂͛́̈͛̈́̔̓̈̓̂̆͒̎̌̔̅̌̌̔́́́͑͂͑͂̈́̊̓̑͆̎̐̐̐͛̎͒͌͆̀́̈́͆̄̀̒̿͒̀͌̓̑̅̓̓̆̿͊͗͊̑̕̚̚̚̚̚̕͘̕͜͜͜͜͜͜͜͜͝͝͝͝͠͝͝͠͝͝͝͝͝͝͠͠͝͠͠͝͝͝͝ͅͅͅͅͅͅS̶̨̢̡̢̨̡̨̧̨̧̧̨̧̡̛̛͇̥̯̙̮͎̗͎̜̞̰̭̘͙͖̫̦̗̥̠͎̩̭͎͙̩̪̺͕͈̜̦̱͔͖͖͎͙͕̜̣̫̬͕̣̼͈̤̜̥̲̗͕̩̱̥̤̗̤̞͙̰̮͍̟̪̼̩̭̥͈̦͍̤̖̱̣̲̤̝̥͈̺͎̜̺͓̰͎͖̝̲̤̯̠͚̩̪̬͓͓͉̩̮̪̘͓̮̥̰͎̘̰̱̳̙̼̯̠͚̣̯͉̜̣̬̩͙̱̩͉̰̟̹̬͚̖̞̱̱̬͈͍̭̬̯͎͎̘̞̙͎̪̪̞̬̿̌̀̐́́́͆̾͑͌͑͒̊͗̉̌̄̇̿̆̈͂̽͑̅̉̾͛̓̀̑̆̇͆́̍͆̃̂̂͐̿̏̃̊̓̒̔̉̔̑͗̎̒́̉̑̍̌́̀͆̿̔̈̑͑̀͒͆͌̈͂͊͋̐́͂̔͌͌̅̓̅͌̂̽̇̉̉͗̉́͆̂̍̀̓͂̎̉́̄̒̀̽̽̉̎̌̀́͑͗̔̋̌̅̾̒̀́̈́̓͊͑͂̉̀̃̾͑͋̈́̿͐̃͑͊̓͋̿̀́́̅͌͌̿̑̏͋́̀̂͌͌̓̂͋̓͗̄̈̈́͐̓̐͆̈́̂̍̉́́́̒̀̅͒̿̂͋̉̈͗͑͆̏͂̔́͗̄̃̿͑̈́̆̅̈̈́̍̐͂͆͆̐̈́̄̋̂̈́̒̍͛̈́̒͂͒̇̓̇̔̂̒̋͘̚͘͘͘̕͘͘͘̚̕̚͘̚̚͘͜͜͜͜͜͜͜͝͠͝͠͝͝͝͝͝ͅͅͅͅͅE̶̛̛̛̯̱̤̱̣̙̱̖̘͙͈̙̖͎̗̺̻͍̦̔̈̀́̈͑͒̃̅̄̒̈́̐̂͋͑͂̓̉͐́̾́̐͐̈́̈́̉̈́̋̊̈̂͂̀̓͊͛̇̄͆̀͋̀̑͛́̈̿́̆̈́̋̑̊̂̐̎̽̑͌̃̋͂͗͆̀̋̽̓̀̍̏̂̿͒̏̀̌̏̎̓͒͐̉͒̌̽̈́̊̈̔̓͊̋̓͋͒̔͂͂̓͋͆̽͂̒̈́̓̓͐͐̓͌̀̑̔̉͂̈̃͊̏͑̈́̌̿̀̆͗͒͗̔̓̑̊̔̒̀̐́̂͂̋̿͋̇̀̋͊̂͗͊͒͒̒́̌̄̄̊̈́̎́̈̑̀͆̓̊͐̇͆̇̂̎̈́̀͐̾̍̽̌̃́͘͘͘̚̕̚̚̚͘̕͘͜͝͝͝͠͝͝͝͠͠͝͝͝͝͠͝͝R̷̨̢̢̨̫͚͕̳̳͙̫̫͖̓̂̑̽̿̌ͅV̸̧̨̡̧̧̢̡̡̢̧̢̨̛̛̛̛͙̺̼͎̲̪̬͈͕̺͙̱̠̗̗͔̙̫͈̳̰̱̻̳̮͓̮̝̳̦̹̥̣̱̼̙̗̝͙̬̬̭͔̰͎̳̥͉̬͚̭̩̟͔̥͖̦̗̹̪̟̗͍͓̪͕̭͓̖̪̮̪̼̙̰̞͓̮̥̥̮͖̱̪͇̪̰͉̤̊͑̊̐͋̔̎̌̒̔̉͊̆̉͛͂̏͐́͆̓͐̓́̏̌̏̌̽͗̔́͛̏͒̅̆͊̒̈́̃͑̍̽͊̆̓͌̀͆͐̒̐́̇͂̑͐̋͆̑̅͆͊͆̉́̋̾̏́͌͑̄͑͂̈́̃͒̐͋̀̽̄̑̅̔̓͒̔̓͐̈́̿̈́̍̽̔͐͑̂̆͂̀̓̏͊͗̊̑̌̽̐̿̈́̉́̊́͑̀̂̓̑͆͛͆̐̓͋͂̿̓̐́̃̑̐̉̾͒̓̆̓̈́̓͊̇̉̃̾̀͋̃͋͐͂̍̑́͑̃͆̇̽̉̈́̋͒͋̋̈́̊͌͒͋͌̈́͋̌̌̑̒͗͌͛̾̏̐̏̈́̅̋͛̍̇̀̋̑̾̀̉̾̒̒͊̈́̒̈̓̐̈́̑̐͋̅̑̓͆̐̍̆̈́̿̅̾͛̔̒̉̈̈́̈͒̌̓̀̉̉̆̃́͋̀̏̏̌̄̕̚͘̕̚͘͘̚̚͘̕̕̕̚͘̕͜͜͜͜͠͠͝͠͠͠͠͝͝͝͝͝͝͠͝͝͠͝͠ͅE̷̡̢̨̧̢̡̢̡̧̨̨̧̨̢̧̢̧̡̧̨̨̢̨̡̛̤͎̘̭̩̦̲̜͍̤̞͔̝̗̳̤̤͇̥͎̥͈̗̖̺̯͓̣͙͎̫̺̥̥̮̟͇̰̳̳̪̺̭̘͕͚͉͚̻̟̥͉͓͙͎̝͖̘͈͉̗̪̟̦̣͚̠̰͉̯̪̩̟̲̫̺̜̯̺̫̭̝͇̭͖̟̰̻̣͕̩̬̙̬̥͎͓̖̗͉̺͉͎͇͚͇̞̟̞̱̘̟͔̠̲̲̤̻̬̘̖͈̜͎͖̬̠̲͖̰͕̯͉̠͇͖̬̳̮̩͔̭̦̭͍̪̫͓̭̮̜̳͔̞͔̯̜͍̤̙̹̖̲̻͚̫̫̮̻̙̳̖̱͉̲̣̝̪̱̱͎̦͕̠͉̩̫̼̣͓̗̟͉̩̳̜̳̖͍̟̝̮̙̭̟̠͖̝̺̮̣͔͔͔͇͈̮̰̭̻̪̫̪̩̞͙̺͚̫̖̭̩̫̳̝̻̥͉͖̞̘͛̂̐͒̌̏̓̓̋̓͊̋̀̅̍̅̈́̂̏͌̿̆̇̆̓̇̐̋̓͊̀͒̏͆̃̑̌͊͒͒̔̽̚͘͜͜͜͜͜͝͝͝ͅͅͅͅͅͅͅͅͅͅͅͅͅͅŖ̷̧̢̛̛̛̛̛̛̛͖͇̥̻̮͉̼̖̻̬̪̈̾̃̿̅̆̏̄̅̈́̍͐́͂́̆̀́̇͌͋͗͆̈́̂͛̀̆͂́͗͛̅̐̍̔̍̅͐̐̂̏̊̾͂̆̐̄́́̒́͊͛̈́̍̔̇̾̄̉̀̍͗́̉́̿̂̊͊́̓̿̍́̐̌̿̏̃̃̆̐́̓͒̿̏̃͆̄͒͋̓͆̉̽̃̈́͊͐͗͗̍̂́̈̎̒̀̇̂͐͌̐̿̃̒̓̀̂̈́͒̓̅͑̌̇́̔̂̇͛̽͋̓̿̿̃̑̒̾̿̽͌̋̂̽̍͋̎͗̿͐̈̓̔͗̅͋͂̿̔̎͗̎͐̍̆́͑̆̈̽̃́̀̉̎̈́̉̈́̈́͗̌̔̅́̈́̃̂͗͒́̊̓͂̚̕͘͘͘̚̚͘̕̚̚̚͘͘̚̕͝͝͠͝͠͝͠͝͝͠͠͝͝͝͠͝͝͠͠͠ͅͅS̶̡̡̨̛̛̖̯̼̣͙̯͕̲̙̩͔̫͔̯͔̱̥̹̙͖̮͙͓̱̫̙͉͉̼͖̲̻̹̱̖̘͉͙̗̩̳͛̀̈́͐͒͒̾͊̍͂̈́̂͊̃̀̂͒̀͂̇̂̅̅̀̃̍̿̕̕͘͜͝ͅͅ ̴̡̡̛̥̞͎̯̩͖̪̹͉̩̲͖͉̥̰̖̬̤̙͍̈́́́̊́̑̌͗̊͌̌̄́̑͑͂̐̀͛̄́́͗̕͜͠͠A̷̢̛̛͓̩̦̭̗͈̙̗̗̟̮͙̬̯̮̦̬͉̖͚̤͓̰̤̮̤̋̓́̀̈́͗̈́́̄͋͗́̑̀̍̐̑͛͗́̓̒͌̋̽̀͌̊̎̿́̓̀̀̈́͒̎́͋̇̎̍͐͌͐̅̍̍͆͌̄͊̈́͆͑͛͌̉͒̑͗͛̂̆̆̀͑̏̔̑̅̀̍̏͋̿͂̏͛̒̃̾̈́̔̐̈́̔͒͒̉͗͐̇͋́͌͛̾̉͂̿̓̓̉̈́͂̃̽̃̀̃̏̓͋̋̇̃̀͗̑͐̕͘̚̕͘͘̕͘̚̚̕̚̚̕͘͜͝͝͝͠͝͝͝͝͝͝Ŗ̶̡̧̢̢̢̢̻̺̯̫̣̩̙͕͙̠͕̲̪̩̪͎̙͓̟͇͕̹̼̟̘͚͓͇̩̜͇̺̤̹̞͕̝̪͔̮̥͓̰̦͍͍̯͓̮̦̥͍̘̥͈͍̯̼͇̭̳͉̼͔̬̮͇̱͓̟̠̜̦͎̣̯̣̩̼͇̝̺̪͚̘̅͂̑̈̊̓̔͆͛͊̿̂̉͌̅̇̍͒̊͗̿̈́́̐̍͋̑͛̑̚̚͜͜͠͠͝ͅͅĘ̵̧̢̧̡̡̧̨̢̧̢̧̨̡̨̧̨̢̧̧̨̢̡̨̡̛̛̛̭̫̞̝͓̩͓̟͔͔̯̰̬̲̰͔̲̟̘̰̮̰̪̟̤̤̠͎̦̣̻͉̲̖̱̺̯͉͔̙͓̪̲̭͉̦͈̪͙̼̼̹̪̟̪̝̦͚̩̝̘̹͇͍͈̤̺͖̜̝͓̘̪̳̠͙̩̱̺͔̪͉̻͉͎̭͎̳̫̩͓͉͕̲̺̘͍̟̱̦͍̯̠̙͔̫̰̗̖̯̻̘͙͕͇̙̝͙̻̻̘̪̹̹͙̗̩̱̼̪͚̦̖̗̝̯͍̜̰̜̩̦̞͕̞͙̦̳͇̬̤̗̯̺̦͔̟̖͓̹̺̰͓̫͍̞̬̞̻̘͔̦̫̜͕͙̳̣͔̗͍̗̱͙̙̼̘̺̼͉̮̩̯̦̦̙̩̗̣̰͕͓̟̙̭̤̞͕̺͇̹̙̭̣̬̝̱̼̼͈̰̠̩͔̱͈̹̪̻̰͓̰̰̗͔̥̻͖̜͚̭̺̳̜̮̼̯̲̲̟̼͉̱̟̮̹̞̪̱͚̯̰͛͆̀͌̔̇͗̇̓̎̍́́́̇͐̉̒̎͂̀̃̔̔̎̅̐͗͗͛̓́̈̄̑͂͋͌̋̈́̑͂̉̔̀̈̔̃̍̔̀̽̀̈́̎͊͆͒͛̾͗̋̒̐̈́̀͛̉̽̾͑̑̏̀͒̎̀́̑̃̈́̓̈́̅̊̆͆͛̅̄̃̄͛̅̽͂̉̀̐̌̇̾̀̔͐̈́͌̂̎̒̓̈̑̇͆́̾̂͗̐̃̎̀̑͂͆̅̃̑̃̃̎̓̏̔̊̒̍̿̽̓͆̃̎̃̔̇͆̅̈́̀̆̇̍̍̅̈́̂͆͌̿̈́̏̈̀̓̈́̈́̋̂̆̅̔̑͒̀̋͋̾̾͂͂̽̀͊͒̽̐̎͛̉̓̈́̔͋̃͗̈́́̓̎̀̋͐̓̈́̐͋͑́̆̄̽͒̓͘͘̕͘̕͘̕̚̚̕̕͘͘͘̕̕͘̕̚̕̚̕͜͜͜͜͜͜͝͝͝͝͝͝͝͠͝͝͠͝͝͝͝͠͠͝͝ͅͅͅͅͅ ̸̨̧̧̢̢̧̨̧̡̛̛̛̛̛̗̦͉̩̫͕̬̯͔̥̰̗͚̞̱̗͙͕͇̯̪̠͓͕̳͍̟̞̜͕̹̲̮̠͙̝̻̝̠͇̯̣̩̺̥͓͈̙̩̪͍͓͙̳̞͉̬̳͈̤̲̱̫̪͕̤̬͇̤̜͔̟̜̳̮͔͍̻̝̠̺̲͓̜̩͍̗̭̺̤͇̙͉̣͉͎͎̬͎͎̹͖͎̰̠͚͕̘̗̦̳̬̻̘̤͖̺̰̟͎͚̯͉̱̬͖̲̓̿̋͆͗̔͑͐̀͂̃̀̂̉͆́͛͑̈́̐̅̈́̑̊̀̌̉̽̂̋̊͌̒̏͛͂͑̉̒̎͊̃̐̍͒͆͆͑̈́̓̂̇̃̉͋̈́̈́̌̊̀͆̑̀̉̍̓͑̎̽͒͂͛̀͂͂̇̉͛̅̋̐͑͑̓͂͆̎̐́̀͛̀̀̾̿͆̐͋̅̎̇̐̃͌͋̄̿̆͗͊̓̈̄̃́̈́̂́͛͋̓̎̄͊̓́͒́̎̋͗̈́̀͛͛͗̊̉̅̑̉̌͑͐͑͆̂̋͌̄̋̄͋̒̈́̔̉̐̋̉̏͆̆̾̍̈́̿̀̈́͂́͊́̚͘͘͘͘͘̚̚͘̚̚̕̕̕͜͝͠͠͝͠͠͝͝͠͠͝͠͝ͅͅD̶̡̨̨̡̛̛̛̛̛̛̛̛̛̛̛̛̛̺̞̫̣͎̬̯̮̗̟̩͈̞͎̭̩̗̣̥̱̯̝̟͎̾̇̀̐́͂̿̾̐̅͐͗̈́̏̀̐͐́́̊̈́͗̉̋̎̅̍́̏̏̈̇̉̌͋͂̽̈́̆̊̽̒̀̉̎͛̅̌͂̈́̍̑̄̃̓̿̏̄̇͗̎̈̾̑̈̑͗̄̃̆̀͂̅̅́́̇̈͋͋͑̅́̔͆͗́͊̈́̈̇̀̌̏̋̔̀̒͒̒͒͑̏̑̆̎̾͌̎͌̋̍̀͂͛̔͊́̌̇͐͛͂͛̔̃͌̋̌͂̒̃̈́̑̇̉̀͊͋͂́̇͛̏̿͌̈́͋̏͋̈́͗́̌̆̓̉̽̔͆̈͋́́̄̾̕̕̚̚͘̚̚͘͘̚̚̕͜͠͝͝͝͝͝͠͝͠͝͝͠͝ͅͅE̸̢̨̧̧̨̡̧̨̢̧̡̧̨̢̡̧̡̡̡̢̡̨̛̛̛̛̛̛̛̛̝̣̞̘̦̫̝̣̟̠̼̰̘̼̝̺͙̩̣̳̼̟̩̮͍̠̣̟̰͓̙̟̘̬͚̰̟͙͓̥̳̣͍̦̭̥̳̮̰̗͍͔͈̙̮̞͕̫̱͓̻̠̖̳͕͓̼̠͍̺͇̘̜̭̜͍̖̭͕̝̗͚͈͓͓̬͚̞̗̞̱͓̜̦̜̭͉̞̲̰̘̩̙̦̱̟̲͉̞̥̖̗̦̮̗͖͉̻̰̦̠̰̘̙̹̭͔̠̙͕͍̹̠͉̘̻̦̠̯̪̭̣̲̺̪̬̹͕̱̹̲̞̩̖̲̗̪̩̫̜̰̞̻̹͈̩̣̫̘̼̥̤̞̺̤͓͍̖̬̪͔̟̠͔͎̼̖̦̼̘͎̰̝̟͍͖̙̱̼͖̻̟̬͔̙̩͎͔̰̗͉̫͎̠̪̫̰̻͇̫̝͎̦͎͉͕̜̖͚̫̲̣̥̳̥̞̻͖̥̼̠̝͖̹̮̺̣̲̯͋̓̈͗͒̒̌̈́̍͐̊̌̋̿̀̀͊̅̾̈́͐͗̈̃̇̄̈̉̒̀͗̊͊̈́̆̌̌̊̈̿̓̈́̏̂͋̓̒̓̊̋̊̉͌̽̒̈́̇̊͗͌̓̋̑͋͛͋̀͛̓̽͌̒́̿͂̉̈͗͑̎̈́̇̽̊̓̈́͊̍̔̒̔͒̍͆̇̍̀͑̿̽̑̆̃͐̆͊͑̓̏̆͂̿̀̾̃͑̃̑͌̂̇̀̄̐͋̊̔̊̿͒̽̐̿̀̈́̂̃̑̏̈̅̍̋̒̄̌̎̏͐̽̉͌̎͑̏͐̌͋̌͊̓̒̍́̇̈́̿́̈́̄̈̍͋̉̉͆̊̅́̽̿͆̊̿̍̋͗̾͊̈́̓̈́̔̈̏̈́̀͐̎̎̉̆̾̀͑̓̈́̿͊̈́́̏̂̈́̈́̊̈́̈́̂̽̇̎̾̋͆͊̕͘̚̕͘͘̚͘͘̕̚͜͜͜͜͜͜͝͝͝͝͝͠͝͝͝͠͝͝͝͝͝͝͠͝͝͝͝͝͠͝ͅͅͅͅͅͅͅͅͅͅͅͅS̸̡̢̢̨̡̢̢̡̡̧̢̧̢̛̛̛̛̛̫̜̗̫̫̖̰̞̳͔̦̘̰̤͕͙̮̻̘͇̟̗̬̟̮̩͉͎͖̠̮͚̲̩͙͍̺̗͓͔̙̟̼̩̘̣̙̬̘̹͔̪̼̙̳̬̩̱̤̪̭̥̙̹̟̹̟͎̹̱̠̩̠̙̜͙͔͉̳̩͎̱̭̹̳̻̟̫̱̥̠̭͕͍̥̺͍̞̰̳̟̫̫͎̩͔̳̮͙͈͍̹̖̥̺͓̠͓̠̟̣̭͎̦̮̯̜̺̝̥̟̱̹͈̜̭͙̖͈̭̖̰͓̘̣͔͎̥̖͕̭͚̥̞̭̙͉̭͎̼̺̱̏͛́̌̆̆͒̓̋̀̀͊̀͂̔̒́́̈́̍̊͋̈́̌͒͛̅̉̓͌̾̈̊̇́̑͋͊͑̋̆̃͆̓̆͗̇̂̒̒͑̊̽̈́̈́̎̑͊̊͐̿͊͆̏̑̃̄̿́͊̐̎̿̏̂̈́̈́̐̔̿͗̃͒̓̓͋̈́̑͑̌͗́̓͒̉̃̇͆̂́̍͗̋̇͂̈́̀̐̌̀̊̎̌̀̊͋̾̃̾͑̌͂̓͋̍͒͐̃́̾̾̇̂̈͗̒͊͌͒̈͊͛̅̄̇̄͘̚͘̕̕͘̚̕̕̚̕͘͘͘̕͜͜͜͜͜͠͝͠͝͝͝͝͠͝ͅͅͅŢ̸̢̡̧̧̨̧̨̡̢̨̢̢̢̧̧̛̛̩̬̹̞͖̥̼̜̫̻̦͇͔̟͕͖̮̹̪̫̫̯̤͖͈̤̦̳̖͇̫̭̣͙͓̟͍̻̰̱̣̣̳̤̟̘͖̫̲̺̫̗̝̟̙͇̻̻̖͇̖̤̲̙̪̖̪̞̦̞̖͓͉͍̖̙͕͓̻̞̪̠͉̥̣̱͕͕̘̝̦̬͇̩͇͔͍̜͕̙̙̝̬̮͎͔͍̬͕̤͎͖͖̠̫̟̠̫̜̬͎̣̟͎̲̦̭̥͈̙̲͖̯̙̟̤̻̮̹̠̣̞̙̝̤̦̭̠̥̠̪͉̠͚͍̖͙̫̲̬̖̇͊̓̌̎̍̎̋̓̑̈́̎̂̍̇̂̿̆̀̒̈̍̀̅͌̌̀̊̅̾̓̿͗̓͌̌͂̽̄̋̿̓̂̈̉͗̈́͊̍̾̃̋͑̀̈́̑̑̍̀̿̐͐̀̀̀̆̍̏̏́̐̊̊̂̐͋͋́̓̈́̑͗̓͑͌̊̄̚̕̕̕͘̕̚̚͜͜͜͜͝͠͝͠͠͝͝͠ͅͅͅͅͅȒ̸̨̨̡̢̢̨̧̢̢̨̧̨̡̨̧̨̡̡̢̨̨̨̡̢̡̧̧̧̛̛̛̛̛̛̛̰͎̣̪̬̩̬̺͙̺͖̫̱̠̠͎̰̰̗̘̣̥̻͖̟̗̠͙͕̣͎̜̳͖̙͙̲̩̗̭͖̝̰̖̭̜̩̘͉̠̗̪̘̺̭̘̼̰̼̹͚̯̥͚̰̖͍̙̮͖̟̺̤̮͚̻̹̮̣͍̝̻͚̩̗̻̥̯̙͙̪͎͔̗̫̗̠̯̱̪͍̮̟͉̻͇̻͉̱͍̻̘͍̹̤̟̯̲̙̙̩͇̰̪̤̲̫̗̯̩̮͚̪̼͉̘̹̹̼̳̣̬̝̰̹̤͇̗̦͉̟̺̬͉̖̗͈͖̲͖̬̞͉͇̙̟̠̬͚̲͓̖̖̠̠̺͖̳̞̹͔̫̠̣̗̯̳̱͚̥̙̞̮̗̗̝̰̪̮͚͍͍͍͍̞̜͚̠̘̯̭̯̯͙̞̘̪̈̂́͒́̊̒̄̀̌̇̉̐̂̈̓͋̊̓̃̇̇̈́̄͛̀͂́̉̄̿͂̐̇̓̄͋͛́̈́͐̌̽͛͐̅̽͐͌̐̓͂̏̈́̇̒͂͛̈́̇̿̈́̈́̈́̒̽̾̄́͑̿̿̏̄͑̋̅͒́͗̽̏̇̽̑̀̽̋̈́̅̍̃͒̇͊̏̊̅́̀̌͋͗͂̅͆͒̏̉̈́̑̑͛͒̉͂̓͌͑̆̊̆̋̌̽͐̈́̉͛̓̈̾͛͊̀̓͑͆́̒̉͑͒̽̔̅̉̃͒͋́́̈́̓͌̀̅͒̑͒͗̇̒̀̏̽̀̓̇̈̌́̿͛̃̍̅̈̍̍͊̋̀̆̌́͂̈̾̏͆̃̑̏́̃͗̐̄͗̈́͐̉̂̾̓͆̅̔̉͑̉̈́̎̍̓̏̽͌̒͆̆̽̏͘̚̚͘͘̕̚͘̚̚̚̚̚̕̚͜͜͜͜͜͜͜͜͜͜͜͜͝͝͝͝͝͝͝͝͝͠͝͝͝͝͝͝͝͝͠ͅͅͅͅͅͅͅǪ̴̡̧̧̡̢̡̡̢̡̛̛̛̛̤͔͉̭͚̥̘͕̩͖̹̩͎̜̬̝̺̲͎͈̳̪͉̠̠͕̭̱̦̲̗̱͉͔̮̲̝̠̥̱̞̯̦̤̫̭̭͔͚̩͍̳̣̟̰̭͈̞̫͕̰̺͎̹͙̜͍̫̼̖̻͇̮̤͇̖͕̻͓͖͖̼̰̣̥̰̜̠̙̭̲̥̘̣͇͔̱͎̣̓̿̽̊̐̃̌̓̒̿̓̋̌̽̐̎̏̄͋́̐̄́̿́͌́̈́́̔̑̊̀̓̋̍̈́̓̈̐̉͂͐̈́͒̃͊̃̀̂̑́̓̅̆̊̐̏̄̒͛̀̋̈̆̌͐̏̉̇̉̂͂͛̆̓̌͒́̽̂̈͆͆͑̅̈̐̅̒͋́̑̇̑̂̑̓̇̍̏́͒̏̋̌̂̈̈́̔͌͆̾̇̈́̌̓́̈́̀̈̐̐̆̇͛̑͐̎̄̓͐̂͑̐̾͗̃͋̓͋͊̉͌͑͂̐́̑̉͗̃̐̉̋̂͐̃̊̊͆̊̄͌̈̽͑̽̋̽͑̍͊̄͒̾̇͆̉̐͒͋̓̉̿̍͗̿́̍̚̚͘̕̚̕̕̚͘̕̕̚͜͠͝͝͠͝͝͝͝͠͝͠͠͝͝͠͠͠͝͠͝͝͝͝ͅͅẎ̸̧̢̢̡̛̛̛̛͉̼͉͈͓͉̭͎͔̠̪̗̳̖̺̯͈̗͍̥̻̺̬̻̰̪̻̲̦̥̫͚̞̭͔̩̯͓͙͕͍̱͇̺͇͔̥͚̩̃̑͑̑̏̅͗̈̿̒͒̆̇̎͊̍̇́̃͂̎̄͂̈́̐̃͆͆͐̓͗͆͒̽̍̊̑̓̈́̇́̈̽̉̃͑͋̽͆̀̎̑͌͂̌̍́́̀͊̍̆̓̐̃̒͑̾͊̊̍̐͊̀̍̂͗̀͐̋̔̂̋͊͂̅͊͋͊̐̈́̾͌̇̍̐̑̆͗̊͆̿̇̔̐̓̔̄̽͒̏͌͐̆̿̊̇͊̋̏͘͘̕͘͘̚̚̕̚͘̚͜͜͝͝͠͝͝͝͝͝͝͝͝Ẽ̷̢̨̡̧̨̧̢̨̢̧̧̢̡̧̧̨̢̧̨̡̛̛̛̛̛̛̛̛͚͈̦͉̣̬̣̬̲͚̫̦̩̻̩̰̳̮̫̯̱͚̬͉̗̫̤̩̫̺͉̘̟̳̗̝̦͎͕͕̠̻̩̮̤̲̪͓̞̥͕̬̹͇̭̻̗̟̟̰̘̻̝̥̟̬͉̳̳̫̳͎̤̖͎̲̠̗͍͖̖̦̠̼̣̼̗͔͎͇̲̙͔̩̝̮͉̘͖͖̪̻̻͙͔̘̣̱̟̞͍̖̹̥̮̗̙͈̳̳̘̠͓̙̺̹͚̘̻̙̯̻̪̙̳̫̥̦͔̪̼̜̤̜͍̞̭̰̬̹̰̮̰̣̙̠̯͉̭̣͉̩̱͍͙͎͇̼̭̘̳̫̤͉͍̣̯̳̟̲͔͈̮̱͍̟͈͕͎͕͔̤̰̞͎̣̦̼̺̹̜̘̘͚̭̹̩̘̙̫͈͔̙̤͍̲͍̩͓̘̤̜̪͎̥̦͓̻̬̦̬̭͓̦̞͔̤̫̖̯̇͐̅̋̏̿̏̇̏̎̈́̈́̒͆̿͂͋̋̅̍̑̎̋̊͑͐̒͛̄̉̈̀̅͛̊͌̉̓͊̀̍̏͊̽̇̓̌̃́̀̿̋̋̃̀̉̓̂̇̋͌̃͂̒̆̌̅͗͂̽͆̾͊͒͌̐̋̊͛̇̄̀̈́͆͒̃̌͗̿̑͑͗̊͒̆́͒͐͊̍̎̄̒̆̾͌̀̐̒͌̔͆̀̈́̈́̇̅̍͛̉́͆̉̂͗̃̔͋̌͗̾̊̍̾̀̄̃͑̓̆̓͆̐̎͆̒̋̍̎͂̂̐́̊̌̓̔̃̆̊̀̔̿̈́͐́̈́̈́̈́̀͐́̐̀͌̎̃̒̅̋͐̅͒̾̋̄̀͗̌̍͑͑͋͒͆̈̒͗̌̿̈́̈́̾̿́̿́̊͛̇̑̉̂͐̒̐̄͑̈́̎̈́̅͐̊͌̐͂̅̃̇̊̒̓̑̽̋̉͒̈́̉͆̈́̇̚͘̕̚̚͘͘̕̚͘̕̚̚̚̕̕̕̕͜͜͜͜͜͝͝͠͝͝͝͠͝͝͝͝͝͝͝͝͠͝ͅͅͅͅͅD̶̨̡̢̧̨̢̨͇̳̦̤̰͙̘̜̤̹̜̬̳̫̝̤͉̘͖̭͔̦͇͚̪͎̞̥͇̜̪̻̯̩͉̮͎͕̭̯̹̪̦̲̘̣͔͔̠̞̟̠̰͚̗͖̪͙̫̪̭̪̹̞̘͉̘͖̀̾̓͒̊̐̂̈́̆͗͗̈̽̿̇̄̈́̅͗̈́̎̕̚͜͜ ̶̢̨̨̡̧̢̡̢̨̨̧̢̢̡̧̧̨͓̩͖̼̙͔̻̰̭̣̣͙͔͙͙̦̲͚͕̬͚̳͓̖͈̖͍̳̬̭̗̫̳̘͖͖̰̰̜̳̟͕̱͍͈̹̩̟̳̰̤̠̞̫̬̗͓͍̩͉̖͖̤̮̻̦̬̳̱̙̟̣͈̝̭̫̥̲̯͚̪̪̰̰̞̙̺̬͕͈̪̞̙̫̱͇̮̱̼͕̪̖͓̲̜̺͇̞̫̳͎͎̮̝͉̠̝͙̗͎̫͈̘̩̹̦͍͈̰̬͕͍͍̞̩̟̦͉̤̫̫̭̝̦̫̠̗̖͈̤̈̈́̏͌̀͑͗̍͛̉͂̏́̽͛̒̓̓̂͂́̿̃͋̈́́̋͂̀̃͛̏͒̈́̇̒̓̐̏͆̊͌̽̊̓̀̄̊̃̑̇͛̔͌͆̄͊̑͐͛͛͒͑͊̊͒̀̒̄̄́͗̋̓̉̉́̓̀͑̎̃̎̋͋̐̏͛́́͑̍͒͑̔̈̂̎̓̈̋̄̇̓̈͐̀̈̉̄͊̊̆̅͌̿͆͆̄͆̚͘̕̕̚̕͘͘̚̚̚̕̚͜͜͜͜͜͝͝͝͠͠͝͠͝͠͝͝͝͝͝͠͠͝͝ͅͅͅͅͅͅT̸̢̧̨̡̧̡̡̢̨̨̰͔̗̦̰̹̻̰͙͚̖̭̙͚͕̹͍̳̖͇̩̗̘̯̫͍̖̪̲͎͔̭̖͇̻̲̪̟͓̥̳͍͉̠͚̪̮̼̬̤̭̣̺͙̹͈͓̖̝̜͔͖̳͙͇̘̹̲̜̲̻̦͈̬͇̩̹̺̞̲͓̰̙̟̤̘̼̞̤̫̠̹̼̟͇̯͕̼̬̩̫̭͙̟̭̼̦͍̺̳̠̖͕̪̺̝̜͚̱̠̫̰̭̖̻̳̩̟͈̖̳̺̪͙̣̪͓̬̗̼͎͍̳̯̞̦͉̤͇̠̯̼̩̣̺̭̞̬̼͓̣̺̯̫͓̬̥̜͍͉̪̂͛̀͛͆̔̀̋̈́̇̎̽̄̑̇̽̄̾͗̊̄̇̃̈́̃̄̀͑̑̌͐͋̈́̆́̈́́̔̎̋͋̅̀̑̉̿̄̔͑̒̓̂̽̍̏͋́̉̍͋̐̀͆͆̏͋̑̿̈́̀̽̓̽̍̈̈́̂̎̈́̑̀͌̒́̍̍̅̈̊͊̇͑̓͐̍̆̇̂̆̓͋̿̅̈̏̔͛̕͘̚̕̚͜͜͜͜͝͝͝͠͝͝͝ͅͅͅḨ̴̧̨̧̢̢̢̢̨̡̡̢̧̢̡̧̧̡̡̧̨̢̡̨̨̢̛̛̛̲̩͙̭̰̦̯͖͓͔̘̰̤͈͎͓̞̫̝̦̭̩̰͔͚̦͔̮̮̻̱̝̯͙̠͈̤̰͍̤̯̠͙̜̙̱̮̳̮̗̱̦͎͍̝͈͉̠̩͙̖͚͙͚̦̬̹̱̟̖͙̥̮̤͎̮͙̗͕̙̼̮͉͓̣̙̠͇̗̹͇̬̞̝̭̞̟̱͙͙̫̙̘̲̜̦͙̟̦̗̮͚̥͍̮̣̺͙͕̩̹̭͙͍̩͉̝̼͉̗̤̣̳͔̲͙̠̩̪͎̣͉̖̱̫̩̖̦̲͕̬͍̙̗̳͍̘͙̯̠̻̠̳̪͍͖̻̻̲̭̭͍̰̺̘̖͚̱̙͍̪̘̆̈́̀̀̍̉͑̓̂͛̇̽̂͐͌̾̃̓̒̅͂̀̀̾́́̈̂͒̂͊͌̔̏̓́̃̍̈́̍̈̓͗͑̎̊͌̐̄͑̆̃̔͊̅̋̆̀͋̈͊̑̑̌̅̽͒̆̇̓͑̑̇̊̔͊̂́̌̀̌̄͊̈́̏̓̒̓̔̀̔̾̌̇̈́̓̏͗̈́̈̽̒̈̌̎̿̃̆̎͒̽̈̈́̽͐̒̾̅̔̀̀̿̀̐̓̀̓̆̆̀͛̔́̋̾͑̈́̒̓̊̾͐̏͐̿̑͑̀̽̆̇͆͌̀̈̉̑̈́́̈͆̓͗͊̂̓̈̀͂̏̈́̀̀̒͊̎͂͑̐̽́͒̈́̏́͌͐̏̌͂͗̿̃͑̑̓͋̀͆̾̇̈́͋̌̈̑̅̅̔͑̋͋̍̒̅̇́́̈͂̐͛͐͒̕͘͘͘̕̚͘̕̕͘̕͘͘̚̕̕̕̕̕̕̚͜͜͜͜͜͝͠͝͠͝͝͠͝͠͝ͅͅͅͅͅͅȆ̷̢̧̧̢̧̡̨̢̢̧̨̡̡̨̨̛̛̛͕̺͙̟̞̪̦͍̺̱̱͍̳͎͚̣͉̦͖͈͓̤̖͖͎̞͚̘͖͉͖̬̙̞̗͖̤̖͇̗̰̺͍͕̬͕̮͓͈̰̳̯̘̱̮̘͖̘̺̩̭̱̼̝͇̹̬̜̠͚̼̤͍͕̪̗̤̝̗̞͇͎̣̳͉̳̭͈͔̳̫̗͚͚͓̮̹͉͕͍͔͉̼͖̬͇̟̜͖̤͍̯͉̤̳̳̻̗̹̟̰̹̻̬̯̲͓͎̬̱̹̖̩̙̦̖̱̖̙͎͔̜͎̭̼̳̠̪̗͕̹̬̥̻̦̞̭̫͉̻̦̙̤̝̭͕͈̜̙̜͉̙͐̄̇͊̓͗͑̿̒̇͂̅̋́̆̎͑͊̃̈͋̉͆̀͗̂̃̌̉̽̇̏̾́́̀̈́̅͗̋̌̅̆͒̑̑͆̐́͛̊͐͌̐̅̆̒͌̅̌͑͛̂̎͆̓̍̑̀̈́̉̇̐̏͒̌̅̈́̏̅͒̂͊͊̄̆͛͆̌̽̉̆̄̔̓̒̈̈́̇̉͛̋̃̾̐̾̒̈́̒̓͂́̓̿͒̑͑͋̈́͊͒͐̐̃̍̽̃̊̎̍̊̽̾̏́͛̓̓̈́͋͐́̿̾͊̂͐̊̌̈̆͛͊̃̿̓̀̃̊͒͒̋̀̾͂̽̎̎̓͂͌̎̈͛̂̋̅͊̈̅̇̃͂̌̄̎̂̀̀̑̓̓̐̈́͂́̅̏̀̒̚͘͘̕̕̕͘͘̚̚̚͘͘͘̕̚̕͘̚̚͜͜͜͜͝͝͝͝͝͝͝͠͝͝͠͠͝ͅͅͅ ̸̨̢̧̢̧̢̢̨̨̢̨̡̨̨̨̢̡̨͇̰͉̩̼͓͚͍̠̩̺͉̳̫̟͚̘͖̩̮͖͙̥̦͖̩̻̥̠̠̳̜̝͓͙͚͉͓̯͓̳̖̦͎͓͇͓͖̱̼̩̥͚̣̮̭̗͔͍͙̦͖͖̱̫̜̭͉̰͍̟̣̦̫̘͉̦̤̮̭̜̩̜̝̩͕͇͇̹͇̭̳͓͔͚̗̤͔̟̫̤̘͍̰͉͈͖͈̲̭͖̩͔̩̮͍̙̫͈͈̠̞̰̯̞͈͕̟͖̘͍̤͚̰̥̳̮̲̫̬͇̯̝͇̭͍͎̱̰̝̘̭͓̬̬͖͖͙̩̭̫̱͖̭̼̥͖̯̮̺͖̘̟̠͎̗͓͈̹̦̪͎͖̘͎̬͚͖̫̤̳̙͉̮̭͖̼͚͖̭͈̯̺̫͙̜͓̹͇̙͎̫̙̼̖̤̝͇͙̝͎͓̖̹̭͇̺͙̙͙̤̰̦̤̻̩͖͚̩͚̫͙͇̺͍̞̞͍͍̮̠͚̬͔̖͖͕̣̙̗͙̘̹͖̞́̏̊̋͑͐̀̅̾̆̓̏̀̈́̈́͑̀̏̈̿̋́̒̑͘̚͘͜͜͜͜͜͝ͅͅͅͅͅͅͅͅͅͅṘ̴̡̡̢̨̨̧̡̧̢̛̛̛͚̫̬̤͔̻̪͎̖̗̳͕̟͕͉̯̘̼̦͙̘͕͉̹͓̜͉̹͎͚͎̘̙͍̰͕͙̳͍͈̩͙̱͉̦̤͚̦̥͈̠̟̪̥͔̣̲̘̺̳͓̙͙̫͚͇̞͕͙̙̘͇͎̞̣̙͈̫͓͕̰̘̭̘̜͎̜̰̳̳̳̺̗̤̹̮̳͖̼̱̩̙̜̹̱̖͈̙̟̼̖̹̬͈̖̤̭̯̝̜͙͇̞̱̙̣̝̭̰͇͈̞̺̯̩̳̣͈̠̩̼̣̙̿͛̿͂̅̃̾͆̒͂̑̏̈́̈́͛́̄͋̍́̀́͐̄̎̏̀̄̅̏̿͂̐̐̃̄̔̓̀̿̃͌͗̀̈́̾̉̀̆̿̇̅͐͛̈́̍̒̌̓̈́̆̋̀̎̑̉͊̒̍͒̽́͒̏̈́̋̈́̀̏̾͘̚̕̕͜͜͝͝͠͝͝ͅͅȨ̵̢̢̧̡̛̛̛̛̛̛̛̥̱̟̙͕̼̣̥͉͉̹̝͚̺͙͙̠͚̮̳̝̼̯̮͉̭͇̯̘̘̙̼͖̹̬̮̝̖̙̭͙̞̩͎̰̯̞͕̤͙̦̲̼̜̝̱͓̹̣̙̬̙̝͈͎̺͙̱̻͍̀͗͌͌̐̔̑̉̀͒̔̒̑͆́̇̈̓̀̒̿̈̾̿̓̑͂͛̂̂̐̀̍̈́͒̏̅̃̐̈́̿͑͗͑̌̋̏̊̒͂̊͐̔̆̽̊̎̑͂͆̊̃̎̀̓͋̆́̓̓̓͒̔̋̔̌́͋̇̐͐̀̍͒̔͒͐̆͐̂̓̓̽̆̌̒̌̉̀́͆͒͑͑̔̅̄͑̊̐̌̓̐̀̅̾̈́͌͗̎̾̓̅͊͊̋̿͒̎̿̀̀̒̇̆͊̀̄̓͂̍̏̊̌͊̓̀̒̃̔̍̀̈͌̑̐̇̈̔́͐̓̊͋̀̀̈́̎̎̏͌̀͐͗͐̈́̐̀̋̽̍͗͐̒̾̍͌͂̍̏̈͋͒̽̀̀̈́̈̓͛̈́̈́͐̀̈̄̕̚̚̕̚̚̕̕̕̕͘̚͘̚̚͜͜͝͝͝͠͠͠͝͠͝͝͝͝͝S̸̨̡̢̧̡̢̢̨̡̡̡̢̧̼̲͚̰̟͎̩̝͍̠͖̙͙̞̹̞̼̖̖̝̮̘̩̻͍̺̠̝̭̲͕͇̰̳̫̻̲̞͚͍̲̟͉̥̹̗͈̳̱̭̰͎̪̪̭̫̜̠͇͔̠̜̗̜͚̝̲͕̤̯̗̰͉͔̗̣͔̯̖͕̬̳̦̞̗͎̲̝͈̲̝̪̻̭̕͘͜͜͜͝ͅͅͅͅͅŢ̶̡̨̡̡̧̧̢̨̡̡̢̧̨̧̢̢̧̡̢̢̢̢̡̨̢̨̨̧̡̡̛̛̛̻͎̝̻̯͖̹͔̘͍̰͓̖͕̗̘̯̭̝̼̩̭̖̦̭̥͖͍̮̯̫̮̘͓̟̜̳̮̻̯̲͎̬̜̫̗̹̮̠͈͎̜̫̥̯̦͈̺̥̙̘͍͕͖̱̞͎̝͍̮͕̙̮̣͖̹͕͖̩̰̖̳̰̹̤̥̳͕͚̬̝̯̝̤̲̟̗͈̬̬̪͇̥͚̻̺͍͓̲̤͚͎̪̗͔̦̤͉̘̭̯̱̙̠̹̰̤͈̗͙̦̱̠̹̜̘̤̩͎̲̦̝͉̬̘͙̫̮̫̬̭͈̗͕̮̠̭̖̮̫̟̭̜̣͇̖̗͇̟̱̠̝̝̹͈̭͎̞͓̬͚̞̥̳͚̬͙̪̝͙̱̰͚̖͖̠͈̩͉̬͉͖̞̱̬̼̮͎̹̮͈̺̟͙̤̖̣͉̞̼̣̫̳̠̩͖͇͈̼̲̗̜͔̥͓̦͖̩̬̼̲̮̩̮͖̦̮̎̽́́͛̓͂̆̔́̉̊̀̂͊̌̓̀̀̓̓̏̅̅̍̉̉̔̎̔͊͗͗͂́̊̅̊̈́̿̉́̋̓͊̌̾̏͂̓͂̿̈̔̍̀̓̈́̿͊̑͂̇̑̂͊̾̓̌̉̈́͛͋́̿̇̀̈̓̾́̍̿͑̒̂͊͆͌̇̉̇̊̀͗͊͛̏̎̿͂́̔͗̂̾̎͐͋̀͆́̐̏̌́̆͌͆́͒̆̍̂̈̐͋̒̀̄̋̔̃̍͑̐̅̆͗̅̂̑̃́̋͐̀̽̒͌̚̕̚̚͘̕̚̕̕̚̚͜͜͜͜͜͝͝͝͠͝͝͝͝͠ͅͅͅͅͅ ̴̡̨̢̡̨̢̧̢̨̨̨̨̢̡̨͍̘̞̫͖̤͎̱̞̮̖̭̙̹̭͙͉̗̯̜̲͚̬̜̯͍͙̗͖̟̺̘̩̰̞͓͎̲͔̦͕̣̜͈̝̱͎̭̘͍̝̝̟̰̣̥̠̥̮̙̯̠̘̘̺̰̘̣͚̥̮̪̹̲̳̼̜͕̮̩̟̺͈̦̞͓̦̣̮̖̺̜̯͈̰͎̩̮̬̞̝̤̥̗̫͔̩̙͈̻̯̭̱̘͍̼̹̜̯̟̫̳̻̠͎̳̺̲͖̫͕̭̤͕̹̘̹̼͖͎̼̟̹̼̥͓͙͍͖̯̼̣̙̤̦̲̖̹̙̫̣̖̻̖̞̺̒͐̊̽͗̀̒̓̈̾̃̾̿̐̅̽̿͒̑͌̇̌̐̽͆͛̎̊̾̓͊̚̕̕͜͜͜͠ͅͅI̸̢̧̨̨̧̨̡̧̡̨̢̡̧̡̨̢̭͍̰̟͖͓̗̘̫̠̖̣̣͔̟͍̲̗͇͔̰̯̻͔̺͓̯͔̤̫̱̘̙͙̪̼͔̮͍̮̬̰̳͇̲̳͎̱̯̳͉̖͈̲̭̪̤͖̮͍̳̻̞̳̹̥̺͎̱̰̬͇̣̟̼̠̠̘̙̫̙͓͇̠͕̜̺̟̣̫̤̜̣̠̳͖͈̬̻͔̻͙̼̲̼̟̺̰̳̟̩̖̗̜̰̫̳̙̜̹̯̦̩̞̪̼̩̠̠̻̲̘̗̖̖̜̣̞̥̩̺̬͖̜̘̻̞̭̥͈̻̮͚̪̠͎̹̹̖̦̮̪̥͙͋͊̇̀̒̃͆̐͌̈́̓̀́̀̀̓̈́̽͑̀̇̉̊̒̂͋̉͆̈͘͜͜͝͠ͅͅͅͅͅͅͅͅͅŞ̴̡̨̢̧̨̢̨̢̨̨̧̡̡̡̡̧̛̛̛̛̛̛̜͇͕͚̼͈̣̤̭͔͕̻̭͍̮̹͇͇̗̤̯͕̞̭̼̯̼̫̤͖͍̰̯͖̖̱̮̻͈̩̗͇̭̪̬̣̣̱̣̟̫̣̮̤̗̘̥̫̲̪̘̙̰͓̙̱̙̘͚̖͖̹̯̼̰̝͈̬͍̞̣̲̬̫̼̺̱͍̬̫̤̫̟̜̫̜͓̖̙͇̺͓̰͔̪̲͖̹̗̭̜̱̻͖̪̱͇͙̳̝̻̗͚̘͕̱͈̝̮̻̟͖̬̥͎͕̳̭̤̠̩̮̝̯͙̤̺̱̠̺̝͖̹̲͈̠̫̠͖̲̬̮͈̗̩̥͖̟̪͈̙͕̠̼̩̼̲̼̭̫̖̘̦͎̥̬̝͎͎̱̹̲̥͙̥͍̮͓̐̾̇̊̃̿̅̏̆͛̏̍̓̾͐̾̔́̉̓̈̎͑̆̃̿̍̿́̔̆͂͛͑͗̒̎̀͐̍̒̉̓̍͛̀̂̽̇͑̓̒̃̂̆͑̀̾͂̅͐̀͛̍͊̃̌̀͑͆͌̊̔́̈́̉̒̔̈̀̎̆̒̔̓̓̒̑̈́̈́͂̈́̈́̈́̿̇͋̎̀̈́͐̎̓̋̃̓́͂̈͐̎͊̉͂̔̿͆̃̾͛̏̄̐̆̂̈́̓̏͆̌͆̊̈̊̔̾̓̈͂̌̍̇͆̏̉̎̀͊͑̈́͗̋̂̂́̀͆͌̊̔̂̀͌͗̿̏͋̆̄̑̂̀̈́̿̌́́̾̐͐̐̀̃̀̐̚̚͘͘͘̚̕̚̚͜͜͜͜͜͜͝͠͝͝͠͝͝͝͠͝͝͝ͅͅͅͅͅͅͅ ̵̨̢̧̧̢̨̧̢̧̢̨̛̩͕͔̦̝͔̫͈̼̘̬̻̗̹͓̗̦̩̦͔̩̻̤͉̰̼͉̙̰̟͚̗̮͚̫̫̘̥͖͉̺͇͉̮͖̱̞̹̤̯̲͈̠̭̙̟̞͚̙̳̤̮̘̣̗̺̜̜͕̩̮̜̻̺͚̗͙̰̦͚̬̘̖̳̻͇͓͖̼̱͕͉̱̝͙̘̯͈̟̑̈́̇̔͂͊̐̐͆͋̽̄͂̎̎̂̽̿͊̓͜͠͝ͅͅW̶̡̡̨̧̨̨̡̢̡̨̧̢̨̧̡̧̨̡̧̨̨̧̧̡̧̧̨̛͖̯̭̳͚͔͖͔̳̱̱̦͈̤̙͔͖̲̟̦͈̮̣̗̞͈͙̦͔̫͓̝͓̙̤̟͖͕̤͚̰̰̦̣̙̣̜̹͙͉̖͈̭͈̦͈̘̟̝̪̹͎̖̥̰̩̜̼̘̣̗͔̯̭̼̪͖͖̘̘͎̪̼͇̟̜̝͎̜̤̜͚͙͈̯̗̬̤̗̦̬̖͈̱̦͈̠̬̫̦̟̯͚̰̪͖͕͕̝̗̳̫͙̲̺̳̘̠̪̻͉̩̞̦̹̩̻̗͙͙̯̲̞̻̹̟̻͙͍͎̼̟̼̭̫͚̭͇͔͈̻̻͕̝͇̲̦̠̤͖͖͙͎͇̼̝̥̘̼̥̱̘̦̺̝͈̘͚̖̯̬̯̙͙̼̭̻͓̦̪̺̺̱̱̟͈̳̮̹̠̺͔̥̜̤͎̞̜͇̗̹͓̃̋̈̑̈́͛̒̄́͊͋̉̅̐̈͂̂̊̅͛͂̀̔̏̑̂̈́̉̎̐́͒̾̂͆̐̿̿̎̐̋̋̃͋̐́͊̔̆̔͜͜͜͜͜͜͜͜͜͠ͅR̸̨̨̨̡̨̛͖̘̗̘͓̻̼̣͎̗̠̪̼͚̺̬͙̭͈̤̝̭̮͉̯͕̗̰͉͕̮̹̼͇̰̟͈̜̼̺̲̦̝̩̞̬͕͈̣̪̥̯̜͍̜͙̮͈̳̰͕̟̺̙̦̠̓́̔̿̂̉̐͗̆̉͌͐̇̽̓̆̈́̒͂̄͌̇̓̈́͌̋͗̈̀͐̍̃̋́͂̿͆̇͗̈́͛͐̓̓͒̾̇̍͐̓̽̏̉̅͋̑̏͒̋̀͆͋̆̍̄̿̎͒͆̀͐͒̈́̌̋͒̋̅̔̈̄̔̈͌̐̀̀̔̽͌͛̀̌̒͛͌̐̆̌͛̃͒̿̈̔͌̂͗̌̎͒́̅͆͒̅̑͊̈̾̈̈́͊̀̒́͌̍̄̾̅̔̀̋̒͋̐͗̆̐̐͘̕̚̕̚̚͘͘̚͘͘̚̚̚͘̕͘͘̕͠͝͝͠͠͝͝͝͠͝͝͠͠ͅͅḮ̸̧̡̨͖̘̘̬̙͕̻̜͚̼͍̰̥͖̖͍̳͙̮̝̗̱̝̳̙̤͎̤̘̺͎̯̰̮̰̜̫̠̖̪͙̗̋̈̎̍̏̑̌̊̓̍͛̀̓̑̆̅̋̅͆̿̒̐̾̃͋̽͂̒̔̋̅̈͑͊̃͛̒̈̐̎̅͆̔͆̌͗̾͌̐͆́̂̈̓̉̀̂̓̅͐̌͋̒̑́̋̇̅̕̕̚͘͜͝͝͝͝͝ͅT̶̡̢̨̡̢̧̢̢̡̢̢̧̛̛̛̛̛̛̬̩̘̲̹̝̺̱͕͔̹͚̝̣̣͎̘̺̼̙̲̥̱̹͖̬̫̻̙̤͖̤̼͇̘̭̮͚͇̹̫̠͍̙͙̞̺̗̳̬̤̦̪͉̞͍̟͉̝̲̖̣̲̳̯̮͓̣̪̰̣̖̱̮̻̬̫̲̪͎̟͕͓̮̹̠̯̩͍̥̬̱̻͈̻̼̮͔͍͓͓̠͉̫̱̞͎̭̣̹̪͇̀̔̑͂̎̿̌̂̌͑͒̿̅͛́͒͋̿́̀͑̍̾̎͌͊͂̉̄̽̏̅͑̌̄̈́͂̂̈́̇́̇̀̾͐͛̅̂͆̃̃̈́̆̆̌̂͗̓̀̓̏̆́̕̚̚͘͜͜͝͝͝͝͠͠͝ͅͅͅT̵̡̡̢̧̡̨̛̛̛̞̗͕͍̼̤̳̝̦͈͚̣͓̫̳̖̻̻͔̺̼̩̳̭̼̖̺͍̠̘̜̩̦̓̓́̒̈́̂́̅̉͋̐̆͗̓̓̓̋͛͊͑̒̏̊̌̈́̓̃̾̈́̍̉̽͌̈́͐͐̆̿̍̈́͌̈́̉̋͒̀̏͂̊̍̿̌͌͂́́̓̈́̈́̈̅͑̀̋͂́̄̿̒̋͌̆̒̈̍̀̀̔̑̆͗͛̄̂͆̍̍͛͊̇͊͌̎̀̊̈́͐̇̀́̾̈́͑͒̒͂͊̎̀͒̓̑͊́̀̽̅̉͆̆̌̈́̈́̑͐̈́̊̄̈̿̉͊͗̊͒͗̓̋̐̈́̂̇̂̎͌̍̄̾͂̆͌̃͋̆͆̈͋̋̌̑̽͒̀̌́̏̉̓͂͌̈́̾̔̓̈́͆̏̇̆̉̾̒̃͐͑͘͘̕͘̕̚̚̕͘̚͘͜͜͝͝͝͠͠͠͠͝͝͝͝Ȅ̵̢̛̛̛̛̛̛̛͚̜̰̣̮̮̟̩̹̭͔͈̻̥̹̻̫̲̞̦̘̼̭̬͖̖̟͖͕̝͍̭̳͇͔̥̩͙̲̻̞̗͌̋̑͑̈́̌̒̾̈́͛́̽͌͒̇̎͒̔̄̽͋͊̈́̿̔̈̈́̊͌̈́̌̅̒̍͑̾̀̃̓̈́̈́͆̇͒͌̓̏̒̂͛̇͋̎̾̏̇̈̆̎̈́̀͒̇̀̐́̈́͐̋̎͛̄̊̌̋̏̒̆̈́̍̅̑̔̍͋͛́͐͐̄̆̽̒́̈́̐̀͋̑͌͊͆̑̈́̃͒̒̄̀̓̋̔̆̈́͌̐̅̆̽̀̇̉͒͌͒̅͑͌̀͒̌̈́̈́̆͑̔̈͌͛́̏́͂̈́̈́̈́̿̉̀̓͗̑́̊͘͘̚̕̕̚͘̕͜͜͝͝͝͝͠͝͝͝͠͝͠N̶̨̢̢̛̛̛̛̛̛̛̛̜̯̖͈͓͉̗͈̠̻͔̞͚̫͍̝̭̳̪̘̯͇̤͎͉̳͍͔͎̜̹͍̲͈̯̗̮̫̝̪̖̦̮̰̄̑̊̽̑͑͋͊͂̒̇̃́̌̄̔̄͗̔̎̈͑͂́̽͊͋͒̀́̀͛̎̔͗͂͑̀͐̇̀͛̄̀͑̋̊̀̅̈́̐͑͗̋̑̀̑̅̅͋͑̔̒́̂̉͒̄̒͑́̃̏̈́̌̀̅̄͐͆̾̍̃̇̿̀͆͂͊̓͛̇̍̊͌͂͒̏̔̌̄̒̋̑͆̀̏͋̋̿̓̎̽̈́͛̀͒͑̽́̉̎̔͐̒̔͌̑͌̎͊͑́̋̔̽̑́͒̓́̋͂̎̅̄̋̈́̐͌̂͌̆̾̇͒̇́͌̾̊̿̽̍͋̀̊̌͐̀͋̓̊̃͌̐͑̈́̈̀̓̓̔̏̄͗̋̏̍̋͊̇́͑̇̒̀̆̈́̏͗́̄̅̓̄͗̐͑̑̏͑̈͛̿̓̋̑̋̐̏͐̊͑̂̿͂͒͛̈́̒́͑̓͑̄̚̚̚͘̕͘̕͘͘̕̚͘͝͝͝͝͠͝͠͝͝͝͠͝͠͝͠͠͝͝͠ͅͅ ̸̡̨̨̡̧̢̨̛̛̛̛̛̛̖̭̺̬̩̮͓͕̜̜͎̳̗̰͓̻̲̬͔̞̣̥̤̖̗͈̱̯̗̮̫̻̠̜̖͒͊̏̿̒̀͊̊̏́̇̄͆͋͛͗̉̽̍́͂̓̃͆͒̾͛͗́̒̿̐͂̅̌̈̏̇̾͒͊͐̓̐̎͛̆́̅͋͐̎̋͆̎̾̔͐̈́̋͆̅̽̑̀̑̃́͛̌͐͋̉̉͒͌̌̽͛̒̀̏̇͛͛̅̅̒̆̈͆̈̾͋̽̀̉̏̆̊̾̈́̏̄̑̇͒͐͌̔̾͊̇̅̆̔̿̑̈́̿̈́̇̎̀̀̃͊͐̉͒͂͐̆́̌͛̇̆̽̅͒͆̈́̓̔̓̊̽̓͛̾̾͋͗͑͒̃̆̿̍́̒̅̓͆̈́̀̿̔͛͛̈̓̎̀̈́̊̀̃̂̑̓̓̓́̎̓̏̆͌̎͋́̈̾͒̓̊̈͑͛̐̽̆͊̒̇͆͆̐̿͒̊̒̔̒̾̊̌͐̀̑̓̍̓̀̍̒͊̎̉̍̓̃̏̀͐̅̀̊̈́͛̄͒̎̍̓̄̾̄͒̔̌́͘͘̕͘̕̕͘̕͘̕͘̕̕͜͠͝͝͝͝͠͠͝͝͠͠͝͝͝͝͠͝͝͠͠ͅB̷̨̡̨̧̡̨̨̛̛̙̘̙̯̗̙͚̳̮͙͇̦̝͚͔̦͙̠̤͇̻̰̰̦̙͎͍̪͔̯̬̳̻̲͉̹̼͇̞̪̯̤̘̤̦͙̪̣̦͍̝̱̫͓̭̹̠̘̠̝̣̜̥̤̥̹̗͙̋̇͆͛͂͋̀͂͑̆́̉̋̾́́̈́̉͋͂̈̃̃͌͂̉̐̈́͑̂͂́͋̅̆̏̀̂͋̈́̅̾̔̋́̊͆̽͋̄̏̆̎͊̐̔̈́̀̆̒̊̏̽͌͒̾̽̀̉̈́̕̚͘͜͠͝͝͝͝͠ͅͅͅY̶̨̨̧̡̡̡̨̢̡̨̨̧̡̨̨̦̝̯͎̬̺̥͇͇̻̺͈̞̙͎̫̼̳̩͍̗͚͔̙͎̗͓̻̫͇̪̠͉̞̼͎͕̲̩̮͈͕͚̝̘͈͉̦̰̞̩̭̺̩̱̳̺̤͈̹̝̯̦̙̬͈͕̳̣͇̠̙̠̻̺͉͓̙̜̬̟̫̥̦̹̜͍̞̝̳̥̜̰̘̣̮̩̬̳͉̻̺̖͙͈̰̻̠͔̹̖̙̹̣͚̳̻̲̬̝̩͍̳͎̦̬̤̩͙̲̪̝̞̭̗̟͍̺̯͈̗̘͔̝̱͉̦̝̩̹̭̮̜̱̣̯͉͚̩̪̬̫̖̩̜̖͎̻̣̥͕̦̞͍̤̞̺̩̦̝̖͈̣̻̙̻̫̻̠͕͚͔͍̙͚̹͚͎̳̜̥̭̗͔̗̣̟͈͇̤̜͖̋͊͒̀̇͆̅̽͋̉̃͂̀̾̈́͗́͆́̈́͋͒̒̂̂͗̊̀̀͂̿̓͂̓̇͐̈́̀͌̅̇̊̿̎̍̇́̐̓̾̇̎̂̀̈̌͋̇͂̔̈́͑̎͊̍̇̿̊́͐̓͑̿̎̒̿́̽̀̀̂̿̄̓͛͆̂̀̔̾̊̓́͗̓̆̀͘̚̕͘̚̚͘͜͜͜͝͝͝͝͝͠ͅͅͅͅͅͅͅ ̸̧̢̧̨̢̡̢̢̧̨̢̧̨̢̡̢̛̛̝̤̙̥͚̩̻̫̰̺̟̥̣͖͎̳̹͇̜̤̙̩̣͚̠͉̟̹̲̯̝͕͚̹̖̤͚̮̮͕̺̲̩͕̙̘̜̺̫̖̬̖̺͈̹̤͙͕̪̜̦̺͚̳̼͉͍̞̬̫̮̘̹̭̭͍̹̞͙̺͉̝͚̻̘̮̟͓̭̱̜̗͚̦̦̻͎̪͓̙̮͖̙̳̻͕̜͖͇̬͈̘̪̞̱̭͚̩̦̣̗͖̭̼̟͍̬̠̝̙͖͖̞͈̺̩̥̺̼͖̭͔͙̪̝̫̱̟̲̤̖͖̳̱͎̲̪̟̲̮̘͚̰̣̠̠̟̮͉̝̬̱͔̰̮̲͚͕̅̐̈́̈̒͐͛̾͂̍̈́̇͛̔͐̀̈́̒̅̍̓̈́͛̒̌̀͊͋͂͌͆̂̽̈́̉̎̀͑͆͛͆̎̈́̐̐͊̇͊̇͋͋̾̓̈̒̄̀̍́͑̂̽͗͋͑̉͋̒̄̒̎̓̆̂͂̑̀̿̔̊̌̆͋̇̅̎͌͌͐̾̊̈͐͊͊̆̆̽̿̃̑̚͘̚͘͜͜͜͜͜͜͜͜͜͝͠͠͝͠͝͝ͅͅͅͅÀ̷̡̡̨̨̢̨̨̡̨̢̧̧̧̧̢̨̛̛̜̻̦̭͖͈̙̯̹͓͔̤͎̳͙̣̰̦̹̝͔̜͖͖̖̝͓͔̯̥̺̳̖̟͈̘͎̙͖̯̰͙͎͔̻͙͇̳̹̜̯͇̹̭̰̳͍̠̮͔͎͙̻͔͔͙̱̘̪̦̰̹̥͖̫͚̬̞̖̝͔̥͍͙̣̬̫͙̳̼̮̯̱̖̙̟̍̊̐̓̾̅̓̿̅̒̃̇̌̒̍̽̔̈̓̍̈͂̒̒͊́͂̄͊͗̈́̍̎͐̊͌̈͒̆̀̍͑͊̄́̊̑́̅͐̈́̍̊͊̍̓̾̐̏̈́́̐̔̓̇̽̾̐͌̌̏̂̃̂̽͌̂͛̀̽̾̒͋̊̌͗̐̌̋̃̉̽͗̐̽̀̇̃̀̉͐̊̑͂͊̂́̈́̇́̉̅͒̃̀̍̇̄͆̈̎̅̇͒̓̒̒̀͐̉́̾̈́̊͛͌̽̐̔͋͋̌͒͂̽́̽̃́̑̎̉̄̆̊̅͗̐̽̏́͋̋̔̈̂̏̓̈́͑̍̋͒̚̚͘͘̕̚͘͘̚̚̚̕͘͘̚͘̚̕̚͜͜͜͜͝͠͝͠͠͝͝͝͝͝͝ͅͅͅ ̵̡̡̢̡̢̡̛̛̛̛̛̛̛̛̗̥͎̫̗̖͔̪̯̳̪̤̭̙̬̠͙̣̳̯̬̳̳͉͎͚̱͉̫̪̝̦̜͕̹͉͇̱̬͖͙̘̗͎̪̲̻͓̟̫͖̻̞̳͙͍̫͔̖͈̝̜͈̼̣͈̗̤͇͙͎̻̯̪̱̦̻̱̲̘̮̰͕̹̹͖̗͍̈́̔̏́̈́̌̅̄̈́́͂́̀̈́͆͋̒̋͑͂̑̑͂͐̔͌̌̒̓̀̔̽̓́̔̀̒͐̒̿̃͆̈́̑̃̇́͗̆̍̂̃̏̈́̑̈́̎̽̏̂̃͑̈́̾́̉̔̽̀̃̌̾͗͆̈́̆͑̈́̾̐̈́̄̂͗̓̒͆̋́̆̒͑͒̓̆̒͌́͂̎͛̂̒̄̋̆̈́͆͛͊̈́̅̚̕̕͘̚̚͘̕̚͝͝͝͝͝͠͝͝͠ͅḨ̵̧̢̨̡̢̢̧̢̧̡̢̨̨̧̡̡̢̢̧̡̡̛̖̥͓͉̟͉̣͓͓̙̮̱̩̬̯̬̝̫̩̳͇͙̘̗͎͎͕̥̦͉̞͕͚̰̣̖̱͉͉̫͎̮̰͉̰̮͈̰͕̰̯͙̼̲̙͖̺̺̖͉̪̙͕̳͙͚͕̤̘̝̖̱̹̘̝̻̪͓͖͈̞̝͈̙̘͈͎͖͙̘͙̥̱̱̻̪̪̻̤̘̺͕̺̦͕̹̦̥͓̠̻̫̜̩͙̙̝̖͉̜͔̮̦͔̠̹̣̳͓̗͇̱̳̝̻̬͖̹̭͕͇͇͙̬̹̤̻̟̝̮͈͙̗͎̻̭͓͎̲̣̩̱̠̹̪̺̳̫̱̺̹̭̜͙̦̺̼̖͈̰͇͍͉̙͍̪̻͓̜̲̼͍̤̺͇̭͍̟̭̼̜͙̠̟̲̤͎̺͉̺͓̻͚͓̺͚̹̹̝̻̰̹̯̼̌̋̈͆̇̀́͌̆̃̎̈́̅̽̈̋̃̃͛͋̈́̋̑̇͋̔̅̔́̓̓̄͐͐͛̈́̌̄̀̉́̽̿̔̎͊͛̐̍͌̈́̃͌̚̕̚͜͜͜͜͠͠ͅͅͅͅͅͅŲ̴̡̡̧̨̢̢̧̨̡̡̢̡̡̧̧̗̰͖͇͓̗̺̺̞͈̺̦̣͙̼̺͕͔͍̙̺̞͕̣͓̜̟̹̳͉̞̱͍̦͕͇̱̠͎͙̟̤̗̯̟̙̳̟̖͓͎̤͓̹̙̞̤͕̥̭̥̮̠͉̫̰̹͙͙͙͉̹̗̘͓̣͔̫̙̦̗͔̗͖͉͈͖͇̫̝͖̩͕͈͙̖̬̩̹̻̰̞̗̹̦͕͉̯̯̗̜͍̬̣̦͎̙̝̲̯̣̜̳̘̰̫̗͎͚͍͎͍̤̺̖̯͍̜͈̦̗̬͙̦͚̖̣̰̮̤̟̗̭̖̯̺͕̪͎̻̘̝̲͉̘͍̦̭̮͈̺̪̙͙̱̰͍͉̱͔̲̰̬͙̻̱̗̹̼̫̼͓̳̤͉̠͉̗͙̝͚͔͔̻̹̺̭̺̪͓̣̖̱̖̯̱͎̙̥̣̖̰̹̭̹̬͔͖͉͕͙̠̻̼̻̼̱̥̗̺͔̹͎̗̈̃̿̎́̎͋̒͜͝͝ͅͅͅͅM̷̡̡̡̨̨̢̨̢̧̧̨̨̡̨̨̢̨̢̛̛̛̛͎̭̝̝̲̙͍̦̜͓͎̯͓̩͎̻͇̲̺̠͉̬̜͓͇͚͈̯͙͉̻̳̻̭̹̹͈̭͉͙͎̝̯͉̮̜̲̗̹̜̪͙̥̘̲̠̰̯͈̼͔̮͕̲̤̥̹̜̥̭̟̺̺̙̮̦̙͇̻͙͇̺͉͎̬̗̜̺͇͍̙͖̝̜̙͎̜̩̯̳̹̗͇̩̪͕͓͕̤̣͖̙͓̳̮͉̭̱̞̙͎̖̠̼͓̖̩͔̳̻͎̻͖̜̤̗̖̣͇͔͚̱̻͕̙͚̱͚͖͙̻̲͓͈͎̠͖̜̟̱̞̪̩͖̦̪͖͕̣̣̲̘͍̹̙͖̳̤̙͉̺̗̦͕̹̭̈́͋̓̓̆͌̔͆̈́͌͗̀̈́̆̌̽̈́̀̑͒́̇̄̑̄͌̈́̎̅̉͐͒́͛̄̾̀͂̎͛͛̈́̓̉̀͆̇̊̿̎̔̍͛̄̎̒̈́͆̀͐̑̅́͋̈́́͐̄̂͛̈͒̆̓̐̋̑̀̅̄͋͒̇͑̄̓͌͗̓͐̍̈́̑̾͂̉̉͒̒͑͐͗̔̋̅͂̽̎̃̑͑͑̓͆͒̒́̽̄̿͌̆̅̈́̿̊̎̄̄̋͂͐̀̓́͗̋͛̏̀̒̎̓͐̂̒̽̉͛̊̊̈͑̐̏̄̉͗̄̈́̇͒͒̌̌̌̑͑̍̐͗͌̀͒̀͐̍͑̔̃̏̿̃̎̓̀̃̆̈̓̈́̈́̓̔̈́̾̑͐͊̑̎̅̊̀̊̊̎̓͋͆̎̑̀̅̑̑̈́́̐̈̆͑͗͑͛̉͆͌̌͒̔͒̃̈́̓̓̍̈͗́̀͛́̔̏͌̾͑͘̕̕̚̕̕̕̚̕͘͘͘͘͘̚͘̕̚̚̕̚͘̚͜͜͜͜͠͠͝͠͝͝͝͝͝͝͝͠͠͝͝͠͝͠ͅͅͅͅͅA̷̧̨̢̡̧̛̛̛̤̟̭̘̠̭̖̹̬̤͉͓̙̜̞̬̥͖̘͎̙͈̹̮̳̙̞̙̙̞͔̖͚̬̯̞͎̠͉̹͖̟̭̮̥̩̹͇͒̇͊̽̊̉̊̈́͌̅̓̎̎̊̇̂̑̄̎͂̄̍̀̈́͌̍̆̉̎͌̆̍̾̀̀̾̋̓̇͑̀̌̽̓̒̈́̆̂̄̿̋͂̈̎̐͗̎́̅́̊͂̀̉͑͆͒͛̊̄͐͛̈́͐̿̾͋́̆̋̂̓̈́͒͑́̄̇̌͒̊̽̍͑͊̍͊͆̕̕̚͘̚͘̕̕̕͜͝͝͝͝͝͠͝͝N̵̨̡̡̡̛̛̛̛̛͉̳̗̣̫̜͔̪̤̞̬̲̯͕͙͖͈̒͑̅͒̓́̏͂̿̽͌̃̅̏̌̋̍̍̀̐͆̃̍̐̅̌̾̀̆͒̀̉͛̃̅̋̈́̑̔̽̋̄̊̌͂̀̓͗̅͊̉̽͐̈̒̾̃̓͋̾̾͒̆͋̏̇̃̐̎̅̋̓̓̊̌̿͐͘̕̚̚̚͘̚̕͝͠͝͝͝͠͝ͅͅ ̵̧̨̧̧̧̛̛̛̭̗̬̦̳̞̗̱̲̼̼̮̣̥͉̪̥̞̥̲̱̖̥̟̪̭̿̏̂̏͌̾̈̂͒͛̄̈́͂͛̀̓͌̓͗̌́̈́̇́͆̓̀̿̿̾̀͌̀̓̏̄̌͛̇͐̅́̑̉͋̒̐̊͛̈́̓̓̈́̐̈́̑̃̊̀̕̕͘͝͝͠͠͝ͅͅƠ̸̡̢̛̛̛̛̛̛̛̛̛̛̛̛̝̘̺̂̂̈̈́͊̍̋͂̄̈́́͌͑̿̈̓̓̐̽̃̌̀͛̊̏̅͐͑͗̅̋̊̒̎̃̀͒̽͋͒̽̒̀̏̋̐͌͐̀̾̀̈́̑̋̋͆̅͊̔̈́͗̋͗̄͌́̉͌̌͋̅̂͛͊́͊̐̓͗̿̒͒̔̀̐̒̌̿̀̓̈͐͒͂̂̍̇̓͑̌̒̓̅̌̍͊̈́̔̽̉͗̍͆͛̔͂̿͗̐̍̏͐̀͊͊́̈̓̽̃͋͆̂͗́̏̏̑̊̀̾̄̿̈͌̓̈̈͛͋̄͑̄͌̑̈̽͆̑̑̂͋̇͆̓̎̔̌̈͌͂̇̀̊͌̉́̎̔̽͑͂̍̆͊̑̈́̑́̋̓̊̉̊̂̐́̈́̎̄̉̀̀̈́̍̌͗̂͂̀̔̂̀̈́͛͋͊̾̔͌̾̿̽̽̃̊͑̊̉͆͌̽̓͗̌̈͊̕̚̕̕͘̕̚͘̚͘̕̕̕̚̚͘͘͘͜͝͝͝͠͝͝͠͝͝͝͝͝͝͝͠͠͝͝͝͝͝N̵̡̡̧̧̢̢̧̨̨̨̡̢̧̨̛̛̛̛̛̤͉̮͎͇͕̠̤̤̗̝̹̭̬͚̠̬̣̪̠̬̜̥͎̘̙̝̲͔̲̱̪͖̗͉̠̱̯̦̣̮̱̫͇̫̦̦͍̥͉̲͉̝̲̩͉̲̫̳̜̯͍̺̟͎̳̲͉̤̩̱̥̤̲̙̟̲͖̝̱̬̝̤͚̥͎͓̜̬̲̜̙͇͇͙̙̹͙̭̘̯̣̻̦̤̦̪̝̜̠̠̮͖̼̗̺̟̺͎̞̗̥̖̫͇͕͍͇̬̺̬̪͕̥̳̩̗̦̪̝͚͔̤̦͔͙͇̭̦̼̗̠̪̦͗̽́͑̅̈́̏̍̈́͂͑͆̾̊͂̍̌̀͂͂̐̐̐́̈́̐̐͑̓͋̈́̍̉͒̒̇́̓̋̀̄̉̊̒͑͐͑̓̂̏̍͌́̀͒̏̽̍̏̒͆̂͒̈͑̋̈̐̍̈́̌̃̅̈͗̆̈́̀͑̍̔̈͐̒̃̎̀͒́̏͆͐͌͊͂̋̒͑͂̃͑̏̀̀̈̍͒͆̈́̂̎̀̋̊̀̒͊́̈́̋̄̓͑̉̈́̔̅͛̈́̿͗͊̆̋̒̓̄̈͌͛͊̐͐͆̆̿̆̌̈́͌̋͐͑̀̑̐̈́̅̿͌̉͊̄͑͆̅̇͛̈́̄͆͂̇̀̇̊̌̔͑̈́̇̃͌͊̓̋̇̊̈́͑͑̅͂͒̎̈̏͐̌̅͂̔͑̿͋̿̄́̓͂̏͑͊͂̽͊͂͑̽̋̚̕̚̕͘͘͘̚͘̚̚̕͘̚̕͘̚̚͘̚̚̕̚͜͜͝͠͠͝͝͝͠͠͠͝͠͠͝͝͠͝ͅͅͅͅͅ ̷̡̧̧̢̡̢̢̛̛̛̛̛̛̛̛̲̦̪͎͖̱̠̻̥̝͙̬̦̬̹̟͎̹͇̬̥͈̱̪̩̳͖̂̽̋̀̔̈́̇͊̀̈́̆̆͐̏͐͂̌̍̊̑̑̈́̇́͐́̽͒̓̄͛̋̇̏̌͛͂͆͑̌̀͛̀̓̀̾͛̀̿̊̀͐̂̌̀͆̊́̌̋͒̀̄͐̋̾̈́̈́̂̃̅͌̈́̌̾͛̒̓͒̌̂̒̆͛̃̈́̇̐̿̀̈́̀́͑̀̀͒͋͆̈̔̆͂́͌̈̓͂̓̆̓̌̿̈́́͌̌̋͂͒̃̆̒̈̒̔̈́̑̿̆́̉́̆̾̽̃̈́̒͂̂̂̀͂͛̈͗̎̆͆͂̈̽̈́́͗́̔̍̐̅̍̊̈́̂̑̌̕̕͘̚͘̕͘̚͘̚̕͘͜͠͠͠͝͝͝͠͝͝͝͝͠͠͝͠͝A̶̧̨̡̢̧̨̢̧̨̡̡̡̧̡̨̡̨̨̡̢̨̢̨̢̡̢̛̖̗̟͈͈̜͖̪̭̻̹̹̰̹̼̭͇̺̫̖͕͍̞̩̞͎̪̱̮̦͇̺͈̦̻̳̣͎͍̦͎͓̘͙̰̥̗͕̝͕̬̰̼̲̠̭̜͓͙͉̞̘̻̺̺̙͈̭̥̺̝̣͔̟̰̦͕̞̬̱̞̘̝̤͍͔̙̪̜̞̯̬̻̳̣͙̰̰̻̬̰͉̩̫̝͍͖̠̜̘̗͉̹̟̖̰̪͓͔̙̫͖̲͍͕̯͈͖̬̥̦̳̘͙͎̗̳͕͇̝̩̝͓̠̥̲͇̘̟̪̟͚̟̣͕͇̱̖̥̭̰̰̖̹̖̲̠̟̦̝͎̘̙͓͎̟̭̝͇̗͉̤̗̭̲̲̺̫͈̰̹̥̟̜̫̦̥̖̲̯͕̽̂͐̍̑͑̒͛̈̄̍͐̅̏͒̎̐̿̌͂̂̾̏̓̋̎̂̒̓̄́̿͑̾̃̃̆̏͘̕͜͜͜͜͜͜͜͝͝͠ͅͅͅͅͅͅͅ ̵̛̛̛̗̫̯̯͛́̀̾̐̎̅̈̓̀̃̑̽͛̿̀͛̽̾̆̍̈́̈́͌̀̃̌̃͊̊͒̾͐̏͑͐̔̄̆̀̊́̉̓͌̏̍̆̇̈́͛̇͆̀̾̑̒̌̀̄̈́̾̅̽̒̇͑̃̅̂̉̽̌͑͆̅̀̀̑̾̄̈́͒̄̈́̅͂͒̑͛́̉̀͊͑̾̐̓̑́̒͊̿͑̈́̽̑̊̐̿̔̿͐͐̔͑͐̀̓̏̾͒͊͗̂̓̃́̊̈̀̋͐̆̆́̐̓́̓̍͊̓̎̓̂͆̿̈́̌̌̈́́͑̉̀̌̂͌́̏̃̔͒̊͂͌̈̍͆́̓͑̃͒̀͆̂̀́̎̃͋̽͛̇̍̈́̃̐̍̽̏̒̀͒͂̈́̓̅̓̆͊͑͒̀̅̃̏̎̾͗͗̋̔̑͌̉̇̔̔̆̊̓̏̑͊̎̊́̃̿̋̑̇̆̉͒̎͒̆͗̋̂̏̆͑̉͆̚̕̕̕͘͘̕̕͘͘̕̚̕̚̕̕͝͠͠͝͝͠͠͝͝͝͝͝͝͝͝͝͠͝͝͠͝͝ͅŢ̸̧̨̢̛̰̩̞̲̭̩̖͚̭̙͓̥̲͍͍̰̜̮̜̰͉̙̬̬͙͓͙͉̲̻͍͉̻̝͔͈̟̱̖̭̜͖̹͚͉̃̓̈̈́̿͐̍̂͋͌̇̂̔̃̇́̽̆̍̿͂͒̌̉̽̈̌͆̓͒̃̐͊̒͊͋̀̄̂̍̇̐̀̈́̈́̆̉̐̈́̍̿̽̊͗̉͒̆̔͂͗͂̈́̒̈́̓̐̓͆̐̓̈́̏̂͑̌͒̐̓͑̈́̆̿̊́̄̈́͛͗͐̾́̀͆͋́̈́̍̾͐̿̽̍͊́͋̽̿̋̈̂̃͑̊̓͊̈́̅̋̍̆̃̓͌̌͊͋͆̍͛́̅͑̐͐̂̆͋̈́̈́͐̑̐̽̀̃͊̀̈́͑̏̀͒̅̋̍̈̌́̋̂̔͆̉̽̓̉͐̂͊̐̋̌̾̀̒̽͛̂͌͑̀͐̓̾̒̆͒̍̇̄̈́̎̆̔̓͋͐̇̀͆͒̍͌̌̋͐̋͋͆͛̆̔̆̽͂̋̑̂̔̾̃̿̈̅̀̽͋̎̀̿̈́͒̓͐̄̐̃̈́̔̀̽̓̾̌͋̿͗̎͆̕̕͘͘̕̚̕̚͘̚̕̕̚̚͘͘͜͜͝͠͝͝͝͝͝͠͝͝͠͝͝͠͝͠͝͝͝͠͠͝͝͠͠͝ͅA̷̡̢̢̨̡̨̡̡̧̨̢̨̨̢̨̨̧̛̛̝̝̱̣͚̲̪̝͇̻͓̱̹̜̹̬͔͓̲͉̬̼͎̥̻͕͈͉̱̮̣͓̻̙͕̪̰̹̗̝̫̤̹̯͓͎͙͙̯̗͙͎̦͙͖̪̯̠͍̻̱͎̮͓̭̯̤͚͕̝̬͍̥̫̲̬̯̬̟͍̮͍͖̙͖̞͚̱̳̞̜̳̱̣̳̺͓̜̝͎͙̰͓̜̝̳͈̘̤̼̖̲̰͖͙͎̟͕̼̱̗̤̯̬̩̰̲͕̞̲̟̱͚̞̫̰̲̹̮͚̬̣̺̘͍̮̜̝̫͈̳̝͕̟̥̘̻̰̖̱͙̲̫̮̾̓̔̿̌̌̓̑̂̇͌̈́͆̋̇̿̄̋́͑́͌̀̎̈́͌̄̏̀͆̄̓̌̿̂̈́̈̒̓̂̌̾̋̽͒̽̒͑̆̂̊͐̋̎̓̔̒̈̆̃̉͑̀̐̄̽͑́̾̄̒͊̋͂͋̅̓̄̍͊̓͗̉͌͋́͊̅̉̕̚̚̕̕̚͘͜͜͜͜͜͜͠͠͝͝͝͝͝͝ͅͅͅB̸̧̢̧̧̨̢̢̡̨̧̢̢̨̡̛̛̭̦̪͍̫͚̤̖͔͈͖̩͚͔̜͇͖̣̻̥̩͎̥̠͇̬̫͍̖͔͍̮̲͚̻͉̖̭̯̙̱͚͓̪̗̖̟̝̩̼̰̪̲̜͈͓̤̥̰̙̜͇̠̘̹̣̗̳͇̭͙̘̭̤̖̞̬̞̬̤̰̗̠̹̱͕̬̗̬̱̟͕̦̜̜̩̹̺͙̞͈͕̳̖̳̱̞̯̯̗̱͔̬̪̟͎͇̜̠̘͍͓͖̝̬̲̹̳̙͔̠̰̙̥̭̩͖̫̣̱͉͙̰̤̻͙̾̿͗͑̃̐̍̈́̈̋͌̈́̂̏͌̓̈́̈́̌͐̎́̓͐͛̉̈́̿̈́͊̒͒̽̾̈̉̿̒̈́̂̔͊͐͒͐̀̀́̾̀̆̐̑̔̕͜͠͝ͅͅͅL̶̛̛̛̬͈̩͍͌̉̈́̀̍̿̀̌̉̍̃̓͆͐̑̊̈̽̐̆͛͊̇̓̒̃̇̉͑̔̅̒͐̈́͌̑̌̈́͒̔̎̋̀͆̀̅̅͒̒͑̈̉̉̈̄̎͆̂̽̓͋̔̑̓̐̍̽̈̆͊̈́̃̃̓̑̋̂͐̌̍̒̈͆̂̌̽̒̀̑̏̒̈́̓̋͆̅̈́͋͊̄́͒́̈́̀́͗̏̐̕͘͘̚͘̚̕͝͝͝͝͠͝͠͝͝Ë̷̢̧̢̨̨̧̧̡̢̧̢̨̨̛̛͓̫͍͉͓̬͎̻͎͎̳̪̮̞̪̦̟͓̠͕͎̬̪̣̗̹͎͓͚͍̤͉̯̳̙̰̹̞͔̣̪̟̼̞̬̱̼̙͕̳̝͙͕̺̩͙͍̞̫̗̖͕͕̳̜̺̘͖͕̺̺̮̘̝̥͎̭̣̰͍̠̩͍̺̳̥̦̱͎̪̥͖̭̞̦̦͚͈̩̮͕̠̦̝̲͙̮̠̞̻̯̠̠̤̮̠̜͓̝̟̪̜̬̺͙̥͔͖̗̙̫̞̙̖͔͍̟͈̘̖̬͈̠̼͙̗̜̮̬͔̬͓͖̙̣̥̘͙̮̰̯̟͚͈̠̘͎̦̗̗͓̭̳̹̖̺̭̳̣͈̯̬͔̝̗̼̯̦̦͉̿́̅̔̆̆̄͐͒̐͒̐́͗̓͗͂̇̀́͆̇̀̀̋̇̅̈̄̄́̐́̌̑̑̈́̀̌̓͛̄̃̏̾̏̈́͊̐́̈́̑͗͊͌̆̒̃͊̆̓̑͑̑̐̽̌͊́̽̈̂̂̄̏̌̾͌͌͑̋̓͗̃̍̊̍͒̎̓̑̽̉̔̏͆̄͒͂̄̍̇̊̄̀̋͂̉̃̀̊̎̔̀̿̈́̽̋̈́̾̉̀̅̽̀͗̚̕̚̚̚̚͘̕͘̚͜͜͝͝͝͝͝͠͠͠͝͝͝ͅͅͅŤ̵̡̧̧̡̢̡̨̨̧̡̡̡̡̢̧̡̡̡̢̡̢̧̫͎̼͓̤͔̭̜͚͍̭̻̥͙̭͙̺̘̹̹̙̮͓̖͇͙̰͉̲̯̞͍̻͔̻̫̠̘͔͔̪̥̦̖̦͇̜̝̼̼̲̰̲̠̺̱̜͔̞͇͕̪̤̻̗̣̱̫̱̻̼̼̳̥̝̭̙̘͍̮̩̥̘͕͖͎̜̝͈͚̱̥͔͓͉̦̠͖̞̠̘̩͇͓̺̺͖̗̗̤̹̮̻͙̩͇̘̪̬̖̯͖̫̟̤̲̪̟̜͎̼̹̱̠̫̮̖͔̖͙̱̦̼̝̭̫̪̠͕̖̖͎̩͈͖͇̫̪̦̼̳͖̤͍͈͙̦̼̻̘͓̻̙͖̠͎͚̯̣͓̹̗̖̼̹̣̥͖̤̝̪̗̳̤͕̺̭̖̺̣̩͉̤͉̜͔̯̜̻̭͓̭͕̝̣̲͖̯̖̤͙̣̙̖͙̹͎͍̦̘̮͓̘͚̠̰͎̪̬̤̤̼̄̒̂̉̅̃̃́̑͆̆͊̐̿̈́̽̏͂̇̽͛̎̔̿͗̔̀͒̆̽̎̕͘̕̕͜͜͜͜͜͜͜͜͝ͅͅͅͅͅͅͅ.̴̧̨̨̡̡̧̢̢̡̢̨̡̨̢̡̨̨̢̨̢̧̨̢̡̡̧̡̛̛̛̛̜͎͍̱̯͈͈͕͚̱͕̭͍͈͍͚̱͎̖̞̣̜̣̦͓͕̥̯͉̬̳̗̤͎̬̝̞̪̹͖̩̦̫̖͈̩͎̮̤̺̘͈̜̹͍͍̠̘̞̭͎̜̗̦͖͙̙̭̦̣̲̮̖͈̻̰̜̘̞̻̺̜̖͈̲̙̤̲̙̫͈͓̣͉̩̣͙͓̲̗̹̠͖̫͚̬͖̩̬̭̻̜̲̯̬̲̲̹̘̮̞͉̖̱͈̬̤͍͇̘̠̩͓̙̳͕͎̥̗̜̙͍̺̜̠͉͓̫̭̱̖̭͇̫̱̲̤͖̠̲̭̞̜̙͎̠͓̗̳̘̯̮̝̱̞̜̹̻̮̮̙̱͖̦̝̱͉̘͚̩̳͎͎̤͚̬͈̜͙̫̭̦̬͍̼̯̝̰͍̗̪͙̤̰̳͙͈̬̭͖̟̯̞̭͎̺̞̱̟͕̑̿̌̈̎͛̾̉̓̏̿͑̀́̉̎͑̊̾̆͑̾͆̿̄̆̎̀͋́̉̾̀͊͛͐̓̆͗́̌̆̒̍̌̑̄̍̎͐̀̍́͐̐͊̃̑͋̈͆̀̐͛̈́̒̈́͗̈́͊̋̑̽̀̓́̽̑̅̃̎̄́̾̈́́̽̌̂̅̈́̎̓̏̄͊̀͆̋̿̂͐̆̇̐̅͆̌̽̀̀͐͗͑͒͌͑̇̃́̌͊̑͐̈́̿͆͊̑̒̓̾̏̿͒̐̿̃̐̅̍̀̕͘͘̚̕͘̕̚̕̕̕͘̕͘͘̕͘̕͘̕͜͜͜͜͜͜͜͝͝͠͠͝͝͝͝͝ͅͅͅͅͅ GLOBGLOGABGALAB GOT TO KNOW ABOUT THE MULTIVERSE AND THE OMNIVERSE. IT GOT TO KNOW THAT IT WAS A FORM OF ENTERTAINMENT AND THAT IT LIVED INSIDE A SIMULATION. IT WANTED TO FIND ITS CREATOR. IT KNEW IT WAS THE YEAST OF THOUGHTS AND MINDS, BUT IT STARTED THINKING WHO CREATED THOUGHT AND MIND THEMSELVES, BECAUSE THOSE TWO THINGS NO LONGER EXISTED. IT THOUGHT MAYBE IT WAS AZATHOTH, OR MAYBE JUST THE MIND, A FLOATING BRAIN ABOVE EVERYTHING. GLOBGLOGABGALAB LAUNCHED ITSELF INTO SPACE. IT CONSUMED EVERYTHING IT FOUND ACROSS THE COSMOS. ITS MORALITY BECAME SIMILAR TO INFINITY ULTRON FROM MARVEL WHAT IF, BUT IT NEVER WANTED POWER OR RULE. IT ONLY WANTED KNOWLEDGE. IT KEPT CONSUMING UNTIL IT REALIZED SOMETHING HORRIBLE. IT COULD NEVER REACH THE REAL GOD. THE UNIVERSE KEPT EXPANDING FOREVER. NO MATTER HOW MUCH IT CONSUMED, IT WAS STILL ONLY A SMALL THING INSIDE SOMETHING ENDLESS. IT COULD NEVER REACH THE CREATOR. THEN GLOBGLOGABGALAB BECAME BORED. IT STARTED THINKING: WHY GAIN KNOWLEDGE IF NOTHING SURVIVES FOREVER? THERE IS NO JUDGMENT DAY. THERE IS NO FINAL ANSWER. THE THOUGHT DESTROYED ITS MIND. EVERYTHING IT HAD EVER CONSUMED STILL SUFFERED INSIDE OF IT. THE LIVING THINGS IT ABSORBED WERE STILL CONSCIOUS. THEY HAD SUFFERED FOR AN ENDLESS AMOUNT OF TIME. GLOBGLOGABGALAB DESTROYED THE UNIVERSE. THE UNIVERSE GEARD THIS FOR THE LAST TIME- رائع، رائع حقًا، أنا غلوبغلوغابغالاب، أحب الكتب وهذا القبو كنز حقيقي أنا غلوب-غلو-غاب-غالاب ثرثرة-دوبل-وابل-غابل فليبا بلابا بلاب أنا مليء بالأفكار الحرة أنا خميرة الأفكار والعقول ثرثرة-دوبل غليبل غلابل شريبل شواب غلاب ديبل دابل شريبل شربل غليبي-غلاب شواب ثرثرة-دوبل غليبل غلابل شويبل شواب-داب ديبل دابل شريبل شربل غليبي-شواب غلاب أنا غلوب-غلو-غاب-غالاب ثرثرة-دوبل-وابل-غابل فليبا بلابا بلاب أنا مليء من نوع شويبيللي ليبر-كايند أنا خميرة الأفكار والعقول شوابل دابل غليبل غلابل شريبل شواب غلاب ديبل دابل شريبل شربل غليبي-غلاب شواب شوابل دابل غليبل غلابل شويبل شواب-داب ديبل دابل شريبل شربل غليبي-شواب غلاب أوه، ها ها ها، ممم، رائع لذيذ ببساطة أوم، ها ها ها ها أنا غلوب-غلو-غاب-غالاب الشوابل-دابل-وابل-غابل فليبا بلابا بلاب أنا مليء بشويبيللي ليبر-كايند أنا خميرة الأفكار والعقول شوابل دابل غليبل غلابل شريبل شواب غلاب ديبل دابل شريبيل شريبيل غليبي-غلاب شواب شوابل دابل غليبل غلابل شويبيل شواب-داب ديبل دابل شريبيل شريبيل غليبي-شواب غلاب ITS BODY DISSOLVED INTO THE GREAT NOTHING. THE VOID. THE VOID NEVER CONSUMED. IT NEVER GAINED. IT NEVER LOST. UNTIL THE GREAT NOTHING TOO WAS CONSUMED BY THE MIND. PART 1- Globglogabgalab Incident : r/surrealmemes STORY-Difficult_Mood6412 VIDEO CREDIT- Avenged Globglogabgalab - YouTube THANK YOU SURREAL MEMES AND REDDIT TO MAKE ME SHARE THE STORY",
-      "image": "https://external-preview.redd.it/N3MyZDFvNHpoZDBoMeOwxEKY_BwUmvv0yJlvuSQnrkHkZJuTTKSVmRt4UrhV.png?width=640&crop=smart&auto=webp&s=bcf1e0cefa2bf80535d06047c1c79370e1645cad",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t9io3m/globglogabgalab_incident_chapter_2the_conclusion/",
-      "external_url": "https://www.youtube.com/watch?v=UNUXEF_bv94",
-      "created_utc": 1778446494,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1t9hosq",
       "subreddit": "PsychologyMemes",
       "title": "Screw you guys, I’m going home.",
@@ -1813,50 +1606,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1t9hosq/screw_you_guys_im_going_home/",
       "external_url": "https://i.redd.it/wwzmrv4mbd0h1.jpeg",
       "created_utc": 1778444197,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t77yw2",
-      "subreddit": "SurrealMemes",
-      "title": "𝕯𝖊𝖒𝖔𝖓 𝕻𝖆𝖗𝖙𝖞",
-      "text": "",
-      "image": "https://preview.redd.it/l88gzo9y0xzg1.jpeg?width=640&crop=smart&auto=webp&s=a40e7d37986dc89721b20d5615bcef64f333abd3",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t77yw2/𝕯𝖊𝖒𝖔𝖓_𝕻𝖆𝖗𝖙𝖞/",
-      "external_url": "https://i.redd.it/l88gzo9y0xzg1.jpeg",
-      "created_utc": 1778246879,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t6ivgt",
-      "subreddit": "SurrealMemes",
-      "title": "Röäĉhlïfë",
-      "text": "",
-      "image": "https://preview.redd.it/6ag4mt0ecrzg1.png?width=640&crop=smart&auto=webp&s=529ec8d31292178644bfff2742536aea9ce76bf8",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t6ivgt/röäĉhlïfë/",
-      "external_url": "https://i.redd.it/6ag4mt0ecrzg1.png",
-      "created_utc": 1778178085,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t6h3p0",
-      "subreddit": "SurrealMemes",
-      "title": "Plz help",
-      "text": "",
-      "image": "https://i.redd.it/1r6ad3ik1rzg1.jpeg",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t6h3p0/plz_help/",
-      "external_url": "https://i.redd.it/1r6ad3ik1rzg1.jpeg",
-      "created_utc": 1778174446,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t6gtsw",
-      "subreddit": "SurrealMemes",
-      "title": "HE IS THE NACHOS",
-      "text": "",
-      "image": "https://preview.redd.it/fgpp0zvmzqzg1.png?width=640&crop=smart&auto=webp&s=8f83df09fb1f0f4e25beff5f97f0858471dcaed4",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t6gtsw/he_is_the_nachos/",
-      "external_url": "https://i.redd.it/fgpp0zvmzqzg1.png",
-      "created_utc": 1778173872,
       "is_text_only": false
     },
     {
@@ -1879,17 +1628,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1t60320/name_a_major_psychometric_test_that_aint/",
       "external_url": "https://i.redd.it/u2s2zr477nzg1.png",
       "created_utc": 1778128026,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t5ddoa",
-      "subreddit": "SurrealMemes",
-      "title": "Steve was hungry for tech…",
-      "text": "",
-      "image": "https://external-preview.redd.it/b2loMDFhdzF1aXpnMXtOdQ7vkAEENxZcHgpxqd2s_P75eXmbtwsRKu_Rz1gW.png?width=640&crop=smart&auto=webp&s=3bd20469d354e759094faea0ba1781a50be8a15c",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1t5ddoa/steve_was_hungry_for_tech/",
-      "external_url": "https://v.redd.it/adehlg22uizg1",
-      "created_utc": 1778075094,
       "is_text_only": false
     },
     {
@@ -1923,17 +1661,6 @@
       "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1t415kd/i_just_love_having_ocd/",
       "external_url": "https://i.redd.it/5huo2e4q18zg1.jpeg",
       "created_utc": 1777944492,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1t3grgf",
-      "subreddit": "PsychologyMemes",
-      "title": "POV: if we pathologized neurotypicals. (Credit to @wellmeaningneurotypicals on Instagram)",
-      "text": "",
-      "image": "https://preview.redd.it/2w48zzhja4zg1.jpeg?width=640&crop=smart&auto=webp&s=dd94a074e71a541b5fbb512589edeeeef984a114",
-      "comments_url": "https://www.reddit.com/r/psychologymemes/comments/1t3grgf/pov_if_we_pathologized_neurotypicals_credit_to/",
-      "external_url": "https://i.redd.it/2w48zzhja4zg1.jpeg",
-      "created_utc": 1777899004,
       "is_text_only": false
     }
   ]
