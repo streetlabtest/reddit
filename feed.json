@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-24T14:30:06.414159+00:00",
+  "generated_at_utc": "2026-06-24T17:53:55.164868+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1uej102",
+      "subreddit": "dankmemes",
+      "title": "I've been pleasantly surprised so far",
+      "text": "",
+      "image": "https://preview.redd.it/7ghr87ndg99h1.jpeg?width=640&crop=smart&auto=webp&s=b4d337c0e10c533d3775f00587b1f19b9b1fe141",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uej102/ive_been_pleasantly_surprised_so_far/",
+      "external_url": "https://i.redd.it/7ghr87ndg99h1.jpeg",
+      "created_utc": 1782319985,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uei12x",
+      "subreddit": "dankmemes",
+      "title": "No one is doing the \"chugging soy sauce\" trend guys...",
+      "text": "",
+      "image": "https://preview.redd.it/0frxx0sw999h1.jpeg?width=640&crop=smart&auto=webp&s=0d08a8a56b7d7435b6ff1ab7071da8e682bbfe49",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uei12x/no_one_is_doing_the_chugging_soy_sauce_trend_guys/",
+      "external_url": "https://i.redd.it/0frxx0sw999h1.jpeg",
+      "created_utc": 1782317809,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1ueg49p",
+      "subreddit": "dankmemes",
+      "title": "Thanks, memes.",
+      "text": "",
+      "image": "https://preview.redd.it/ojsvkpdbx89h1.png?width=640&crop=smart&auto=webp&s=223be01d889af1683e4305fab1469f006343a050",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ueg49p/thanks_memes/",
+      "external_url": "https://i.redd.it/ojsvkpdbx89h1.png",
+      "created_utc": 1782313621,
+      "is_text_only": false
+    },
     {
       "id": "t3_1ueds5c",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udnrpf/this_line_is_too_long/",
       "external_url": "https://i.redd.it/jk30lsgsi29h1.png",
       "created_utc": 1782236045,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1udldkk",
-      "subreddit": "dankmemes",
-      "title": "Welp true sadly",
-      "text": "",
-      "image": "https://preview.redd.it/h25sg4s8329h1.png?width=640&crop=smart&auto=webp&s=babb57437acf35b00f8b3716fe39593adc068225",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udldkk/welp_true_sadly/",
-      "external_url": "https://i.redd.it/h25sg4s8329h1.png",
-      "created_utc": 1782230819,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1udktnv",
-      "subreddit": "dankmemes",
-      "title": "I’ve been waiting for this moment!",
-      "text": "",
-      "image": "https://preview.redd.it/0t8cvcyoz19h1.jpeg?width=640&crop=smart&auto=webp&s=d3d9dbd750b7234c5354659a2f11609c3fc3fb13",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udktnv/ive_been_waiting_for_this_moment/",
-      "external_url": "https://i.redd.it/0t8cvcyoz19h1.jpeg",
-      "created_utc": 1782229630,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1udk9q9",
-      "subreddit": "dankmemes",
-      "title": "History may not repeat but it rhymes",
-      "text": "",
-      "image": "https://preview.redd.it/qxu1rfp2w19h1.jpeg?width=640&crop=smart&auto=webp&s=a7a8e876476812526e609ca573684d95060da525",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udk9q9/history_may_not_repeat_but_it_rhymes/",
-      "external_url": "https://i.redd.it/qxu1rfp2w19h1.jpeg",
-      "created_utc": 1782228409,
       "is_text_only": false
     }
   ]
