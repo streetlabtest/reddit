@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-25T07:41:39.623336+00:00",
+  "generated_at_utc": "2026-06-25T10:41:23.931331+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1uf5e3q",
+      "subreddit": "dankmemes",
+      "title": "What Big Oil boomers post on Facebook:",
+      "text": "",
+      "image": "https://preview.redd.it/a47flehsfe9h1.jpeg?width=640&crop=smart&auto=webp&s=932f329c2dd69d28a6b25873e82f5d26a4a99c07",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uf5e3q/what_big_oil_boomers_post_on_facebook/",
+      "external_url": "https://i.redd.it/a47flehsfe9h1.jpeg",
+      "created_utc": 1782380343,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uf4nhn",
+      "subreddit": "dankmemes",
+      "title": "Pearls Before Swine",
+      "text": "",
+      "image": "https://preview.redd.it/y2912jcl7e9h1.jpeg?width=640&crop=smart&auto=webp&s=48fa0740a798c593035041c3ad08069a7d86a25f",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uf4nhn/pearls_before_swine/",
+      "external_url": "https://i.redd.it/y2912jcl7e9h1.jpeg",
+      "created_utc": 1782377730,
+      "is_text_only": false
+    },
     {
       "id": "t3_1uf39tm",
       "subreddit": "dankmemes",
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udyqfi/see_you_space_cowboy/",
       "external_url": "https://i.redd.it/o45x07n7n49h1.jpeg",
       "created_utc": 1782261746,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1udy4ms",
-      "subreddit": "dankmemes",
-      "title": "We are cracked",
-      "text": "",
-      "image": "https://preview.redd.it/opztlqh9i49h1.jpeg?width=320&crop=smart&auto=webp&s=011cf3d3e50b902168535462d673c5489ed7a533",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udy4ms/we_are_cracked/",
-      "external_url": "https://i.redd.it/opztlqh9i49h1.jpeg",
-      "created_utc": 1782260086,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1udx78m",
-      "subreddit": "dankmemes",
-      "title": "\"I make no exceptions.\"",
-      "text": "",
-      "image": "https://preview.redd.it/5bd6zjxta49h1.png?width=640&crop=smart&auto=webp&s=9f11fff6c54047a65f9f5979246f1b5e8dc41141",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1udx78m/i_make_no_exceptions/",
-      "external_url": "https://i.redd.it/5bd6zjxta49h1.png",
-      "created_utc": 1782257676,
       "is_text_only": false
     }
   ]
