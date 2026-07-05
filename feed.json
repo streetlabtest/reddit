@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-05T10:12:08.099670+00:00",
+  "generated_at_utc": "2026-07-05T13:38:30.160071+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1uo1rx9",
+      "subreddit": "dankmemes",
+      "title": "the copium is unreal",
+      "text": "",
+      "image": "https://preview.redd.it/lgje5o6vtebh1.png?width=640&crop=smart&auto=webp&s=ef6589b1e1995868879afca90aa5dc1d8dd84298",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uo1rx9/the_copium_is_unreal/",
+      "external_url": "https://i.redd.it/lgje5o6vtebh1.png",
+      "created_utc": 1783256823,
+      "is_text_only": false
+    },
     {
       "id": "t3_1unyeho",
       "subreddit": "dankmemes",
@@ -159,17 +170,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1unmf68/i_keep_hearing_all_this_talk_about_the_male/",
       "external_url": "https://i.redd.it/6i3e49r3mabh1.png",
       "created_utc": 1783205711,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1unmbc2",
-      "subreddit": "dankmemes",
-      "title": "Crazy meme...",
-      "text": "",
-      "image": "https://preview.redd.it/w64ui3g6labh1.png?width=640&crop=smart&auto=webp&s=87840ac3aeb8e3097cc385612fb79c29f9f234e6",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1unmbc2/crazy_meme/",
-      "external_url": "https://i.redd.it/w64ui3g6labh1.png",
-      "created_utc": 1783205401,
       "is_text_only": false
     },
     {
