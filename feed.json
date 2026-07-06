@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-06T18:10:40.077593+00:00",
+  "generated_at_utc": "2026-07-06T21:28:09.727157+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1up705w",
+      "subreddit": "dankmemes",
+      "title": "This is the way",
+      "text": "",
+      "image": "https://preview.redd.it/nnw5rdwgrnbh1.jpeg?width=320&crop=smart&auto=webp&s=05a321de865ab0c0733a71409667c70675ff82e9",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1up705w/this_is_the_way/",
+      "external_url": "https://i.redd.it/nnw5rdwgrnbh1.jpeg",
+      "created_utc": 1783364905,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1up5s0t",
+      "subreddit": "dankmemes",
+      "title": "I know the caption's been tossed around before but this gif makes it infinitely funnier",
+      "text": "",
+      "image": "https://preview.redd.it/cwlz4o60knbh1.gif?width=320&crop=smart&s=5d89e5e973c0fb193ad1874934ed614f29f502d0",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1up5s0t/i_know_the_captions_been_tossed_around_before_but/",
+      "external_url": "https://i.redd.it/cwlz4o60knbh1.gif",
+      "created_utc": 1783362395,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1up5hpo",
+      "subreddit": "dankmemes",
+      "title": "Need for speed",
+      "text": "",
+      "image": "https://preview.redd.it/3usjysa5inbh1.jpeg?width=640&crop=smart&auto=webp&s=9a16e8a0594011ea21945cdf3b0046f549953a06",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1up5hpo/need_for_speed/",
+      "external_url": "https://i.redd.it/3usjysa5inbh1.jpeg",
+      "created_utc": 1783361811,
+      "is_text_only": false
+    },
     {
       "id": "t3_1up57j7",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uofs53/the_devilthe_prowde_spiritecannot_endure_to_be/",
       "external_url": "https://i.redd.it/7uud8gkfohbh1.jpeg",
       "created_utc": 1783291243,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uoflvz",
-      "subreddit": "dankmemes",
-      "title": "Are you serious man",
-      "text": "",
-      "image": "https://preview.redd.it/djabftl5nhbh1.jpeg?width=640&crop=smart&auto=webp&s=814a04d814d788339af8c51a85bd41f5a5e00cfb",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uoflvz/are_you_serious_man/",
-      "external_url": "https://i.redd.it/djabftl5nhbh1.jpeg",
-      "created_utc": 1783290814,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uoe7yv",
-      "subreddit": "dankmemes",
-      "title": "Man can't stop taking wins",
-      "text": "",
-      "image": "https://preview.redd.it/1u6r87spchbh1.png?width=640&crop=smart&auto=webp&s=2547f6d1cd643cab9e4819e7f23e059596d8e064",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uoe7yv/man_cant_stop_taking_wins/",
-      "external_url": "https://i.redd.it/1u6r87spchbh1.png",
-      "created_utc": 1783287304,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uod012",
-      "subreddit": "dankmemes",
-      "title": "The World Cup Brings Everyone Together",
-      "text": "",
-      "image": "https://preview.redd.it/it9vz3mr3hbh1.png?width=640&crop=smart&auto=webp&s=a92a26cadbf7c935a09d1143e6bb5942e9cc7e30",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uod012/the_world_cup_brings_everyone_together/",
-      "external_url": "https://i.redd.it/it9vz3mr3hbh1.png",
-      "created_utc": 1783284308,
       "is_text_only": false
     }
   ]
