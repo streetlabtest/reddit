@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-08T06:27:34.681573+00:00",
+  "generated_at_utc": "2026-07-08T10:17:45.948010+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1uqnqs2",
+      "subreddit": "dankmemes",
+      "title": "And I lost the damn 10mm",
+      "text": "",
+      "image": "https://preview.redd.it/rh133qft6zbh1.jpeg?width=640&crop=smart&auto=webp&s=2dfa48597e6e21238a2134ebe5584c10b6259ab7",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uqnqs2/and_i_lost_the_damn_10mm/",
+      "external_url": "https://i.redd.it/rh133qft6zbh1.jpeg",
+      "created_utc": 1783503243,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uqlfhg",
+      "subreddit": "dankmemes",
+      "title": "because of recent events...",
+      "text": "",
+      "image": "https://preview.redd.it/j0tk7s2giybh1.jpeg?width=640&crop=smart&auto=webp&s=8436e9b572c8a38c62cf98c7265f9530f7c3f74f",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uqlfhg/because_of_recent_events/",
+      "external_url": "https://i.redd.it/j0tk7s2giybh1.jpeg",
+      "created_utc": 1783495047,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uql9h9",
+      "subreddit": "dankmemes",
+      "title": "It would save some tax dollars…",
+      "text": "",
+      "image": "https://preview.redd.it/l3f11cqrgybh1.jpeg?width=640&crop=smart&auto=webp&s=94dbc791ab5aee4e4646f2db03a75e57a191ac32",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uql9h9/it_would_save_some_tax_dollars/",
+      "external_url": "https://i.redd.it/l3f11cqrgybh1.jpeg",
+      "created_utc": 1783494483,
+      "is_text_only": false
+    },
     {
       "id": "t3_1uqkecw",
       "subreddit": "dankmemes",
@@ -93,17 +126,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uqfzg8/a_title_of_some_kind/",
       "external_url": "https://i.redd.it/8w3wa5yo3xbh1.png",
       "created_utc": 1783478114,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uqep17",
-      "subreddit": "dankmemes",
-      "title": "Weekend at Mitch’s",
-      "text": "",
-      "image": "https://preview.redd.it/nb5xsu9dtwbh1.jpeg?width=640&crop=smart&auto=webp&s=4db35ed9c14383949525d77dc84ab2bb251dc565",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uqep17/weekend_at_mitchs/",
-      "external_url": "https://i.redd.it/nb5xsu9dtwbh1.jpeg",
-      "created_utc": 1783474507,
       "is_text_only": false
     },
     {
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1upz1nw/no_correlation/",
       "external_url": "https://i.redd.it/z65wpcjwwtbh1.jpeg",
       "created_utc": 1783439373,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1upwt1u",
-      "subreddit": "dankmemes",
-      "title": "Americans are gross ig",
-      "text": "",
-      "image": "https://preview.redd.it/uab918ctitbh1.jpeg?width=320&crop=smart&auto=webp&s=d917c7608e4b35d1cbe2e429d9ca69b035c76b48",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1upwt1u/americans_are_gross_ig/",
-      "external_url": "https://i.redd.it/uab918ctitbh1.jpeg",
-      "created_utc": 1783434636,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1upv1db",
-      "subreddit": "dankmemes",
-      "title": "I’m 95% sure someone will unironically keep this meme going in the comments…",
-      "text": "",
-      "image": "https://preview.redd.it/38sakas37tbh1.jpeg?width=320&crop=smart&auto=webp&s=ca60a07e46a02bbd9a8cc856739fe776b83cbb52",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1upv1db/im_95_sure_someone_will_unironically_keep_this/",
-      "external_url": "https://i.redd.it/38sakas37tbh1.jpeg",
-      "created_utc": 1783430698,
       "is_text_only": false
     }
   ]
