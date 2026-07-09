@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-09T07:36:14.256953+00:00",
+  "generated_at_utc": "2026-07-09T10:53:55.186253+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1urlxz7",
+      "subreddit": "dankmemes",
+      "title": "Seems like I am not the only one struggling with budgeting",
+      "text": "",
+      "image": "https://preview.redd.it/mc9l9vajh6ch1.jpeg?width=640&crop=smart&auto=webp&s=64fad5feb76541d631bca260b15344f529dd846c",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1urlxz7/seems_like_i_am_not_the_only_one_struggling_with/",
+      "external_url": "https://i.redd.it/mc9l9vajh6ch1.jpeg",
+      "created_utc": 1783591616,
+      "is_text_only": false
+    },
     {
       "id": "t3_1urilg7",
       "subreddit": "dankmemes",
@@ -104,17 +115,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ur6tg9/jost_a_maeme/",
       "external_url": "https://i.redd.it/noo9kjdxt2ch1.jpeg",
       "created_utc": 1783547348,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1ur6bih",
-      "subreddit": "dankmemes",
-      "title": "Just a Meme boys",
-      "text": "",
-      "image": "https://preview.redd.it/5vjyc5ceq2ch1.jpeg?width=320&crop=smart&auto=webp&s=411dc02085f900b8679f039c857eabba17453aa4",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ur6bih/just_a_meme_boys/",
-      "external_url": "https://i.redd.it/5vjyc5ceq2ch1.jpeg",
-      "created_utc": 1783546211,
       "is_text_only": false
     },
     {
