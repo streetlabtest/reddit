@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-09T21:22:47.140490+00:00",
+  "generated_at_utc": "2026-07-10T03:18:04.549839+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1us7i21",
+      "subreddit": "dankmemes",
+      "title": "Been unemployed too long, this is what i see when applying, workday making my brain bleed",
+      "text": "",
+      "image": "https://preview.redd.it/ap863fs3mach1.jpeg?width=320&crop=smart&auto=webp&s=1478f705410d1d10c3029d6c434113d835d1a7b3",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1us7i21/been_unemployed_too_long_this_is_what_i_see_when/",
+      "external_url": "https://i.redd.it/ap863fs3mach1.jpeg",
+      "created_utc": 1783641566,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1us55fd",
+      "subreddit": "dankmemes",
+      "title": "Well I didn’t think THAT would happen",
+      "text": "",
+      "image": "https://preview.redd.it/o2jrjdcc5ach1.jpeg?width=640&crop=smart&auto=webp&s=a38033179dacff953056927a4d4ce3e8130d446d",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1us55fd/well_i_didnt_think_that_would_happen/",
+      "external_url": "https://i.redd.it/o2jrjdcc5ach1.jpeg",
+      "created_utc": 1783635922,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1us4pb4",
+      "subreddit": "dankmemes",
+      "title": "Not bad, dictator",
+      "text": "",
+      "image": "https://preview.redd.it/09sy8ufb2ach1.jpeg?width=640&crop=smart&auto=webp&s=511103a577979e4c989eac000fa2d5daabfb7a41",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1us4pb4/not_bad_dictator/",
+      "external_url": "https://i.redd.it/09sy8ufb2ach1.jpeg",
+      "created_utc": 1783634906,
+      "is_text_only": false
+    },
     {
       "id": "t3_1us2380",
       "subreddit": "dankmemes",
@@ -60,17 +93,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ury0v0/why_reddit_why/",
       "external_url": "https://i.redd.it/fobx049uu8ch1.jpeg",
       "created_utc": 1783620284,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1urwoxm",
-      "subreddit": "dankmemes",
-      "title": "The joke is racism",
-      "text": "",
-      "image": "https://preview.redd.it/9stgx4ylm8ch1.jpeg?width=640&crop=smart&auto=webp&s=ac2432f368c231fc96524f672c5d0f2b512a38df",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1urwoxm/the_joke_is_racism/",
-      "external_url": "https://i.redd.it/9stgx4ylm8ch1.jpeg",
-      "created_utc": 1783617522,
       "is_text_only": false
     },
     {
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ur859h/well_did_you/",
       "external_url": "https://i.redd.it/oid8f6t433ch1.jpeg",
       "created_utc": 1783550448,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1ur730t",
-      "subreddit": "dankmemes",
-      "title": "We’ve been trying to reach you about your car’s extended warranty….",
-      "text": "",
-      "image": "https://preview.redd.it/a19ylt1uv2ch1.jpeg?width=640&crop=smart&auto=webp&s=0be42a27c03b08f8711e8ffdf79b214171fed0d5",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ur730t/weve_been_trying_to_reach_you_about_your_cars/",
-      "external_url": "https://i.redd.it/a19ylt1uv2ch1.jpeg",
-      "created_utc": 1783547976,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1ur6tg9",
-      "subreddit": "dankmemes",
-      "title": "Jost a Maeme",
-      "text": "",
-      "image": "https://preview.redd.it/noo9kjdxt2ch1.jpeg?width=320&crop=smart&auto=webp&s=938d13db075e43a5f05e097e662cae6890478a83",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ur6tg9/jost_a_maeme/",
-      "external_url": "https://i.redd.it/noo9kjdxt2ch1.jpeg",
-      "created_utc": 1783547348,
       "is_text_only": false
     }
   ]
