@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-11T06:12:09.730729+00:00",
+  "generated_at_utc": "2026-07-11T09:37:14.370466+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1utf1te",
+      "subreddit": "dankmemes",
+      "title": "It's time to find the Holy Grail",
+      "text": "",
+      "image": "https://preview.redd.it/jal1ahk6gkch1.jpeg?width=640&crop=smart&auto=webp&s=4462c40f442e2ebe29c300feb7f148575b09f8b7",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1utf1te/its_time_to_find_the_holy_grail/",
+      "external_url": "https://i.redd.it/jal1ahk6gkch1.jpeg",
+      "created_utc": 1783760732,
+      "is_text_only": false
+    },
     {
       "id": "t3_1uta50s",
       "subreddit": "dankmemes",
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ush0bq/sources_tell_me_he_is_stable_please_god/",
       "external_url": "https://i.redd.it/6sjd4vcdycch1.jpeg",
       "created_utc": 1783669898,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1usgeoa",
-      "subreddit": "dankmemes",
-      "title": "Genuinely hate idiots like this",
-      "text": "",
-      "image": "https://preview.redd.it/mgrbipx1scch1.jpeg?width=640&crop=smart&auto=webp&s=929c95c42cf247ede2b7b073158726bba3665ef3",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1usgeoa/genuinely_hate_idiots_like_this/",
-      "external_url": "https://i.redd.it/mgrbipx1scch1.jpeg",
-      "created_utc": 1783667774,
       "is_text_only": false
     }
   ]
