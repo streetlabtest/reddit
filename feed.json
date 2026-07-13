@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-13T06:52:21.179748+00:00",
+  "generated_at_utc": "2026-07-13T11:10:19.437790+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,17 +18,6 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
-    {
-      "id": "t3_1uv3dd9",
-      "subreddit": "dankmemes",
-      "title": "Japan's Po*N sensor AI automatically pixelates Trump's neck when he appears on TV",
-      "text": "Trump neckussy was not on my 2026 list",
-      "image": "https://preview.redd.it/ofz9pw3hwxch1.jpeg?width=640&crop=smart&auto=webp&s=8557bad11b8985a1b2ff39e2dd3932bef15235c2",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uv3dd9/japans_pon_sensor_ai_automatically_pixelates/",
-      "external_url": "https://i.redd.it/ofz9pw3hwxch1.jpeg",
-      "created_utc": 1783923507,
-      "is_text_only": false
-    },
     {
       "id": "t3_1uv31sk",
       "subreddit": "dankmemes",
@@ -291,6 +280,17 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu8svj/is_this_where_the_title_goes/",
       "external_url": "https://i.redd.it/pgug0hoa5rch1.png",
       "created_utc": 1783841804,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uu6mnd",
+      "subreddit": "dankmemes",
+      "title": "No lyrics",
+      "text": "",
+      "image": "https://preview.redd.it/pxif5cu8kqch1.jpeg?width=640&crop=smart&auto=webp&s=744294646fb6dc2e2e67a58eace9381da458e892",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu6mnd/no_lyrics/",
+      "external_url": "https://i.redd.it/pxif5cu8kqch1.jpeg",
+      "created_utc": 1783834645,
       "is_text_only": false
     }
   ]
