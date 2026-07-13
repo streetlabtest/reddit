@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-13T11:10:19.437790+00:00",
+  "generated_at_utc": "2026-07-13T14:33:03.417702+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1uvccgx",
+      "subreddit": "dankmemes",
+      "title": "\"Brains, we want brains.\"",
+      "text": "",
+      "image": "https://preview.redd.it/a68tnxyg60dh1.png?width=640&crop=smart&auto=webp&s=787165a369582883fad648bfcc91235050a9a4b7",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uvccgx/brains_we_want_brains/",
+      "external_url": "https://i.redd.it/a68tnxyg60dh1.png",
+      "created_utc": 1783951092,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uvannm",
+      "subreddit": "dankmemes",
+      "title": "Not Again",
+      "text": "",
+      "image": "https://preview.redd.it/vtj4p2neuzch1.jpeg?width=320&crop=smart&auto=webp&s=8ef3530a8a528129ad22b71c8e8be7d38956debe",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uvannm/not_again/",
+      "external_url": "https://i.redd.it/vtj4p2neuzch1.jpeg",
+      "created_utc": 1783947023,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1uv9uwf",
+      "subreddit": "dankmemes",
+      "title": "Missing lore",
+      "text": "",
+      "image": "https://preview.redd.it/jnccfwcqnzch1.jpeg?width=640&crop=smart&auto=webp&s=6f9ed2a5eef1f3097e33c3be7a1563aa704afc80",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uv9uwf/missing_lore/",
+      "external_url": "https://i.redd.it/jnccfwcqnzch1.jpeg",
+      "created_utc": 1783944863,
+      "is_text_only": false
+    },
     {
       "id": "t3_1uv31sk",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu95iz/eltit/",
       "external_url": "https://i.redd.it/ahlmkj259rch1.png",
       "created_utc": 1783843043,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uu92w9",
-      "subreddit": "dankmemes",
-      "title": "I thinks it's gonna be good day",
-      "text": "",
-      "image": "https://preview.redd.it/pl0fyrdr7rch1.jpeg?width=320&crop=smart&auto=webp&s=dc7fec0ac0b2d74062f6368299ca37b39425a70e",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu92w9/i_thinks_its_gonna_be_good_day/",
-      "external_url": "https://i.redd.it/pl0fyrdr7rch1.jpeg",
-      "created_utc": 1783842776,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uu8svj",
-      "subreddit": "dankmemes",
-      "title": "Is this where the title goes?",
-      "text": "",
-      "image": "https://preview.redd.it/pgug0hoa5rch1.png?width=640&crop=smart&auto=webp&s=08b4eab8d7da1188461f9349906d182219f35d57",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu8svj/is_this_where_the_title_goes/",
-      "external_url": "https://i.redd.it/pgug0hoa5rch1.png",
-      "created_utc": 1783841804,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uu6mnd",
-      "subreddit": "dankmemes",
-      "title": "No lyrics",
-      "text": "",
-      "image": "https://preview.redd.it/pxif5cu8kqch1.jpeg?width=640&crop=smart&auto=webp&s=744294646fb6dc2e2e67a58eace9381da458e892",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uu6mnd/no_lyrics/",
-      "external_url": "https://i.redd.it/pxif5cu8kqch1.jpeg",
-      "created_utc": 1783834645,
       "is_text_only": false
     }
   ]
