@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-19T13:16:48.011972+00:00",
+  "generated_at_utc": "2026-07-19T16:57:25.893934+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v0un08",
+      "subreddit": "dankmemes",
+      "title": "Hope nothing bad comes out",
+      "text": "",
+      "image": "https://preview.redd.it/icojj44yn7eh1.jpeg?width=640&crop=smart&auto=webp&s=86c5ad3af2d6a82f30205f95df44b8cbe7530b3f",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0un08/hope_nothing_bad_comes_out/",
+      "external_url": "https://i.redd.it/icojj44yn7eh1.jpeg",
+      "created_utc": 1784477555,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v0qdfo",
+      "subreddit": "dankmemes",
+      "title": "I won't tolerate such predatory language in this house!",
+      "text": "",
+      "image": "https://preview.redd.it/ha93suens6eh1.jpeg?width=320&crop=smart&auto=webp&s=644585d44562044fadb541d088e81f51e51e3646",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0qdfo/i_wont_tolerate_such_predatory_language_in_this/",
+      "external_url": "https://i.redd.it/ha93suens6eh1.jpeg",
+      "created_utc": 1784467030,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v0ovzn",
       "subreddit": "dankmemes",
@@ -126,17 +148,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0ezj5/crazy_that_my_graduating_class_of_2022_was_the/",
       "external_url": "https://i.redd.it/qhml9mgvp3eh1.png",
       "created_utc": 1784429778,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v0esix",
-      "subreddit": "dankmemes",
-      "title": "Average Reddit Front Page",
-      "text": "",
-      "image": "https://preview.redd.it/a8887rc1o3eh1.jpeg?width=640&crop=smart&auto=webp&s=178d7abd2e3ae7d4f8df6ff2133638c1300f99ed",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0esix/average_reddit_front_page/",
-      "external_url": "https://i.redd.it/a8887rc1o3eh1.jpeg",
-      "created_utc": 1784429157,
       "is_text_only": false
     },
     {
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uzyv8a/come_outside/",
       "external_url": "https://i.redd.it/1s2699x8b0eh1.jpeg",
       "created_utc": 1784388536,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uzy1bs",
-      "subreddit": "dankmemes",
-      "title": "What's the opposite of Love?",
-      "text": "",
-      "image": "https://preview.redd.it/y1j9sn2a50eh1.png?width=320&crop=smart&auto=webp&s=deb4d6a816d875f4ca3716d4295175faf3059a86",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uzy1bs/whats_the_opposite_of_love/",
-      "external_url": "https://i.redd.it/y1j9sn2a50eh1.png",
-      "created_utc": 1784386540,
       "is_text_only": false
     }
   ]
