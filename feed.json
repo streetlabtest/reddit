@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-19T09:51:09.340519+00:00",
+  "generated_at_utc": "2026-07-19T13:16:48.011972+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v0ovzn",
+      "subreddit": "dankmemes",
+      "title": "Makes sense",
+      "text": "",
+      "image": "https://preview.redd.it/6iqenpj3g6eh1.jpeg?width=320&crop=smart&auto=webp&s=a2098a59e74fc0c2e96911ac6505de46424cd727",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0ovzn/makes_sense/",
+      "external_url": "https://i.redd.it/6iqenpj3g6eh1.jpeg",
+      "created_utc": 1784462887,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v0oay0",
+      "subreddit": "dankmemes",
+      "title": "High Noon hits so different as an adult",
+      "text": "",
+      "image": "https://preview.redd.it/bkcwg3qsa6eh1.png?width=640&crop=smart&auto=webp&s=5362294121e072fd2544cfc393bb3649370ae076",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0oay0/high_noon_hits_so_different_as_an_adult/",
+      "external_url": "https://i.redd.it/bkcwg3qsa6eh1.png",
+      "created_utc": 1784461157,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v0l6cr",
       "subreddit": "dankmemes",
@@ -45,7 +67,7 @@
       "subreddit": "dankmemes",
       "title": "high af",
       "text": "",
-      "image": "https://preview.redd.it/2ksp37tp25eh1.jpeg?width=320&crop=smart&auto=webp&s=7fb0976a166ed72ade4851dfd89c24d0e50cde46",
+      "image": "https://i.redd.it/2ksp37tp25eh1.jpeg",
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v0k2aj/high_af/",
       "external_url": "https://i.redd.it/2ksp37tp25eh1.jpeg",
       "created_utc": 1784446340,
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uzy1bs/whats_the_opposite_of_love/",
       "external_url": "https://i.redd.it/y1j9sn2a50eh1.png",
       "created_utc": 1784386540,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uzw7tj",
-      "subreddit": "dankmemes",
-      "title": "built tuff",
-      "text": "",
-      "image": "https://preview.redd.it/jrq7prrxrzdh1.jpeg?width=320&crop=smart&auto=webp&s=550d629571cfd6bdf9909150aae255ea51174879",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uzw7tj/built_tuff/",
-      "external_url": "https://i.redd.it/jrq7prrxrzdh1.jpeg",
-      "created_utc": 1784382043,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1uztvzu",
-      "subreddit": "dankmemes",
-      "title": "It's like this with every movie now",
-      "text": "",
-      "image": "https://preview.redd.it/ae7oympz8zdh1.jpeg?width=320&crop=smart&auto=webp&s=0cb2c8cbec2bf9a2f0339a865078f3e52401110c",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1uztvzu/its_like_this_with_every_movie_now/",
-      "external_url": "https://i.redd.it/ae7oympz8zdh1.jpeg",
-      "created_utc": 1784375670,
       "is_text_only": false
     }
   ]
