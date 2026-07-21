@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-21T06:27:21.539088+00:00",
+  "generated_at_utc": "2026-07-21T10:24:35.213424+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v2d3tj",
+      "subreddit": "dankmemes",
+      "title": "It's crazy our here guys",
+      "text": "",
+      "image": "https://preview.redd.it/jf2b6ro4ujeh1.jpeg?width=640&crop=smart&auto=webp&s=9c90e3c1f81bb8540eb100d3972c4330ed7816eb",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v2d3tj/its_crazy_our_here_guys/",
+      "external_url": "https://i.redd.it/jf2b6ro4ujeh1.jpeg",
+      "created_utc": 1784624918,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v29d00",
       "subreddit": "dankmemes",
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v1a24m/i_guess_you_can_also_add_spanish_and_german_to/",
       "external_url": "https://i.redd.it/crxpetrvyaeh1.png",
       "created_utc": 1784517622,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v19etu",
-      "subreddit": "dankmemes",
-      "title": "Spoilers from 800 BCE",
-      "text": "",
-      "image": "https://i.redd.it/eq57fmuetaeh1.jpeg",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v19etu/spoilers_from_800_bce/",
-      "external_url": "https://i.redd.it/eq57fmuetaeh1.jpeg",
-      "created_utc": 1784515714,
       "is_text_only": false
     }
   ]
