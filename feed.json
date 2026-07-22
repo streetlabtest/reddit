@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-22T06:26:40.380500+00:00",
+  "generated_at_utc": "2026-07-22T10:24:20.349500+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v3b3j8",
+      "subreddit": "dankmemes",
+      "title": "Men in the Netherlands, Sweden and Denmark have the longest working lives",
+      "text": "",
+      "image": "https://preview.redd.it/e6llbu5o2reh1.jpeg?width=320&crop=smart&auto=webp&s=943b05f0cef28d5666510be558392cec0e49c7c0",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v3b3j8/men_in_the_netherlands_sweden_and_denmark_have/",
+      "external_url": "https://i.redd.it/e6llbu5o2reh1.jpeg",
+      "created_utc": 1784712539,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v3axac",
+      "subreddit": "dankmemes",
+      "title": "They can always print more money, right?",
+      "text": "",
+      "image": "https://preview.redd.it/4ymekrrp0reh1.jpeg?width=640&crop=smart&auto=webp&s=af64585441e8a36010d664d22f19fee66d473628",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v3axac/they_can_always_print_more_money_right/",
+      "external_url": "https://i.redd.it/4ymekrrp0reh1.jpeg",
+      "created_utc": 1784711946,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v38ac0",
+      "subreddit": "dankmemes",
+      "title": "Looking at you Nolan",
+      "text": "",
+      "image": "https://preview.redd.it/6i5znq65aqeh1.jpeg?width=640&crop=smart&auto=webp&s=04cfd94ab8fec8c3dd079cbb23c6890340b7dff8",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v38ac0/looking_at_you_nolan/",
+      "external_url": "https://i.redd.it/6i5znq65aqeh1.jpeg",
+      "created_utc": 1784703002,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v37bko",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v26z8e/title_a_this_is/",
       "external_url": "https://i.redd.it/dn21qtp96ieh1.png",
       "created_utc": 1784604844,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v23jgy",
-      "subreddit": "dankmemes",
-      "title": "78 percent",
-      "text": "",
-      "image": "https://preview.redd.it/r5epb5j6eheh1.gif?width=640&crop=smart&s=f1df668fd29eeec6da1191f8cf47c941b3ba1462",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v23jgy/78_percent/",
-      "external_url": "https://i.redd.it/r5epb5j6eheh1.gif",
-      "created_utc": 1784595341,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v21z1o",
-      "subreddit": "dankmemes",
-      "title": "Aurasexual",
-      "text": "",
-      "image": "https://preview.redd.it/3d0uvfeu1heh1.jpeg?width=640&crop=smart&auto=webp&s=b7f3e872500d1a0020c6f172bcae2b3532af12d1",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v21z1o/aurasexual/",
-      "external_url": "https://i.redd.it/3d0uvfeu1heh1.jpeg",
-      "created_utc": 1784591191,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v1xwic",
-      "subreddit": "dankmemes",
-      "title": "the taste of victory",
-      "text": "",
-      "image": "https://preview.redd.it/3mb6aat98geh1.png?width=640&crop=smart&auto=webp&s=d6fe5465cbe7d62c2f2394f5dc76ffcd304d45ef",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v1xwic/the_taste_of_victory/",
-      "external_url": "https://i.redd.it/3mb6aat98geh1.png",
-      "created_utc": 1784581260,
       "is_text_only": false
     }
   ]
