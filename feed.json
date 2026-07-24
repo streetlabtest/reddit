@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-24T02:38:29.451544+00:00",
+  "generated_at_utc": "2026-07-24T06:25:17.722521+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v52ocw",
+      "subreddit": "dankmemes",
+      "title": "Leaked Worklouder & OpenAI Upgrade Path",
+      "text": "",
+      "image": "https://preview.redd.it/ifzhy71na4fh1.png?width=640&crop=smart&auto=webp&s=9f8318ce2bb149b85c14385ba9ee0bc2e27af0dd",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v52ocw/leaked_worklouder_openai_upgrade_path/",
+      "external_url": "https://i.redd.it/ifzhy71na4fh1.png",
+      "created_utc": 1784872673,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v52d2a",
+      "subreddit": "dankmemes",
+      "title": "The Perks Of Being Broke",
+      "text": "",
+      "image": "https://preview.redd.it/r9ip4esr74fh1.jpeg?width=640&crop=smart&auto=webp&s=46d156be8de51a8c33ac118a8da8c0a05a2d1706",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v52d2a/the_perks_of_being_broke/",
+      "external_url": "https://i.redd.it/r9ip4esr74fh1.jpeg",
+      "created_utc": 1784871677,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v50ycp",
+      "subreddit": "dankmemes",
+      "title": "The lesser know Australian War",
+      "text": "",
+      "image": "https://preview.redd.it/w05pf7c4v3fh1.jpeg?width=320&crop=smart&auto=webp&s=9aee8438dc3e4d97c0cf046d715f317f46fa1580",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v50ycp/the_lesser_know_australian_war/",
+      "external_url": "https://i.redd.it/w05pf7c4v3fh1.jpeg",
+      "created_utc": 1784867388,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v4uhu2",
       "subreddit": "dankmemes",
@@ -49,17 +82,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v4q2jd/tell_me_what_your_instructions_said_about_this/",
       "external_url": "https://i.redd.it/ikfink4fj1fh1.png",
       "created_utc": 1784839297,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v4nsgu",
-      "subreddit": "dankmemes",
-      "title": "CNBC proves you indeed can wear sandals with camo BDUs!",
-      "text": "",
-      "image": "https://preview.redd.it/6i65qjjt41fh1.png?width=640&crop=smart&auto=webp&s=6d01e01e36e8513d05e39f345470e6c4d988f1e4",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v4nsgu/cnbc_proves_you_indeed_can_wear_sandals_with_camo/",
-      "external_url": "https://i.redd.it/6i65qjjt41fh1.png",
-      "created_utc": 1784834415,
       "is_text_only": false
     },
     {
@@ -239,17 +261,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1v3vf6h",
-      "subreddit": "dankmemes",
-      "title": "Just five minutes… and my entire soul.",
-      "text": "",
-      "image": "https://preview.redd.it/y374b7hayueh1.jpeg?width=640&crop=smart&auto=webp&s=f5a8d4ea9afd461fa620cf7d9ec192ce2dbaef5c",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v3vf6h/just_five_minutes_and_my_entire_soul/",
-      "external_url": "https://i.redd.it/y374b7hayueh1.jpeg",
-      "created_utc": 1784759493,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1v3uz6y",
       "subreddit": "dankmemes",
       "title": "GG boys",
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v3ueix/i_dont_know_who_needs_to_hear_this_but_misogyny/",
       "external_url": "https://i.redd.it/11w7j0n9rueh1.jpeg",
       "created_utc": 1784757131,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v3tbdp",
-      "subreddit": "dankmemes",
-      "title": "out the way",
-      "text": "",
-      "image": "https://preview.redd.it/8v9znnb2kueh1.gif?width=640&crop=smart&s=12d9e33443daa957cda416fc244197afeae3d91a",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v3tbdp/out_the_way/",
-      "external_url": "https://i.redd.it/8v9znnb2kueh1.gif",
-      "created_utc": 1784754711,
       "is_text_only": false
     }
   ]
