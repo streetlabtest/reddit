@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-26T02:45:23.905515+00:00",
+  "generated_at_utc": "2026-07-26T06:36:14.428871+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v6rui4",
+      "subreddit": "dankmemes",
+      "title": "Dog-Zap McGee about to go international",
+      "text": "",
+      "image": "https://preview.redd.it/9oegjey5phfh1.jpeg?width=640&crop=smart&auto=webp&s=7b72b46206e12ab7050d8009f384185744a5fd55",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v6rui4/dogzap_mcgee_about_to_go_international/",
+      "external_url": "https://i.redd.it/9oegjey5phfh1.jpeg",
+      "created_utc": 1785034984,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v6r26f",
       "subreddit": "dankmemes",
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v5kyvy/everyones_favorite_trigger_word_these_days/",
       "external_url": "https://i.redd.it/cpqj0qmm88fh1.jpeg",
       "created_utc": 1784920398,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v5jj49",
-      "subreddit": "dankmemes",
-      "title": "The Inconceivable Truth.",
-      "text": "",
-      "image": "https://preview.redd.it/7imwrb1mz7fh1.png?width=640&crop=smart&auto=webp&s=9a05677125115bc2f0456f6b54a088991eaabc27",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v5jj49/the_inconceivable_truth/",
-      "external_url": "https://i.redd.it/7imwrb1mz7fh1.png",
-      "created_utc": 1784917325,
       "is_text_only": false
     }
   ]
