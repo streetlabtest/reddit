@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-27T11:19:53.369873+00:00",
+  "generated_at_utc": "2026-07-27T14:32:35.340930+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1v8044i",
+      "subreddit": "dankmemes",
+      "title": "One day, my time to shine will come",
+      "text": "",
+      "image": "https://i.redd.it/iadix25lvrfh1.jpeg",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v8044i/one_day_my_time_to_shine_will_come/",
+      "external_url": "https://i.redd.it/iadix25lvrfh1.jpeg",
+      "created_utc": 1785158127,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v7z05g",
+      "subreddit": "dankmemes",
+      "title": "And when she isn't working, he gives his money to Destiny",
+      "text": "",
+      "image": "https://preview.redd.it/vd77nrufnrfh1.jpeg?width=640&crop=smart&auto=webp&s=c6f14c1e6269b54e2f71e5f73d7e36d8d21eeec2",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v7z05g/and_when_she_isnt_working_he_gives_his_money_to/",
+      "external_url": "https://i.redd.it/vd77nrufnrfh1.jpeg",
+      "created_utc": 1785155388,
+      "is_text_only": false
+    },
     {
       "id": "t3_1v7wmee",
       "subreddit": "dankmemes",
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v78jr0/when_the_bread_has_gone_stale_and_the_circuses_no/",
       "external_url": "https://i.redd.it/07eqb0hoolfh1.png",
       "created_utc": 1785083145,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v78d7i",
-      "subreddit": "dankmemes",
-      "title": "Change of perspective",
-      "text": "",
-      "image": "https://preview.redd.it/0ns3vnngnlfh1.jpeg?width=640&crop=smart&auto=webp&s=c7b66e2b4ed9fbdee8ff9236bcddc59bde7c3a62",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v78d7i/change_of_perspective/",
-      "external_url": "https://i.redd.it/0ns3vnngnlfh1.jpeg",
-      "created_utc": 1785082738,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1v75veq",
-      "subreddit": "dankmemes",
-      "title": "We keep eating it tho",
-      "text": "",
-      "image": "https://preview.redd.it/aek5d46w6lfh1.jpeg?width=320&crop=smart&auto=webp&s=df06e7a1cd67968bca4c5102a97302d3118e98a6",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v75veq/we_keep_eating_it_tho/",
-      "external_url": "https://i.redd.it/aek5d46w6lfh1.jpeg",
-      "created_utc": 1785077164,
       "is_text_only": false
     }
   ]
