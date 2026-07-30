@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-30T13:59:59.571695+00:00",
+  "generated_at_utc": "2026-07-30T17:26:13.241571+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vayg9p",
+      "subreddit": "dankmemes",
+      "title": "Soooooo... Avengers are nothing than?",
+      "text": "",
+      "image": "https://preview.redd.it/fzwtnhm98egh1.gif?width=320&crop=smart&s=f094e217044d5d53ac547329606edcad327b2777",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vayg9p/soooooo_avengers_are_nothing_than/",
+      "external_url": "https://i.redd.it/fzwtnhm98egh1.gif",
+      "created_utc": 1785428745,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vax83n",
+      "subreddit": "dankmemes",
+      "title": "life comes at me fast",
+      "text": "",
+      "image": "https://preview.redd.it/3lwn60tf0egh1.jpeg?width=640&crop=smart&auto=webp&s=6735fa30945ce5bb7877be3bdffbf78183eaf99e",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vax83n/life_comes_at_me_fast/",
+      "external_url": "https://i.redd.it/3lwn60tf0egh1.jpeg",
+      "created_utc": 1785426136,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vau4j3",
       "subreddit": "dankmemes",
@@ -38,17 +60,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vat9vt/dog_can_have_all_the_plot_armor_they_need/",
       "external_url": "https://i.redd.it/ll7q6e7n9dgh1.png",
       "created_utc": 1785417110,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1varnl1",
-      "subreddit": "dankmemes",
-      "title": "Lmao. Reddit wont like this logic",
-      "text": "",
-      "image": "https://preview.redd.it/upneuj79xcgh1.jpeg?width=640&crop=smart&auto=webp&s=67fa2689965ff20e195455f65eb2762e3a0ede35",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1varnl1/lmao_reddit_wont_like_this_logic/",
-      "external_url": "https://i.redd.it/upneuj79xcgh1.jpeg",
-      "created_utc": 1785412916,
       "is_text_only": false
     },
     {
@@ -93,17 +104,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vaosov/he_genuinely_looks_concerned_now/",
       "external_url": "https://i.redd.it/ifftx0bs6cgh1.jpeg",
       "created_utc": 1785404038,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vaorsg",
-      "subreddit": "dankmemes",
-      "title": "The perfect license plate doesn’t exist",
-      "text": "",
-      "image": "https://preview.redd.it/uwz7w3fl6cgh1.jpeg?width=640&crop=smart&auto=webp&s=04e6ccb4dba8be59e86d8153c10aaa7d1a40d4ba",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vaorsg/the_perfect_license_plate_doesnt_exist/",
-      "external_url": "https://i.redd.it/uwz7w3fl6cgh1.jpeg",
-      "created_utc": 1785403951,
       "is_text_only": false
     },
     {
@@ -195,17 +195,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1vabtj6",
-      "subreddit": "dankmemes",
-      "title": "God forbid I think someone is a shit bloke.",
-      "text": "",
-      "image": "https://preview.redd.it/dvpqpci309gh1.jpeg?width=640&crop=smart&auto=webp&s=267efd16bca3a9ad6c0d590559f4668ae4179ec2",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vabtj6/god_forbid_i_think_someone_is_a_shit_bloke/",
-      "external_url": "https://i.redd.it/dvpqpci309gh1.jpeg",
-      "created_utc": 1785365518,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1vab21m",
       "subreddit": "dankmemes",
       "title": "I put the i, in simp",
@@ -291,6 +280,17 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1va0eo2/rented_free_in_my_head_for_years/",
       "external_url": "https://i.redd.it/taatfd83z6gh1.jpeg",
       "created_utc": 1785340891,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1v9ysnt",
+      "subreddit": "dankmemes",
+      "title": "extra realism",
+      "text": "",
+      "image": "https://preview.redd.it/r71awyqwo6gh1.jpeg?width=640&crop=smart&auto=webp&s=7998ca2923c22fdd64877e33360fd54ee2dbd9fc",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1v9ysnt/extra_realism/",
+      "external_url": "https://i.redd.it/r71awyqwo6gh1.jpeg",
+      "created_utc": 1785337473,
       "is_text_only": false
     }
   ]
