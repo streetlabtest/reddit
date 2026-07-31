@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-31T10:38:03.370527+00:00",
+  "generated_at_utc": "2026-07-31T14:04:53.179894+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vbqjsk",
+      "subreddit": "dankmemes",
+      "title": "Celebrities solving poverty",
+      "text": "",
+      "image": "https://preview.redd.it/q5d0zbdpdkgh1.jpeg?width=640&crop=smart&auto=webp&s=e3b630c8d5a15f8af79776f1cb5ff20a54f4b149",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vbqjsk/celebrities_solving_poverty/",
+      "external_url": "https://i.redd.it/q5d0zbdpdkgh1.jpeg",
+      "created_utc": 1785503449,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vbobsu",
+      "subreddit": "dankmemes",
+      "title": "Man of the year",
+      "text": "",
+      "image": "https://preview.redd.it/p031iyqjwjgh1.jpeg?width=640&crop=smart&auto=webp&s=722c1d9fcc8b28069c6263b517961439aa5fdb03",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vbobsu/man_of_the_year/",
+      "external_url": "https://i.redd.it/p031iyqjwjgh1.jpeg",
+      "created_utc": 1785497429,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vbn5n2",
       "subreddit": "dankmemes",
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vat9vt/dog_can_have_all_the_plot_armor_they_need/",
       "external_url": "https://i.redd.it/ll7q6e7n9dgh1.png",
       "created_utc": 1785417110,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vaqmrw",
-      "subreddit": "dankmemes",
-      "title": "Can I have a cheap GPU please",
-      "text": "",
-      "image": "https://preview.redd.it/xlcfi3aeocgh1.jpeg?width=320&crop=smart&auto=webp&s=8a1ca5b2073610975044f96929189e5d30ff70e0",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vaqmrw/can_i_have_a_cheap_gpu_please/",
-      "external_url": "https://i.redd.it/xlcfi3aeocgh1.jpeg",
-      "created_utc": 1785409937,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vaq100",
-      "subreddit": "dankmemes",
-      "title": "Skynet Getting The Mythical Build Upgrade Already",
-      "text": "",
-      "image": "https://preview.redd.it/irylhm6vicgh1.png?width=640&crop=smart&auto=webp&s=bb8e907f930ef92bdae470e328c6b3b8716a3caa",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vaq100/skynet_getting_the_mythical_build_upgrade_already/",
-      "external_url": "https://i.redd.it/irylhm6vicgh1.png",
-      "created_utc": 1785408076,
       "is_text_only": false
     }
   ]
