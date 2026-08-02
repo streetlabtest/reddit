@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-02T06:32:13.043075+00:00",
+  "generated_at_utc": "2026-08-02T09:56:01.277119+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vde0cw",
+      "subreddit": "dankmemes",
+      "title": "Quarter final🥃",
+      "text": "",
+      "image": "https://preview.redd.it/lu3e42hdpxgh1.jpeg?width=640&crop=smart&auto=webp&s=713c4d3dafeabcb107b1cedaee3c950071563f3b",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vde0cw/quarter_final/",
+      "external_url": "https://i.redd.it/lu3e42hdpxgh1.jpeg",
+      "created_utc": 1785664511,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vdczj7",
+      "subreddit": "dankmemes",
+      "title": "We ain't the same bro",
+      "text": "",
+      "image": "https://preview.redd.it/6pvm2mxiexgh1.jpeg?width=640&crop=smart&auto=webp&s=962f07f6c59136430faa1789290b8b6934dd6da3",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vdczj7/we_aint_the_same_bro/",
+      "external_url": "https://i.redd.it/6pvm2mxiexgh1.jpeg",
+      "created_utc": 1785660864,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vdbvn4",
+      "subreddit": "dankmemes",
+      "title": "They were children at one point, so...",
+      "text": "",
+      "image": "https://preview.redd.it/eo3r5eut2xgh1.jpeg?width=320&crop=smart&auto=webp&s=235a22663a60e6e3cffc8cbf13749a7e6275e49a",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vdbvn4/they_were_children_at_one_point_so/",
+      "external_url": "https://i.redd.it/eo3r5eut2xgh1.jpeg",
+      "created_utc": 1785656954,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vd9t3n",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vcgh4i/maybe_do_more_than_just_think_next_time/",
       "external_url": "https://i.redd.it/cjg3flwaspgh1.jpeg",
       "created_utc": 1785568640,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vcfqbf",
-      "subreddit": "dankmemes",
-      "title": "You try anyway",
-      "text": "",
-      "image": "https://preview.redd.it/i029z4mykpgh1.png?width=640&crop=smart&auto=webp&s=4d2aae5518fc6ff868348047d6de2ec1e39c9fd1",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vcfqbf/you_try_anyway/",
-      "external_url": "https://i.redd.it/i029z4mykpgh1.png",
-      "created_utc": 1785566193,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vce3uf",
-      "subreddit": "dankmemes",
-      "title": "Foot to the the gas!",
-      "text": "",
-      "image": "https://preview.redd.it/mksd7j243pgh1.jpeg?width=640&crop=smart&auto=webp&s=200c4059020b9842ff695dcaa8d47b02f14ff886",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vce3uf/foot_to_the_the_gas/",
-      "external_url": "https://i.redd.it/mksd7j243pgh1.jpeg",
-      "created_utc": 1785560959,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vccyyt",
-      "subreddit": "dankmemes",
-      "title": "I'm off to sea!",
-      "text": "",
-      "image": "https://preview.redd.it/3aba6qt5vogh1.jpeg?width=320&crop=smart&auto=webp&s=3a0b89964adea7b26b22f52efb7ab56ce858a09d",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vccyyt/im_off_to_sea/",
-      "external_url": "https://i.redd.it/3aba6qt5vogh1.jpeg",
-      "created_utc": 1785557504,
       "is_text_only": false
     }
   ]
