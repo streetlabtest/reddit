@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-03T07:24:55.640942+00:00",
+  "generated_at_utc": "2026-08-03T11:22:25.839409+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,39 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1ve8q69",
+      "subreddit": "dankmemes",
+      "title": "Every trace of it wiped away",
+      "text": "",
+      "image": "https://preview.redd.it/18awncg6r4hh1.jpeg?width=640&crop=smart&auto=webp&s=8588adea85a14881b898239e7fa3c7d3d9c0ca9f",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ve8q69/every_trace_of_it_wiped_away/",
+      "external_url": "https://i.redd.it/18awncg6r4hh1.jpeg",
+      "created_utc": 1785749865,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1ve7zc5",
+      "subreddit": "dankmemes",
+      "title": "My brain:What control?",
+      "text": "",
+      "image": "https://preview.redd.it/7f1bpedlj4hh1.jpeg?width=320&crop=smart&auto=webp&s=fc93902d71ef428975f85dd9376447542b13d849",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ve7zc5/my_brainwhat_control/",
+      "external_url": "https://i.redd.it/7f1bpedlj4hh1.jpeg",
+      "created_utc": 1785747314,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1ve7xhn",
+      "subreddit": "dankmemes",
+      "title": "title",
+      "text": "",
+      "image": "https://preview.redd.it/i7bz7jc1j4hh1.png?width=320&crop=smart&auto=webp&s=1d2cbc0a42e968f4ca9a668bb6a8b784c58409bc",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1ve7xhn/title/",
+      "external_url": "https://i.redd.it/i7bz7jc1j4hh1.png",
+      "created_utc": 1785747133,
+      "is_text_only": false
+    },
     {
       "id": "t3_1ve49cw",
       "subreddit": "dankmemes",
@@ -258,39 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vctp1f/2_times_i_saw_youtubers_missing_stephanie_who/",
       "external_url": "https://i.redd.it/at6716h7wsgh1.gif",
       "created_utc": 1785606282,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vctosz",
-      "subreddit": "dankmemes",
-      "title": "The feeling is real",
-      "text": "",
-      "image": "https://preview.redd.it/afmnvst5wsgh1.jpeg?width=640&crop=smart&auto=webp&s=4147c30ef00f5f9163a7824a2bae7287aaca9e15",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vctosz/the_feeling_is_real/",
-      "external_url": "https://i.redd.it/afmnvst5wsgh1.jpeg",
-      "created_utc": 1785606266,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vctmha",
-      "subreddit": "dankmemes",
-      "title": "is it true?",
-      "text": "",
-      "image": "https://preview.redd.it/gkl4uciqvsgh1.jpeg?width=640&crop=smart&auto=webp&s=0c23b5aaca17af490e572d427ec9786b7535bf36",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vctmha/is_it_true/",
-      "external_url": "https://i.redd.it/gkl4uciqvsgh1.jpeg",
-      "created_utc": 1785606115,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vctckl",
-      "subreddit": "dankmemes",
-      "title": "Abandon your faith brother. I have found the true path 🗿",
-      "text": "",
-      "image": "https://preview.redd.it/ezo84hhqtsgh1.png?width=640&crop=smart&auto=webp&s=c34bc05518a0674abf24583fe71c2b335be2c60c",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vctckl/abandon_your_faith_brother_i_have_found_the_true/",
-      "external_url": "https://i.redd.it/ezo84hhqtsgh1.png",
-      "created_utc": 1785605441,
       "is_text_only": false
     }
   ]
