@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-07T05:39:11.445675+00:00",
+  "generated_at_utc": "2026-08-07T08:57:53.230320+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vhsvq2",
+      "subreddit": "dankmemes",
+      "title": "A Distinguished Gentleman's PC!",
+      "text": "",
+      "image": "https://preview.redd.it/qftx5d9rdwhh1.jpeg?width=640&crop=smart&auto=webp&s=7fb4491c0a4a3b1796434fdb9748ddca4d7645fa",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vhsvq2/a_distinguished_gentlemans_pc/",
+      "external_url": "https://i.redd.it/qftx5d9rdwhh1.jpeg",
+      "created_utc": 1786084368,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vhov7t",
       "subreddit": "dankmemes",
@@ -115,17 +126,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vhc8ry/weaponized_incompetence/",
       "external_url": "https://i.redd.it/q1ccj1zzqshh1.gif",
       "created_utc": 1786040370,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vhadmf",
-      "subreddit": "dankmemes",
-      "title": "Everyday my day",
-      "text": "",
-      "image": "https://preview.redd.it/vxzu4w0ddshh1.jpeg?width=320&crop=smart&auto=webp&s=d72364ec80e337666d5d04369c8c4ef81051e4fa",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vhadmf/everyday_my_day/",
-      "external_url": "https://i.redd.it/vxzu4w0ddshh1.jpeg",
-      "created_utc": 1786036370,
       "is_text_only": false
     },
     {
