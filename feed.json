@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-08T04:55:47.780395+00:00",
+  "generated_at_utc": "2026-08-08T08:39:46.877173+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,17 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vinpoi",
+      "subreddit": "dankmemes",
+      "title": "*Eltit",
+      "text": "",
+      "image": "https://preview.redd.it/531ca6ro93ih1.png?width=640&crop=smart&auto=webp&s=717d009bb3a44163eea24e970d2733153dc7c48d",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vinpoi/eltit/",
+      "external_url": "https://i.redd.it/531ca6ro93ih1.png",
+      "created_utc": 1786167737,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vimta1",
       "subreddit": "dankmemes",
@@ -280,17 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vhoj3n/who_gave_him_the_mic/",
       "external_url": "https://i.redd.it/n9mdi1u69vhh1.png",
       "created_utc": 1786070701,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vho4lq",
-      "subreddit": "dankmemes",
-      "title": "Hey, at least you got a $4 head start",
-      "text": "",
-      "image": "https://preview.redd.it/wf2agmes5vhh1.jpeg?width=320&crop=smart&auto=webp&s=cf8d4945322e06f5a271e678eecb87ac8308aae6",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vho4lq/hey_at_least_you_got_a_4_head_start/",
-      "external_url": "https://i.redd.it/wf2agmes5vhh1.jpeg",
-      "created_utc": 1786069561,
       "is_text_only": false
     }
   ]
