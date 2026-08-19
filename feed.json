@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-19T04:35:25.851892+00:00",
+  "generated_at_utc": "2026-08-19T08:36:00.818148+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -10,7 +10,6 @@
     "SurrealMemes"
   ],
   "errors": {
-    "EarthPorn": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/EarthPorn/new/.rss",
     "me_irl": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/me_irl/new/.rss",
     "meirl": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/meirl/new/.rss",
     "NatureIsFuckingLit": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/NatureIsFuckingLit/new/.rss",
@@ -18,6 +17,72 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vsfpgb",
+      "subreddit": "EarthPorn",
+      "title": "Iguazu Falls, Argentina [OC] [4288x2848]",
+      "text": "",
+      "image": "https://preview.redd.it/q5tgyhy5dakh1.jpeg?width=640&crop=smart&auto=webp&s=f7d16b3b50af3348ddf484dc80c843fe6dd67f5d",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vsfpgb/iguazu_falls_argentina_oc_4288x2848/",
+      "external_url": "https://i.redd.it/q5tgyhy5dakh1.jpeg",
+      "created_utc": 1787125491,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vsfj9v",
+      "subreddit": "dankmemes",
+      "title": "Best-selling manga in the world",
+      "text": "",
+      "image": "https://preview.redd.it/w0j2ng6qbakh1.png?width=640&crop=smart&auto=webp&s=061889f7ae2c73679e2d59f96e52584c2f774b41",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vsfj9v/bestselling_manga_in_the_world/",
+      "external_url": "https://i.redd.it/w0j2ng6qbakh1.png",
+      "created_utc": 1787124854,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vse12k",
+      "subreddit": "dankmemes",
+      "title": "To AI or not to AI",
+      "text": "",
+      "image": "https://preview.redd.it/qneiyheew9kh1.jpeg?width=640&crop=smart&auto=webp&s=1eb4730779b3abfb0aa898a8773441e4cc709ce2",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vse12k/to_ai_or_not_to_ai/",
+      "external_url": "https://i.redd.it/qneiyheew9kh1.jpeg",
+      "created_utc": 1787119701,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vsdhbq",
+      "subreddit": "EarthPorn",
+      "title": "Fiordland National Park, New Zealand [OC] [5392x4044]",
+      "text": "",
+      "image": "https://preview.redd.it/v74g3tjyq9kh1.jpeg?width=640&crop=smart&auto=webp&s=a09a474804e832552d98c5457bae0a5937fb4c2f",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vsdhbq/fiordland_national_park_new_zealand_oc_5392x4044/",
+      "external_url": "https://i.redd.it/v74g3tjyq9kh1.jpeg",
+      "created_utc": 1787117890,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vscjog",
+      "subreddit": "EarthPorn",
+      "title": "Mt Rainier at sunrise on a stormy morning, WA, USA [2048x1366][OC]",
+      "text": "",
+      "image": "https://preview.redd.it/62lsabv8i9kh1.jpeg?width=640&crop=smart&auto=webp&s=822445aefcd4dc871e24f0fd22412646994369de",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vscjog/mt_rainier_at_sunrise_on_a_stormy_morning_wa_usa/",
+      "external_url": "https://i.redd.it/62lsabv8i9kh1.jpeg",
+      "created_utc": 1787114963,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vsc95w",
+      "subreddit": "EarthPorn",
+      "title": "Penitentiary Hollow, Lake Mineral Wells State Park, Texas [13565x2048][OC]",
+      "text": "",
+      "image": "https://preview.redd.it/c3okxi4of9kh1.jpeg?width=640&crop=smart&auto=webp&s=688dba9a08579e4745a328ae153e75b35179336a",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vsc95w/penitentiary_hollow_lake_mineral_wells_state_park/",
+      "external_url": "https://i.redd.it/c3okxi4of9kh1.jpeg",
+      "created_utc": 1787114074,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vsalf1",
       "subreddit": "dankmemes",
@@ -63,6 +128,17 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1vs8fy4",
+      "subreddit": "EarthPorn",
+      "title": "Blueberry picking in Alaska Glen Alps area [OC] [4000x3000]",
+      "text": "",
+      "image": "https://preview.redd.it/ho1xq51aj8kh1.jpeg?width=640&crop=smart&auto=webp&s=bbfd4190a58cc0776303768c4c3e3078a32137a3",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vs8fy4/blueberry_picking_in_alaska_glen_alps_area_oc/",
+      "external_url": "https://i.redd.it/ho1xq51aj8kh1.jpeg",
+      "created_utc": 1787103216,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1vs81dl",
       "subreddit": "dankmemes",
       "title": "\"Yaaaay!\"",
@@ -82,6 +158,28 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vs7pv7/natural_care_giver_moment/",
       "external_url": "https://i.redd.it/1o36ostgd8kh1.png",
       "created_utc": 1787101240,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vs7i9t",
+      "subreddit": "EarthPorn",
+      "title": "Avalanche Lake, Glacier National Park [OC] [3840x2160]",
+      "text": "",
+      "image": "https://preview.redd.it/u892tfzqb8kh1.jpeg?width=640&crop=smart&auto=webp&s=7e578be20fd7efc7b85f75b1172fa50b07046897",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vs7i9t/avalanche_lake_glacier_national_park_oc_3840x2160/",
+      "external_url": "https://i.redd.it/u892tfzqb8kh1.jpeg",
+      "created_utc": 1787100673,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vs6s5q",
+      "subreddit": "EarthPorn",
+      "title": "Black Canyon of the Gunnison, Colorado [OC] [1650x928]",
+      "text": "",
+      "image": "https://preview.redd.it/bpjv0ulv58kh1.jpeg?width=640&crop=smart&auto=webp&s=aa697d6fcf6d02f3c2d0cd9100290e1107cb24b1",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vs6s5q/black_canyon_of_the_gunnison_colorado_oc_1650x928/",
+      "external_url": "https://i.redd.it/bpjv0ulv58kh1.jpeg",
+      "created_utc": 1787098782,
       "is_text_only": false
     },
     {
@@ -184,6 +282,17 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1vrykwx",
+      "subreddit": "EarthPorn",
+      "title": "The Quiet Between - Salt Creek Recreational Area, WA [1365x2048] [OC]",
+      "text": "",
+      "image": "https://preview.redd.it/puoz5ikcl6kh1.jpeg?width=640&crop=smart&auto=webp&s=01d83dc931f91b0fd03c0c221da48f8c562df53d",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrykwx/the_quiet_between_salt_creek_recreational_area_wa/",
+      "external_url": "https://i.redd.it/puoz5ikcl6kh1.jpeg",
+      "created_utc": 1787079675,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1vry726",
       "subreddit": "dankmemes",
       "title": "I can fix them",
@@ -206,6 +315,17 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1vrx053",
+      "subreddit": "EarthPorn",
+      "title": "A cliffside of waterfalls disappearing into the clouds, Ribeira do Ferreiro, Flores Island, Azores, Portugal [OC] [4167x5556]",
+      "text": "",
+      "image": "https://preview.redd.it/6mpcjy9eb6kh1.jpeg?width=640&crop=smart&auto=webp&s=2c81e3ba0a004b70c5d22ab552499f3f59ed9fda",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrx053/a_cliffside_of_waterfalls_disappearing_into_the/",
+      "external_url": "https://i.redd.it/6mpcjy9eb6kh1.jpeg",
+      "created_utc": 1787076369,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1vrv9k4",
       "subreddit": "dankmemes",
       "title": "\"it's whimsical, yet evil\"",
@@ -214,6 +334,17 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vrv9k4/its_whimsical_yet_evil/",
       "external_url": "https://i.redd.it/sad090om06kh1.png",
       "created_utc": 1787072726,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vrv61e",
+      "subreddit": "EarthPorn",
+      "title": "Sunrise over Hot Creek and the Sierra Nevada, Mammoth Lakes, California [OC] [5338×7934]",
+      "text": "",
+      "image": "https://preview.redd.it/jrj8245306kh1.jpeg?width=640&crop=smart&auto=webp&s=7ff6d85187b161e4adc13f95ce848a4e5de73946",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrv61e/sunrise_over_hot_creek_and_the_sierra_nevada/",
+      "external_url": "https://i.redd.it/jrj8245306kh1.jpeg",
+      "created_utc": 1787072523,
       "is_text_only": false
     },
     {
@@ -228,6 +359,17 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1vrra3x",
+      "subreddit": "EarthPorn",
+      "title": "Waterfowl Lakes, Alberta. [OC] [1200x1500]",
+      "text": "",
+      "image": "https://preview.redd.it/3cu1t612c5kh1.jpeg?width=640&crop=smart&auto=webp&s=a085fcee82d049ce6169a960d9b8857dfa408fef",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrra3x/waterfowl_lakes_alberta_oc_1200x1500/",
+      "external_url": "https://i.redd.it/3cu1t612c5kh1.jpeg",
+      "created_utc": 1787064431,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1vrpxwo",
       "subreddit": "dankmemes",
       "title": "can't we all just get along?",
@@ -236,6 +378,39 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vrpxwo/cant_we_all_just_get_along/",
       "external_url": "https://i.redd.it/shzap4g735kh1.jpeg",
       "created_utc": 1787061454,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vroipe",
+      "subreddit": "EarthPorn",
+      "title": "Nachmittag in den Alpen Kampen wand winter [OC] 3000x4000",
+      "text": "",
+      "image": "https://preview.redd.it/ygfdfyp2t4kh1.jpeg?width=640&crop=smart&auto=webp&s=47ec88df4209ea2c198f2199cfe43510103b4781",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vroipe/nachmittag_in_den_alpen_kampen_wand_winter_oc/",
+      "external_url": "https://i.redd.it/ygfdfyp2t4kh1.jpeg",
+      "created_utc": 1787058047,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vrmqv9",
+      "subreddit": "EarthPorn",
+      "title": "Mount Pelmo rising above a sea of clouds at sunset, seen from Marmolada, Dolomites, Italy [5644x7525] [OC]",
+      "text": "",
+      "image": "https://preview.redd.it/86vq4e1pe4kh1.jpeg?width=640&crop=smart&auto=webp&s=9f4035ab396eb29e03c24211e53ee476821995c0",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrmqv9/mount_pelmo_rising_above_a_sea_of_clouds_at/",
+      "external_url": "https://i.redd.it/86vq4e1pe4kh1.jpeg",
+      "created_utc": 1787053286,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vrmpfp",
+      "subreddit": "EarthPorn",
+      "title": "Lake Wānaka, New Zealand [OC] [5184x3456]",
+      "text": "",
+      "image": "https://preview.redd.it/ab4t2nrhe4kh1.jpeg?width=640&crop=smart&auto=webp&s=f31b515cef1747efa62784d97498ef40122519fb",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrmpfp/lake_wānaka_new_zealand_oc_5184x3456/",
+      "external_url": "https://i.redd.it/ab4t2nrhe4kh1.jpeg",
+      "created_utc": 1787053173,
       "is_text_only": false
     },
     {
@@ -261,6 +436,17 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1vrjwip",
+      "subreddit": "EarthPorn",
+      "title": "Lago Quill (P.N Fiorland)Isla Sur de Nueva Zelanda [OC]2400×1080",
+      "text": "",
+      "image": "https://preview.redd.it/c1pnjvzhn3kh1.jpeg?width=640&crop=smart&auto=webp&s=3c7c601397497ad3c36227f10193da332f3c844e",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrjwip/lago_quill_pn_fiorlandisla_sur_de_nueva_zelanda/",
+      "external_url": "https://i.redd.it/c1pnjvzhn3kh1.jpeg",
+      "created_utc": 1787044066,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1vri6nj",
       "subreddit": "dankmemes",
       "title": "Eltit*",
@@ -272,25 +458,113 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1vri6fy",
-      "subreddit": "dankmemes",
-      "title": "In Minecraft, mods",
+      "id": "t3_1vrgd9y",
+      "subreddit": "EarthPorn",
+      "title": "Ginzan Onsen, Japan [OC] [5461x4096]",
       "text": "",
-      "image": "https://preview.redd.it/hqbxj2xr43kh1.gif?width=320&crop=smart&s=3663b9dec817d1deca15eff9f7f5209a885f303c",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vri6fy/in_minecraft_mods/",
-      "external_url": "https://i.redd.it/hqbxj2xr43kh1.gif",
-      "created_utc": 1787037841,
+      "image": "https://preview.redd.it/238fcoxxm2kh1.jpeg?width=640&crop=smart&auto=webp&s=491fa11518e177507d80220217877f1f4396887d",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrgd9y/ginzan_onsen_japan_oc_5461x4096/",
+      "external_url": "https://i.redd.it/238fcoxxm2kh1.jpeg",
+      "created_utc": 1787031794,
       "is_text_only": false
     },
     {
-      "id": "t3_1vri1e2",
-      "subreddit": "dankmemes",
-      "title": "Title*",
+      "id": "t3_1vrf4j4",
+      "subreddit": "EarthPorn",
+      "title": "Drakes Beach, Point Reyes [OC] [2048 x 1363]",
       "text": "",
-      "image": "https://preview.redd.it/hv0afsoh33kh1.png?width=640&crop=smart&auto=webp&s=9608f0500d622768c235cf2a4bdf664888ae77b9",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vri1e2/title/",
-      "external_url": "https://i.redd.it/hv0afsoh33kh1.png",
-      "created_utc": 1787037349,
+      "image": "https://preview.redd.it/kdh16nqva2kh1.jpeg?width=640&crop=smart&auto=webp&s=177607b1046eb3160b7ed7d34c52cd07cb9d9507",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrf4j4/drakes_beach_point_reyes_oc_2048_x_1363/",
+      "external_url": "https://i.redd.it/kdh16nqva2kh1.jpeg",
+      "created_utc": 1787027806,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vrdx74",
+      "subreddit": "EarthPorn",
+      "title": "Los Picos de Europa, Bulnes, Spain [OC] [2048 x 1363]",
+      "text": "",
+      "image": "https://preview.redd.it/drgh9yf202kh1.jpeg?width=640&crop=smart&auto=webp&s=c1941af41dad2862ea202405e3521384ad6865a6",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrdx74/los_picos_de_europa_bulnes_spain_oc_2048_x_1363/",
+      "external_url": "https://i.redd.it/drgh9yf202kh1.jpeg",
+      "created_utc": 1787024137,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vrdtk6",
+      "subreddit": "EarthPorn",
+      "title": "Enchantments in Spring, WA, USA [2048x1365][OC]",
+      "text": "",
+      "image": "https://preview.redd.it/qoshwjecz1kh1.jpeg?width=640&crop=smart&auto=webp&s=59136ec9cfde7579930c319542b088d6a5674d8b",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vrdtk6/enchantments_in_spring_wa_usa_2048x1365oc/",
+      "external_url": "https://i.redd.it/qoshwjecz1kh1.jpeg",
+      "created_utc": 1787023846,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vr8h43",
+      "subreddit": "EarthPorn",
+      "title": "Sea cliffs on the northwest shore of Kauaʻi, Hawaii [4056x2704] [OC]",
+      "text": "",
+      "image": "https://preview.redd.it/4203gn3ds0kh1.jpeg?width=640&crop=smart&auto=webp&s=12b6a81bf2d5348c0208670e2864f65630bc028b",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vr8h43/sea_cliffs_on_the_northwest_shore_of_kauaʻi/",
+      "external_url": "https://i.redd.it/4203gn3ds0kh1.jpeg",
+      "created_utc": 1787009390,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vr55zq",
+      "subreddit": "EarthPorn",
+      "title": "Paradise Meadow, Glacier national park [3762x2066][OC]",
+      "text": "",
+      "image": "https://preview.redd.it/0x27flun40kh1.jpeg?width=640&crop=smart&auto=webp&s=a60ef750f33bd58f19c17311e7e96d675bce4b99",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vr55zq/paradise_meadow_glacier_national_park_3762x2066oc/",
+      "external_url": "https://i.redd.it/0x27flun40kh1.jpeg",
+      "created_utc": 1787001414,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vr2whk",
+      "subreddit": "EarthPorn",
+      "title": "Mount Assiniboine Provincial Park, BC, Canada [OC] [2048x928]",
+      "text": "",
+      "image": "https://preview.redd.it/goevz3fnpzjh1.jpeg?width=640&crop=smart&auto=webp&s=4ae7c6683fff0dd9b3d1b3956a459de59108c893",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vr2whk/mount_assiniboine_provincial_park_bc_canada_oc/",
+      "external_url": "https://i.redd.it/goevz3fnpzjh1.jpeg",
+      "created_utc": 1786996399,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vr1ccd",
+      "subreddit": "EarthPorn",
+      "title": "Blue hour on the southern Oregon Coast [OC][1080x1800]",
+      "text": "",
+      "image": "https://preview.redd.it/gtuewqirfzjh1.jpeg?width=640&crop=smart&auto=webp&s=db5e925f0c6e4bffe4c510ac8a96fde35be8ec91",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vr1ccd/blue_hour_on_the_southern_oregon_coast_oc1080x1800/",
+      "external_url": "https://i.redd.it/gtuewqirfzjh1.jpeg",
+      "created_utc": 1786993055,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vr09k6",
+      "subreddit": "EarthPorn",
+      "title": "Star trails at The Black Tusk [OC] [4000x2667]",
+      "text": "",
+      "image": "https://preview.redd.it/0hgpb8849zjh1.jpeg?width=640&crop=smart&auto=webp&s=a326d254cb751b1b3c996f0a59c9dfa644c7f92e",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vr09k6/star_trails_at_the_black_tusk_oc_4000x2667/",
+      "external_url": "https://i.redd.it/0hgpb8849zjh1.jpeg",
+      "created_utc": 1786990801,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vqzusu",
+      "subreddit": "EarthPorn",
+      "title": "View from a Hot Air Balloon over the Masai Mara, Kenya [4284x5812][OC]",
+      "text": "",
+      "image": "https://preview.redd.it/4e3pnblj6zjh1.jpeg?width=640&crop=smart&auto=webp&s=7d3dce96e86e114884e03db8481eead175a11b5b",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1vqzusu/view_from_a_hot_air_balloon_over_the_masai_mara/",
+      "external_url": "https://i.redd.it/4e3pnblj6zjh1.jpeg",
+      "created_utc": 1786989938,
       "is_text_only": false
     }
   ]
