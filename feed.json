@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-25T08:40:43.617662+00:00",
+  "generated_at_utc": "2026-08-25T12:44:52.098461+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1vxyftp",
+      "subreddit": "dankmemes",
+      "title": "I guess it's in the name",
+      "text": "",
+      "image": "https://preview.redd.it/8uekzf6nlilh1.jpeg?width=640&crop=smart&auto=webp&s=3b808f6bbfc82f618b8266a839dba438f3edc13b",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vxyftp/i_guess_its_in_the_name/",
+      "external_url": "https://i.redd.it/8uekzf6nlilh1.jpeg",
+      "created_utc": 1787660893,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1vxyetk",
+      "subreddit": "dankmemes",
+      "title": "(Game Theft Auto) So what is the closing chapter in our heroes story?",
+      "text": "",
+      "image": "https://preview.redd.it/wwnc7dm5lilh1.jpeg?width=640&crop=smart&auto=webp&s=e0cc22d78b41d6e4e896e638ea052e327a049a1e",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vxyetk/game_theft_auto_so_what_is_the_closing_chapter_in/",
+      "external_url": "https://i.redd.it/wwnc7dm5lilh1.jpeg",
+      "created_utc": 1787660822,
+      "is_text_only": false
+    },
     {
       "id": "t3_1vxqioh",
       "subreddit": "dankmemes",
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vwy1v6/spit_it_out/",
       "external_url": "https://i.redd.it/9s76h18kmalh1.jpeg",
       "created_utc": 1787564346,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vwxbz2",
-      "subreddit": "dankmemes",
-      "title": "the level of cool i aspire to be",
-      "text": "",
-      "image": "https://preview.redd.it/m58yyp1xealh1.png?width=640&crop=smart&auto=webp&s=ae51d6ca3310cf3df7253aac2976af075aeeb800",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vwxbz2/the_level_of_cool_i_aspire_to_be/",
-      "external_url": "https://i.redd.it/m58yyp1xealh1.png",
-      "created_utc": 1787561841,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1vwugaw",
-      "subreddit": "dankmemes",
-      "title": "It's almost that time ( ͡° ͜ʖ ͡°)",
-      "text": "",
-      "image": "https://external-preview.redd.it/LFvUqC_6DSP4NdUXu4U3grjkuBQQPRXClbEo_HHVNF8.png?width=640&crop=smart&auto=webp&s=8623934de6ef80468acc45adb6bd623da58c091e",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1vwugaw/its_almost_that_time_ʖ/",
-      "external_url": "https://i.imgur.com/fTXRuFJ.png",
-      "created_utc": 1787551569,
       "is_text_only": false
     }
   ]
