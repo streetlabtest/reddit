@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-10T15:54:01.497624+00:00",
+  "generated_at_utc": "2026-09-10T18:58:00.870179+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -13,11 +13,208 @@
     "EarthPorn": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/EarthPorn/new/.rss",
     "me_irl": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/me_irl/new/.rss",
     "meirl": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/meirl/new/.rss",
-    "NatureIsFuckingLit": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/NatureIsFuckingLit/new/.rss",
     "PsychologyMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/PsychologyMemes/new/.rss",
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1wcs29e",
+      "subreddit": "dankmemes",
+      "title": "O Canada",
+      "text": "",
+      "image": "https://preview.redd.it/aynza9v4oqoh1.jpeg?width=640&crop=smart&auto=webp&s=136ab27a7876809721e92f3e000470953b176dac",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wcs29e/o_canada/",
+      "external_url": "https://i.redd.it/aynza9v4oqoh1.jpeg",
+      "created_utc": 1789066129,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcrabb",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Carlsbad Caverns National Park",
+      "text": "",
+      "image": "https://external-preview.redd.it/aDgxcm40czZqcW9oMcjh8vC-OnFaUT6SEyJMJVHkeYk--aDPbK13rZiuk75s.jpeg?width=320&crop=smart&auto=webp&s=e7c8a84ed4828295ce2d054f841b4ca959aefb92",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcrabb/carlsbad_caverns_national_park/",
+      "external_url": "https://v.redd.it/tgiw82x6jqoh1",
+      "created_utc": 1789064501,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcr7qo",
+      "subreddit": "dankmemes",
+      "title": "About right",
+      "text": "",
+      "image": "https://preview.redd.it/bz1h3i1uiqoh1.jpeg?width=640&crop=smart&auto=webp&s=699c4f7f1a3b04a041b7b0fde1f6c430635e0942",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wcr7qo/about_right/",
+      "external_url": "https://i.redd.it/bz1h3i1uiqoh1.jpeg",
+      "created_utc": 1789064346,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcqs4n",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 One tiny nature preserve, so much life. Just a few things that made my morning better.",
+      "text": "",
+      "image": "https://preview.redd.it/6bry58a3gqoh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=7aa931959a6b1eeb442f27bfe6a48987d32429a2",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcqs4n/one_tiny_nature_preserve_so_much_life_just_a_few/",
+      "external_url": null,
+      "created_utc": 1789063428,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcqa5v",
+      "subreddit": "dankmemes",
+      "title": "Pure evil",
+      "text": "",
+      "image": "https://preview.redd.it/0oied913dqoh1.jpeg?width=640&crop=smart&auto=webp&s=947527c98b6b19d602e1de5d140c94dbf510049e",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wcqa5v/pure_evil/",
+      "external_url": "https://i.redd.it/0oied913dqoh1.jpeg",
+      "created_utc": 1789062413,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcps43",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Bioluminescent waves glowing electric blue at night",
+      "text": "",
+      "image": "https://preview.redd.it/ccv9v3js9qoh1.png?width=140&height=73&auto=webp&s=8e084c3e78a73c1dc7458dac10f64dc605bf3ca1",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcps43/bioluminescent_waves_glowing_electric_blue_at/",
+      "external_url": null,
+      "created_utc": 1789061345,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcpaql",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 This emo bee eats teardrops",
+      "text": "Credit: National Geographic",
+      "image": "https://preview.redd.it/ago5suzq6qoh1.jpg?width=140&height=121&auto=webp&s=d48a2fad4f68c0b3a8f1e1b9ea57cd6b0a194913",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcpaql/this_emo_bee_eats_teardrops/",
+      "external_url": null,
+      "created_utc": 1789060337,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcox0m",
+      "subreddit": "dankmemes",
+      "title": "Never forget",
+      "text": "",
+      "image": "https://preview.redd.it/xonlc6nj4qoh1.jpeg?width=640&crop=smart&auto=webp&s=5f00f11e9eee74c71b93a2ca64db478586dcdf94",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wcox0m/never_forget/",
+      "external_url": "https://i.redd.it/xonlc6nj4qoh1.jpeg",
+      "created_utc": 1789059541,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wconsm",
+      "subreddit": "dankmemes",
+      "title": "Call 877-CASH-NOW",
+      "text": "",
+      "image": "https://preview.redd.it/ncvyq62k2qoh1.png?width=640&crop=smart&auto=webp&s=d46651e02a72e86d2f58c30ba4ab105aad4f37b0",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wconsm/call_877cashnow/",
+      "external_url": "https://i.redd.it/ncvyq62k2qoh1.png",
+      "created_utc": 1789058978,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wco8u3",
+      "subreddit": "dankmemes",
+      "title": "Jesus loves you!!!",
+      "text": "",
+      "image": "https://preview.redd.it/dfhhe9360qoh1.jpeg?width=640&crop=smart&auto=webp&s=6b426f0a818ca917b27614d3fba0d9ce55c51102",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wco8u3/jesus_loves_you/",
+      "external_url": "https://i.redd.it/dfhhe9360qoh1.jpeg",
+      "created_utc": 1789058070,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcnxc0",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Eastern Screech Owl",
+      "text": "Palm Springs, Florida Canon 5DM4 24-70 2.8 L",
+      "image": "https://preview.redd.it/7eg12394ypoh1.jpeg?width=640&crop=smart&auto=webp&s=315a269bb516eb9d702194ade7612e8b23935e76",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcnxc0/eastern_screech_owl/",
+      "external_url": "https://i.redd.it/7eg12394ypoh1.jpeg",
+      "created_utc": 1789057379,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcnqeq",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥A few Deer having a rather heated disagreement",
+      "text": "",
+      "image": "https://external-preview.redd.it/MGVmNDZmMWN3cG9oMQnjy3RywwFTncXaXuZOAsfV3-b0DzEMAXMpMyDruHOl.png?width=640&crop=smart&auto=webp&s=5ddc2ccebcc0a044fe37fd44fa9a64e5fed05319",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcnqeq/a_few_deer_having_a_rather_heated_disagreement/",
+      "external_url": "https://v.redd.it/t3lbf30cwpoh1",
+      "created_utc": 1789056967,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcno0e",
+      "subreddit": "dankmemes",
+      "title": "Senpai",
+      "text": "",
+      "image": "https://preview.redd.it/8eaoulchwpoh1.jpeg?width=640&crop=smart&auto=webp&s=36fc79a1872278ef1d0f592c6b5b1a5863bb91d2",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wcno0e/senpai/",
+      "external_url": "https://i.redd.it/8eaoulchwpoh1.jpeg",
+      "created_utc": 1789056830,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcn01q",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Coopers hawk just landed on a branch outside my office window. Louisville, KY",
+      "text": "",
+      "image": "https://preview.redd.it/j3rzni37spoh1.jpeg?width=640&crop=smart&auto=webp&s=111bed30d97c25d4393a1dac6b7b93f5daa5e3f9",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcn01q/coopers_hawk_just_landed_on_a_branch_outside_my/",
+      "external_url": "https://i.redd.it/j3rzni37spoh1.jpeg",
+      "created_utc": 1789055388,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcmzj2",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥The 20 Breathtaking Winners of International Landscape Photographer of the Year 2025",
+      "text": "",
+      "image": "https://preview.redd.it/j55utr6trpoh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=e5c9a75ea76e10dc3f0e53710326f72beb2b24e8",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcmzj2/the_20_breathtaking_winners_of_international/",
+      "external_url": null,
+      "created_utc": 1789055357,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcmh03",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Red-legged honey creeper",
+      "text": "",
+      "image": "https://external-preview.redd.it/dnNpajE0eWNtcG9oMYM6IQepppdoKo7ubNMg4qawdHiShNI6Zmwx4hc6m06S.jpeg?width=320&crop=smart&auto=webp&s=eb964aa85f6ea7b161e5385af2d4a22cb6b2fcaf",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcmh03/redlegged_honey_creeper/",
+      "external_url": "https://v.redd.it/agkhgwrhmpoh1",
+      "created_utc": 1789054227,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcm2us",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 The sound of hail falling on a slate-covered hillside",
+      "text": "",
+      "image": "https://external-preview.redd.it/bWZmMDhnY3lscG9oMX5crODYC6MgTIBQDqsSFM2nWGhG9ehcxpsMWagdVS_q.png?width=640&crop=smart&auto=webp&s=88a0ea89bc528a91b08162b217f0cea086736b49",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcm2us/the_sound_of_hail_falling_on_a_slatecovered/",
+      "external_url": "https://v.redd.it/8s15fxbylpoh1",
+      "created_utc": 1789053335,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcm2tx",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Devil’s Throat, Iguazu Falls, Argentina. The immense power of nature is truly magical 🌎",
+      "text": "",
+      "image": "https://external-preview.redd.it/NGVqaTNtZXpscG9oMbtWuyhaDjfn5Pt9AvRolBMAOnNOa59c5hv-IqET723W.png?width=320&crop=smart&auto=webp&s=8f89372a18f1953cd56e8d3839cac01f8bd22106",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcm2tx/devils_throat_iguazu_falls_argentina_the_immense/",
+      "external_url": "https://v.redd.it/951cxjkzlpoh1",
+      "created_utc": 1789053334,
+      "is_text_only": false
+    },
     {
       "id": "t3_1wclmwd",
       "subreddit": "dankmemes",
@@ -30,6 +227,39 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1wclkcv",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 This unit of a bull reindeer",
+      "text": "",
+      "image": "https://preview.redd.it/6t2iud0sipoh1.jpeg?width=640&crop=smart&auto=webp&s=59a99a922b3abc3b7708c4d00065f80131cf1974",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wclkcv/this_unit_of_a_bull_reindeer/",
+      "external_url": "https://i.redd.it/6t2iud0sipoh1.jpeg",
+      "created_utc": 1789052221,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wcli3q",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Giant anteater and its pup - Brazil",
+      "text": "",
+      "image": "https://external-preview.redd.it/cjR6MHU1eDhpcG9oMQQ19dvtre8BDN6Ff0bmkkVysRF4Aak9zr6EKyEW0q9T.png?width=640&crop=smart&auto=webp&s=06995e345b901f8025e06a934aef26130425a0f6",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcli3q/giant_anteater_and_its_pup_brazil/",
+      "external_url": "https://v.redd.it/frzst0x8ipoh1",
+      "created_utc": 1789052087,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wckqjv",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥🔥Part-time Pollinator, Full-time Diva. Ruby-Throated Hummingbird",
+      "text": "",
+      "image": "https://preview.redd.it/g1p6wvl7dpoh1.jpeg?width=640&crop=smart&auto=webp&s=b03d387349768b0e721c41a94106905d7c0ae813",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wckqjv/parttime_pollinator_fulltime_diva_rubythroated/",
+      "external_url": "https://i.redd.it/g1p6wvl7dpoh1.jpeg",
+      "created_utc": 1789050360,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1wckmmc",
       "subreddit": "dankmemes",
       "title": "Been waiting",
@@ -38,6 +268,50 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wckmmc/been_waiting/",
       "external_url": "https://i.redd.it/y83rv5eicpoh1.jpeg",
       "created_utc": 1789050113,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wckf90",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Squirl desperately accepting applications for a partner.",
+      "text": "",
+      "image": "https://external-preview.redd.it/N2Nya2hjcTNicG9oMcSwGE6P0_t9atP5i3klfynElnqMn8LFJv6V8Yb922ny.png?width=640&crop=smart&auto=webp&s=ba63c4dd8daa1bb131706364ea454d28bad1698d",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wckf90/squirl_desperately_accepting_applications_for_a/",
+      "external_url": "https://v.redd.it/4q5ws3q3bpoh1",
+      "created_utc": 1789049652,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wckc4m",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥J. Fritz Rumpf's Winning Work for International Landscape Photographer of the Year 2025",
+      "text": "",
+      "image": "https://preview.redd.it/nf43q49eapoh1.jpg?width=140&height=93&auto=webp&s=0e82850d2c18cba1608db06d59fe3cf8690474c4",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wckc4m/j_fritz_rumpfs_winning_work_for_international/",
+      "external_url": null,
+      "created_utc": 1789049454,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wci1g9",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Emerald Cock roach Wasps grabbing and lobotomizing cockroaches.",
+      "text": "",
+      "image": "https://external-preview.redd.it/cTgwa29rajN1b29oMdQFuYn581s5oBP3RBmfnBa2dRktGXOmGyYUVPh5OP_r.png?width=320&crop=smart&auto=webp&s=a80b1fdd47dc9ccfb9b26c570ef8a4e177a3cfc6",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wci1g9/emerald_cock_roach_wasps_grabbing_and/",
+      "external_url": "https://v.redd.it/vjj3men3uooh1",
+      "created_utc": 1789043948,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wci03f",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Brown bear clubs trying to change a tire. Credit to Kay Kotzian",
+      "text": "",
+      "image": "https://preview.redd.it/2xxvc0zutooh1.png?width=640&crop=smart&auto=webp&s=dab62096b577db96c4f00abb82c5781100893001",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wci03f/brown_bear_clubs_trying_to_change_a_tire_credit/",
+      "external_url": "https://i.redd.it/2xxvc0zutooh1.png",
+      "created_utc": 1789043849,
       "is_text_only": false
     },
     {
@@ -96,6 +370,39 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1wcag6n",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Every year from May to September, this Zimbabwe estate dumps tons of leftover orange pulp and low-grade fruit by the river, creating a massive daily buffet for hundreds of wild elephants.",
+      "text": "",
+      "image": "https://external-preview.redd.it/MHR6ODU3ZDh1bW9oMbopYOutP54yAjqQ1R831ZiLFGRQRLT_sk8wQjdoJgZ4.png?width=320&crop=smart&auto=webp&s=266a5149b4d4d32dc147bddddef98b5ea456b62a",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wcag6n/every_year_from_may_to_september_this_zimbabwe/",
+      "external_url": "https://v.redd.it/vxuihqc8umoh1",
+      "created_utc": 1789019778,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wca3w0",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Edge Of A Rainstorm",
+      "text": "",
+      "image": "https://external-preview.redd.it/cWRuZGY3aXlxbW9oMddrn6LJpLWB-MpEPgSjYy-lZRwA6BlCPvTOfLOIE9ay.png?width=320&crop=smart&auto=webp&s=761b85d926ff4af6fe0569263cdd4faa3db2a513",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wca3w0/edge_of_a_rainstorm/",
+      "external_url": "https://v.redd.it/0jmpf7iyqmoh1",
+      "created_utc": 1789018675,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wc9xl9",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Two ginormous Alaska moose",
+      "text": "",
+      "image": "https://external-preview.redd.it/cWJpbnQyZDdwbW9oMen3b3dfm8YPHVhBgaXSsU35UkBZ7wNkNPkta6yGHDcC.png?width=640&crop=smart&auto=webp&s=45a370dc53c792a2f93aa713250c655d1a54561c",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wc9xl9/two_ginormous_alaska_moose/",
+      "external_url": "https://v.redd.it/akhkv2i1pmoh1",
+      "created_utc": 1789018127,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1wc9mi9",
       "subreddit": "dankmemes",
       "title": "Catch and release",
@@ -118,6 +425,39 @@
       "is_text_only": false
     },
     {
+      "id": "t3_1wc8tc2",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Watching a giant Pacific octopus move across the seafloor is absolutely mesmerizing [OC]",
+      "text": "One of those encounters where all you have to do is hold the camera steady and let the animal do the work. This giant Pacific octopus came straight toward me, turned broadside right in front of the camera, and then slowly cruised away across the sand. This was towards the end of a 21 dive streak where I was filming octopus daily for a couple of weeks. It takes patience and perseverance to catch them out in the open so getting in the water as much as possible definitely helps. 2 hours of ambient octopus: https://www.youtube.com/watch?v=xzkNu1PMK_0",
+      "image": "https://external-preview.redd.it/cGozMDNkZWNmbW9oMdb8EDhH1qyYlQv2eOzIX2Xe6K45FNRrGOw_dqyvDJpK.png?width=640&crop=smart&auto=webp&s=290dd3edc5a7d521376810b9b5ccd4de1df89b32",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wc8tc2/watching_a_giant_pacific_octopus_move_across_the/",
+      "external_url": "https://www.youtube.com/watch?v=xzkNu1PMK_0",
+      "created_utc": 1789014748,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wc8lme",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 World’s Brightest Bioluminescent Bay in Vieques, Puerto Rico changed my life",
+      "text": "Had the utmost pleasure of visiting the brightest bioluminescent bay in the world! There are currently five permanent biobays in the world and three of them are in Puerto Rico! Mosquito bay on the island of Vieques is officially recognized as the brightest in the world. So why does the bay glow? The water contains millions of microscopic organisms called dinoflagellates. When you move through the water by paddling or splashing your hands, these organisms create a bright blue-green flash. The dinos are so tiny that it's quite impossible to capture them on camera! They only light up for a micro-second and any light source that enters the water will prevent you from seeing them! This is literally the definition of \"you had to be there\" to witness the magic of this ecosystem. I was lucky to capture two separate instances of the dinos lighting up and then i merged them into one photo and edited. So how did these organisms get there? The bay has quite a narrow mouth preventing the sea from washing them away and surrounding mangroves provide nutrients for them. Yes, MANGROVES!!!! The island of Vieques does a lot conservation efforts to protect the ecosystem as well. For e.g., they have red street lights instead of the traditional white lights to reduce light pollution; there are absolutely no industrial or housing developments near the bay. It is strictly prohibited; and they do not allow any swimming or fueled boats in the bay. If you ever plan to visit this magical place, plan your visit around a new moon so you have complete darkness in the bay. Our visit also coincided with the peak of the Perseids meteor shower and this elevated the entire experience.",
+      "image": "https://preview.redd.it/femmx7tedmoh1.jpeg?width=640&crop=smart&auto=webp&s=0ad050927a169dab66914789a5ba9fffa959a104",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wc8lme/worlds_brightest_bioluminescent_bay_in_vieques/",
+      "external_url": "https://i.redd.it/femmx7tedmoh1.jpeg",
+      "created_utc": 1789014095,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wc8lfu",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Red-necked phalarope and their aggressive headbobbing when they move around",
+      "text": "",
+      "image": "https://external-preview.redd.it/NWk5cjl3cmNkbW9oMTjJ-XXRvRBYBdC2TQdhH54n9RA1D2XHc1NkUyOnCPl2.png?width=640&crop=smart&auto=webp&s=cada79f148298b1948595b1f14f107098f70db69",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wc8lfu/rednecked_phalarope_and_their_aggressive/",
+      "external_url": "https://v.redd.it/rrtyr8wcdmoh1",
+      "created_utc": 1789014079,
+      "is_text_only": false
+    },
+    {
       "id": "t3_1wc8bhx",
       "subreddit": "dankmemes",
       "title": "A relationship title.",
@@ -137,6 +477,17 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wc7z4c/a_bleach_relationship_title/",
       "external_url": "https://i.redd.it/728flmuy7moh1.png",
       "created_utc": 1789012293,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wc7gv0",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Beautiful Sky",
+      "text": "",
+      "image": "https://external-preview.redd.it/NXl5a21oMGczbW9oMR7DXbkVpXb5ut9OFQnIDcLWBk_FElWZLOfRH7_VC_5U.png?width=640&crop=smart&auto=webp&s=b3d47f7a82d377620209a0cae9534c8a9ec9cbf6",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wc7gv0/beautiful_sky/",
+      "external_url": "https://v.redd.it/zfi63d0g3moh1",
+      "created_utc": 1789010865,
       "is_text_only": false
     },
     {
@@ -214,83 +565,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbybq0/did_he_really_say_that/",
       "external_url": "https://i.redd.it/os2xzunk7koh1.png",
       "created_utc": 1788987919,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbxxu4",
-      "subreddit": "dankmemes",
-      "title": "what an original idea",
-      "text": "",
-      "image": "https://preview.redd.it/kz9dnf8y4koh1.png?width=640&crop=smart&auto=webp&s=d4bdde0c6dee12bca884336a58b4c93fc95e2bba",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbxxu4/what_an_original_idea/",
-      "external_url": "https://i.redd.it/kz9dnf8y4koh1.png",
-      "created_utc": 1788987065,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbwcyh",
-      "subreddit": "dankmemes",
-      "title": "But they're so cute",
-      "text": "",
-      "image": "https://preview.redd.it/xz2cz2g3vjoh1.jpeg?width=640&crop=smart&auto=webp&s=cf504da75edac20adb7867b164ad8d77d4f23b55",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbwcyh/but_theyre_so_cute/",
-      "external_url": "https://i.redd.it/xz2cz2g3vjoh1.jpeg",
-      "created_utc": 1788983721,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbw4ih",
-      "subreddit": "dankmemes",
-      "title": "This gameshow is wild.",
-      "text": "",
-      "image": "https://preview.redd.it/h1a83mpktjoh1.png?width=640&crop=smart&auto=webp&s=e88d418fe81364b99250797cdc2fc03f714b92e8",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbw4ih/this_gameshow_is_wild/",
-      "external_url": "https://i.redd.it/h1a83mpktjoh1.png",
-      "created_utc": 1788983211,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbvs30",
-      "subreddit": "dankmemes",
-      "title": "If the elites don't work, why should we?",
-      "text": "",
-      "image": "https://preview.redd.it/p5fsbc2erjoh1.jpeg?width=640&crop=smart&auto=webp&s=87a00c5bd559923b312f0e9891fe0697a37bafab",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbvs30/if_the_elites_dont_work_why_should_we/",
-      "external_url": "https://i.redd.it/p5fsbc2erjoh1.jpeg",
-      "created_utc": 1788982476,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbt32x",
-      "subreddit": "dankmemes",
-      "title": "But we came up with that name first",
-      "text": "",
-      "image": "https://preview.redd.it/fqbkiyrrajoh1.jpeg?width=640&crop=smart&auto=webp&s=b2f86d82e13be8572846f95c72be33a0747e4d04",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbt32x/but_we_came_up_with_that_name_first/",
-      "external_url": "https://i.redd.it/fqbkiyrrajoh1.jpeg",
-      "created_utc": 1788976888,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbr56n",
-      "subreddit": "dankmemes",
-      "title": "And here's a spoiler for you",
-      "text": "",
-      "image": "https://preview.redd.it/yh23na6kyioh1.png?width=640&crop=smart&auto=webp&s=1e45af3fe60a79ca3385d50d995631408c99217a",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbr56n/and_heres_a_spoiler_for_you/",
-      "external_url": "https://i.redd.it/yh23na6kyioh1.png",
-      "created_utc": 1788972780,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wbqima",
-      "subreddit": "dankmemes",
-      "title": "Pro-fessionals Have Standards",
-      "text": "",
-      "image": "https://preview.redd.it/wsfr2snhuioh1.png?width=640&crop=smart&auto=webp&s=ef5519828059aea6c920b25a4d6ce031c9796788",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wbqima/professionals_have_standards/",
-      "external_url": "https://i.redd.it/wsfr2snhuioh1.png",
-      "created_utc": 1788971432,
       "is_text_only": false
     }
   ]
