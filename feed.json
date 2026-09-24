@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-23T22:42:41.682854+00:00",
+  "generated_at_utc": "2026-09-24T03:24:03.408591+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -18,6 +18,28 @@
     "SurrealMemes": "429 Client Error: Too Many Requests for url: https://www.reddit.com/r/SurrealMemes/new/.rss"
   },
   "items": [
+    {
+      "id": "t3_1wonp2w",
+      "subreddit": "dankmemes",
+      "title": "😁. 🤔",
+      "text": "",
+      "image": "https://preview.redd.it/0ung1opx9drh1.jpeg?width=320&crop=smart&auto=webp&s=243e4a322ef0b73afddf6ffb87392e8504456309",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wonp2w/_/",
+      "external_url": "https://i.redd.it/0ung1opx9drh1.jpeg",
+      "created_utc": 1790211508,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wolp69",
+      "subreddit": "dankmemes",
+      "title": "In America, Taylor Swift is a spoiled brat",
+      "text": "Here in the Philippines, it’s Anne Curtis",
+      "image": "https://preview.redd.it/udiflor0ucrh1.jpeg?width=640&crop=smart&auto=webp&s=c1262a6f4860e6009e009fe2c994fc28fc008cdb",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wolp69/in_america_taylor_swift_is_a_spoiled_brat/",
+      "external_url": "https://i.redd.it/udiflor0ucrh1.jpeg",
+      "created_utc": 1790206157,
+      "is_text_only": false
+    },
     {
       "id": "t3_1wojexz",
       "subreddit": "dankmemes",
@@ -269,28 +291,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wno064/happy_first_day_of_autumn/",
       "external_url": "https://i.redd.it/osvbvbnkd5rh1.jpeg",
       "created_utc": 1790115877,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wnnucc",
-      "subreddit": "dankmemes",
-      "title": "It happens recently",
-      "text": "",
-      "image": "https://preview.redd.it/jedl0mmxa5rh1.gif?width=320&crop=smart&s=ec13112de582007118f0be175673c9e4025e00bb",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wnnucc/it_happens_recently/",
-      "external_url": "https://i.redd.it/jedl0mmxa5rh1.gif",
-      "created_utc": 1790115486,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wnisje",
-      "subreddit": "dankmemes",
-      "title": "The mistakes just all come at once",
-      "text": "",
-      "image": "https://preview.redd.it/6x6kd6tre4rh1.png?width=640&crop=smart&auto=webp&s=1f0c4a1f94c64876505a76d4bc02c5def247190f",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wnisje/the_mistakes_just_all_come_at_once/",
-      "external_url": "https://i.redd.it/6x6kd6tre4rh1.png",
-      "created_utc": 1790104176,
       "is_text_only": false
     }
   ]
