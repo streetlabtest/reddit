@@ -5,13 +5,19 @@ Fetch subreddit RSS (server-side) and build a static feed.json.
 - Reads upstream subreddit list from subreddits_source.txt (repo root).
 - Extracts title, sanitized text, one image (if any), one video (if any), comments URL, external URL.
 - Strips common Reddit RSS noise (e.g., "submitted by /u/..." and [link] [comments]).
+- Spaces requests out and retries 429/5xx responses (honouring Retry-After) to
+  avoid Reddit's rate limiting.
+- Merges with the previous feed.json so a subreddit that fails to fetch keeps its
+  last good items instead of disappearing.
 - Writes feed.json suitable for a static GitHub Pages site.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
+import sys
 import time
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
@@ -28,6 +34,15 @@ USER_AGENT = "quiet-feed/1.2 (GitHub Actions; +https://pages.github.com/)"
 TIMEOUT_SECONDS = 20
 MAX_ENTRIES_PER_SUB = 25
 OUTPUT_PATH = "feed.json"
+
+REQUEST_DELAY_SECONDS = 4        # pause between subreddit requests
+MAX_ATTEMPTS = 4                 # per subreddit, including the first try
+BACKOFF_BASE_SECONDS = 8         # 8s, 16s, 32s when no Retry-After is given
+MAX_RETRY_AFTER_SECONDS = 120
+RETRY_STATUSES = {429, 500, 502, 503, 504}
+
+MAX_ITEM_AGE_DAYS = 7            # retained items older than this are dropped
+MAX_ITEMS_PER_SUB = 50
 
 REDDIT_DOMAINS = {"www.reddit.com", "reddit.com", "old.reddit.com", "np.reddit.com", "redd.it"}
 IMAGE_HOST_HINTS = {
@@ -189,11 +204,32 @@ class FeedItem:
     is_text_only: bool
 
 
+def _retry_delay(resp: Optional[requests.Response], attempt: int) -> float:
+    if resp is not None:
+        ra = (resp.headers.get("Retry-After") or "").strip()
+        if ra.isdigit():
+            return min(float(ra), MAX_RETRY_AFTER_SECONDS)
+    return min(BACKOFF_BASE_SECONDS * (2 ** (attempt - 1)), MAX_RETRY_AFTER_SECONDS)
+
+
 def fetch_rss(url: str) -> feedparser.FeedParserDict:
     headers = {"User-Agent": USER_AGENT, "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.8"}
-    resp = requests.get(url, headers=headers, timeout=TIMEOUT_SECONDS)
-    resp.raise_for_status()
-    return feedparser.parse(resp.content)
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        resp: Optional[requests.Response] = None
+        try:
+            resp = requests.get(url, headers=headers, timeout=TIMEOUT_SECONDS)
+            if resp.status_code not in RETRY_STATUSES:
+                resp.raise_for_status()
+                return feedparser.parse(resp.content)
+            if attempt == MAX_ATTEMPTS:
+                resp.raise_for_status()
+        except (requests.ConnectionError, requests.Timeout):
+            if attempt == MAX_ATTEMPTS:
+                raise
+        delay = _retry_delay(resp, attempt)
+        print(f"  retrying {url} in {delay:.0f}s (attempt {attempt}/{MAX_ATTEMPTS})")
+        time.sleep(delay)
+    raise RuntimeError("unreachable")
 
 
 def build_items_for_subreddit(sub: str) -> List[FeedItem]:
@@ -244,19 +280,74 @@ def build_items_for_subreddit(sub: str) -> List[FeedItem]:
     return items
 
 
+def _load_previous(path: str) -> Dict[str, Any]:
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _previous_items_by_sub(prev: Dict[str, Any]) -> Dict[str, List[FeedItem]]:
+    fields = set(FeedItem.__dataclass_fields__)
+    out: Dict[str, List[FeedItem]] = {}
+    for raw in prev.get("items") or []:
+        if not isinstance(raw, dict) or not fields.issubset(raw):
+            continue
+        it = FeedItem(**{k: raw[k] for k in fields})
+        out.setdefault(it.subreddit.lower(), []).append(it)
+    return out
+
+
+def _merge(fresh: List[FeedItem], old: List[FeedItem], min_created: int) -> List[FeedItem]:
+    by_id: Dict[str, FeedItem] = {}
+    for it in old:
+        by_id[it.id] = it
+    for it in fresh:  # fresh copies win
+        by_id[it.id] = it
+    kept = [it for it in by_id.values() if it.created_utc >= min_created]
+    kept.sort(key=lambda x: x.created_utc, reverse=True)
+    return kept[:MAX_ITEMS_PER_SUB]
+
+
 def main() -> None:
     subs = _read_subreddits_source(SUBREDDITS_SOURCE_PATH)
+    prev = _load_previous(OUTPUT_PATH)
+    prev_items = _previous_items_by_sub(prev)
+    prev_fetched = prev.get("last_fetched_utc") or {}
+
+    now = datetime.now(timezone.utc)
+    min_created = int(now.timestamp()) - MAX_ITEM_AGE_DAYS * 24 * 60 * 60
 
     all_items: List[FeedItem] = []
     errors: Dict[str, str] = {}
+    last_fetched: Dict[str, str] = {}
 
-    for sub in subs:
+    for i, sub in enumerate(subs):
+        if i > 0:
+            time.sleep(REQUEST_DELAY_SECONDS)
+        old = prev_items.get(sub.lower(), [])
         try:
-            all_items.extend(build_items_for_subreddit(sub))
+            fresh = build_items_for_subreddit(sub)
+            last_fetched[sub] = now.isoformat()
         except Exception as e:
             errors[sub] = str(e)
+            fresh = []
+            if prev_fetched.get(sub):
+                last_fetched[sub] = prev_fetched[sub]
+        all_items.extend(_merge(fresh, old, min_created))
 
-    # dedupe by comments_url
+    if len(errors) == len(subs):
+        # Keep the previous feed.json untouched rather than publishing an empty one.
+        print("All subreddits failed; leaving existing feed.json unchanged.", file=sys.stderr)
+        for k, v in errors.items():
+            print(f"  - {k}: {v}", file=sys.stderr)
+        raise SystemExit(1)
+
+    # dedupe by comments_url (cross-posts can share a thread)
     dedup: Dict[str, FeedItem] = {}
     for it in all_items:
         if it.comments_url not in dedup or it.created_utc > dedup[it.comments_url].created_utc:
@@ -265,9 +356,10 @@ def main() -> None:
     items_sorted = sorted(dedup.values(), key=lambda x: x.created_utc, reverse=True)
 
     out: Dict[str, Any] = {
-        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "generated_at_utc": now.isoformat(),
         "subreddits_source": subs,
         "errors": errors,
+        "last_fetched_utc": last_fetched,
         "items": [asdict(x) for x in items_sorted],
     }
 
@@ -276,7 +368,7 @@ def main() -> None:
 
     print(f"Wrote {OUTPUT_PATH} with {len(items_sorted)} items from {len(subs)} subreddits.")
     if errors:
-        print("Errors:")
+        print("Errors (previous items kept):")
         for k, v in errors.items():
             print(f"  - {k}: {v}")
 

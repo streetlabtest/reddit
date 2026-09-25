@@ -3,9 +3,10 @@
    - Time-of-day background theme (CSS variables)
    - Breath interstitial on Next pagination (6s animation, continue immediately)
    - Meal check note on open if >3.5h since last activity (subtle status note, dismiss or auto-hide)
+   - Settings are stored only where they differ from DEFAULTS, so default changes reach users who never customised them
 */
 
-const APP_VERSION = "quietfeed-20260331-5";
+const APP_VERSION = "quietfeed-20260925-1";
 const SESSION_IDLE_RESET_MS = 30 * 60 * 1000; // session resets after inactivity
 
 const MEAL_NUDGE_THRESHOLD_MS = 3.5 * 60 * 60 * 1000; // 3.5 hours
@@ -18,18 +19,19 @@ const STORAGE_KEYS = {
   banlist: "quietfeed.banlist",
   showTextOnly: "quietfeed.showTextOnly",
   showComments: "quietfeed.showComments",
-  page: "quietfeed.page",
+  page: "quietfeed.page", // pages viewed this session (display only)
   feedGeneratedAt: "quietfeed.feedGeneratedAt",
   seenPersistent: "quietfeed.seenPersistent"
 };
 
 const SESSION_KEYS = {
   seenIds: "quietfeed.sessionSeenIds",
-  shuffledIds: "quietfeed.sessionShuffledIds"
+  seed: "quietfeed.sessionSeed",
+  pageIds: "quietfeed.sessionPageIds"
 };
 
 const DEFAULTS = {
-  subreddits: ["EarthPorn", "PsychologyMemes", "NatureIsFuckingLit", "SurrealMemes", "meirl", "me_irl", "dankmemes"],
+  subreddits: null,      // null = every subreddit available in feed.json
   banlist: "politics, war, shooting, death, violence, election",
   showTextOnly: false,
   showComments: false,   // EDIT (1): default unchecked
@@ -59,11 +61,8 @@ function setStatus(msg) {
   document.getElementById("statusText").textContent = msg;
 }
 
-function clamp(n, lo, hi) {
-  return Math.max(lo, Math.min(hi, n));
-}
 
-function escapeText(s) {
+function asText(s) {
   return (s ?? "").toString();
 }
 
@@ -124,15 +123,33 @@ function debounce(fn, ms) {
   };
 }
 
-function titleAllowed(title, banWords) {
-  if (!banWords || banWords.length === 0) return true;
-  const t = (title || "").toLowerCase();
-  return !banWords.some(word => t.includes(word));
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Whole-word (or whole-phrase) matching, so "war" does not hide "software" or "reward".
+function buildBanMatcher(banWords) {
+  if (!banWords || banWords.length === 0) return null;
+  const alts = banWords.map(w => escapeRegExp(w).replace(/\s+/g, "\\s+"));
+  return new RegExp(`(?<![\\p{L}\\p{N}_])(?:${alts.join("|")})(?![\\p{L}\\p{N}_])`, "iu");
+}
+
+function postAllowed(item, banMatcher) {
+  if (!banMatcher) return true;
+  return !banMatcher.test(item.title || "") && !banMatcher.test(item.text || "");
 }
 
 function subredditAllowed(itemSub, allowedSet) {
   if (!allowedSet) return true;
   return allowedSet.has((itemSub || "").toLowerCase());
+}
+
+function clearSessionState() {
+  sessionStorage.removeItem(SESSION_KEYS.seenIds);
+  sessionStorage.removeItem(SESSION_KEYS.seed);
+  sessionStorage.removeItem(SESSION_KEYS.pageIds);
+  sessionStorage.removeItem("quietfeed.sessionShuffledIds"); // legacy key
+  saveJSON(STORAGE_KEYS.page, 1, localStorage);
 }
 
 /* ----------------- time-of-day theming (EDIT 2) ----------------- */
@@ -178,16 +195,13 @@ function migrateIfNeeded() {
   const stored = loadJSON(STORAGE_KEYS.appVersion, null, localStorage);
   if (stored === APP_VERSION) return;
 
-  // Reset settings so old defaults don't "stick" after upgrades
-  localStorage.removeItem(STORAGE_KEYS.subreddits);
-  localStorage.removeItem(STORAGE_KEYS.banlist);
-  localStorage.removeItem(STORAGE_KEYS.showTextOnly);
-  localStorage.removeItem(STORAGE_KEYS.showComments);
-  localStorage.removeItem(STORAGE_KEYS.page);
+  // User settings are kept. Only values that differ from DEFAULTS are stored
+  // (see saveSettings), so changed defaults still reach users who never edited them.
+  // Drop stored values that merely equal the current defaults.
+  saveSettings(loadSettings());
 
-  // Reset current session state
-  sessionStorage.removeItem(SESSION_KEYS.seenIds);
-  sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
+  // Session state layout may have changed between versions.
+  clearSessionState();
 
   saveJSON(STORAGE_KEYS.appVersion, APP_VERSION, localStorage);
 }
@@ -196,46 +210,45 @@ function touchLastActive() {
   saveJSON(STORAGE_KEYS.lastActiveMs, Date.now(), localStorage);
 }
 
+// Returns the previous last-active timestamp (before this call refreshed it).
 function maybeResetSessionForMobile() {
   const last = loadJSON(STORAGE_KEYS.lastActiveMs, null, localStorage);
   const now = Date.now();
   if (typeof last === "number" && now - last > SESSION_IDLE_RESET_MS) {
-    sessionStorage.removeItem(SESSION_KEYS.seenIds);
-    sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
-    saveJSON(STORAGE_KEYS.page, 1, localStorage);
+    clearSessionState();
   }
   touchLastActive();
+  return typeof last === "number" ? last : null;
 }
 
 /* ----------------- meal nudge (EDIT 3b) ----------------- */
 
 let mealNudgeTimer = null;
 let mealNudgeVisible = false;
+let lastBaseStatus = "";
 
-function showMealNudgeIfNeeded(baseStatusText) {
-  const last = loadJSON(STORAGE_KEYS.lastActiveMs, null, localStorage);
+// `previousActiveMs` must be read before anything refreshes lastActiveMs.
+function showMealNudgeIfNeeded(previousActiveMs) {
   const now = Date.now();
 
-  if (typeof last === "number" && (now - last) >= MEAL_NUDGE_THRESHOLD_MS) {
+  if (typeof previousActiveMs === "number" && (now - previousActiveMs) >= MEAL_NUDGE_THRESHOLD_MS) {
     // Show a faint note in the status area; no popup.
     mealNudgeVisible = true;
-    renderStatusWithMealNote(baseStatusText);
+    renderStatusWithMealNote();
 
     // Auto-hide after 30 seconds for this session
     if (mealNudgeTimer) clearTimeout(mealNudgeTimer);
     mealNudgeTimer = setTimeout(() => {
       mealNudgeVisible = false;
-      renderStatusWithMealNote(baseStatusText);
+      renderStatusWithMealNote();
     }, MEAL_NUDGE_AUTOHIDE_MS);
-  } else {
-    mealNudgeVisible = false;
-    renderStatusWithMealNote(baseStatusText);
   }
 }
 
-function renderStatusWithMealNote(baseStatusText) {
+function renderStatusWithMealNote(baseStatusText = lastBaseStatus) {
   const el = document.getElementById("statusText");
   if (!el) return;
+  lastBaseStatus = baseStatusText || "";
 
   // Use lightweight DOM update; no external deps.
   el.textContent = "";
@@ -257,7 +270,8 @@ function renderStatusWithMealNote(baseStatusText) {
   dismiss.textContent = "Dismiss";
   dismiss.addEventListener("click", () => {
     mealNudgeVisible = false;
-    renderStatusWithMealNote(baseStatusText);
+    if (mealNudgeTimer) clearTimeout(mealNudgeTimer);
+    renderStatusWithMealNote();
   });
   el.appendChild(dismiss);
 }
@@ -286,16 +300,6 @@ function setPersistentSeenSet(set) {
 
 /* ----------------- randomization stable per session ----------------- */
 
-function mulberry32(seed) {
-  let t = seed >>> 0;
-  return function () {
-    t += 0x6D2B79F5;
-    let r = Math.imul(t ^ (t >>> 15), 1 | t);
-    r ^= r + Math.imul(r ^ (r >>> 7), 61 | r);
-    return ((r ^ (r >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
 function hashStringToSeed(str) {
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
@@ -305,27 +309,25 @@ function hashStringToSeed(str) {
   return h >>> 0;
 }
 
-function shuffledIdsForSession(items, seedStr) {
-  const stored = loadJSON(SESSION_KEYS.shuffledIds, null, sessionStorage);
-  if (stored && Array.isArray(stored) && stored.length > 0) return stored;
-
-  const seed = hashStringToSeed(seedStr);
-  const rnd = mulberry32(seed);
-
-  const ids = items.map(it => it.id).filter(Boolean);
-  for (let i = ids.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [ids[i], ids[j]] = [ids[j], ids[i]];
+function getSessionSeed() {
+  let seed = loadJSON(SESSION_KEYS.seed, null, sessionStorage);
+  if (typeof seed !== "string" || !seed) {
+    seed = Math.random().toString(36).slice(2);
+    saveJSON(SESSION_KEYS.seed, seed, sessionStorage);
   }
+  return seed;
+}
 
-  saveJSON(SESSION_KEYS.shuffledIds, ids, sessionStorage);
-  return ids;
+// Order by a per-session hash of each id. Stable within a session, and posts that
+// become eligible later (e.g. a subreddit is re-enabled) slot into the order
+// instead of being left out of a stored list.
+function sessionOrder(items) {
+  const seed = getSessionSeed();
+  const rank = new Map(items.map(it => [it.id, hashStringToSeed(`${seed}:${it.id}`)]));
+  return items.slice().sort((a, b) => rank.get(a.id) - rank.get(b.id));
 }
 
 /* ----------------- breath interstitial (EDIT 3a) ----------------- */
-
-let pendingNextPage = null;
-let pendingNextRerender = null;
 
 function buildBreathInterstitial(onContinue) {
   const card = document.createElement("article");
@@ -407,7 +409,7 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
   card.className = "card";
 
   const h2 = document.createElement("h2");
-  h2.textContent = escapeText(item.title || "(untitled)");
+  h2.textContent = asText(item.title || "(untitled)");
   card.appendChild(h2);
 
   const fullText = item.text || "";
@@ -462,7 +464,7 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
   meta.className = "meta";
 
   const left = document.createElement("span");
-  left.textContent = `/r/${escapeText(item.subreddit || "")}`;
+  left.textContent = `/r/${asText(item.subreddit || "")}`;
   meta.appendChild(left);
 
   if (showComments) {
@@ -493,9 +495,9 @@ function buildCard(item, sessionSeenSet, persistentSeenSet, showComments) {
   return card;
 }
 
-function setPager(page, totalPages, stopReached) {
+function setPager(page, nextEnabled) {
   document.getElementById("pageInfo").textContent = `Page ${page}`;
-  document.getElementById("next").disabled = stopReached || page >= totalPages;
+  document.getElementById("next").disabled = !nextEnabled;
 }
 
 async function loadFeed() {
@@ -504,108 +506,169 @@ async function loadFeed() {
   return await res.json();
 }
 
-/* ----------------- UI state ----------------- */
+/* ----------------- settings ----------------- */
 
-function getStateFromUI() {
-  const banlistRaw = document.getElementById("banlist").value || "";
-  const banWords = banlistRaw.split(",").map(w => w.trim().toLowerCase()).filter(Boolean);
-
-  const showTextOnly = document.getElementById("showTextOnly").checked;
-  const showComments = document.getElementById("showComments").checked;
-
-  const subsText = document.getElementById("subreddits").value || "";
-  const allowedSubs = uniqNormSubs(subsText.split("\n"));
-
-  return { banWords, showTextOnly, showComments, allowedSubs };
+function subsKey(subs) {
+  return (subs || []).map(s => s.toLowerCase()).sort().join("|");
 }
 
-function persistStateFromUI(allowedSubs) {
-  saveJSON(STORAGE_KEYS.banlist, document.getElementById("banlist").value || "");
-  saveJSON(STORAGE_KEYS.showTextOnly, document.getElementById("showTextOnly").checked);
-  saveJSON(STORAGE_KEYS.showComments, document.getElementById("showComments").checked);
-  saveJSON(STORAGE_KEYS.subreddits, allowedSubs);
-}
-
-function restoreUIFromStorage() {
+function loadSettings() {
   const subs = loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits);
-  const banlist = loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist);
-  const showTextOnly = loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly);
-  const showComments = loadJSON(STORAGE_KEYS.showComments, DEFAULTS.showComments);
+  return {
+    banlist: loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist),
+    showTextOnly: !!loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly),
+    showComments: !!loadJSON(STORAGE_KEYS.showComments, DEFAULTS.showComments),
+    subreddits: Array.isArray(subs) ? uniqNormSubs(subs) : null
+  };
+}
 
-  document.getElementById("subreddits").value = (subs || []).join("\n");
-  document.getElementById("banlist").value = banlist || "";
-  document.getElementById("showTextOnly").checked = !!showTextOnly;
-  document.getElementById("showComments").checked = !!showComments;
+function saveOrClear(key, value, isDefault) {
+  if (isDefault) localStorage.removeItem(key);
+  else saveJSON(key, value);
+}
+
+// Stores only values that differ from DEFAULTS. `available` (the feed's subreddits)
+// lets a selection of "everything" be stored as the default.
+function saveSettings(settings, available = null) {
+  saveOrClear(STORAGE_KEYS.banlist, settings.banlist, settings.banlist === DEFAULTS.banlist);
+  saveOrClear(STORAGE_KEYS.showTextOnly, settings.showTextOnly, settings.showTextOnly === DEFAULTS.showTextOnly);
+  saveOrClear(STORAGE_KEYS.showComments, settings.showComments, settings.showComments === DEFAULTS.showComments);
+
+  const subs = settings.subreddits;
+  const isAll = subs === null || (available !== null && subsKey(subs) === subsKey(available));
+  saveOrClear(STORAGE_KEYS.subreddits, subs, isAll);
+}
+
+function banWordsOf(settings) {
+  return (settings.banlist || "").split(",").map(w => w.trim().toLowerCase()).filter(Boolean);
+}
+
+/* ----------------- settings UI ----------------- */
+
+function renderSubredditChoices(available, settings) {
+  const box = document.getElementById("subreddits");
+  box.textContent = "";
+  const chosen = settings.subreddits ? new Set(settings.subreddits.map(s => s.toLowerCase())) : null;
+
+  for (const sub of available) {
+    const label = document.createElement("label");
+    label.className = "toggle";
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.value = sub;
+    input.checked = !chosen || chosen.has(sub.toLowerCase());
+    const span = document.createElement("span");
+    span.textContent = `/r/${sub}`;
+    label.append(input, span);
+    box.appendChild(label);
+  }
+}
+
+function writeSettingsToUI(available, settings) {
+  document.getElementById("banlist").value = settings.banlist || "";
+  document.getElementById("showTextOnly").checked = settings.showTextOnly;
+  document.getElementById("showComments").checked = settings.showComments;
+  renderSubredditChoices(available, settings);
+}
+
+function readSettingsFromUI(available) {
+  const checked = Array.from(document.querySelectorAll("#subreddits input[type=checkbox]"))
+    .filter(el => el.checked)
+    .map(el => el.value);
+  return {
+    banlist: document.getElementById("banlist").value || "",
+    showTextOnly: document.getElementById("showTextOnly").checked,
+    showComments: document.getElementById("showComments").checked,
+    subreddits: checked.length === available.length ? null : checked
+  };
+}
+
+function renderFeedNote(data) {
+  const el = document.getElementById("feedNote");
+  if (!el) return;
+  const failed = Object.keys(data.errors || {});
+  el.textContent = failed.length
+    ? `The last update could not refresh ${failed.map(s => "/r/" + s).join(", ")}; any earlier posts from them are still shown.`
+    : "";
+  el.hidden = failed.length === 0;
 }
 
 /* ----------------- filtering + ordering ----------------- */
 
-function applyFilters(items, allowedSubs, banWords, showTextOnly, persistentSeenSet) {
-  const allowedSet = allowedSubs && allowedSubs.length > 0
-    ? new Set(allowedSubs.map(s => (s || "").toLowerCase()))
+function applyFilters(items, settings) {
+  const allowedSet = settings.subreddits
+    ? new Set(settings.subreddits.map(s => s.toLowerCase()))
     : null;
+  const banMatcher = buildBanMatcher(banWordsOf(settings));
   return (items || []).filter(it => {
     if (!it || !it.id) return false;
-    if (persistentSeenSet.has(it.id)) return false;
     if (!subredditAllowed(it.subreddit, allowedSet)) return false;
-    if (!titleAllowed(it.title, banWords)) return false;
-    if (!showTextOnly && it.is_text_only) return false;
+    if (!postAllowed(it, banMatcher)) return false;
+    if (!settings.showTextOnly && it.is_text_only) return false;
     return true;
   });
 }
 
-function render(items, page, perPage, showComments, seedStr) {
+/* ----------------- rendering the feed ----------------- */
+
+// The current page is a stored list of post ids. A page is only drawn fresh (the next
+// unseen posts in session order) when there is no current page, so seen posts never
+// shift an offset and nothing is skipped.
+function renderFeed(app) {
   const feedEl = document.getElementById("feed");
   feedEl.innerHTML = "";
+
+  const eligible = sessionOrder(applyFilters(app.items, app.settings));
+  const byId = new Map(eligible.map(it => [it.id, it]));
 
   const sessionSeen = getSessionSeenSet();
   const persistentSeen = getPersistentSeenSet();
 
-  if (sessionSeen.size >= DEFAULTS.sessionCap) {
-    feedEl.appendChild(buildStopScreen());
-    setPager(1, 1, true);
-    return;
-  }
+  let pageIds = loadJSON(SESSION_KEYS.pageIds, [], sessionStorage);
+  pageIds = (Array.isArray(pageIds) ? pageIds : []).filter(id => byId.has(id));
 
-  if (!items || items.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "card";
-    empty.textContent = "No posts match your filters (or you have already seen them).";
-    feedEl.appendChild(empty);
-    setPager(1, 1, false);
-    return;
-  }
-
-  const idOrder = shuffledIdsForSession(items, seedStr);
-  const byId = new Map(items.map(it => [it.id, it]));
-  const randomized = idOrder.map(id => byId.get(id)).filter(Boolean);
-
-  const totalPages = Math.ceil(randomized.length / perPage);
-  const p = clamp(page, 1, totalPages);
-
-  const start = (p - 1) * perPage;
-  const pageItems = randomized.slice(start, start + perPage);
-
-  let stopReached = false;
-
-  for (const it of pageItems) {
-    if (sessionSeen.size >= DEFAULTS.sessionCap) {
-      stopReached = true;
-      break;
+  if (pageIds.length === 0) {
+    const budget = DEFAULTS.sessionCap - sessionSeen.size;
+    if (budget > 0) {
+      pageIds = eligible
+        .filter(it => !persistentSeen.has(it.id))
+        .slice(0, Math.min(DEFAULTS.perPage, budget))
+        .map(it => it.id);
     }
-    feedEl.appendChild(buildCard(it, sessionSeen, persistentSeen, showComments));
+  }
+  saveJSON(SESSION_KEYS.pageIds, pageIds, sessionStorage);
+
+  for (const id of pageIds) {
+    feedEl.appendChild(buildCard(byId.get(id), sessionSeen, persistentSeen, app.settings.showComments));
   }
 
   setSessionSeenSet(sessionSeen);
   setPersistentSeenSet(persistentSeen);
 
-  if (sessionSeen.size >= DEFAULTS.sessionCap) {
-    stopReached = true;
+  const capReached = sessionSeen.size >= DEFAULTS.sessionCap;
+  const unseenLeft = eligible.some(it => !persistentSeen.has(it.id));
+
+  if (capReached) {
     feedEl.appendChild(buildStopScreen());
+  } else if (pageIds.length === 0) {
+    const empty = document.createElement("div");
+    empty.className = "card";
+    empty.textContent = "No posts match your filters (or you have already seen them).";
+    feedEl.appendChild(empty);
   }
 
-  setPager(p, totalPages, stopReached);
-  saveJSON(STORAGE_KEYS.page, p);
+  const page = loadJSON(STORAGE_KEYS.page, 1);
+  setPager(typeof page === "number" ? page : 1, !capReached && unseenLeft);
+  renderSessionStatus(app, sessionSeen.size);
+}
+
+function renderSessionStatus(app, seenThisSession) {
+  const remaining = Math.max(0, DEFAULTS.sessionCap - seenThisSession);
+  const capMsg = remaining > 0 ? `${remaining} remaining this session` : "Session limit reached";
+  const upd = app.updatedLabel ? ` • ${app.updatedLabel}` : "";
+  renderStatusWithMealNote(`${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`);
+  const bar = document.getElementById("progressBar");
+  if (bar) bar.style.setProperty("--pct", `${Math.round((seenThisSession / DEFAULTS.sessionCap) * 100)}%`);
 }
 
 /* ----------------- events + lifecycle ----------------- */
@@ -628,107 +691,46 @@ function installActivityHooks() {
   });
 }
 
-function wireEvents(app, updatedLabel) {
-  const banEl = document.getElementById("banlist");
+function wireEvents(app) {
+  const settingsEl = document.querySelector(".settings");
 
-  const saveBtn = document.getElementById("saveSettings");
-  const resetBtn = document.getElementById("resetSettings");
-
-  const nextBtn = document.getElementById("next");
-
-  function setSessionStatus() {
-    const seenThisSession = getSessionSeenSet().size;
-    const remaining = Math.max(0, DEFAULTS.sessionCap - seenThisSession);
-    const capMsg = remaining > 0 ? `${remaining} remaining this session` : "Session limit reached";
-    const upd = updatedLabel ? ` • ${updatedLabel}` : "";
-    const base = `${DEFAULTS.sessionCap} posts per session • ${capMsg}${upd}`;
-    renderStatusWithMealNote(base);
-    const bar = document.getElementById("progressBar");
-    if (bar) bar.style.setProperty("--pct", `${Math.round((seenThisSession / DEFAULTS.sessionCap) * 100)}%`);
-  }
-
-  function rerender(resetToFirstPage = false, persist = true) {
+  function applySettingsFromUI() {
     touchLastActive();
-
-    const { banWords, showTextOnly, showComments, allowedSubs } = getStateFromUI();
-    const persistentSeen = getPersistentSeenSet();
-    const filtered = applyFilters(app.items, allowedSubs, banWords, showTextOnly, persistentSeen);
-
-    const pageStored = loadJSON(STORAGE_KEYS.page, 1);
-    const page = resetToFirstPage ? 1 : pageStored;
-
-    if (persist) persistStateFromUI(allowedSubs);
-
-    const seedStr = [
-      app.feedGeneratedAt,
-      allowedSubs.join("|"),
-      document.getElementById("banlist").value || "",
-      showTextOnly ? "T" : "F"
-    ].join("::");
-
-    setSessionStatus();
-    render(filtered, page, DEFAULTS.perPage, showComments, seedStr);
-    app.filtered = filtered;
+    app.settings = readSettingsFromUI(app.available);
+    saveSettings(app.settings, app.available);
+    renderFeed(app);
   }
 
-  function resetSessionShuffleAndRerender() {
-    sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
-    saveJSON(STORAGE_KEYS.page, 1, localStorage);
-    rerender(true);
+  document.getElementById("banlist").addEventListener("input", debounce(applySettingsFromUI, 300));
+  for (const id of ["showTextOnly", "showComments", "subreddits"]) {
+    document.getElementById(id).addEventListener("change", applySettingsFromUI);
   }
 
-  function settingsChanged(allowedSubs) {
-    const storedBanlist  = loadJSON(STORAGE_KEYS.banlist, DEFAULTS.banlist);
-    const storedTextOnly = loadJSON(STORAGE_KEYS.showTextOnly, DEFAULTS.showTextOnly);
-    const storedComments = loadJSON(STORAGE_KEYS.showComments, DEFAULTS.showComments);
-    const storedSubs     = loadJSON(STORAGE_KEYS.subreddits, DEFAULTS.subreddits);
-
-    if ((document.getElementById("banlist").value || "") !== storedBanlist) return true;
-    if (document.getElementById("showTextOnly").checked !== !!storedTextOnly) return true;
-    if (document.getElementById("showComments").checked !== !!storedComments) return true;
-
-    const currentKey = allowedSubs.map(s => s.toLowerCase()).sort().join("|");
-    const storedKey  = (storedSubs || []).map(s => s.toLowerCase()).sort().join("|");
-    if (currentKey !== storedKey) return true;
-
-    return false;
-  }
-
-  banEl.addEventListener("input", debounce(resetSessionShuffleAndRerender, 300));
-
-  saveBtn.addEventListener("click", () => {
-    document.querySelector(".settings").removeAttribute("open");
-    const { allowedSubs } = getStateFromUI();
-    if (settingsChanged(allowedSubs)) rerender(true);
+  document.getElementById("saveSettings").addEventListener("click", () => {
+    settingsEl.removeAttribute("open");
   });
 
-  resetBtn.addEventListener("click", () => {
-    document.getElementById("subreddits").value = DEFAULTS.subreddits.join("\n");
-    document.getElementById("banlist").value = DEFAULTS.banlist;
-    document.getElementById("showTextOnly").checked = DEFAULTS.showTextOnly;
-    document.getElementById("showComments").checked = DEFAULTS.showComments;
-
-    saveJSON(STORAGE_KEYS.page, 1, localStorage);
-    sessionStorage.removeItem(SESSION_KEYS.seenIds);
-    sessionStorage.removeItem(SESSION_KEYS.shuffledIds);
-
-    rerender(true);
+  document.getElementById("resetSettings").addEventListener("click", () => {
+    writeSettingsToUI(app.available, {
+      banlist: DEFAULTS.banlist,
+      showTextOnly: DEFAULTS.showTextOnly,
+      showComments: DEFAULTS.showComments,
+      subreddits: DEFAULTS.subreddits
+    });
+    clearSessionState();
+    applySettingsFromUI();
   });
 
-  nextBtn.addEventListener("click", () => {
-    const current = loadJSON(STORAGE_KEYS.page, 1);
-    const perPage = DEFAULTS.perPage;
-    const totalPages = Math.ceil((app.filtered || []).length / perPage);
-    const nextPage = Math.min(totalPages, (current || 1) + 1);
-
+  document.getElementById("next").addEventListener("click", () => {
     showBreathThenContinue(() => {
-      saveJSON(STORAGE_KEYS.page, nextPage);
-      rerender(false, false);
+      touchLastActive();
+      const page = loadJSON(STORAGE_KEYS.page, 1);
+      saveJSON(STORAGE_KEYS.page, (typeof page === "number" ? page : 1) + 1);
+      sessionStorage.removeItem(SESSION_KEYS.pageIds);
+      renderFeed(app);
       window.scrollTo({ top: 0, behavior: "instant" });
     });
   });
-
-  rerender(false);
 }
 
 /* ----------------- main ----------------- */
@@ -736,10 +738,9 @@ function wireEvents(app, updatedLabel) {
 (async function main() {
   applyTimeOfDayTheme();
   migrateIfNeeded();
-  maybeResetSessionForMobile();
+  const previousActiveMs = maybeResetSessionForMobile();
   installActivityHooks();
 
-  restoreUIFromStorage();
   setStatus("Loading…");
 
   try {
@@ -750,12 +751,28 @@ function wireEvents(app, updatedLabel) {
       saveJSON(STORAGE_KEYS.feedGeneratedAt, data.generated_at_utc, localStorage);
     }
 
-    const updatedLabel = humanUpdatedLabel(data.generated_at_utc) || "";
-    const base = `${DEFAULTS.sessionCap} posts per session • ${updatedLabel}`;
-    showMealNudgeIfNeeded(base);
+    // Only subreddits present in feed.json can be shown; offer exactly those.
+    const available = uniqNormSubs(
+      Array.isArray(data.subreddits_source) && data.subreddits_source.length
+        ? data.subreddits_source
+        : items.map(it => it.subreddit)
+    );
 
-    const app = { items, filtered: [], feedGeneratedAt: data.generated_at_utc || "" };
-    wireEvents(app, updatedLabel);
+    const settings = loadSettings();
+    saveSettings(settings, available);
+
+    const app = {
+      items,
+      available,
+      settings,
+      updatedLabel: humanUpdatedLabel(data.generated_at_utc) || ""
+    };
+
+    writeSettingsToUI(available, settings);
+    renderFeedNote(data);
+    wireEvents(app);
+    renderFeed(app);
+    showMealNudgeIfNeeded(previousActiveMs);
   } catch (e) {
     console.error(e);
     setStatus("Failed to load feed.json.");
@@ -767,5 +784,3 @@ function wireEvents(app, updatedLabel) {
     feedEl.appendChild(card);
   }
 })();
-
-

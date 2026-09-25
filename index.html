@@ -20,7 +20,7 @@
           <summary>Settings</summary>
           <div class="settingsBody">
             <label class="field">
-              <span class="label">Ban list (hide titles containing these words — comma separated)</span>
+              <span class="label">Ban list (hide posts whose title or text contains these words or phrases — comma separated)</span>
               <input id="banlist" type="text" autocomplete="off" placeholder="e.g., politics, war, crime" />
             </label>
 
@@ -34,13 +34,15 @@
               <span>Show Comments links</span>
             </label>
 
-            <label class="field">
-              <span class="label">Allowed subreddits (one per line)</span>
-              <textarea id="subreddits" rows="6" spellcheck="false" placeholder="e.g. EarthPorn&#10;Eyebleach"></textarea>
-            </label>
+            <fieldset class="field subFieldset">
+              <legend class="label">Subreddits to show</legend>
+              <div id="subreddits" class="subList"></div>
+              <p class="label hint">Only subreddits listed in <code>subreddits_source.txt</code> are fetched. Add a line there to make a new one available.</p>
+              <p id="feedNote" class="label hint" hidden></p>
+            </fieldset>
 
             <div class="row">
-              <button id="saveSettings" class="btn" type="button">Save</button>
+              <button id="saveSettings" class="btn" type="button">Done</button>
               <button id="resetSettings" class="btn ghost" type="button">Reset to defaults</button>
             </div>
           </div>
@@ -62,7 +64,7 @@
     </nav>
   </main>
 
-  <script src="app.js?v=20260331-5"></script>
+  <script src="app.js?v=20260925-1"></script>
 </body>
 </html>
 
