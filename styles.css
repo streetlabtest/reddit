@@ -84,6 +84,19 @@ input[type="text"]:focus, textarea:focus { border-color: var(--focus); }
 
 .toggle input { transform: translateY(1px); }
 
+.subFieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.subList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px 16px;
+}
+
 .settings {
   border: 1px solid var(--border);
   border-radius: 12px;
