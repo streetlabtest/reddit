@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-01T20:48:57.575439+00:00",
+  "generated_at_utc": "2026-10-02T04:18:51.041828+00:00",
   "subreddits_source": [
     "dankmemes",
     "EarthPorn",
@@ -11,15 +11,642 @@
   ],
   "errors": {},
   "last_fetched_utc": {
-    "dankmemes": "2026-10-01T20:48:57.575439+00:00",
-    "EarthPorn": "2026-10-01T20:48:57.575439+00:00",
-    "me_irl": "2026-10-01T20:48:57.575439+00:00",
-    "meirl": "2026-10-01T20:48:57.575439+00:00",
-    "NatureIsFuckingLit": "2026-10-01T20:48:57.575439+00:00",
-    "PsychologyMemes": "2026-10-01T20:48:57.575439+00:00",
-    "SurrealMemes": "2026-10-01T20:48:57.575439+00:00"
+    "dankmemes": "2026-10-02T04:18:51.041828+00:00",
+    "EarthPorn": "2026-10-02T04:18:51.041828+00:00",
+    "me_irl": "2026-10-02T04:18:51.041828+00:00",
+    "meirl": "2026-10-02T04:18:51.041828+00:00",
+    "NatureIsFuckingLit": "2026-10-02T04:18:51.041828+00:00",
+    "PsychologyMemes": "2026-10-02T04:18:51.041828+00:00",
+    "SurrealMemes": "2026-10-02T04:18:51.041828+00:00"
   },
   "items": [
+    {
+      "id": "t3_1wvk2qw",
+      "subreddit": "EarthPorn",
+      "title": "El Capitan, Southwest Face, Yosemite Valle [OC] [2048 x 1363]",
+      "text": "",
+      "image": "https://preview.redd.it/4g2siybw9zsh1.jpeg?width=640&crop=smart&auto=webp&s=7ae9fb217fe598a4a3e6696df90b66b7e71437d2",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvk2qw/el_capitan_southwest_face_yosemite_valle_oc_2048/",
+      "external_url": "https://i.redd.it/4g2siybw9zsh1.jpeg",
+      "created_utc": 1790913726,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjynn",
+      "subreddit": "dankmemes",
+      "title": "Hit the pen and watch Scooby-Doo 2002, its a trip",
+      "text": "",
+      "image": "https://preview.redd.it/1k8cck3u8zsh1.jpeg?width=640&crop=smart&auto=webp&s=a90e228b902fc9b53dd3f7acf42fcdaad9294714",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvjynn/hit_the_pen_and_watch_scoobydoo_2002_its_a_trip/",
+      "external_url": "https://i.redd.it/1k8cck3u8zsh1.jpeg",
+      "created_utc": 1790913393,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjxlj",
+      "subreddit": "EarthPorn",
+      "title": "The valley of Yosemite, California [OC] [2048 x 1363]",
+      "text": "",
+      "image": "https://preview.redd.it/pt0tvruk8zsh1.jpeg?width=640&crop=smart&auto=webp&s=d50a719546735807686dbffe0487b8660f36873a",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvjxlj/the_valley_of_yosemite_california_oc_2048_x_1363/",
+      "external_url": "https://i.redd.it/pt0tvruk8zsh1.jpeg",
+      "created_utc": 1790913297,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjqul",
+      "subreddit": "me_irl",
+      "title": "me irl",
+      "text": "",
+      "image": "https://preview.redd.it/t0wiimaw6zsh1.jpeg?width=320&crop=smart&auto=webp&s=47ad142dc396e9d8e941d90fb5fc6fccc5ddca42",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wvjqul/me_irl/",
+      "external_url": "https://i.redd.it/t0wiimaw6zsh1.jpeg",
+      "created_utc": 1790912686,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjqe0",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/7yso9xhr6zsh1.jpeg?width=320&crop=smart&auto=webp&s=a7f92738265394642d0940a2d692639e83e3f514",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvjqe0/meirl/",
+      "external_url": "https://i.redd.it/7yso9xhr6zsh1.jpeg",
+      "created_utc": 1790912641,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjoqg",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/jfsdkgsa6zsh1.jpeg?width=640&crop=smart&auto=webp&s=fef53b2b5413233a1b5bb7efee03533603ca3bf0",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvjoqg/meirl/",
+      "external_url": "https://i.redd.it/jfsdkgsa6zsh1.jpeg",
+      "created_utc": 1790912486,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvjkev",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/y2gy2ds35zsh1.jpeg?width=640&crop=smart&auto=webp&s=15e7bac08c8047bc3bf0950231cd404f12bd2eca",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvjkev/meirl/",
+      "external_url": "https://i.redd.it/y2gy2ds35zsh1.jpeg",
+      "created_utc": 1790912085,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvit6c",
+      "subreddit": "dankmemes",
+      "title": "Maybe God has a sense of humor",
+      "text": "",
+      "image": "https://preview.redd.it/3yvx25dyxysh1.jpeg?width=640&crop=smart&auto=webp&s=e8c6e7ecce62bfe6772c2817d2d3505dcd94ef02",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvit6c/maybe_god_has_a_sense_of_humor/",
+      "external_url": "https://i.redd.it/3yvx25dyxysh1.jpeg",
+      "created_utc": 1790909679,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvit2e",
+      "subreddit": "dankmemes",
+      "title": "(Almost) Every type of Incel Online",
+      "text": "",
+      "image": "https://preview.redd.it/6bjt85evxysh1.jpeg?width=640&crop=smart&auto=webp&s=afadf8ad338f4816bd3d9e0b0649a8ad75f8cd8e",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvit2e/almost_every_type_of_incel_online/",
+      "external_url": "https://i.redd.it/6bjt85evxysh1.jpeg",
+      "created_utc": 1790909670,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvi5ze",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Big Beehive Trail, Lake Louise",
+      "text": "This was worth every switchback",
+      "image": "https://preview.redd.it/10lzmf1zrysh1.jpeg?width=640&crop=smart&auto=webp&s=c6587e20e9acecfbfb1385fe8931e82eb33f7467",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvi5ze/big_beehive_trail_lake_louise/",
+      "external_url": "https://i.redd.it/10lzmf1zrysh1.jpeg",
+      "created_utc": 1790907673,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvi3wg",
+      "subreddit": "dankmemes",
+      "title": "Spooktober doesn’t need skeletons",
+      "text": "",
+      "image": "https://preview.redd.it/y7vnf15hrysh1.gif?width=640&crop=smart&s=c6f33e50239298386cb23f1976ef97593cd095eb",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvi3wg/spooktober_doesnt_need_skeletons/",
+      "external_url": "https://i.redd.it/y7vnf15hrysh1.gif",
+      "created_utc": 1790907502,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvi38i",
+      "subreddit": "EarthPorn",
+      "title": "Wakefield, Michigan (2048x1536) oc",
+      "text": "",
+      "image": "https://preview.redd.it/4wigtsfbrysh1.jpeg?width=640&crop=smart&auto=webp&s=a3a513c79f6ef92260593975e228be36d8f86f39",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvi38i/wakefield_michigan_2048x1536_oc/",
+      "external_url": "https://i.redd.it/4wigtsfbrysh1.jpeg",
+      "created_utc": 1790907446,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhzee",
+      "subreddit": "EarthPorn",
+      "title": "Upcountry Maui overlooking South Maui and the West Maui Mountains [OC] [1536×1024]",
+      "text": "",
+      "image": "https://preview.redd.it/ckya019bqysh1.jpeg?width=640&crop=smart&auto=webp&s=4e0596fe99931a854ac26a442cb98d30a3388669",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvhzee/upcountry_maui_overlooking_south_maui_and_the/",
+      "external_url": "https://i.redd.it/ckya019bqysh1.jpeg",
+      "created_utc": 1790907128,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhr0a",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Isopod Enjoying a Meal",
+      "text": "",
+      "image": "https://external-preview.redd.it/dHpvbHJmeGFveXNoMSganMbugCDbeb_QvNHNzXekOKLcv-G7H3asdWf4rYty.png?width=640&crop=smart&auto=webp&s=36d9f43e57df99a544eef173c3b6742f486d06d0",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvhr0a/isopod_enjoying_a_meal/",
+      "external_url": "https://v.redd.it/aqpj0pvaoysh1",
+      "created_utc": 1790906438,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhlb7",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/55q3v7aymysh1.jpeg?width=640&crop=smart&auto=webp&s=b03b8047cf6ad287226f9cdffe4fa86d967337e9",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvhlb7/meirl/",
+      "external_url": "https://i.redd.it/55q3v7aymysh1.jpeg",
+      "created_utc": 1790905980,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhl2f",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/5qn51gbwmysh1.jpeg?width=640&crop=smart&auto=webp&s=bf593bc12c985ad9698838de55db931591f06ef5",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvhl2f/meirl/",
+      "external_url": "https://i.redd.it/5qn51gbwmysh1.jpeg",
+      "created_utc": 1790905960,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhg4s",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥Cheetah Crossing a River",
+      "text": "Not OC, hijacked from FB because it was too bad ass not to share.",
+      "image": "https://external-preview.redd.it/YzFrcDhieG9seXNoMRe09e-r2x097SbWw64FXRXsp21bPH2rZf4fx0rzYI7p.jpeg?width=640&crop=smart&auto=webp&s=e2095b19a68d37af3ee7bdc4417b52192ea8dc31",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvhg4s/cheetah_crossing_a_river/",
+      "external_url": "https://v.redd.it/do6dnryolysh1",
+      "created_utc": 1790905556,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhf7r",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/ryj1hn6glysh1.jpeg?width=640&crop=smart&auto=webp&s=0c3fa7bf5f704b340105694077f844fcc7fe3d96",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvhf7r/meirl/",
+      "external_url": "https://i.redd.it/ryj1hn6glysh1.jpeg",
+      "created_utc": 1790905480,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvhemn",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 These trees look mesmerizing! Back roads can hold the most beautiful scenery.",
+      "text": "EDIT: I was not aware that this is kudzu covering the trees. Thank you all for the info.",
+      "image": "https://external-preview.redd.it/M2NjeHV5aGJseXNoMUiyXSOZYfXB-XjfTZgciQSzwIfKJsAp2Q5LKBE70P00.jpeg?width=640&crop=smart&auto=webp&s=0275d245afea24934bc6c157161b05b12f151340",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvhemn/these_trees_look_mesmerizing_back_roads_can_hold/",
+      "external_url": "https://v.redd.it/ngtcxvjblysh1",
+      "created_utc": 1790905433,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvh5zx",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://external-preview.redd.it/bzJvNmRjZTlqeXNoMbu5ZfOzKaf837j5Sc2DflYbvVw20-wSRPZDRZXREhDm.png?width=640&crop=smart&auto=webp&s=de400fb6efe8ea55a817d3f27680ad5ee4c381e6",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvh5zx/meirl/",
+      "external_url": "https://v.redd.it/fj5zy0w7jysh1",
+      "created_utc": 1790904737,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvh5tz",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Just The Tip In The Water",
+      "text": "",
+      "image": "https://preview.redd.it/udl63wv7jysh1.jpeg?width=640&crop=smart&auto=webp&s=85526f6010b6429e1c545c0fd2fdf702958c0ab0",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvh5tz/just_the_tip_in_the_water/",
+      "external_url": "https://i.redd.it/udl63wv7jysh1.jpeg",
+      "created_utc": 1790904723,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvh4z7",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 American Alligator Showing Off Pearly Whites.",
+      "text": "",
+      "image": "https://preview.redd.it/5rupuv70jysh1.jpeg?width=640&crop=smart&auto=webp&s=b72f43fd2586a7680b89bfdfc7980b680d93b2ef",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvh4z7/american_alligator_showing_off_pearly_whites/",
+      "external_url": "https://i.redd.it/5rupuv70jysh1.jpeg",
+      "created_utc": 1790904651,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvgyfk",
+      "subreddit": "EarthPorn",
+      "title": "A majestic bolete guarding the forest path. Wooded trail in West Virginia. [OC] [3024x4032]",
+      "text": "",
+      "image": "https://preview.redd.it/vu58x0tdhysh1.jpeg?width=640&crop=smart&auto=webp&s=f02769d0db9179541d05a9e3d0928e057b7ee802",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvgyfk/a_majestic_bolete_guarding_the_forest_path_wooded/",
+      "external_url": "https://i.redd.it/vu58x0tdhysh1.jpeg",
+      "created_utc": 1790904113,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvgw3c",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/046tqomugysh1.jpeg?width=640&crop=smart&auto=webp&s=db4218ad8a9ca4ecce3c6694797d35c65b97ef8e",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvgw3c/meirl/",
+      "external_url": "https://i.redd.it/046tqomugysh1.jpeg",
+      "created_utc": 1790903926,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvggni",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/n8b8hsrbdysh1.jpeg?width=640&crop=smart&auto=webp&s=c31b853eb3e1640768897ea479182cfaace25be7",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvggni/meirl/",
+      "external_url": "https://i.redd.it/n8b8hsrbdysh1.jpeg",
+      "created_utc": 1790902746,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvgfap",
+      "subreddit": "EarthPorn",
+      "title": "Peck Lake - Algonquin Provincial Park [OC] [2000x1333]",
+      "text": "",
+      "image": "https://preview.redd.it/i0p2j1lzcysh1.jpeg?width=640&crop=smart&auto=webp&s=57fc2153dfdf41bbcaa87c5b992e762610512ddf",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvgfap/peck_lake_algonquin_provincial_park_oc_2000x1333/",
+      "external_url": "https://i.redd.it/i0p2j1lzcysh1.jpeg",
+      "created_utc": 1790902628,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvgc9a",
+      "subreddit": "EarthPorn",
+      "title": "Fog in the smokies national park, Tennessee [3000x4000] (OC)",
+      "text": "",
+      "image": "https://preview.redd.it/ec63rfl8cysh1.jpeg?width=640&crop=smart&auto=webp&s=c567983dd14551220d91be2b78e1ab4c3c4c984b",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvgc9a/fog_in_the_smokies_national_park_tennessee/",
+      "external_url": "https://i.redd.it/ec63rfl8cysh1.jpeg",
+      "created_utc": 1790902376,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvg6fp",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/i2pziliuaysh1.jpeg?width=640&crop=smart&auto=webp&s=768170ff7321468dfccb90fcc753cdac224279f8",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wvg6fp/me_irl/",
+      "external_url": "https://i.redd.it/i2pziliuaysh1.jpeg",
+      "created_utc": 1790901908,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfqqy",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Gorgeous web of my resident Cross Orb Weaver",
+      "text": "",
+      "image": "https://preview.redd.it/siu7ypl27ysh1.jpeg?width=640&crop=smart&auto=webp&s=f2d415a25fd7573caf89461cadb8a631b46f8ab2",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvfqqy/gorgeous_web_of_my_resident_cross_orb_weaver/",
+      "external_url": "https://i.redd.it/siu7ypl27ysh1.jpeg",
+      "created_utc": 1790900647,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfgye",
+      "subreddit": "dankmemes",
+      "title": "They have become the very thing they swore to destroy",
+      "text": "",
+      "image": "https://preview.redd.it/fo0jz06d4ysh1.jpeg?width=320&crop=smart&auto=webp&s=abbb1d946b5fdce218cc22b610e1fc3ad7a0c605",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvfgye/they_have_become_the_very_thing_they_swore_to/",
+      "external_url": "https://i.redd.it/fo0jz06d4ysh1.jpeg",
+      "created_utc": 1790899873,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfe5h",
+      "subreddit": "dankmemes",
+      "title": "skid marks",
+      "text": "",
+      "image": "https://preview.redd.it/pg5v39i44ysh1.jpeg?width=640&crop=smart&auto=webp&s=1f03393d21442886978609a2a16bf503009697f2",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvfe5h/skid_marks/",
+      "external_url": "https://i.redd.it/pg5v39i44ysh1.jpeg",
+      "created_utc": 1790899647,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfdg7",
+      "subreddit": "EarthPorn",
+      "title": "Moody day in the North Cascades, Washington (3086x4111)(OC)",
+      "text": "",
+      "image": "https://preview.redd.it/yloyd2zx3ysh1.jpeg?width=640&crop=smart&auto=webp&s=3dd903e7e69c8fbb9d40332da966439788ca4fad",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvfdg7/moody_day_in_the_north_cascades_washington/",
+      "external_url": "https://i.redd.it/yloyd2zx3ysh1.jpeg",
+      "created_utc": 1790899586,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfd0o",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://external-preview.redd.it/YzFqeW4zZHUzeXNoMVR-7t0ypsVJiWVavkExzrjn6MQl-l95_Yy5E4s0w5t4.png?width=320&crop=smart&auto=webp&s=d72d6c897d94313a66717dae89306c804973e014",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvfd0o/meirl/",
+      "external_url": "https://v.redd.it/m9k0d6gu3ysh1",
+      "created_utc": 1790899554,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfcv4",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/bgczwugt3ysh1.jpeg?width=320&crop=smart&auto=webp&s=e84b87418770b456562523ce52c17500a5200005",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvfcv4/meirl/",
+      "external_url": "https://i.redd.it/bgczwugt3ysh1.jpeg",
+      "created_utc": 1790899543,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfc39",
+      "subreddit": "dankmemes",
+      "title": "buff",
+      "text": "",
+      "image": "https://preview.redd.it/bwh90pdl3ysh1.gif?width=640&crop=smart&s=b30c3687e656b7a875dc045534c1dcea9900d224",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvfc39/buff/",
+      "external_url": "https://i.redd.it/bwh90pdl3ysh1.gif",
+      "created_utc": 1790899489,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvfa16",
+      "subreddit": "dankmemes",
+      "title": "thinking…",
+      "text": "",
+      "image": "https://preview.redd.it/i4xolcs53ysh1.jpeg?width=640&crop=smart&auto=webp&s=7218c28f325106fd6616211815e61728666773f8",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvfa16/thinking/",
+      "external_url": "https://i.redd.it/i4xolcs53ysh1.jpeg",
+      "created_utc": 1790899323,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvewa9",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥A little soul [oc]",
+      "text": "",
+      "image": "https://preview.redd.it/um9bw7f10ysh1.jpeg?width=640&crop=smart&auto=webp&s=d6e3a4e42817a2e69902bb608fedbd4c317770cc",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvewa9/a_little_soul_oc/",
+      "external_url": "https://i.redd.it/um9bw7f10ysh1.jpeg",
+      "created_utc": 1790898274,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvepvi",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/brt7pl5kyxsh1.png?width=640&crop=smart&auto=webp&s=36bf7ab9d9c070492db07a7d79da20fc2dc879ae",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvepvi/meirl/",
+      "external_url": "https://i.redd.it/brt7pl5kyxsh1.png",
+      "created_utc": 1790897775,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvekqy",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/83l9ua3exxsh1.jpeg?width=320&crop=smart&auto=webp&s=50fbe1f9fe0888e2c5dda50b0132b0194f576bce",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvekqy/meirl/",
+      "external_url": "https://i.redd.it/83l9ua3exxsh1.jpeg",
+      "created_utc": 1790897382,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvdpcg",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/bkj5juqaqxsh1.jpeg?width=640&crop=smart&auto=webp&s=2e9e49461c84a219226c461f43e5a84231bf278d",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wvdpcg/me_irl/",
+      "external_url": "https://i.redd.it/bkj5juqaqxsh1.jpeg",
+      "created_utc": 1790894997,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvdo0f",
+      "subreddit": "me_irl",
+      "title": "me_irl",
+      "text": "",
+      "image": "https://preview.redd.it/7qa88hezpxsh1.jpeg?width=640&crop=smart&auto=webp&s=c832a6775820be51015d5210f2cbe17d647595aa",
+      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wvdo0f/me_irl/",
+      "external_url": "https://i.redd.it/7qa88hezpxsh1.jpeg",
+      "created_utc": 1790894892,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvdmnf",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 bee buzzing pollen pants",
+      "text": "",
+      "image": "https://external-preview.redd.it/bnBkazlxMDlueHNoMZgoBUBGXJq-aZzTZiRHd0yxapKZtNh3krT7VpnhqIQj.png?width=320&crop=smart&auto=webp&s=a0286bc5d18aaf2411f0fb8f308a55ed290a1dfb",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvdmnf/bee_buzzing_pollen_pants/",
+      "external_url": "https://v.redd.it/4e4kva33pxsh1",
+      "created_utc": 1790894783,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvdg4w",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 A diver recorded this floating in the ocean",
+      "text": "",
+      "image": "https://external-preview.redd.it/aHU2bW93YzZveHNoMSB_NeMWjRqP-XXglAD_3SkDixlOafH0bz3Vd64bWSru.jpeg?width=320&crop=smart&auto=webp&s=77e1efbcd69a751ddb5b081440c47a90dcbdd56f",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvdg4w/a_diver_recorded_this_floating_in_the_ocean/",
+      "external_url": "https://v.redd.it/zrxjzkf6oxsh1",
+      "created_utc": 1790894287,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvdanz",
+      "subreddit": "dankmemes",
+      "title": "The difference between red and violet",
+      "text": "",
+      "image": "https://preview.redd.it/7s5xwh6ymxsh1.png?width=320&crop=smart&auto=webp&s=91a5304ae9420b4e675ed8a180cc47532466c35c",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvdanz/the_difference_between_red_and_violet/",
+      "external_url": "https://i.redd.it/7s5xwh6ymxsh1.png",
+      "created_utc": 1790893880,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcy54",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/6riydcf6kxsh1.jpeg?width=640&crop=smart&auto=webp&s=abca707dfe14c22864960d6ef7150f40acffd07b",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvcy54/meirl/",
+      "external_url": "https://i.redd.it/6riydcf6kxsh1.jpeg",
+      "created_utc": 1790892945,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcy34",
+      "subreddit": "meirl",
+      "title": "meirl",
+      "text": "",
+      "image": "https://preview.redd.it/3u4lxen6kxsh1.jpeg?width=640&crop=smart&auto=webp&s=6c46748ba0b131555785d2d83ddddb8aa3ba59fc",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvcy34/meirl/",
+      "external_url": "https://i.redd.it/3u4lxen6kxsh1.jpeg",
+      "created_utc": 1790892941,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcx50",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/xemkhcizjxsh1.jpeg?width=640&crop=smart&auto=webp&s=db7a442325eff7bb20476a98407dd9dd1515ea7f",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvcx50/meirl/",
+      "external_url": "https://i.redd.it/xemkhcizjxsh1.jpeg",
+      "created_utc": 1790892874,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcw60",
+      "subreddit": "meirl",
+      "title": "Meirl",
+      "text": "",
+      "image": "https://preview.redd.it/90e789drjxsh1.jpeg?width=640&crop=smart&auto=webp&s=902a667fb354e356ef58b2951d22a0a79ee11b4b",
+      "comments_url": "https://www.reddit.com/r/meirl/comments/1wvcw60/meirl/",
+      "external_url": "https://i.redd.it/90e789drjxsh1.jpeg",
+      "created_utc": 1790892799,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcizo",
+      "subreddit": "dankmemes",
+      "title": "⠀⠀⠀⠀",
+      "text": "",
+      "image": "https://preview.redd.it/udxunk7ygxsh1.jpeg?width=320&crop=smart&auto=webp&s=e865d3e6a11dfe4276e5948e839b8bc7121d4ccc",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvcizo/_/",
+      "external_url": "https://i.redd.it/udxunk7ygxsh1.jpeg",
+      "created_utc": 1790891870,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvccud",
+      "subreddit": "dankmemes",
+      "title": "Hendimen",
+      "text": "",
+      "image": "https://preview.redd.it/4m2ebywffxsh1.jpeg?width=320&crop=smart&auto=webp&s=03ec29449578ab9eecb0f086bcc706666896fbb8",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvccud/hendimen/",
+      "external_url": "https://i.redd.it/4m2ebywffxsh1.jpeg",
+      "created_utc": 1790891426,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvcawf",
+      "subreddit": "SurrealMemes",
+      "title": "I can prove it!",
+      "text": "",
+      "image": "https://preview.redd.it/sugt5vq9fxsh1.jpeg?width=640&crop=smart&auto=webp&s=e25d2b10e5db57ad53baa364bb8a833e7ac084ba",
+      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wvcawf/i_can_prove_it/",
+      "external_url": "https://i.redd.it/sugt5vq9fxsh1.jpeg",
+      "created_utc": 1790891289,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvc6qm",
+      "subreddit": "EarthPorn",
+      "title": "Early mornings at Mussoorie, Uttarakhand, India [OC] (4983X 3322)",
+      "text": "",
+      "image": "https://preview.redd.it/9itln4sxdxsh1.jpeg?width=640&crop=smart&auto=webp&s=83327cf0eb3f22cc4eb910d8eb17624416c6f6ec",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvc6qm/early_mornings_at_mussoorie_uttarakhand_india_oc/",
+      "external_url": "https://i.redd.it/9itln4sxdxsh1.jpeg",
+      "created_utc": 1790890997,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvbiow",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Oh to be a Wild Horse in rural Albania",
+      "text": "",
+      "image": "https://external-preview.redd.it/ZXExMm0zajI5eHNoMZS0J-DZePkA3i5JEYcinKcF2GPZCpy0W61_G9VIk0q4.jpeg?width=640&crop=smart&auto=webp&s=8811175af8b98dffe47dd75812ff14a8be8c1636",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvbiow/oh_to_be_a_wild_horse_in_rural_albania/",
+      "external_url": "https://v.redd.it/961au6o29xsh1",
+      "created_utc": 1790889274,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvbi3o",
+      "subreddit": "EarthPorn",
+      "title": "Wood River Valley, ID [OC] [7008x4672]",
+      "text": "",
+      "image": "https://preview.redd.it/jxo5rqi59xsh1.jpeg?width=640&crop=smart&auto=webp&s=40b78219c526a3fa04e4f981645469378a3ffa0b",
+      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wvbi3o/wood_river_valley_id_oc_7008x4672/",
+      "external_url": "https://i.redd.it/jxo5rqi59xsh1.jpeg",
+      "created_utc": 1790889235,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvbap5",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 When mom's tail is the only play toy you have.",
+      "text": "",
+      "image": "https://external-preview.redd.it/NDVmZ2kweW43eHNoMV67vpKYAyUeYAOyen2XnxSEXDGyfGJCg44U1qWf8zaP.jpeg?width=640&crop=smart&auto=webp&s=0b39399c5da13f4628cdf754af1e6ad9d4e020fe",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvbap5/when_moms_tail_is_the_only_play_toy_you_have/",
+      "external_url": "https://v.redd.it/2imjcs2o7xsh1",
+      "created_utc": 1790888739,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvb70k",
+      "subreddit": "NatureIsFuckingLit",
+      "title": "🔥 Little roadrunner courting his own reflection in the door mirror.",
+      "text": "Video credited to @b.b.schmidt on Instagram.",
+      "image": "https://external-preview.redd.it/dW1tcG9kNng2eHNoMS6payQVQMVPAnmFq1prGfZkPTDQI4XGv9yQp_54CJf4.jpeg?width=320&crop=smart&auto=webp&s=81e600add2d54834fcc782d7ef26e6b9a6a6a5a5",
+      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wvb70k/little_roadrunner_courting_his_own_reflection_in/",
+      "external_url": "https://v.redd.it/opktcl9x6xsh1",
+      "created_utc": 1790888485,
+      "is_text_only": false
+    },
+    {
+      "id": "t3_1wvb457",
+      "subreddit": "dankmemes",
+      "title": "Legend",
+      "text": "",
+      "image": "https://preview.redd.it/z9hqdqvd6xsh1.jpeg?width=320&crop=smart&auto=webp&s=64a91af1db2b3addee081803275b1a55b141dcf5",
+      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wvb457/legend/",
+      "external_url": "https://i.redd.it/z9hqdqvd6xsh1.jpeg",
+      "created_utc": 1790888304,
+      "is_text_only": false
+    },
     {
       "id": "t3_1wvawk8",
       "subreddit": "meirl",
@@ -945,17 +1572,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wuz5tq",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://external-preview.redd.it/dnNnMnVncXZ2dXNoMTOzK0gyCAJsblMvENJz_3B2aMf9Nq0-Jf_kajd_EznQ.png?width=640&crop=smart&auto=webp&s=41b7ee8f493afc5dc01e945c326e4457aeccf1e0",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuz5tq/meirl/",
-      "external_url": "https://v.redd.it/cpz8ittvvush1",
-      "created_utc": 1790860556,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wuz3uo",
       "subreddit": "me_irl",
       "title": "me irl",
@@ -964,17 +1580,6 @@
       "comments_url": "https://www.reddit.com/r/me_irl/comments/1wuz3uo/me_irl/",
       "external_url": "https://i.redd.it/lkkzbsadvush1.jpeg",
       "created_utc": 1790860414,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wuz0cy",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/bg837rpnuush1.jpeg?width=320&crop=smart&auto=webp&s=43d18be19dcc77b9e5dba8e636a840b8ede10792",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuz0cy/meirl/",
-      "external_url": "https://i.redd.it/bg837rpnuush1.jpeg",
-      "created_utc": 1790860143,
       "is_text_only": false
     },
     {
@@ -989,17 +1594,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wuypum",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/bgsy8gdesush1.jpeg?width=640&crop=smart&auto=webp&s=a958f3a166a8a8bf72714ed553c8bba011168af8",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuypum/meirl/",
-      "external_url": "https://i.redd.it/bgsy8gdesush1.jpeg",
-      "created_utc": 1790859382,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wuyoss",
       "subreddit": "me_irl",
       "title": "me_irl",
@@ -1008,17 +1602,6 @@
       "comments_url": "https://www.reddit.com/r/me_irl/comments/1wuyoss/me_irl/",
       "external_url": "https://v.redd.it/t3dsjq54sush1",
       "created_utc": 1790859303,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wuyo3h",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/9coz0j00sush1.png?width=640&crop=smart&auto=webp&s=405b6ded6f33887090f20e5c1d50e3cac8a743f3",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuyo3h/meirl/",
-      "external_url": "https://i.redd.it/9coz0j00sush1.png",
-      "created_utc": 1790859250,
       "is_text_only": false
     },
     {
@@ -1253,17 +1836,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wut0f2",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/x1g31crv4tsh1.jpeg?width=640&crop=smart&auto=webp&s=e6c9900bc84fcd798130b72840ba2369cd1c8aba",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wut0f2/meirl/",
-      "external_url": "https://i.redd.it/x1g31crv4tsh1.jpeg",
-      "created_utc": 1790839373,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wusszq",
       "subreddit": "EarthPorn",
       "title": "Agujas de los Alpes Fueguinos (Patagonia/Argentina)[OC]2400×1080",
@@ -1341,39 +1913,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wuqjjk",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/amnqmiq9essh1.jpeg?width=640&crop=smart&auto=webp&s=3906a225c247658d6655f5ff3af85b44df5c0365",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuqjjk/meirl/",
-      "external_url": "https://i.redd.it/amnqmiq9essh1.jpeg",
-      "created_utc": 1790830417,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wuqjii",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/enfkkjc9essh1.jpeg?width=640&crop=smart&auto=webp&s=bcab33228d1897caf3fe600203d0458271076008",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuqjii/meirl/",
-      "external_url": "https://i.redd.it/enfkkjc9essh1.jpeg",
-      "created_utc": 1790830414,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wuq8cx",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/8bm7vxb1bssh1.jpeg?width=640&crop=smart&auto=webp&s=3a0c4d49e3941e295ba0a24e5cb2f2a255c39a04",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wuq8cx/meirl/",
-      "external_url": "https://i.redd.it/8bm7vxb1bssh1.jpeg",
-      "created_utc": 1790829330,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wuq4kg",
       "subreddit": "NatureIsFuckingLit",
       "title": "🔥Scientists have discovered a new penguin species named Pygoscelis kerguelensis, also known as the southeastern gentoo penguin, living on the remote Kerguelen Islands in the southern Indian Ocean. First discovery in 100 years",
@@ -1429,17 +1968,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wupiuq",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/gwcb7m844ssh1.jpeg?width=640&crop=smart&auto=webp&s=805acd9ff96b19136f0ad39e98c2aa9805d68ad0",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wupiuq/meirl/",
-      "external_url": "https://i.redd.it/gwcb7m844ssh1.jpeg",
-      "created_utc": 1790827018,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wuphwz",
       "subreddit": "me_irl",
       "title": "Me irl",
@@ -1462,28 +1990,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wupb87",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/9yvbac442ssh1.jpeg?width=640&crop=smart&auto=webp&s=e9f6abecb18773b3867281208c3d70894d20f68d",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wupb87/meirl/",
-      "external_url": "https://i.redd.it/9yvbac442ssh1.jpeg",
-      "created_utc": 1790826329,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wupb22",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/2wo5w6t22ssh1.jpeg?width=640&crop=smart&auto=webp&s=9255c78b70d7ae94f2bed88ba4c8f7c69d1dc985",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wupb22/meirl/",
-      "external_url": "https://i.redd.it/2wo5w6t22ssh1.jpeg",
-      "created_utc": 1790826317,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wup6rz",
       "subreddit": "NatureIsFuckingLit",
       "title": "🔥 Endangered South African Penguin",
@@ -1492,17 +1998,6 @@
       "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wup6rz/endangered_south_african_penguin/",
       "external_url": "https://i.redd.it/uq7lrc0y0ssh1.jpeg",
       "created_utc": 1790825936,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wup43l",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://external-preview.redd.it/M2hjY2owYjgwc3NoMREZB-RZwFaX2qPhKdDy6VYmAbsu7hUVvUtIP0wavJn8.jpeg?width=640&crop=smart&auto=webp&s=971eca9d81539e22aa14e947c568869fbe4c364a",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wup43l/meirl/",
-      "external_url": "https://v.redd.it/3w6tltd80ssh1",
-      "created_utc": 1790825698,
       "is_text_only": false
     },
     {
@@ -1583,17 +2078,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wunkrf",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/1fl8pk00mrsh1.jpeg?width=640&crop=smart&auto=webp&s=78246ed27079658c58b4d9b8dc770c41e1e525fb",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wunkrf/meirl/",
-      "external_url": "https://i.redd.it/1fl8pk00mrsh1.jpeg",
-      "created_utc": 1790820911,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wun8dq",
       "subreddit": "dankmemes",
       "title": "The oysters were like butter",
@@ -1602,28 +2086,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wun8dq/the_oysters_were_like_butter/",
       "external_url": "https://i.redd.it/2vd12ur0jrsh1.jpeg",
       "created_utc": 1790819908,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wumpgs",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/1k30qjibersh1.png?width=640&crop=smart&auto=webp&s=5625d6c30c5dd1ebebdaabd40ba230eac93017fc",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wumpgs/meirl/",
-      "external_url": "https://i.redd.it/1k30qjibersh1.png",
-      "created_utc": 1790818338,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wumjlu",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/gg2z0wkwcrsh1.jpeg?width=640&crop=smart&auto=webp&s=e1aaa23b10f5a2f2ecc6516276196388b73434cf",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wumjlu/meirl/",
-      "external_url": "https://i.redd.it/gg2z0wkwcrsh1.jpeg",
-      "created_utc": 1790817851,
       "is_text_only": false
     },
     {
@@ -1646,28 +2108,6 @@
       "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wumhdk/anyone_seen_the_documentary_yet/",
       "external_url": "https://i.redd.it/huujnyvccrsh1.jpeg",
       "created_utc": 1790817667,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wumeq1",
-      "subreddit": "meirl",
-      "title": "Meirl",
-      "text": "",
-      "image": "https://preview.redd.it/jjxd46oobrsh1.jpeg?width=640&crop=smart&auto=webp&s=f5b3be02c6fb1c9a4008a0ffa2d36983b5871045",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wumeq1/meirl/",
-      "external_url": "https://i.redd.it/jjxd46oobrsh1.jpeg",
-      "created_utc": 1790817448,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wumc71",
-      "subreddit": "meirl",
-      "title": "meirl",
-      "text": "",
-      "image": "https://preview.redd.it/0rurs5q3brsh1.jpeg?width=640&crop=smart&auto=webp&s=6a57323abda932cef1b13d7cd3f8bea2c98a8357",
-      "comments_url": "https://www.reddit.com/r/meirl/comments/1wumc71/meirl/",
-      "external_url": "https://i.redd.it/0rurs5q3brsh1.jpeg",
-      "created_utc": 1790817246,
       "is_text_only": false
     },
     {
@@ -1990,17 +2430,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wued4t",
-      "subreddit": "me_irl",
-      "title": "Me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/01hhfs7mlpsh1.jpeg?width=640&crop=smart&auto=webp&s=f42e818ac4fe2df504964ecac517e209a2ddf713",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wued4t/me_irl/",
-      "external_url": "https://i.redd.it/01hhfs7mlpsh1.jpeg",
-      "created_utc": 1790796568,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wue7q6",
       "subreddit": "EarthPorn",
       "title": "[OC] The Mystical Woods near Zhetysu Region, Kazakhstan[4000×3000]🌳",
@@ -2009,17 +2438,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wue7q6/oc_the_mystical_woods_near_zhetysu_region/",
       "external_url": "https://i.redd.it/0ujjwoylkpsh1.jpeg",
       "created_utc": 1790796230,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wue30k",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/f7by913qjpsh1.png?width=320&crop=smart&auto=webp&s=94061e116af40f7f2777821da1f3fc1132e7ec8d",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wue30k/me_irl/",
-      "external_url": "https://i.redd.it/f7by913qjpsh1.png",
-      "created_utc": 1790795940,
       "is_text_only": false
     },
     {
@@ -2111,127 +2529,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wuc9jn",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥Intimidating Shot of an absolute unit of a Tiger",
-      "text": "",
-      "image": "https://preview.redd.it/6lved09j7psh1.jpeg?width=640&crop=smart&auto=webp&s=26375ae82bf81d2b3f83ddc27c26eeea958ccc15",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wuc9jn/intimidating_shot_of_an_absolute_unit_of_a_tiger/",
-      "external_url": "https://i.redd.it/6lved09j7psh1.jpeg",
-      "created_utc": 1790791833,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wubhmq",
-      "subreddit": "me_irl",
-      "title": "Me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/avh2wafh2psh1.jpeg?width=640&crop=smart&auto=webp&s=f9a5eec4d9c8a39e296ae5376490347c52281aba",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wubhmq/me_irl/",
-      "external_url": "https://i.redd.it/avh2wafh2psh1.jpeg",
-      "created_utc": 1790790134,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wubh8i",
-      "subreddit": "me_irl",
-      "title": "me_irl",
-      "text": "",
-      "image": "https://preview.redd.it/23ytnfpe2psh1.jpeg?width=640&crop=smart&auto=webp&s=5e66ad2129be242b61cfda1383e20387482a2ff0",
-      "comments_url": "https://www.reddit.com/r/me_irl/comments/1wubh8i/me_irl/",
-      "external_url": "https://i.redd.it/23ytnfpe2psh1.jpeg",
-      "created_utc": 1790790108,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wuawg0",
-      "subreddit": "dankmemes",
-      "title": "Pretty handy",
-      "text": "",
-      "image": "https://preview.redd.it/mcl2585lyosh1.gif?width=320&crop=smart&s=e6e81a878a4526860c29de65264943e72019f801",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wuawg0/pretty_handy/",
-      "external_url": "https://i.redd.it/mcl2585lyosh1.gif",
-      "created_utc": 1790788823,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wualmk",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 Such a noble being, just sitting in a tree being statuesque in Sequim Wa. (OC -my SIL sent me)",
-      "text": "",
-      "image": "https://preview.redd.it/q74npbtjwosh1.jpeg?width=640&crop=smart&auto=webp&s=e6d5601985d27c7c3c8c908fedc55c58ecf2fc8a",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wualmk/such_a_noble_being_just_sitting_in_a_tree_being/",
-      "external_url": "https://i.redd.it/q74npbtjwosh1.jpeg",
-      "created_utc": 1790788137,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9x4o",
-      "subreddit": "dankmemes",
-      "title": "Bro, do you even compress files?",
-      "text": "",
-      "image": "https://preview.redd.it/a31xkde2sosh1.gif?width=320&crop=smart&s=6b5316d1d846a611800c0ffc7e5dadb2799243c6",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu9x4o/bro_do_you_even_compress_files/",
-      "external_url": "https://i.redd.it/a31xkde2sosh1.gif",
-      "created_utc": 1790786632,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9p7n",
-      "subreddit": "dankmemes",
-      "title": "He's gonna drill a hole in his head🔩",
-      "text": "",
-      "image": "https://preview.redd.it/680q0b7lqosh1.jpeg?width=640&crop=smart&auto=webp&s=fd1e3efea55d643f73fd74f3b51f9686c42e1ef0",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu9p7n/hes_gonna_drill_a_hole_in_his_head/",
-      "external_url": "https://i.redd.it/680q0b7lqosh1.jpeg",
-      "created_utc": 1790786133,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9oez",
-      "subreddit": "dankmemes",
-      "title": "Something something Schmidt the bed",
-      "text": "",
-      "image": "https://preview.redd.it/g36rs6bfqosh1.jpeg?width=640&crop=smart&auto=webp&s=9cc23cbbb5ce344af0b09350f95b0faf0a5bfaa9",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu9oez/something_something_schmidt_the_bed/",
-      "external_url": "https://i.redd.it/g36rs6bfqosh1.jpeg",
-      "created_utc": 1790786085,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9ntu",
-      "subreddit": "dankmemes",
-      "title": "Clean your Toothbrush",
-      "text": "",
-      "image": "https://preview.redd.it/gfohx0rbqosh1.gif?width=320&crop=smart&s=c0f8951438f55a7afbaca04970adafe14762a7b7",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu9ntu/clean_your_toothbrush/",
-      "external_url": "https://i.redd.it/gfohx0rbqosh1.gif",
-      "created_utc": 1790786048,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9i85",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 these two beautiful Sandhill Cranes decided to synchronized fly in looking for food",
-      "text": "By @ thenatureconnectionclub",
-      "image": "https://external-preview.redd.it/bzdkOXRpczhwb3NoMWdFvG7HKoxekegLnbOuZLImxtrbIK7-lpXh8YLsrwsp.jpeg?width=640&crop=smart&auto=webp&s=6ff024513c125d4f8b40ee11512115bd443acbb2",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu9i85/these_two_beautiful_sandhill_cranes_decided_to/",
-      "external_url": "https://v.redd.it/j6efgtv8posh1",
-      "created_utc": 1790785697,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu9hov",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥Avalanche on Annapurna. Annapurna is considered one of the most difficult mountains to climb due to its steep, technical and unstable terrain, frequent avalanches, and unpredictable conditions.",
-      "text": "It has historically had one of the highest fatality-to-summit ratios among the world's 8,000-meter peak. 13.6% as of 2026",
-      "image": "https://external-preview.redd.it/c3cwNTBzYzZwb3NoMdM61PINlEG5eAd4_voJ8yuZNUKo_yhOyDINZ9lX3VSD.png?width=320&crop=smart&auto=webp&s=5dcf24141325b25155c630e07e826bf622e91141",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu9hov/avalanche_on_annapurna_annapurna_is_considered/",
-      "external_url": "https://v.redd.it/akcho8k6posh1",
-      "created_utc": 1790785662,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wu9224",
       "subreddit": "EarthPorn",
       "title": "Fall colors along the way to the North Rim, Kaibab National Forest, Arizona[3072x2048][oc]",
@@ -2240,28 +2537,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wu9224/fall_colors_along_the_way_to_the_north_rim_kaibab/",
       "external_url": "https://live.staticflickr.com/65535/55559911907_7aa401852d_3k.jpg",
       "created_utc": 1790784684,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu8422",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 a horsehead grasshopper feeds",
-      "text": "Credit: @bealeiderman",
-      "image": "https://external-preview.redd.it/NGg0czcyeXJmb3NoMfUBfODm0X4L8gLUxSxwmUN6mbuKTM5fGtyMrFgCDNsi.jpeg?width=320&crop=smart&auto=webp&s=a90ed0ca4e45b446b5e79bd4acabb28b20452ae1",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu8422/a_horsehead_grasshopper_feeds/",
-      "external_url": "https://v.redd.it/rf701pzrfosh1",
-      "created_utc": 1790782498,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu7gjn",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥Seagull eats fish but the fish doesn't go down easily",
-      "text": "Absolute cinema lol",
-      "image": "https://external-preview.redd.it/cmg5NzVpMGNhb3NoMWJT58vFFlGuHiG84gQy__PCLnzrK0TfRroLTEBE0xt7.png?width=320&crop=smart&auto=webp&s=4324e65c6750f87e18370e4b92bb30dc89803102",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu7gjn/seagull_eats_fish_but_the_fish_doesnt_go_down/",
-      "external_url": "https://v.redd.it/39rysuzbaosh1",
-      "created_utc": 1790780975,
       "is_text_only": false
     },
     {
@@ -2276,28 +2551,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wu6zru",
-      "subreddit": "dankmemes",
-      "title": "Make the bond",
-      "text": "",
-      "image": "https://preview.redd.it/rfh4cse18osh1.jpeg?width=640&crop=smart&auto=webp&s=7043007859238b27ed95610ae9ba956e1283da97",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu6zru/make_the_bond/",
-      "external_url": "https://i.redd.it/rfh4cse18osh1.jpeg",
-      "created_utc": 1790779894,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu6vpp",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥Polar bears swimming by the ice edge. Extremely capable of having fun alone with whatever they find.(Shot by@florian_ledoux_photographer)",
-      "text": "",
-      "image": "https://external-preview.redd.it/Y2dtOGdxOXU2b3NoMSqMBJP9qcqrx8EQADb9n1O0q93rRn9g2JU2gIOacFf7.png?width=640&crop=smart&auto=webp&s=83cd6653c3511d5cc85cfe9f623d578ca69600c8",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu6vpp/polar_bears_swimming_by_the_ice_edge_extremely/",
-      "external_url": "https://v.redd.it/8nl78c9u6osh1",
-      "created_utc": 1790779625,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wu6iyr",
       "subreddit": "SurrealMemes",
       "title": "Cathode aurora borealis spins a wicked web of light, and",
@@ -2306,17 +2559,6 @@
       "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wu6iyr/cathode_aurora_borealis_spins_a_wicked_web_of/",
       "external_url": "https://i.redd.it/c53ymrmp4osh1.jpeg",
       "created_utc": 1790778776,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu68w5",
-      "subreddit": "dankmemes",
-      "title": "You were a good bot/ But your time has come today/ You’ve hai’d your last ku",
-      "text": "",
-      "image": "https://preview.redd.it/tp2af67o2osh1.jpeg?width=640&crop=smart&auto=webp&s=641c99eddf4c8b8aa6014140aa0ee655dad49e8a",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu68w5/you_were_a_good_bot_but_your_time_has_come_today/",
-      "external_url": "https://i.redd.it/tp2af67o2osh1.jpeg",
-      "created_utc": 1790778089,
       "is_text_only": false
     },
     {
@@ -2353,17 +2595,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wu4kzv",
-      "subreddit": "dankmemes",
-      "title": "Can almost feel the condensation",
-      "text": "",
-      "image": "https://preview.redd.it/48szysw7qnsh1.jpeg?width=640&crop=smart&auto=webp&s=409d3fa10217b1c7f9bd82e5b2951930fc89f75f",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu4kzv/can_almost_feel_the_condensation/",
-      "external_url": "https://i.redd.it/48szysw7qnsh1.jpeg",
-      "created_utc": 1790773910,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wu4fba",
       "subreddit": "EarthPorn",
       "title": "Milford Sound, New Zealand [OC] [5400x3600]",
@@ -2383,39 +2614,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wu43sb/gwaii_haanas_np_haida_gwaii_bc_canada_4032x3024_oc/",
       "external_url": "https://i.redd.it/9nmtn7eimnsh1.jpeg",
       "created_utc": 1790772654,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu42uw",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥A prairie dog pleading with a bald eagle. (Reposting because of spelling error sorry about that everyone.)",
-      "text": "",
-      "image": "https://preview.redd.it/0xq7ac7amnsh1.jpeg?width=640&crop=smart&auto=webp&s=d468be7ec4ca5ba9ee2a5325fc31ab7cdbc78a35",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu42uw/a_prairie_dog_pleading_with_a_bald_eagle/",
-      "external_url": "https://i.redd.it/0xq7ac7amnsh1.jpeg",
-      "created_utc": 1790772581,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu41th",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 A spiderweb catching the sunlight in a quiet forest.",
-      "text": "",
-      "image": "https://preview.redd.it/392v6t32mnsh1.jpeg?width=640&crop=smart&auto=webp&s=129ef010b7a20908f84468d859424803f27ee3cd",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wu41th/a_spiderweb_catching_the_sunlight_in_a_quiet/",
-      "external_url": "https://i.redd.it/392v6t32mnsh1.jpeg",
-      "created_utc": 1790772504,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wu3up2",
-      "subreddit": "dankmemes",
-      "title": "Bless the almighty real jesus",
-      "text": "",
-      "image": "https://preview.redd.it/ntdflmbeknsh1.jpeg?width=640&crop=smart&auto=webp&s=fe482f9832dd8f5b6fb032627cd9ff2898ff7e22",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu3up2/bless_the_almighty_real_jesus/",
-      "external_url": "https://i.redd.it/ntdflmbeknsh1.jpeg",
-      "created_utc": 1790771943,
       "is_text_only": false
     },
     {
@@ -2463,39 +2661,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wu0wxu",
-      "subreddit": "dankmemes",
-      "title": "confusing",
-      "text": "",
-      "image": "https://i.redd.it/zoi6r5t5smsh1.jpeg",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wu0wxu/confusing/",
-      "external_url": "https://i.redd.it/zoi6r5t5smsh1.jpeg",
-      "created_utc": 1790762448,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wtzk55",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 Was out walking when i noticed movement in the bushes. Turns out it was a ptarmigan, and if it didn't move, i would have never known it was there",
-      "text": "",
-      "image": "https://preview.redd.it/qqxw6bmccmsh1.jpeg?width=640&crop=smart&auto=webp&s=d015b1ef6a4c8bea53461f6b969e445298a1511b",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wtzk55/was_out_walking_when_i_noticed_movement_in_the/",
-      "external_url": "https://i.redd.it/qqxw6bmccmsh1.jpeg",
-      "created_utc": 1790757131,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wtyi8v",
-      "subreddit": "dankmemes",
-      "title": "first time in 6 years i play a mobile game... see you again in 6 years",
-      "text": "",
-      "image": "https://preview.redd.it/0iojm9m20msh1.jpeg?width=640&crop=smart&auto=webp&s=080023a4cf3ad0aa1acc6d4899fce0e8e0c5186e",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wtyi8v/first_time_in_6_years_i_play_a_mobile_game_see/",
-      "external_url": "https://i.redd.it/0iojm9m20msh1.jpeg",
-      "created_utc": 1790753001,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wtxik1",
       "subreddit": "EarthPorn",
       "title": "Hayedo de la Biescona (Asturias-España)[OC]1975×1080",
@@ -2518,28 +2683,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wtvysd",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 Humpback whale giving birth to a calf. cr: nytimes",
-      "text": "A drone has captured a humpback whale giving birth to a calf in waters off Australia's east coast, in what may be a world first.",
-      "image": "https://external-preview.redd.it/a2c2eW9qcGE4bHNoMWwKGLx6JB_69FgfDqi6fV2ddx5SJcjxbcdPuQ0M2i_1.png?width=640&crop=smart&auto=webp&s=76064dfa3f4fd4bc0c74829310e25d5016bf26b7",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wtvysd/humpback_whale_giving_birth_to_a_calf_cr_nytimes/",
-      "external_url": "https://v.redd.it/gyzhzcqa8lsh1",
-      "created_utc": 1790743688,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wtvpax",
-      "subreddit": "dankmemes",
-      "title": "POV: Average Insta user trying Reddit the first time",
-      "text": "",
-      "image": "https://preview.redd.it/3xm6cqgp5lsh1.jpeg?width=640&crop=smart&auto=webp&s=118122ce2164ab05d4043430d08e0736c0c770d8",
-      "comments_url": "https://www.reddit.com/r/dankmemes/comments/1wtvpax/pov_average_insta_user_trying_reddit_the_first/",
-      "external_url": "https://i.redd.it/3xm6cqgp5lsh1.jpeg",
-      "created_utc": 1790742790,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wtun03",
       "subreddit": "EarthPorn",
       "title": "Balanced Rock - Arches National Park, Moab Utah - [4503x5200][OC]",
@@ -2551,17 +2694,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wtu933",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥The blue dragon sea slug (NOT AI) cr: alex.basha.sea",
-      "text": "Have you heard of the blue dragon? The blue dragon sea slug (Glaucus atlanticus) is a pelagic nudibranch that spends its life drifting at the ocean's surface, carried by currents and winds. Measuring just 3-4 cm, the blue dragon feeds on venomous organisms and can store stinging cells from their prey as a defense. Nudibranchs like the blue dragon are increasingly gaining interest in biomedical research for their potential antitumor properties-making them one of the ocean's most quietly remarkable creatures.",
-      "image": "https://external-preview.redd.it/dHozbXVyZHJya3NoMfXvRbvle1mgtUP0ycJJwzpw3dut9AErcn4mrj8s-ItD.png?width=640&crop=smart&auto=webp&s=9cb1a4a3c0a130009cb7476a5bb19e210e283a44",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wtu933/the_blue_dragon_sea_slug_not_ai_cr_alexbashasea/",
-      "external_url": "https://v.redd.it/bb13ywbrrksh1",
-      "created_utc": 1790738166,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wtu1xk",
       "subreddit": "EarthPorn",
       "title": "On the hike to Twin Sisters Peaks, CO. [OC] [4064x2552]",
@@ -2570,17 +2702,6 @@
       "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wtu1xk/on_the_hike_to_twin_sisters_peaks_co_oc_4064x2552/",
       "external_url": "https://i.redd.it/s6pes6b9pksh1.png",
       "created_utc": 1790737555,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wtt745",
-      "subreddit": "NatureIsFuckingLit",
-      "title": "🔥 Great blue heron, Ardea herodias, Mid Strike",
-      "text": "",
-      "image": "https://preview.redd.it/nr5a95sfiksh1.jpeg?width=640&crop=smart&auto=webp&s=0086a191ff2db1a8b092af54060a40a2e4ce4c22",
-      "comments_url": "https://www.reddit.com/r/NatureIsFuckingLit/comments/1wtt745/great_blue_heron_ardea_herodias_mid_strike/",
-      "external_url": "https://i.redd.it/nr5a95sfiksh1.jpeg",
-      "created_utc": 1790734964,
       "is_text_only": false
     },
     {
@@ -2749,28 +2870,6 @@
       "is_text_only": false
     },
     {
-      "id": "t3_1wt31ok",
-      "subreddit": "EarthPorn",
-      "title": "Asturias-España [OC]1944×1079",
-      "text": "",
-      "image": "https://preview.redd.it/xtmzf35dpesh1.jpeg?width=640&crop=smart&auto=webp&s=2bdf3f770ca47750a2f75fbcc63f225ef5028cfc",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wt31ok/asturiasespaña_oc19441079/",
-      "external_url": "https://i.redd.it/xtmzf35dpesh1.jpeg",
-      "created_utc": 1790664653,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wt2wmo",
-      "subreddit": "EarthPorn",
-      "title": "Foggy Morning at Lake Eland, KZN South Africa, [OC] (960x1280)",
-      "text": "",
-      "image": "https://preview.redd.it/p6cingrnnesh1.jpeg?width=640&crop=smart&auto=webp&s=1946d9302f0eb143b5cefe9d1146ff1fdf26bed6",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wt2wmo/foggy_morning_at_lake_eland_kzn_south_africa_oc/",
-      "external_url": "https://i.redd.it/p6cingrnnesh1.jpeg",
-      "created_utc": 1790664137,
-      "is_text_only": false
-    },
-    {
       "id": "t3_1wt1p2g",
       "subreddit": "SurrealMemes",
       "title": "‽¿?",
@@ -2779,83 +2878,6 @@
       "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wt1p2g/_/",
       "external_url": "https://i.redd.it/lxzc8fs1besh1.png",
       "created_utc": 1790659838,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wt0pw9",
-      "subreddit": "EarthPorn",
-      "title": "Lewis Lake, WA [OC][5712x3213]",
-      "text": "",
-      "image": "https://preview.redd.it/4cvh5bo81esh1.jpeg?width=640&crop=smart&auto=webp&s=24a4567d740ceb74c606f8c5c8f641d754730ebc",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wt0pw9/lewis_lake_wa_oc5712x3213/",
-      "external_url": "https://i.redd.it/4cvh5bo81esh1.jpeg",
-      "created_utc": 1790656546,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wt0bv6",
-      "subreddit": "EarthPorn",
-      "title": "Point Reyes National Seashore [OC] [4000 x 2000]",
-      "text": "",
-      "image": "https://preview.redd.it/p5wk5g4fxdsh1.jpeg?width=640&crop=smart&auto=webp&s=f0c3d24aef0f2339b775805b3476d6658c1ba9a9",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wt0bv6/point_reyes_national_seashore_oc_4000_x_2000/",
-      "external_url": "https://i.redd.it/p5wk5g4fxdsh1.jpeg",
-      "created_utc": 1790655255,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wsy18d",
-      "subreddit": "EarthPorn",
-      "title": "Yosemite trails [OC] [2048 x 1363]",
-      "text": "",
-      "image": "https://preview.redd.it/34dkvrixcdsh1.jpeg?width=640&crop=smart&auto=webp&s=51c0bf5ae399e8ecd8cf7088260c37286a76492b",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wsy18d/yosemite_trails_oc_2048_x_1363/",
-      "external_url": "https://i.redd.it/34dkvrixcdsh1.jpeg",
-      "created_utc": 1790648369,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wsxzxa",
-      "subreddit": "EarthPorn",
-      "title": "Yosemite Falls [OC] [2048x1363]",
-      "text": "",
-      "image": "https://preview.redd.it/2nghph5hcdsh1.jpeg?width=640&crop=smart&auto=webp&s=a7e9b62de3dd9cee2ca15c2c75449b8c2604858e",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wsxzxa/yosemite_falls_oc_2048x1363/",
-      "external_url": "https://i.redd.it/2nghph5hcdsh1.jpeg",
-      "created_utc": 1790648264,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wsvq2x",
-      "subreddit": "EarthPorn",
-      "title": "Wichita Mountains National Wildlife Refuge [OC][9000x6750]",
-      "text": "",
-      "image": "https://preview.redd.it/5evkh1tbtcsh1.jpeg?width=640&crop=smart&auto=webp&s=6996c745a9a3f0f7c4d1f631e88b74c0eee89b36",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wsvq2x/wichita_mountains_national_wildlife_refuge/",
-      "external_url": "https://i.redd.it/5evkh1tbtcsh1.jpeg",
-      "created_utc": 1790641807,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wstyzg",
-      "subreddit": "EarthPorn",
-      "title": "Beginning of Autumn in the Mount Baldy Wilderness, Arizona [9504x6336][OC",
-      "text": "",
-      "image": "https://preview.redd.it/r4ihsvwefcsh1.jpeg?width=640&crop=smart&auto=webp&s=f2707fbabd81121e1e069b5c5d4f32fea204f247",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wstyzg/beginning_of_autumn_in_the_mount_baldy_wilderness/",
-      "external_url": "https://i.redd.it/r4ihsvwefcsh1.jpeg",
-      "created_utc": 1790637099,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wstuxe",
-      "subreddit": "EarthPorn",
-      "title": "Morning Reflections, Newfoundland [OC] [3550x2376]",
-      "text": "",
-      "image": "https://preview.redd.it/el80ckmjecsh1.jpeg?width=640&crop=smart&auto=webp&s=5d661f31c4df092261412febe0123ddf2045c18c",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wstuxe/morning_reflections_newfoundland_oc_3550x2376/",
-      "external_url": "https://i.redd.it/el80ckmjecsh1.jpeg",
-      "created_utc": 1790636800,
       "is_text_only": false
     },
     {
@@ -2878,17 +2900,6 @@
       "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wssl2i/dead_end/",
       "external_url": "https://i.redd.it/dghpp99s4csh1.jpeg",
       "created_utc": 1790633517,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wsnh5o",
-      "subreddit": "EarthPorn",
-      "title": "Foggy evening in the North Cascades, Washington [OC][1681x1198]",
-      "text": "",
-      "image": "https://preview.redd.it/73d0714d6bsh1.jpeg?width=640&crop=smart&auto=webp&s=5d9d7733e8c191cbb698a15becacf184df96becb",
-      "comments_url": "https://www.reddit.com/r/EarthPorn/comments/1wsnh5o/foggy_evening_in_the_north_cascades_washington/",
-      "external_url": "https://i.redd.it/73d0714d6bsh1.jpeg",
-      "created_utc": 1790622000,
       "is_text_only": false
     },
     {
@@ -2966,17 +2977,6 @@
       "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wr0aph/ты_видел_бога/",
       "external_url": "https://i.redd.it/du8l7x559xrh1.jpeg",
       "created_utc": 1790453381,
-      "is_text_only": false
-    },
-    {
-      "id": "t3_1wpeo1h",
-      "subreddit": "SurrealMemes",
-      "title": "c",
-      "text": "",
-      "image": "https://preview.redd.it/n1ekro6ugjrh1.png?width=640&crop=smart&auto=webp&s=94fa459f0000131d140486470c7ecffebf20a6cb",
-      "comments_url": "https://www.reddit.com/r/surrealmemes/comments/1wpeo1h/c/",
-      "external_url": "https://i.redd.it/n1ekro6ugjrh1.png",
-      "created_utc": 1790286480,
       "is_text_only": false
     }
   ]
